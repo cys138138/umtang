@@ -1,0 +1,2 @@
+.nameList {width: 300px;} /*这不能删除，表面上这个样式没引用，但这是生成HTML节点后会用到的*/
+.go2top {background: url("../../img/go2top.png") no-repeat scroll left top;  bottom: 15px;  color: #444;  display: none;  height: 50px;  position: fixed; right: 15px; text-align: center; width: 50px; }

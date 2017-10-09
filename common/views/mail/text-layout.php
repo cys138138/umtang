@@ -1,0 +1,1 @@
+<?php echo $content; ?> 优满分(http://www.umfun.com)

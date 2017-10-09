@@ -1,0 +1,25 @@
+.umNavbar .navbar-collapse{padding-left:0;}
+.navbar-nav a.active{outline: none; background-color:#000 !important; color:#FFF;}
+
+.umNoBorderTable .column{padding:8px 3px;}
+.umNoBorderTable input{margin-top:-7px; width:90%;}
+.umNoBorderTable .header{background:#F5F5F5;}
+.umNoBorderTable .row{margin-left:0;}
+.umNoBorderTable .row:hover{background:#F5F5F5;}
+
+.container-fluid form{width:1000px;}
+
+.condition-line{font-size:14px; font-family:Microsoft YaHei; font-weight:bold;}
+.condition-line a{margin-left:10px;font-family:'Microsoft Yahei'; font-weight:normal;color:#999;}
+.condition-line a.select{color:#337ab7;font-weight:bold;}
+.condition-line select,.condition-line input{width:110px; display:inline-block;}
+.condition-line i{display:inline-block; font-style: normal;width:110px; text-align:right;}
+
+.J-es-detail{font-family: SimHei, Microsoft YaHei !important;}
+
+/*用于抵消代码（*=》border-box）样式*/
+.edui-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}

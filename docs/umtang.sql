@@ -1,0 +1,6459 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : db.umfun.test
+Source Server Version : 50162
+Source Host           : db.umfun.test:3306
+Source Database       : umtang
+
+Target Server Type    : MYSQL
+Target Server Version : 50162
+File Encoding         : 65001
+
+Date: 2017-10-09 10:47:31
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `area`
+-- ----------------------------
+DROP TABLE IF EXISTS `area`;
+CREATE TABLE `area` (
+  `id` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of area
+-- ----------------------------
+INSERT INTO `area` VALUES ('110000', '0', '北京市');
+INSERT INTO `area` VALUES ('110100', '110000', '市辖区');
+INSERT INTO `area` VALUES ('110101', '110100', '东城区');
+INSERT INTO `area` VALUES ('110102', '110100', '西城区');
+INSERT INTO `area` VALUES ('110105', '110100', '朝阳区');
+INSERT INTO `area` VALUES ('110106', '110100', '丰台区');
+INSERT INTO `area` VALUES ('110107', '110100', '石景山区');
+INSERT INTO `area` VALUES ('110108', '110100', '海淀区');
+INSERT INTO `area` VALUES ('110109', '110100', '门头沟区');
+INSERT INTO `area` VALUES ('110111', '110100', '房山区');
+INSERT INTO `area` VALUES ('110112', '110100', '通州区');
+INSERT INTO `area` VALUES ('110113', '110100', '顺义区');
+INSERT INTO `area` VALUES ('110114', '110100', '昌平区');
+INSERT INTO `area` VALUES ('110115', '110100', '大兴区');
+INSERT INTO `area` VALUES ('110116', '110100', '怀柔区');
+INSERT INTO `area` VALUES ('110117', '110100', '平谷区');
+INSERT INTO `area` VALUES ('110200', '110000', '县');
+INSERT INTO `area` VALUES ('110228', '110200', '密云县');
+INSERT INTO `area` VALUES ('110229', '110200', '延庆县');
+INSERT INTO `area` VALUES ('120000', '0', '天津市');
+INSERT INTO `area` VALUES ('120100', '120000', '市辖区');
+INSERT INTO `area` VALUES ('120101', '120100', '和平区');
+INSERT INTO `area` VALUES ('120102', '120100', '河东区');
+INSERT INTO `area` VALUES ('120103', '120100', '河西区');
+INSERT INTO `area` VALUES ('120104', '120100', '南开区');
+INSERT INTO `area` VALUES ('120105', '120100', '河北区');
+INSERT INTO `area` VALUES ('120106', '120100', '红桥区');
+INSERT INTO `area` VALUES ('120110', '120100', '东丽区');
+INSERT INTO `area` VALUES ('120111', '120100', '西青区');
+INSERT INTO `area` VALUES ('120112', '120100', '津南区');
+INSERT INTO `area` VALUES ('120113', '120100', '北辰区');
+INSERT INTO `area` VALUES ('120114', '120100', '武清区');
+INSERT INTO `area` VALUES ('120115', '120100', '宝坻区');
+INSERT INTO `area` VALUES ('120116', '120100', '滨海新区');
+INSERT INTO `area` VALUES ('120200', '120000', '县');
+INSERT INTO `area` VALUES ('120221', '120200', '宁河县');
+INSERT INTO `area` VALUES ('120223', '120200', '静海县');
+INSERT INTO `area` VALUES ('120225', '120200', '蓟县');
+INSERT INTO `area` VALUES ('130000', '0', '河北省');
+INSERT INTO `area` VALUES ('130100', '130000', '石家庄市');
+INSERT INTO `area` VALUES ('130102', '130100', '长安区');
+INSERT INTO `area` VALUES ('130103', '130100', '桥东区');
+INSERT INTO `area` VALUES ('130104', '130100', '桥西区');
+INSERT INTO `area` VALUES ('130105', '130100', '新华区');
+INSERT INTO `area` VALUES ('130107', '130100', '井陉矿区');
+INSERT INTO `area` VALUES ('130108', '130100', '裕华区');
+INSERT INTO `area` VALUES ('130121', '130100', '井陉县');
+INSERT INTO `area` VALUES ('130123', '130100', '正定县');
+INSERT INTO `area` VALUES ('130124', '130100', '栾城县');
+INSERT INTO `area` VALUES ('130125', '130100', '行唐县');
+INSERT INTO `area` VALUES ('130126', '130100', '灵寿县');
+INSERT INTO `area` VALUES ('130127', '130100', '高邑县');
+INSERT INTO `area` VALUES ('130128', '130100', '深泽县');
+INSERT INTO `area` VALUES ('130129', '130100', '赞皇县');
+INSERT INTO `area` VALUES ('130130', '130100', '无极县');
+INSERT INTO `area` VALUES ('130131', '130100', '平山县');
+INSERT INTO `area` VALUES ('130132', '130100', '元氏县');
+INSERT INTO `area` VALUES ('130133', '130100', '赵县');
+INSERT INTO `area` VALUES ('130181', '130100', '辛集市');
+INSERT INTO `area` VALUES ('130182', '130100', '藁城市');
+INSERT INTO `area` VALUES ('130183', '130100', '晋州市');
+INSERT INTO `area` VALUES ('130184', '130100', '新乐市');
+INSERT INTO `area` VALUES ('130185', '130100', '鹿泉市');
+INSERT INTO `area` VALUES ('130200', '130000', '唐山市');
+INSERT INTO `area` VALUES ('130202', '130200', '路南区');
+INSERT INTO `area` VALUES ('130203', '130200', '路北区');
+INSERT INTO `area` VALUES ('130204', '130200', '古冶区');
+INSERT INTO `area` VALUES ('130205', '130200', '开平区');
+INSERT INTO `area` VALUES ('130207', '130200', '丰南区');
+INSERT INTO `area` VALUES ('130208', '130200', '丰润区');
+INSERT INTO `area` VALUES ('130223', '130200', '滦县');
+INSERT INTO `area` VALUES ('130224', '130200', '滦南县');
+INSERT INTO `area` VALUES ('130225', '130200', '乐亭县');
+INSERT INTO `area` VALUES ('130227', '130200', '迁西县');
+INSERT INTO `area` VALUES ('130229', '130200', '玉田县');
+INSERT INTO `area` VALUES ('130230', '130200', '唐海县');
+INSERT INTO `area` VALUES ('130281', '130200', '遵化市');
+INSERT INTO `area` VALUES ('130283', '130200', '迁安市');
+INSERT INTO `area` VALUES ('130300', '130000', '秦皇岛市');
+INSERT INTO `area` VALUES ('130302', '130300', '海港区');
+INSERT INTO `area` VALUES ('130303', '130300', '山海关区');
+INSERT INTO `area` VALUES ('130304', '130300', '北戴河区');
+INSERT INTO `area` VALUES ('130321', '130300', '青龙满族自治县');
+INSERT INTO `area` VALUES ('130322', '130300', '昌黎县');
+INSERT INTO `area` VALUES ('130323', '130300', '抚宁县');
+INSERT INTO `area` VALUES ('130324', '130300', '卢龙县');
+INSERT INTO `area` VALUES ('130400', '130000', '邯郸市');
+INSERT INTO `area` VALUES ('130402', '130400', '邯山区');
+INSERT INTO `area` VALUES ('130403', '130400', '丛台区');
+INSERT INTO `area` VALUES ('130404', '130400', '复兴区');
+INSERT INTO `area` VALUES ('130406', '130400', '峰峰矿区');
+INSERT INTO `area` VALUES ('130421', '130400', '邯郸县');
+INSERT INTO `area` VALUES ('130423', '130400', '临漳县');
+INSERT INTO `area` VALUES ('130424', '130400', '成安县');
+INSERT INTO `area` VALUES ('130425', '130400', '大名县');
+INSERT INTO `area` VALUES ('130426', '130400', '涉县');
+INSERT INTO `area` VALUES ('130427', '130400', '磁县');
+INSERT INTO `area` VALUES ('130428', '130400', '肥乡县');
+INSERT INTO `area` VALUES ('130429', '130400', '永年县');
+INSERT INTO `area` VALUES ('130430', '130400', '邱县');
+INSERT INTO `area` VALUES ('130431', '130400', '鸡泽县');
+INSERT INTO `area` VALUES ('130432', '130400', '广平县');
+INSERT INTO `area` VALUES ('130433', '130400', '馆陶县');
+INSERT INTO `area` VALUES ('130434', '130400', '魏县');
+INSERT INTO `area` VALUES ('130435', '130400', '曲周县');
+INSERT INTO `area` VALUES ('130481', '130400', '武安市');
+INSERT INTO `area` VALUES ('130500', '130000', '邢台市');
+INSERT INTO `area` VALUES ('130502', '130500', '桥东区');
+INSERT INTO `area` VALUES ('130503', '130500', '桥西区');
+INSERT INTO `area` VALUES ('130521', '130500', '邢台县');
+INSERT INTO `area` VALUES ('130522', '130500', '临城县');
+INSERT INTO `area` VALUES ('130523', '130500', '内丘县');
+INSERT INTO `area` VALUES ('130524', '130500', '柏乡县');
+INSERT INTO `area` VALUES ('130525', '130500', '隆尧县');
+INSERT INTO `area` VALUES ('130526', '130500', '任县');
+INSERT INTO `area` VALUES ('130527', '130500', '南和县');
+INSERT INTO `area` VALUES ('130528', '130500', '宁晋县');
+INSERT INTO `area` VALUES ('130529', '130500', '巨鹿县');
+INSERT INTO `area` VALUES ('130530', '130500', '新河县');
+INSERT INTO `area` VALUES ('130531', '130500', '广宗县');
+INSERT INTO `area` VALUES ('130532', '130500', '平乡县');
+INSERT INTO `area` VALUES ('130533', '130500', '威县');
+INSERT INTO `area` VALUES ('130534', '130500', '清河县');
+INSERT INTO `area` VALUES ('130535', '130500', '临西县');
+INSERT INTO `area` VALUES ('130581', '130500', '南宫市');
+INSERT INTO `area` VALUES ('130582', '130500', '沙河市');
+INSERT INTO `area` VALUES ('130600', '130000', '保定市');
+INSERT INTO `area` VALUES ('130602', '130600', '新市区');
+INSERT INTO `area` VALUES ('130603', '130600', '北市区');
+INSERT INTO `area` VALUES ('130604', '130600', '南市区');
+INSERT INTO `area` VALUES ('130621', '130600', '满城县');
+INSERT INTO `area` VALUES ('130622', '130600', '清苑县');
+INSERT INTO `area` VALUES ('130623', '130600', '涞水县');
+INSERT INTO `area` VALUES ('130624', '130600', '阜平县');
+INSERT INTO `area` VALUES ('130625', '130600', '徐水县');
+INSERT INTO `area` VALUES ('130626', '130600', '定兴县');
+INSERT INTO `area` VALUES ('130627', '130600', '唐县');
+INSERT INTO `area` VALUES ('130628', '130600', '高阳县');
+INSERT INTO `area` VALUES ('130629', '130600', '容城县');
+INSERT INTO `area` VALUES ('130630', '130600', '涞源县');
+INSERT INTO `area` VALUES ('130631', '130600', '望都县');
+INSERT INTO `area` VALUES ('130632', '130600', '安新县');
+INSERT INTO `area` VALUES ('130633', '130600', '易县');
+INSERT INTO `area` VALUES ('130634', '130600', '曲阳县');
+INSERT INTO `area` VALUES ('130635', '130600', '蠡县');
+INSERT INTO `area` VALUES ('130636', '130600', '顺平县');
+INSERT INTO `area` VALUES ('130637', '130600', '博野县');
+INSERT INTO `area` VALUES ('130638', '130600', '雄县');
+INSERT INTO `area` VALUES ('130681', '130600', '涿州市');
+INSERT INTO `area` VALUES ('130682', '130600', '定州市');
+INSERT INTO `area` VALUES ('130683', '130600', '安国市');
+INSERT INTO `area` VALUES ('130684', '130600', '高碑店市');
+INSERT INTO `area` VALUES ('130700', '130000', '张家口市');
+INSERT INTO `area` VALUES ('130702', '130700', '桥东区');
+INSERT INTO `area` VALUES ('130703', '130700', '桥西区');
+INSERT INTO `area` VALUES ('130705', '130700', '宣化区');
+INSERT INTO `area` VALUES ('130706', '130700', '下花园区');
+INSERT INTO `area` VALUES ('130721', '130700', '宣化县');
+INSERT INTO `area` VALUES ('130722', '130700', '张北县');
+INSERT INTO `area` VALUES ('130723', '130700', '康保县');
+INSERT INTO `area` VALUES ('130724', '130700', '沽源县');
+INSERT INTO `area` VALUES ('130725', '130700', '尚义县');
+INSERT INTO `area` VALUES ('130726', '130700', '蔚县');
+INSERT INTO `area` VALUES ('130727', '130700', '阳原县');
+INSERT INTO `area` VALUES ('130728', '130700', '怀安县');
+INSERT INTO `area` VALUES ('130729', '130700', '万全县');
+INSERT INTO `area` VALUES ('130730', '130700', '怀来县');
+INSERT INTO `area` VALUES ('130731', '130700', '涿鹿县');
+INSERT INTO `area` VALUES ('130732', '130700', '赤城县');
+INSERT INTO `area` VALUES ('130733', '130700', '崇礼县');
+INSERT INTO `area` VALUES ('130800', '130000', '承德市');
+INSERT INTO `area` VALUES ('130802', '130800', '双桥区');
+INSERT INTO `area` VALUES ('130803', '130800', '双滦区');
+INSERT INTO `area` VALUES ('130804', '130800', '鹰手营子矿区');
+INSERT INTO `area` VALUES ('130821', '130800', '承德县');
+INSERT INTO `area` VALUES ('130822', '130800', '兴隆县');
+INSERT INTO `area` VALUES ('130823', '130800', '平泉县');
+INSERT INTO `area` VALUES ('130824', '130800', '滦平县');
+INSERT INTO `area` VALUES ('130825', '130800', '隆化县');
+INSERT INTO `area` VALUES ('130826', '130800', '丰宁满族自治县');
+INSERT INTO `area` VALUES ('130827', '130800', '宽城满族自治县');
+INSERT INTO `area` VALUES ('130828', '130800', '围场满族蒙古族自治县');
+INSERT INTO `area` VALUES ('130900', '130000', '沧州市');
+INSERT INTO `area` VALUES ('130902', '130900', '新华区');
+INSERT INTO `area` VALUES ('130903', '130900', '运河区');
+INSERT INTO `area` VALUES ('130921', '130900', '沧县');
+INSERT INTO `area` VALUES ('130922', '130900', '青县');
+INSERT INTO `area` VALUES ('130923', '130900', '东光县');
+INSERT INTO `area` VALUES ('130924', '130900', '海兴县');
+INSERT INTO `area` VALUES ('130925', '130900', '盐山县');
+INSERT INTO `area` VALUES ('130926', '130900', '肃宁县');
+INSERT INTO `area` VALUES ('130927', '130900', '南皮县');
+INSERT INTO `area` VALUES ('130928', '130900', '吴桥县');
+INSERT INTO `area` VALUES ('130929', '130900', '献县');
+INSERT INTO `area` VALUES ('130930', '130900', '孟村回族自治县');
+INSERT INTO `area` VALUES ('130981', '130900', '泊头市');
+INSERT INTO `area` VALUES ('130982', '130900', '任丘市');
+INSERT INTO `area` VALUES ('130983', '130900', '黄骅市');
+INSERT INTO `area` VALUES ('130984', '130900', '河间市');
+INSERT INTO `area` VALUES ('131000', '130000', '廊坊市');
+INSERT INTO `area` VALUES ('131002', '131000', '安次区');
+INSERT INTO `area` VALUES ('131003', '131000', '广阳区');
+INSERT INTO `area` VALUES ('131004', '131000', '开发区');
+INSERT INTO `area` VALUES ('131022', '131000', '固安县');
+INSERT INTO `area` VALUES ('131023', '131000', '永清县');
+INSERT INTO `area` VALUES ('131024', '131000', '香河县');
+INSERT INTO `area` VALUES ('131025', '131000', '大城县');
+INSERT INTO `area` VALUES ('131026', '131000', '文安县');
+INSERT INTO `area` VALUES ('131028', '131000', '大厂回族自治县');
+INSERT INTO `area` VALUES ('131081', '131000', '霸州市');
+INSERT INTO `area` VALUES ('131082', '131000', '三河市');
+INSERT INTO `area` VALUES ('131100', '130000', '衡水市');
+INSERT INTO `area` VALUES ('131102', '131100', '桃城区');
+INSERT INTO `area` VALUES ('131121', '131100', '枣强县');
+INSERT INTO `area` VALUES ('131122', '131100', '武邑县');
+INSERT INTO `area` VALUES ('131123', '131100', '武强县');
+INSERT INTO `area` VALUES ('131124', '131100', '饶阳县');
+INSERT INTO `area` VALUES ('131125', '131100', '安平县');
+INSERT INTO `area` VALUES ('131126', '131100', '故城县');
+INSERT INTO `area` VALUES ('131127', '131100', '景县');
+INSERT INTO `area` VALUES ('131128', '131100', '阜城县');
+INSERT INTO `area` VALUES ('131181', '131100', '冀州市');
+INSERT INTO `area` VALUES ('131182', '131100', '深州市');
+INSERT INTO `area` VALUES ('140000', '0', '山西省');
+INSERT INTO `area` VALUES ('140100', '140000', '太原市');
+INSERT INTO `area` VALUES ('140105', '140100', '小店区');
+INSERT INTO `area` VALUES ('140106', '140100', '迎泽区');
+INSERT INTO `area` VALUES ('140107', '140100', '杏花岭区');
+INSERT INTO `area` VALUES ('140108', '140100', '尖草坪区');
+INSERT INTO `area` VALUES ('140109', '140100', '万柏林区');
+INSERT INTO `area` VALUES ('140110', '140100', '晋源区');
+INSERT INTO `area` VALUES ('140121', '140100', '清徐县');
+INSERT INTO `area` VALUES ('140122', '140100', '阳曲县');
+INSERT INTO `area` VALUES ('140123', '140100', '娄烦县');
+INSERT INTO `area` VALUES ('140181', '140100', '古交市');
+INSERT INTO `area` VALUES ('140200', '140000', '大同市');
+INSERT INTO `area` VALUES ('140202', '140200', '城区');
+INSERT INTO `area` VALUES ('140203', '140200', '矿区');
+INSERT INTO `area` VALUES ('140211', '140200', '南郊区');
+INSERT INTO `area` VALUES ('140212', '140200', '新荣区');
+INSERT INTO `area` VALUES ('140221', '140200', '阳高县');
+INSERT INTO `area` VALUES ('140222', '140200', '天镇县');
+INSERT INTO `area` VALUES ('140223', '140200', '广灵县');
+INSERT INTO `area` VALUES ('140224', '140200', '灵丘县');
+INSERT INTO `area` VALUES ('140225', '140200', '浑源县');
+INSERT INTO `area` VALUES ('140226', '140200', '左云县');
+INSERT INTO `area` VALUES ('140227', '140200', '大同县');
+INSERT INTO `area` VALUES ('140300', '140000', '阳泉市');
+INSERT INTO `area` VALUES ('140302', '140300', '城区');
+INSERT INTO `area` VALUES ('140303', '140300', '矿区');
+INSERT INTO `area` VALUES ('140311', '140300', '郊区');
+INSERT INTO `area` VALUES ('140321', '140300', '平定县');
+INSERT INTO `area` VALUES ('140322', '140300', '盂县');
+INSERT INTO `area` VALUES ('140400', '140000', '长治市');
+INSERT INTO `area` VALUES ('140402', '140400', '城区');
+INSERT INTO `area` VALUES ('140411', '140400', '郊区');
+INSERT INTO `area` VALUES ('140421', '140400', '长治县');
+INSERT INTO `area` VALUES ('140423', '140400', '襄垣县');
+INSERT INTO `area` VALUES ('140424', '140400', '屯留县');
+INSERT INTO `area` VALUES ('140425', '140400', '平顺县');
+INSERT INTO `area` VALUES ('140426', '140400', '黎城县');
+INSERT INTO `area` VALUES ('140427', '140400', '壶关县');
+INSERT INTO `area` VALUES ('140428', '140400', '长子县');
+INSERT INTO `area` VALUES ('140429', '140400', '武乡县');
+INSERT INTO `area` VALUES ('140430', '140400', '沁县');
+INSERT INTO `area` VALUES ('140431', '140400', '沁源县');
+INSERT INTO `area` VALUES ('140481', '140400', '潞城市');
+INSERT INTO `area` VALUES ('140500', '140000', '晋城市');
+INSERT INTO `area` VALUES ('140502', '140500', '城区');
+INSERT INTO `area` VALUES ('140521', '140500', '沁水县');
+INSERT INTO `area` VALUES ('140522', '140500', '阳城县');
+INSERT INTO `area` VALUES ('140524', '140500', '陵川县');
+INSERT INTO `area` VALUES ('140525', '140500', '泽州县');
+INSERT INTO `area` VALUES ('140581', '140500', '高平市');
+INSERT INTO `area` VALUES ('140600', '140000', '朔州市');
+INSERT INTO `area` VALUES ('140602', '140600', '朔城区');
+INSERT INTO `area` VALUES ('140603', '140600', '平鲁区');
+INSERT INTO `area` VALUES ('140621', '140600', '山阴县');
+INSERT INTO `area` VALUES ('140622', '140600', '应县');
+INSERT INTO `area` VALUES ('140623', '140600', '右玉县');
+INSERT INTO `area` VALUES ('140624', '140600', '怀仁县');
+INSERT INTO `area` VALUES ('140700', '140000', '晋中市');
+INSERT INTO `area` VALUES ('140702', '140700', '榆次区');
+INSERT INTO `area` VALUES ('140721', '140700', '榆社县');
+INSERT INTO `area` VALUES ('140722', '140700', '左权县');
+INSERT INTO `area` VALUES ('140723', '140700', '和顺县');
+INSERT INTO `area` VALUES ('140724', '140700', '昔阳县');
+INSERT INTO `area` VALUES ('140725', '140700', '寿阳县');
+INSERT INTO `area` VALUES ('140726', '140700', '太谷县');
+INSERT INTO `area` VALUES ('140727', '140700', '祁县');
+INSERT INTO `area` VALUES ('140728', '140700', '平遥县');
+INSERT INTO `area` VALUES ('140729', '140700', '灵石县');
+INSERT INTO `area` VALUES ('140781', '140700', '介休市');
+INSERT INTO `area` VALUES ('140800', '140000', '运城市');
+INSERT INTO `area` VALUES ('140802', '140800', '盐湖区');
+INSERT INTO `area` VALUES ('140821', '140800', '临猗县');
+INSERT INTO `area` VALUES ('140822', '140800', '万荣县');
+INSERT INTO `area` VALUES ('140823', '140800', '闻喜县');
+INSERT INTO `area` VALUES ('140824', '140800', '稷山县');
+INSERT INTO `area` VALUES ('140825', '140800', '新绛县');
+INSERT INTO `area` VALUES ('140826', '140800', '绛县');
+INSERT INTO `area` VALUES ('140827', '140800', '垣曲县');
+INSERT INTO `area` VALUES ('140828', '140800', '夏县');
+INSERT INTO `area` VALUES ('140829', '140800', '平陆县');
+INSERT INTO `area` VALUES ('140830', '140800', '芮城县');
+INSERT INTO `area` VALUES ('140881', '140800', '永济市');
+INSERT INTO `area` VALUES ('140882', '140800', '河津市');
+INSERT INTO `area` VALUES ('140900', '140000', '忻州市');
+INSERT INTO `area` VALUES ('140902', '140900', '忻府区');
+INSERT INTO `area` VALUES ('140921', '140900', '定襄县');
+INSERT INTO `area` VALUES ('140922', '140900', '五台县');
+INSERT INTO `area` VALUES ('140923', '140900', '代县');
+INSERT INTO `area` VALUES ('140924', '140900', '繁峙县');
+INSERT INTO `area` VALUES ('140925', '140900', '宁武县');
+INSERT INTO `area` VALUES ('140926', '140900', '静乐县');
+INSERT INTO `area` VALUES ('140927', '140900', '神池县');
+INSERT INTO `area` VALUES ('140928', '140900', '五寨县');
+INSERT INTO `area` VALUES ('140929', '140900', '岢岚县');
+INSERT INTO `area` VALUES ('140930', '140900', '河曲县');
+INSERT INTO `area` VALUES ('140931', '140900', '保德县');
+INSERT INTO `area` VALUES ('140932', '140900', '偏关县');
+INSERT INTO `area` VALUES ('140981', '140900', '原平市');
+INSERT INTO `area` VALUES ('141000', '140000', '临汾市');
+INSERT INTO `area` VALUES ('141002', '141000', '尧都区');
+INSERT INTO `area` VALUES ('141021', '141000', '曲沃县');
+INSERT INTO `area` VALUES ('141022', '141000', '翼城县');
+INSERT INTO `area` VALUES ('141023', '141000', '襄汾县');
+INSERT INTO `area` VALUES ('141024', '141000', '洪洞县');
+INSERT INTO `area` VALUES ('141025', '141000', '古县');
+INSERT INTO `area` VALUES ('141026', '141000', '安泽县');
+INSERT INTO `area` VALUES ('141027', '141000', '浮山县');
+INSERT INTO `area` VALUES ('141028', '141000', '吉县');
+INSERT INTO `area` VALUES ('141029', '141000', '乡宁县');
+INSERT INTO `area` VALUES ('141030', '141000', '大宁县');
+INSERT INTO `area` VALUES ('141031', '141000', '隰县');
+INSERT INTO `area` VALUES ('141032', '141000', '永和县');
+INSERT INTO `area` VALUES ('141033', '141000', '蒲县');
+INSERT INTO `area` VALUES ('141034', '141000', '汾西县');
+INSERT INTO `area` VALUES ('141081', '141000', '侯马市');
+INSERT INTO `area` VALUES ('141082', '141000', '霍州市');
+INSERT INTO `area` VALUES ('141100', '140000', '吕梁市');
+INSERT INTO `area` VALUES ('141102', '141100', '离石区');
+INSERT INTO `area` VALUES ('141121', '141100', '文水县');
+INSERT INTO `area` VALUES ('141122', '141100', '交城县');
+INSERT INTO `area` VALUES ('141123', '141100', '兴县');
+INSERT INTO `area` VALUES ('141124', '141100', '临县');
+INSERT INTO `area` VALUES ('141125', '141100', '柳林县');
+INSERT INTO `area` VALUES ('141126', '141100', '石楼县');
+INSERT INTO `area` VALUES ('141127', '141100', '岚县');
+INSERT INTO `area` VALUES ('141128', '141100', '方山县');
+INSERT INTO `area` VALUES ('141129', '141100', '中阳县');
+INSERT INTO `area` VALUES ('141130', '141100', '交口县');
+INSERT INTO `area` VALUES ('141181', '141100', '孝义市');
+INSERT INTO `area` VALUES ('141182', '141100', '汾阳市');
+INSERT INTO `area` VALUES ('150000', '0', '内蒙古自治区');
+INSERT INTO `area` VALUES ('150100', '150000', '呼和浩特市');
+INSERT INTO `area` VALUES ('150102', '150100', '新城区');
+INSERT INTO `area` VALUES ('150103', '150100', '回民区');
+INSERT INTO `area` VALUES ('150104', '150100', '玉泉区');
+INSERT INTO `area` VALUES ('150105', '150100', '赛罕区');
+INSERT INTO `area` VALUES ('150121', '150100', '土默特左旗');
+INSERT INTO `area` VALUES ('150122', '150100', '托克托县');
+INSERT INTO `area` VALUES ('150123', '150100', '和林格尔县');
+INSERT INTO `area` VALUES ('150124', '150100', '清水河县');
+INSERT INTO `area` VALUES ('150125', '150100', '武川县');
+INSERT INTO `area` VALUES ('150200', '150000', '包头市');
+INSERT INTO `area` VALUES ('150202', '150200', '东河区');
+INSERT INTO `area` VALUES ('150203', '150200', '昆都仑区');
+INSERT INTO `area` VALUES ('150204', '150200', '青山区');
+INSERT INTO `area` VALUES ('150205', '150200', '石拐区');
+INSERT INTO `area` VALUES ('150206', '150200', '白云鄂博矿区');
+INSERT INTO `area` VALUES ('150207', '150200', '九原区');
+INSERT INTO `area` VALUES ('150221', '150200', '土默特右旗');
+INSERT INTO `area` VALUES ('150222', '150200', '固阳县');
+INSERT INTO `area` VALUES ('150223', '150200', '达尔罕茂明安联合旗');
+INSERT INTO `area` VALUES ('150300', '150000', '乌海市');
+INSERT INTO `area` VALUES ('150302', '150300', '海勃湾区');
+INSERT INTO `area` VALUES ('150303', '150300', '海南区');
+INSERT INTO `area` VALUES ('150304', '150300', '乌达区');
+INSERT INTO `area` VALUES ('150400', '150000', '赤峰市');
+INSERT INTO `area` VALUES ('150402', '150400', '红山区');
+INSERT INTO `area` VALUES ('150403', '150400', '元宝山区');
+INSERT INTO `area` VALUES ('150404', '150400', '松山区');
+INSERT INTO `area` VALUES ('150421', '150400', '阿鲁科尔沁旗');
+INSERT INTO `area` VALUES ('150422', '150400', '巴林左旗');
+INSERT INTO `area` VALUES ('150423', '150400', '巴林右旗');
+INSERT INTO `area` VALUES ('150424', '150400', '林西县');
+INSERT INTO `area` VALUES ('150425', '150400', '克什克腾旗');
+INSERT INTO `area` VALUES ('150426', '150400', '翁牛特旗');
+INSERT INTO `area` VALUES ('150428', '150400', '喀喇沁旗');
+INSERT INTO `area` VALUES ('150429', '150400', '宁城县');
+INSERT INTO `area` VALUES ('150430', '150400', '敖汉旗');
+INSERT INTO `area` VALUES ('150500', '150000', '通辽市');
+INSERT INTO `area` VALUES ('150502', '150500', '科尔沁区');
+INSERT INTO `area` VALUES ('150521', '150500', '科尔沁左翼中旗');
+INSERT INTO `area` VALUES ('150522', '150500', '科尔沁左翼后旗');
+INSERT INTO `area` VALUES ('150523', '150500', '开鲁县');
+INSERT INTO `area` VALUES ('150524', '150500', '库伦旗');
+INSERT INTO `area` VALUES ('150525', '150500', '奈曼旗');
+INSERT INTO `area` VALUES ('150526', '150500', '扎鲁特旗');
+INSERT INTO `area` VALUES ('150581', '150500', '霍林郭勒市');
+INSERT INTO `area` VALUES ('150600', '150000', '鄂尔多斯市');
+INSERT INTO `area` VALUES ('150602', '150600', '东胜区');
+INSERT INTO `area` VALUES ('150621', '150600', '达拉特旗');
+INSERT INTO `area` VALUES ('150622', '150600', '准格尔旗');
+INSERT INTO `area` VALUES ('150623', '150600', '鄂托克前旗');
+INSERT INTO `area` VALUES ('150624', '150600', '鄂托克旗');
+INSERT INTO `area` VALUES ('150625', '150600', '杭锦旗');
+INSERT INTO `area` VALUES ('150626', '150600', '乌审旗');
+INSERT INTO `area` VALUES ('150627', '150600', '伊金霍洛旗');
+INSERT INTO `area` VALUES ('150700', '150000', '呼伦贝尔市');
+INSERT INTO `area` VALUES ('150702', '150700', '海拉尔区');
+INSERT INTO `area` VALUES ('150721', '150700', '阿荣旗');
+INSERT INTO `area` VALUES ('150722', '150700', '莫力达瓦达斡尔族自治旗');
+INSERT INTO `area` VALUES ('150723', '150700', '鄂伦春自治旗');
+INSERT INTO `area` VALUES ('150724', '150700', '鄂温克族自治旗');
+INSERT INTO `area` VALUES ('150725', '150700', '陈巴尔虎旗');
+INSERT INTO `area` VALUES ('150726', '150700', '新巴尔虎左旗');
+INSERT INTO `area` VALUES ('150727', '150700', '新巴尔虎右旗');
+INSERT INTO `area` VALUES ('150781', '150700', '满洲里市');
+INSERT INTO `area` VALUES ('150782', '150700', '牙克石市');
+INSERT INTO `area` VALUES ('150783', '150700', '扎兰屯市');
+INSERT INTO `area` VALUES ('150784', '150700', '额尔古纳市');
+INSERT INTO `area` VALUES ('150785', '150700', '根河市');
+INSERT INTO `area` VALUES ('150800', '150000', '巴彦淖尔市');
+INSERT INTO `area` VALUES ('150802', '150800', '临河区');
+INSERT INTO `area` VALUES ('150821', '150800', '五原县');
+INSERT INTO `area` VALUES ('150822', '150800', '磴口县');
+INSERT INTO `area` VALUES ('150823', '150800', '乌拉特前旗');
+INSERT INTO `area` VALUES ('150824', '150800', '乌拉特中旗');
+INSERT INTO `area` VALUES ('150825', '150800', '乌拉特后旗');
+INSERT INTO `area` VALUES ('150826', '150800', '杭锦后旗');
+INSERT INTO `area` VALUES ('150900', '150000', '乌兰察布市');
+INSERT INTO `area` VALUES ('150902', '150900', '集宁区');
+INSERT INTO `area` VALUES ('150921', '150900', '卓资县');
+INSERT INTO `area` VALUES ('150922', '150900', '化德县');
+INSERT INTO `area` VALUES ('150923', '150900', '商都县');
+INSERT INTO `area` VALUES ('150924', '150900', '兴和县');
+INSERT INTO `area` VALUES ('150925', '150900', '凉城县');
+INSERT INTO `area` VALUES ('150926', '150900', '察哈尔右翼前旗');
+INSERT INTO `area` VALUES ('150927', '150900', '察哈尔右翼中旗');
+INSERT INTO `area` VALUES ('150928', '150900', '察哈尔右翼后旗');
+INSERT INTO `area` VALUES ('150929', '150900', '四子王旗');
+INSERT INTO `area` VALUES ('150981', '150900', '丰镇市');
+INSERT INTO `area` VALUES ('152200', '150000', '兴安盟');
+INSERT INTO `area` VALUES ('152201', '152200', '乌兰浩特市');
+INSERT INTO `area` VALUES ('152202', '152200', '阿尔山市');
+INSERT INTO `area` VALUES ('152221', '152200', '科尔沁右翼前旗');
+INSERT INTO `area` VALUES ('152222', '152200', '科尔沁右翼中旗');
+INSERT INTO `area` VALUES ('152223', '152200', '扎赉特旗');
+INSERT INTO `area` VALUES ('152224', '152200', '突泉县');
+INSERT INTO `area` VALUES ('152500', '150000', '锡林郭勒盟');
+INSERT INTO `area` VALUES ('152501', '152500', '二连浩特市');
+INSERT INTO `area` VALUES ('152502', '152500', '锡林浩特市');
+INSERT INTO `area` VALUES ('152522', '152500', '阿巴嘎旗');
+INSERT INTO `area` VALUES ('152523', '152500', '苏尼特左旗');
+INSERT INTO `area` VALUES ('152524', '152500', '苏尼特右旗');
+INSERT INTO `area` VALUES ('152525', '152500', '东乌珠穆沁旗');
+INSERT INTO `area` VALUES ('152526', '152500', '西乌珠穆沁旗');
+INSERT INTO `area` VALUES ('152527', '152500', '太仆寺旗');
+INSERT INTO `area` VALUES ('152528', '152500', '镶黄旗');
+INSERT INTO `area` VALUES ('152529', '152500', '正镶白旗');
+INSERT INTO `area` VALUES ('152530', '152500', '正蓝旗');
+INSERT INTO `area` VALUES ('152531', '152500', '多伦县');
+INSERT INTO `area` VALUES ('152900', '150000', '阿拉善盟');
+INSERT INTO `area` VALUES ('152921', '152900', '阿拉善左旗');
+INSERT INTO `area` VALUES ('152922', '152900', '阿拉善右旗');
+INSERT INTO `area` VALUES ('152923', '152900', '额济纳旗');
+INSERT INTO `area` VALUES ('210000', '0', '辽宁省');
+INSERT INTO `area` VALUES ('210100', '210000', '沈阳市');
+INSERT INTO `area` VALUES ('210102', '210100', '和平区');
+INSERT INTO `area` VALUES ('210103', '210100', '沈河区');
+INSERT INTO `area` VALUES ('210104', '210100', '大东区');
+INSERT INTO `area` VALUES ('210105', '210100', '皇姑区');
+INSERT INTO `area` VALUES ('210106', '210100', '铁西区');
+INSERT INTO `area` VALUES ('210111', '210100', '苏家屯区');
+INSERT INTO `area` VALUES ('210112', '210100', '东陵区');
+INSERT INTO `area` VALUES ('210113', '210100', '沈北新区');
+INSERT INTO `area` VALUES ('210114', '210100', '于洪区');
+INSERT INTO `area` VALUES ('210122', '210100', '辽中县');
+INSERT INTO `area` VALUES ('210123', '210100', '康平县');
+INSERT INTO `area` VALUES ('210124', '210100', '法库县');
+INSERT INTO `area` VALUES ('210181', '210100', '新民市');
+INSERT INTO `area` VALUES ('210200', '210000', '大连市');
+INSERT INTO `area` VALUES ('210202', '210200', '中山区');
+INSERT INTO `area` VALUES ('210203', '210200', '西岗区');
+INSERT INTO `area` VALUES ('210204', '210200', '沙河口区');
+INSERT INTO `area` VALUES ('210211', '210200', '甘井子区');
+INSERT INTO `area` VALUES ('210212', '210200', '旅顺口区');
+INSERT INTO `area` VALUES ('210213', '210200', '金州区');
+INSERT INTO `area` VALUES ('210224', '210200', '长海县');
+INSERT INTO `area` VALUES ('210281', '210200', '瓦房店市');
+INSERT INTO `area` VALUES ('210282', '210200', '普兰店市');
+INSERT INTO `area` VALUES ('210283', '210200', '庄河市');
+INSERT INTO `area` VALUES ('210300', '210000', '鞍山市');
+INSERT INTO `area` VALUES ('210302', '210300', '铁东区');
+INSERT INTO `area` VALUES ('210303', '210300', '铁西区');
+INSERT INTO `area` VALUES ('210304', '210300', '立山区');
+INSERT INTO `area` VALUES ('210311', '210300', '千山区');
+INSERT INTO `area` VALUES ('210321', '210300', '台安县');
+INSERT INTO `area` VALUES ('210323', '210300', '岫岩满族自治县');
+INSERT INTO `area` VALUES ('210381', '210300', '海城市');
+INSERT INTO `area` VALUES ('210400', '210000', '抚顺市');
+INSERT INTO `area` VALUES ('210402', '210400', '新抚区');
+INSERT INTO `area` VALUES ('210403', '210400', '东洲区');
+INSERT INTO `area` VALUES ('210404', '210400', '望花区');
+INSERT INTO `area` VALUES ('210411', '210400', '顺城区');
+INSERT INTO `area` VALUES ('210421', '210400', '抚顺县');
+INSERT INTO `area` VALUES ('210422', '210400', '新宾满族自治县');
+INSERT INTO `area` VALUES ('210423', '210400', '清原满族自治县');
+INSERT INTO `area` VALUES ('210500', '210000', '本溪市');
+INSERT INTO `area` VALUES ('210502', '210500', '平山区');
+INSERT INTO `area` VALUES ('210503', '210500', '溪湖区');
+INSERT INTO `area` VALUES ('210504', '210500', '明山区');
+INSERT INTO `area` VALUES ('210505', '210500', '南芬区');
+INSERT INTO `area` VALUES ('210521', '210500', '本溪满族自治县');
+INSERT INTO `area` VALUES ('210522', '210500', '桓仁满族自治县');
+INSERT INTO `area` VALUES ('210600', '210000', '丹东市');
+INSERT INTO `area` VALUES ('210602', '210600', '元宝区');
+INSERT INTO `area` VALUES ('210603', '210600', '振兴区');
+INSERT INTO `area` VALUES ('210604', '210600', '振安区');
+INSERT INTO `area` VALUES ('210624', '210600', '宽甸满族自治县');
+INSERT INTO `area` VALUES ('210681', '210600', '东港市');
+INSERT INTO `area` VALUES ('210682', '210600', '凤城市');
+INSERT INTO `area` VALUES ('210700', '210000', '锦州市');
+INSERT INTO `area` VALUES ('210702', '210700', '古塔区');
+INSERT INTO `area` VALUES ('210703', '210700', '凌河区');
+INSERT INTO `area` VALUES ('210711', '210700', '太和区');
+INSERT INTO `area` VALUES ('210726', '210700', '黑山县');
+INSERT INTO `area` VALUES ('210727', '210700', '义县');
+INSERT INTO `area` VALUES ('210781', '210700', '凌海市');
+INSERT INTO `area` VALUES ('210782', '210700', '北镇市');
+INSERT INTO `area` VALUES ('210800', '210000', '营口市');
+INSERT INTO `area` VALUES ('210802', '210800', '站前区');
+INSERT INTO `area` VALUES ('210803', '210800', '西市区');
+INSERT INTO `area` VALUES ('210804', '210800', '鲅鱼圈区');
+INSERT INTO `area` VALUES ('210811', '210800', '老边区');
+INSERT INTO `area` VALUES ('210881', '210800', '盖州市');
+INSERT INTO `area` VALUES ('210882', '210800', '大石桥市');
+INSERT INTO `area` VALUES ('210900', '210000', '阜新市');
+INSERT INTO `area` VALUES ('210902', '210900', '海州区');
+INSERT INTO `area` VALUES ('210903', '210900', '新邱区');
+INSERT INTO `area` VALUES ('210904', '210900', '太平区');
+INSERT INTO `area` VALUES ('210905', '210900', '清河门区');
+INSERT INTO `area` VALUES ('210911', '210900', '细河区');
+INSERT INTO `area` VALUES ('210921', '210900', '阜新蒙古族自治县');
+INSERT INTO `area` VALUES ('210922', '210900', '彰武县');
+INSERT INTO `area` VALUES ('211000', '210000', '辽阳市');
+INSERT INTO `area` VALUES ('211002', '211000', '白塔区');
+INSERT INTO `area` VALUES ('211003', '211000', '文圣区');
+INSERT INTO `area` VALUES ('211004', '211000', '宏伟区');
+INSERT INTO `area` VALUES ('211005', '211000', '弓长岭区');
+INSERT INTO `area` VALUES ('211011', '211000', '太子河区');
+INSERT INTO `area` VALUES ('211021', '211000', '辽阳县');
+INSERT INTO `area` VALUES ('211081', '211000', '灯塔市');
+INSERT INTO `area` VALUES ('211100', '210000', '盘锦市');
+INSERT INTO `area` VALUES ('211102', '211100', '双台子区');
+INSERT INTO `area` VALUES ('211103', '211100', '兴隆台区');
+INSERT INTO `area` VALUES ('211121', '211100', '大洼县');
+INSERT INTO `area` VALUES ('211122', '211100', '盘山县');
+INSERT INTO `area` VALUES ('211200', '210000', '铁岭市');
+INSERT INTO `area` VALUES ('211202', '211200', '银州区');
+INSERT INTO `area` VALUES ('211204', '211200', '清河区');
+INSERT INTO `area` VALUES ('211221', '211200', '铁岭县');
+INSERT INTO `area` VALUES ('211223', '211200', '西丰县');
+INSERT INTO `area` VALUES ('211224', '211200', '昌图县');
+INSERT INTO `area` VALUES ('211281', '211200', '调兵山市');
+INSERT INTO `area` VALUES ('211282', '211200', '开原市');
+INSERT INTO `area` VALUES ('211300', '210000', '朝阳市');
+INSERT INTO `area` VALUES ('211302', '211300', '双塔区');
+INSERT INTO `area` VALUES ('211303', '211300', '龙城区');
+INSERT INTO `area` VALUES ('211321', '211300', '朝阳县');
+INSERT INTO `area` VALUES ('211322', '211300', '建平县');
+INSERT INTO `area` VALUES ('211324', '211300', '喀喇沁左翼蒙古族自治县');
+INSERT INTO `area` VALUES ('211381', '211300', '北票市');
+INSERT INTO `area` VALUES ('211382', '211300', '凌源市');
+INSERT INTO `area` VALUES ('211400', '210000', '葫芦岛市');
+INSERT INTO `area` VALUES ('211402', '211400', '连山区');
+INSERT INTO `area` VALUES ('211403', '211400', '龙港区');
+INSERT INTO `area` VALUES ('211404', '211400', '南票区');
+INSERT INTO `area` VALUES ('211421', '211400', '绥中县');
+INSERT INTO `area` VALUES ('211422', '211400', '建昌县');
+INSERT INTO `area` VALUES ('211481', '211400', '兴城市');
+INSERT INTO `area` VALUES ('220000', '0', '吉林省');
+INSERT INTO `area` VALUES ('220100', '220000', '长春市');
+INSERT INTO `area` VALUES ('220102', '220100', '南关区');
+INSERT INTO `area` VALUES ('220103', '220100', '宽城区');
+INSERT INTO `area` VALUES ('220104', '220100', '朝阳区');
+INSERT INTO `area` VALUES ('220105', '220100', '二道区');
+INSERT INTO `area` VALUES ('220106', '220100', '绿园区');
+INSERT INTO `area` VALUES ('220112', '220100', '双阳区');
+INSERT INTO `area` VALUES ('220122', '220100', '农安县');
+INSERT INTO `area` VALUES ('220181', '220100', '九台市');
+INSERT INTO `area` VALUES ('220182', '220100', '榆树市');
+INSERT INTO `area` VALUES ('220183', '220100', '德惠市');
+INSERT INTO `area` VALUES ('220200', '220000', '吉林市');
+INSERT INTO `area` VALUES ('220202', '220200', '昌邑区');
+INSERT INTO `area` VALUES ('220203', '220200', '龙潭区');
+INSERT INTO `area` VALUES ('220204', '220200', '船营区');
+INSERT INTO `area` VALUES ('220211', '220200', '丰满区');
+INSERT INTO `area` VALUES ('220221', '220200', '永吉县');
+INSERT INTO `area` VALUES ('220281', '220200', '蛟河市');
+INSERT INTO `area` VALUES ('220282', '220200', '桦甸市');
+INSERT INTO `area` VALUES ('220283', '220200', '舒兰市');
+INSERT INTO `area` VALUES ('220284', '220200', '磐石市');
+INSERT INTO `area` VALUES ('220300', '220000', '四平市');
+INSERT INTO `area` VALUES ('220302', '220300', '铁西区');
+INSERT INTO `area` VALUES ('220303', '220300', '铁东区');
+INSERT INTO `area` VALUES ('220322', '220300', '梨树县');
+INSERT INTO `area` VALUES ('220323', '220300', '伊通满族自治县');
+INSERT INTO `area` VALUES ('220381', '220300', '公主岭市');
+INSERT INTO `area` VALUES ('220382', '220300', '双辽市');
+INSERT INTO `area` VALUES ('220400', '220000', '辽源市');
+INSERT INTO `area` VALUES ('220402', '220400', '龙山区');
+INSERT INTO `area` VALUES ('220403', '220400', '西安区');
+INSERT INTO `area` VALUES ('220421', '220400', '东丰县');
+INSERT INTO `area` VALUES ('220422', '220400', '东辽县');
+INSERT INTO `area` VALUES ('220500', '220000', '通化市');
+INSERT INTO `area` VALUES ('220502', '220500', '东昌区');
+INSERT INTO `area` VALUES ('220503', '220500', '二道江区');
+INSERT INTO `area` VALUES ('220521', '220500', '通化县');
+INSERT INTO `area` VALUES ('220523', '220500', '辉南县');
+INSERT INTO `area` VALUES ('220524', '220500', '柳河县');
+INSERT INTO `area` VALUES ('220581', '220500', '梅河口市');
+INSERT INTO `area` VALUES ('220582', '220500', '集安市');
+INSERT INTO `area` VALUES ('220600', '220000', '白山市');
+INSERT INTO `area` VALUES ('220602', '220600', '八道江区');
+INSERT INTO `area` VALUES ('220605', '220600', '江源区');
+INSERT INTO `area` VALUES ('220621', '220600', '抚松县');
+INSERT INTO `area` VALUES ('220622', '220600', '靖宇县');
+INSERT INTO `area` VALUES ('220623', '220600', '长白朝鲜族自治县');
+INSERT INTO `area` VALUES ('220681', '220600', '临江市');
+INSERT INTO `area` VALUES ('220700', '220000', '松原市');
+INSERT INTO `area` VALUES ('220702', '220700', '宁江区');
+INSERT INTO `area` VALUES ('220721', '220700', '前郭尔罗斯蒙古族自治县');
+INSERT INTO `area` VALUES ('220722', '220700', '长岭县');
+INSERT INTO `area` VALUES ('220723', '220700', '乾安县');
+INSERT INTO `area` VALUES ('220724', '220700', '扶余县');
+INSERT INTO `area` VALUES ('220800', '220000', '白城市');
+INSERT INTO `area` VALUES ('220802', '220800', '洮北区');
+INSERT INTO `area` VALUES ('220821', '220800', '镇赉县');
+INSERT INTO `area` VALUES ('220822', '220800', '通榆县');
+INSERT INTO `area` VALUES ('220881', '220800', '洮南市');
+INSERT INTO `area` VALUES ('220882', '220800', '大安市');
+INSERT INTO `area` VALUES ('222400', '220000', '延边朝鲜族自治州');
+INSERT INTO `area` VALUES ('222401', '222400', '延吉市');
+INSERT INTO `area` VALUES ('222402', '222400', '图们市');
+INSERT INTO `area` VALUES ('222403', '222400', '敦化市');
+INSERT INTO `area` VALUES ('222404', '222400', '珲春市');
+INSERT INTO `area` VALUES ('222405', '222400', '龙井市');
+INSERT INTO `area` VALUES ('222406', '222400', '和龙市');
+INSERT INTO `area` VALUES ('222424', '222400', '汪清县');
+INSERT INTO `area` VALUES ('222426', '222400', '安图县');
+INSERT INTO `area` VALUES ('230000', '0', '黑龙江省');
+INSERT INTO `area` VALUES ('230100', '230000', '哈尔滨市');
+INSERT INTO `area` VALUES ('230102', '230100', '道里区');
+INSERT INTO `area` VALUES ('230103', '230100', '南岗区');
+INSERT INTO `area` VALUES ('230104', '230100', '道外区');
+INSERT INTO `area` VALUES ('230108', '230100', '平房区');
+INSERT INTO `area` VALUES ('230109', '230100', '松北区');
+INSERT INTO `area` VALUES ('230110', '230100', '香坊区');
+INSERT INTO `area` VALUES ('230111', '230100', '呼兰区');
+INSERT INTO `area` VALUES ('230112', '230100', '阿城区');
+INSERT INTO `area` VALUES ('230123', '230100', '依兰县');
+INSERT INTO `area` VALUES ('230124', '230100', '方正县');
+INSERT INTO `area` VALUES ('230125', '230100', '宾县');
+INSERT INTO `area` VALUES ('230126', '230100', '巴彦县');
+INSERT INTO `area` VALUES ('230127', '230100', '木兰县');
+INSERT INTO `area` VALUES ('230128', '230100', '通河县');
+INSERT INTO `area` VALUES ('230129', '230100', '延寿县');
+INSERT INTO `area` VALUES ('230182', '230100', '双城市');
+INSERT INTO `area` VALUES ('230183', '230100', '尚志市');
+INSERT INTO `area` VALUES ('230184', '230100', '五常市');
+INSERT INTO `area` VALUES ('230200', '230000', '齐齐哈尔市');
+INSERT INTO `area` VALUES ('230202', '230200', '龙沙区');
+INSERT INTO `area` VALUES ('230203', '230200', '建华区');
+INSERT INTO `area` VALUES ('230204', '230200', '铁锋区');
+INSERT INTO `area` VALUES ('230205', '230200', '昂昂溪区');
+INSERT INTO `area` VALUES ('230206', '230200', '富拉尔基区');
+INSERT INTO `area` VALUES ('230207', '230200', '碾子山区');
+INSERT INTO `area` VALUES ('230208', '230200', '梅里斯达斡尔族区');
+INSERT INTO `area` VALUES ('230221', '230200', '龙江县');
+INSERT INTO `area` VALUES ('230223', '230200', '依安县');
+INSERT INTO `area` VALUES ('230224', '230200', '泰来县');
+INSERT INTO `area` VALUES ('230225', '230200', '甘南县');
+INSERT INTO `area` VALUES ('230227', '230200', '富裕县');
+INSERT INTO `area` VALUES ('230229', '230200', '克山县');
+INSERT INTO `area` VALUES ('230230', '230200', '克东县');
+INSERT INTO `area` VALUES ('230231', '230200', '拜泉县');
+INSERT INTO `area` VALUES ('230281', '230200', '讷河市');
+INSERT INTO `area` VALUES ('230300', '230000', '鸡西市');
+INSERT INTO `area` VALUES ('230302', '230300', '鸡冠区');
+INSERT INTO `area` VALUES ('230303', '230300', '恒山区');
+INSERT INTO `area` VALUES ('230304', '230300', '滴道区');
+INSERT INTO `area` VALUES ('230305', '230300', '梨树区');
+INSERT INTO `area` VALUES ('230306', '230300', '城子河区');
+INSERT INTO `area` VALUES ('230307', '230300', '麻山区');
+INSERT INTO `area` VALUES ('230321', '230300', '鸡东县');
+INSERT INTO `area` VALUES ('230381', '230300', '虎林市');
+INSERT INTO `area` VALUES ('230382', '230300', '密山市');
+INSERT INTO `area` VALUES ('230400', '230000', '鹤岗市');
+INSERT INTO `area` VALUES ('230402', '230400', '向阳区');
+INSERT INTO `area` VALUES ('230403', '230400', '工农区');
+INSERT INTO `area` VALUES ('230404', '230400', '南山区');
+INSERT INTO `area` VALUES ('230405', '230400', '兴安区');
+INSERT INTO `area` VALUES ('230406', '230400', '东山区');
+INSERT INTO `area` VALUES ('230407', '230400', '兴山区');
+INSERT INTO `area` VALUES ('230421', '230400', '萝北县');
+INSERT INTO `area` VALUES ('230422', '230400', '绥滨县');
+INSERT INTO `area` VALUES ('230500', '230000', '双鸭山市');
+INSERT INTO `area` VALUES ('230502', '230500', '尖山区');
+INSERT INTO `area` VALUES ('230503', '230500', '岭东区');
+INSERT INTO `area` VALUES ('230505', '230500', '四方台区');
+INSERT INTO `area` VALUES ('230506', '230500', '宝山区');
+INSERT INTO `area` VALUES ('230521', '230500', '集贤县');
+INSERT INTO `area` VALUES ('230522', '230500', '友谊县');
+INSERT INTO `area` VALUES ('230523', '230500', '宝清县');
+INSERT INTO `area` VALUES ('230524', '230500', '饶河县');
+INSERT INTO `area` VALUES ('230600', '230000', '大庆市');
+INSERT INTO `area` VALUES ('230602', '230600', '萨尔图区');
+INSERT INTO `area` VALUES ('230603', '230600', '龙凤区');
+INSERT INTO `area` VALUES ('230604', '230600', '让胡路区');
+INSERT INTO `area` VALUES ('230605', '230600', '红岗区');
+INSERT INTO `area` VALUES ('230606', '230600', '大同区');
+INSERT INTO `area` VALUES ('230621', '230600', '肇州县');
+INSERT INTO `area` VALUES ('230622', '230600', '肇源县');
+INSERT INTO `area` VALUES ('230623', '230600', '林甸县');
+INSERT INTO `area` VALUES ('230624', '230600', '杜尔伯特蒙古族自治县');
+INSERT INTO `area` VALUES ('230700', '230000', '伊春市');
+INSERT INTO `area` VALUES ('230702', '230700', '伊春区');
+INSERT INTO `area` VALUES ('230703', '230700', '南岔区');
+INSERT INTO `area` VALUES ('230704', '230700', '友好区');
+INSERT INTO `area` VALUES ('230705', '230700', '西林区');
+INSERT INTO `area` VALUES ('230706', '230700', '翠峦区');
+INSERT INTO `area` VALUES ('230707', '230700', '新青区');
+INSERT INTO `area` VALUES ('230708', '230700', '美溪区');
+INSERT INTO `area` VALUES ('230709', '230700', '金山屯区');
+INSERT INTO `area` VALUES ('230710', '230700', '五营区');
+INSERT INTO `area` VALUES ('230711', '230700', '乌马河区');
+INSERT INTO `area` VALUES ('230712', '230700', '汤旺河区');
+INSERT INTO `area` VALUES ('230713', '230700', '带岭区');
+INSERT INTO `area` VALUES ('230714', '230700', '乌伊岭区');
+INSERT INTO `area` VALUES ('230715', '230700', '红星区');
+INSERT INTO `area` VALUES ('230716', '230700', '上甘岭区');
+INSERT INTO `area` VALUES ('230722', '230700', '嘉荫县');
+INSERT INTO `area` VALUES ('230781', '230700', '铁力市');
+INSERT INTO `area` VALUES ('230800', '230000', '佳木斯市');
+INSERT INTO `area` VALUES ('230803', '230800', '向阳区');
+INSERT INTO `area` VALUES ('230804', '230800', '前进区');
+INSERT INTO `area` VALUES ('230805', '230800', '东风区');
+INSERT INTO `area` VALUES ('230811', '230800', '郊区');
+INSERT INTO `area` VALUES ('230822', '230800', '桦南县');
+INSERT INTO `area` VALUES ('230826', '230800', '桦川县');
+INSERT INTO `area` VALUES ('230828', '230800', '汤原县');
+INSERT INTO `area` VALUES ('230833', '230800', '抚远县');
+INSERT INTO `area` VALUES ('230881', '230800', '同江市');
+INSERT INTO `area` VALUES ('230882', '230800', '富锦市');
+INSERT INTO `area` VALUES ('230900', '230000', '七台河市');
+INSERT INTO `area` VALUES ('230902', '230900', '新兴区');
+INSERT INTO `area` VALUES ('230903', '230900', '桃山区');
+INSERT INTO `area` VALUES ('230904', '230900', '茄子河区');
+INSERT INTO `area` VALUES ('230921', '230900', '勃利县');
+INSERT INTO `area` VALUES ('231000', '230000', '牡丹江市');
+INSERT INTO `area` VALUES ('231002', '231000', '东安区');
+INSERT INTO `area` VALUES ('231003', '231000', '阳明区');
+INSERT INTO `area` VALUES ('231004', '231000', '爱民区');
+INSERT INTO `area` VALUES ('231005', '231000', '西安区');
+INSERT INTO `area` VALUES ('231024', '231000', '东宁县');
+INSERT INTO `area` VALUES ('231025', '231000', '林口县');
+INSERT INTO `area` VALUES ('231081', '231000', '绥芬河市');
+INSERT INTO `area` VALUES ('231083', '231000', '海林市');
+INSERT INTO `area` VALUES ('231084', '231000', '宁安市');
+INSERT INTO `area` VALUES ('231085', '231000', '穆棱市');
+INSERT INTO `area` VALUES ('231100', '230000', '黑河市');
+INSERT INTO `area` VALUES ('231102', '231100', '爱辉区');
+INSERT INTO `area` VALUES ('231121', '231100', '嫩江县');
+INSERT INTO `area` VALUES ('231123', '231100', '逊克县');
+INSERT INTO `area` VALUES ('231124', '231100', '孙吴县');
+INSERT INTO `area` VALUES ('231181', '231100', '北安市');
+INSERT INTO `area` VALUES ('231182', '231100', '五大连池市');
+INSERT INTO `area` VALUES ('231200', '230000', '绥化市');
+INSERT INTO `area` VALUES ('231202', '231200', '北林区');
+INSERT INTO `area` VALUES ('231221', '231200', '望奎县');
+INSERT INTO `area` VALUES ('231222', '231200', '兰西县');
+INSERT INTO `area` VALUES ('231223', '231200', '青冈县');
+INSERT INTO `area` VALUES ('231224', '231200', '庆安县');
+INSERT INTO `area` VALUES ('231225', '231200', '明水县');
+INSERT INTO `area` VALUES ('231226', '231200', '绥棱县');
+INSERT INTO `area` VALUES ('231281', '231200', '安达市');
+INSERT INTO `area` VALUES ('231282', '231200', '肇东市');
+INSERT INTO `area` VALUES ('231283', '231200', '海伦市');
+INSERT INTO `area` VALUES ('232700', '230000', '大兴安岭地区');
+INSERT INTO `area` VALUES ('232701', '232700', '加格达奇区');
+INSERT INTO `area` VALUES ('232702', '232700', '松岭区');
+INSERT INTO `area` VALUES ('232703', '232700', '新林区');
+INSERT INTO `area` VALUES ('232704', '232700', '呼中区');
+INSERT INTO `area` VALUES ('232721', '232700', '呼玛县');
+INSERT INTO `area` VALUES ('232722', '232700', '塔河县');
+INSERT INTO `area` VALUES ('232723', '232700', '漠河县');
+INSERT INTO `area` VALUES ('310000', '0', '上海市');
+INSERT INTO `area` VALUES ('310100', '310000', '市辖区');
+INSERT INTO `area` VALUES ('310101', '310100', '黄浦区');
+INSERT INTO `area` VALUES ('310104', '310100', '徐汇区');
+INSERT INTO `area` VALUES ('310105', '310100', '长宁区');
+INSERT INTO `area` VALUES ('310106', '310100', '静安区');
+INSERT INTO `area` VALUES ('310107', '310100', '普陀区');
+INSERT INTO `area` VALUES ('310108', '310100', '闸北区');
+INSERT INTO `area` VALUES ('310109', '310100', '虹口区');
+INSERT INTO `area` VALUES ('310110', '310100', '杨浦区');
+INSERT INTO `area` VALUES ('310112', '310100', '闵行区');
+INSERT INTO `area` VALUES ('310113', '310100', '宝山区');
+INSERT INTO `area` VALUES ('310114', '310100', '嘉定区');
+INSERT INTO `area` VALUES ('310115', '310100', '浦东新区');
+INSERT INTO `area` VALUES ('310116', '310100', '金山区');
+INSERT INTO `area` VALUES ('310117', '310100', '松江区');
+INSERT INTO `area` VALUES ('310118', '310100', '青浦区');
+INSERT INTO `area` VALUES ('310120', '310100', '奉贤区');
+INSERT INTO `area` VALUES ('310200', '310000', '县');
+INSERT INTO `area` VALUES ('310230', '310200', '崇明县');
+INSERT INTO `area` VALUES ('320000', '0', '江苏省');
+INSERT INTO `area` VALUES ('320100', '320000', '南京市');
+INSERT INTO `area` VALUES ('320102', '320100', '玄武区');
+INSERT INTO `area` VALUES ('320103', '320100', '白下区');
+INSERT INTO `area` VALUES ('320104', '320100', '秦淮区');
+INSERT INTO `area` VALUES ('320105', '320100', '建邺区');
+INSERT INTO `area` VALUES ('320106', '320100', '鼓楼区');
+INSERT INTO `area` VALUES ('320107', '320100', '下关区');
+INSERT INTO `area` VALUES ('320111', '320100', '浦口区');
+INSERT INTO `area` VALUES ('320113', '320100', '栖霞区');
+INSERT INTO `area` VALUES ('320114', '320100', '雨花台区');
+INSERT INTO `area` VALUES ('320115', '320100', '江宁区');
+INSERT INTO `area` VALUES ('320116', '320100', '六合区');
+INSERT INTO `area` VALUES ('320124', '320100', '溧水县');
+INSERT INTO `area` VALUES ('320125', '320100', '高淳县');
+INSERT INTO `area` VALUES ('320200', '320000', '无锡市');
+INSERT INTO `area` VALUES ('320202', '320200', '崇安区');
+INSERT INTO `area` VALUES ('320203', '320200', '南长区');
+INSERT INTO `area` VALUES ('320204', '320200', '北塘区');
+INSERT INTO `area` VALUES ('320205', '320200', '锡山区');
+INSERT INTO `area` VALUES ('320206', '320200', '惠山区');
+INSERT INTO `area` VALUES ('320211', '320200', '滨湖区');
+INSERT INTO `area` VALUES ('320281', '320200', '江阴市');
+INSERT INTO `area` VALUES ('320282', '320200', '宜兴市');
+INSERT INTO `area` VALUES ('320300', '320000', '徐州市');
+INSERT INTO `area` VALUES ('320302', '320300', '鼓楼区');
+INSERT INTO `area` VALUES ('320303', '320300', '云龙区');
+INSERT INTO `area` VALUES ('320305', '320300', '贾汪区');
+INSERT INTO `area` VALUES ('320311', '320300', '泉山区');
+INSERT INTO `area` VALUES ('320312', '320300', '铜山区');
+INSERT INTO `area` VALUES ('320321', '320300', '丰县');
+INSERT INTO `area` VALUES ('320322', '320300', '沛县');
+INSERT INTO `area` VALUES ('320324', '320300', '睢宁县');
+INSERT INTO `area` VALUES ('320381', '320300', '新沂市');
+INSERT INTO `area` VALUES ('320382', '320300', '邳州市');
+INSERT INTO `area` VALUES ('320400', '320000', '常州市');
+INSERT INTO `area` VALUES ('320402', '320400', '天宁区');
+INSERT INTO `area` VALUES ('320404', '320400', '钟楼区');
+INSERT INTO `area` VALUES ('320405', '320400', '戚墅堰区');
+INSERT INTO `area` VALUES ('320411', '320400', '新北区');
+INSERT INTO `area` VALUES ('320412', '320400', '武进区');
+INSERT INTO `area` VALUES ('320481', '320400', '溧阳市');
+INSERT INTO `area` VALUES ('320482', '320400', '金坛市');
+INSERT INTO `area` VALUES ('320500', '320000', '苏州市');
+INSERT INTO `area` VALUES ('320502', '320500', '沧浪区');
+INSERT INTO `area` VALUES ('320503', '320500', '平江区');
+INSERT INTO `area` VALUES ('320504', '320500', '金阊区');
+INSERT INTO `area` VALUES ('320505', '320500', '虎丘区');
+INSERT INTO `area` VALUES ('320506', '320500', '吴中区');
+INSERT INTO `area` VALUES ('320507', '320500', '相城区');
+INSERT INTO `area` VALUES ('320581', '320500', '常熟市');
+INSERT INTO `area` VALUES ('320582', '320500', '张家港市');
+INSERT INTO `area` VALUES ('320583', '320500', '昆山市');
+INSERT INTO `area` VALUES ('320584', '320500', '吴江市');
+INSERT INTO `area` VALUES ('320585', '320500', '太仓市');
+INSERT INTO `area` VALUES ('320600', '320000', '南通市');
+INSERT INTO `area` VALUES ('320602', '320600', '崇川区');
+INSERT INTO `area` VALUES ('320611', '320600', '港闸区');
+INSERT INTO `area` VALUES ('320612', '320600', '通州区');
+INSERT INTO `area` VALUES ('320621', '320600', '海安县');
+INSERT INTO `area` VALUES ('320623', '320600', '如东县');
+INSERT INTO `area` VALUES ('320681', '320600', '启东市');
+INSERT INTO `area` VALUES ('320682', '320600', '如皋市');
+INSERT INTO `area` VALUES ('320684', '320600', '海门市');
+INSERT INTO `area` VALUES ('320700', '320000', '连云港市');
+INSERT INTO `area` VALUES ('320703', '320700', '连云区');
+INSERT INTO `area` VALUES ('320705', '320700', '新浦区');
+INSERT INTO `area` VALUES ('320706', '320700', '海州区');
+INSERT INTO `area` VALUES ('320721', '320700', '赣榆县');
+INSERT INTO `area` VALUES ('320722', '320700', '东海县');
+INSERT INTO `area` VALUES ('320723', '320700', '灌云县');
+INSERT INTO `area` VALUES ('320724', '320700', '灌南县');
+INSERT INTO `area` VALUES ('320800', '320000', '淮安市');
+INSERT INTO `area` VALUES ('320802', '320800', '清河区');
+INSERT INTO `area` VALUES ('320803', '320800', '楚州区');
+INSERT INTO `area` VALUES ('320804', '320800', '淮阴区');
+INSERT INTO `area` VALUES ('320811', '320800', '清浦区');
+INSERT INTO `area` VALUES ('320826', '320800', '涟水县');
+INSERT INTO `area` VALUES ('320829', '320800', '洪泽县');
+INSERT INTO `area` VALUES ('320830', '320800', '盱眙县');
+INSERT INTO `area` VALUES ('320831', '320800', '金湖县');
+INSERT INTO `area` VALUES ('320900', '320000', '盐城市');
+INSERT INTO `area` VALUES ('320902', '320900', '亭湖区');
+INSERT INTO `area` VALUES ('320903', '320900', '盐都区');
+INSERT INTO `area` VALUES ('320921', '320900', '响水县');
+INSERT INTO `area` VALUES ('320922', '320900', '滨海县');
+INSERT INTO `area` VALUES ('320923', '320900', '阜宁县');
+INSERT INTO `area` VALUES ('320924', '320900', '射阳县');
+INSERT INTO `area` VALUES ('320925', '320900', '建湖县');
+INSERT INTO `area` VALUES ('320981', '320900', '东台市');
+INSERT INTO `area` VALUES ('320982', '320900', '大丰市');
+INSERT INTO `area` VALUES ('321000', '320000', '扬州市');
+INSERT INTO `area` VALUES ('321002', '321000', '广陵区');
+INSERT INTO `area` VALUES ('321003', '321000', '邗江区');
+INSERT INTO `area` VALUES ('321012', '321000', '江都区');
+INSERT INTO `area` VALUES ('321023', '321000', '宝应县');
+INSERT INTO `area` VALUES ('321081', '321000', '仪征市');
+INSERT INTO `area` VALUES ('321084', '321000', '高邮市');
+INSERT INTO `area` VALUES ('321100', '320000', '镇江市');
+INSERT INTO `area` VALUES ('321102', '321100', '京口区');
+INSERT INTO `area` VALUES ('321111', '321100', '润州区');
+INSERT INTO `area` VALUES ('321112', '321100', '丹徒区');
+INSERT INTO `area` VALUES ('321181', '321100', '丹阳市');
+INSERT INTO `area` VALUES ('321182', '321100', '扬中市');
+INSERT INTO `area` VALUES ('321183', '321100', '句容市');
+INSERT INTO `area` VALUES ('321200', '320000', '泰州市');
+INSERT INTO `area` VALUES ('321202', '321200', '海陵区');
+INSERT INTO `area` VALUES ('321203', '321200', '高港区');
+INSERT INTO `area` VALUES ('321281', '321200', '兴化市');
+INSERT INTO `area` VALUES ('321282', '321200', '靖江市');
+INSERT INTO `area` VALUES ('321283', '321200', '泰兴市');
+INSERT INTO `area` VALUES ('321284', '321200', '姜堰市');
+INSERT INTO `area` VALUES ('321300', '320000', '宿迁市');
+INSERT INTO `area` VALUES ('321302', '321300', '宿城区');
+INSERT INTO `area` VALUES ('321311', '321300', '宿豫区');
+INSERT INTO `area` VALUES ('321322', '321300', '沭阳县');
+INSERT INTO `area` VALUES ('321323', '321300', '泗阳县');
+INSERT INTO `area` VALUES ('321324', '321300', '泗洪县');
+INSERT INTO `area` VALUES ('330000', '0', '浙江省');
+INSERT INTO `area` VALUES ('330100', '330000', '杭州市');
+INSERT INTO `area` VALUES ('330102', '330100', '上城区');
+INSERT INTO `area` VALUES ('330103', '330100', '下城区');
+INSERT INTO `area` VALUES ('330104', '330100', '江干区');
+INSERT INTO `area` VALUES ('330105', '330100', '拱墅区');
+INSERT INTO `area` VALUES ('330106', '330100', '西湖区');
+INSERT INTO `area` VALUES ('330108', '330100', '滨江区');
+INSERT INTO `area` VALUES ('330109', '330100', '萧山区');
+INSERT INTO `area` VALUES ('330110', '330100', '余杭区');
+INSERT INTO `area` VALUES ('330122', '330100', '桐庐县');
+INSERT INTO `area` VALUES ('330127', '330100', '淳安县');
+INSERT INTO `area` VALUES ('330182', '330100', '建德市');
+INSERT INTO `area` VALUES ('330183', '330100', '富阳市');
+INSERT INTO `area` VALUES ('330185', '330100', '临安市');
+INSERT INTO `area` VALUES ('330200', '330000', '宁波市');
+INSERT INTO `area` VALUES ('330203', '330200', '海曙区');
+INSERT INTO `area` VALUES ('330204', '330200', '江东区');
+INSERT INTO `area` VALUES ('330205', '330200', '江北区');
+INSERT INTO `area` VALUES ('330206', '330200', '北仑区');
+INSERT INTO `area` VALUES ('330211', '330200', '镇海区');
+INSERT INTO `area` VALUES ('330212', '330200', '鄞州区');
+INSERT INTO `area` VALUES ('330225', '330200', '象山县');
+INSERT INTO `area` VALUES ('330226', '330200', '宁海县');
+INSERT INTO `area` VALUES ('330281', '330200', '余姚市');
+INSERT INTO `area` VALUES ('330282', '330200', '慈溪市');
+INSERT INTO `area` VALUES ('330283', '330200', '奉化市');
+INSERT INTO `area` VALUES ('330300', '330000', '温州市');
+INSERT INTO `area` VALUES ('330302', '330300', '鹿城区');
+INSERT INTO `area` VALUES ('330303', '330300', '龙湾区');
+INSERT INTO `area` VALUES ('330304', '330300', '瓯海区');
+INSERT INTO `area` VALUES ('330322', '330300', '洞头县');
+INSERT INTO `area` VALUES ('330324', '330300', '永嘉县');
+INSERT INTO `area` VALUES ('330326', '330300', '平阳县');
+INSERT INTO `area` VALUES ('330327', '330300', '苍南县');
+INSERT INTO `area` VALUES ('330328', '330300', '文成县');
+INSERT INTO `area` VALUES ('330329', '330300', '泰顺县');
+INSERT INTO `area` VALUES ('330381', '330300', '瑞安市');
+INSERT INTO `area` VALUES ('330382', '330300', '乐清市');
+INSERT INTO `area` VALUES ('330400', '330000', '嘉兴市');
+INSERT INTO `area` VALUES ('330402', '330400', '南湖区');
+INSERT INTO `area` VALUES ('330411', '330400', '秀洲区');
+INSERT INTO `area` VALUES ('330421', '330400', '嘉善县');
+INSERT INTO `area` VALUES ('330424', '330400', '海盐县');
+INSERT INTO `area` VALUES ('330481', '330400', '海宁市');
+INSERT INTO `area` VALUES ('330482', '330400', '平湖市');
+INSERT INTO `area` VALUES ('330483', '330400', '桐乡市');
+INSERT INTO `area` VALUES ('330500', '330000', '湖州市');
+INSERT INTO `area` VALUES ('330502', '330500', '吴兴区');
+INSERT INTO `area` VALUES ('330503', '330500', '南浔区');
+INSERT INTO `area` VALUES ('330521', '330500', '德清县');
+INSERT INTO `area` VALUES ('330522', '330500', '长兴县');
+INSERT INTO `area` VALUES ('330523', '330500', '安吉县');
+INSERT INTO `area` VALUES ('330600', '330000', '绍兴市');
+INSERT INTO `area` VALUES ('330602', '330600', '越城区');
+INSERT INTO `area` VALUES ('330621', '330600', '绍兴县');
+INSERT INTO `area` VALUES ('330624', '330600', '新昌县');
+INSERT INTO `area` VALUES ('330681', '330600', '诸暨市');
+INSERT INTO `area` VALUES ('330682', '330600', '上虞市');
+INSERT INTO `area` VALUES ('330683', '330600', '嵊州市');
+INSERT INTO `area` VALUES ('330700', '330000', '金华市');
+INSERT INTO `area` VALUES ('330702', '330700', '婺城区');
+INSERT INTO `area` VALUES ('330703', '330700', '金东区');
+INSERT INTO `area` VALUES ('330723', '330700', '武义县');
+INSERT INTO `area` VALUES ('330726', '330700', '浦江县');
+INSERT INTO `area` VALUES ('330727', '330700', '磐安县');
+INSERT INTO `area` VALUES ('330781', '330700', '兰溪市');
+INSERT INTO `area` VALUES ('330782', '330700', '义乌市');
+INSERT INTO `area` VALUES ('330783', '330700', '东阳市');
+INSERT INTO `area` VALUES ('330784', '330700', '永康市');
+INSERT INTO `area` VALUES ('330800', '330000', '衢州市');
+INSERT INTO `area` VALUES ('330802', '330800', '柯城区');
+INSERT INTO `area` VALUES ('330803', '330800', '衢江区');
+INSERT INTO `area` VALUES ('330822', '330800', '常山县');
+INSERT INTO `area` VALUES ('330824', '330800', '开化县');
+INSERT INTO `area` VALUES ('330825', '330800', '龙游县');
+INSERT INTO `area` VALUES ('330881', '330800', '江山市');
+INSERT INTO `area` VALUES ('330900', '330000', '舟山市');
+INSERT INTO `area` VALUES ('330902', '330900', '定海区');
+INSERT INTO `area` VALUES ('330903', '330900', '普陀区');
+INSERT INTO `area` VALUES ('330921', '330900', '岱山县');
+INSERT INTO `area` VALUES ('330922', '330900', '嵊泗县');
+INSERT INTO `area` VALUES ('331000', '330000', '台州市');
+INSERT INTO `area` VALUES ('331002', '331000', '椒江区');
+INSERT INTO `area` VALUES ('331003', '331000', '黄岩区');
+INSERT INTO `area` VALUES ('331004', '331000', '路桥区');
+INSERT INTO `area` VALUES ('331021', '331000', '玉环县');
+INSERT INTO `area` VALUES ('331022', '331000', '三门县');
+INSERT INTO `area` VALUES ('331023', '331000', '天台县');
+INSERT INTO `area` VALUES ('331024', '331000', '仙居县');
+INSERT INTO `area` VALUES ('331081', '331000', '温岭市');
+INSERT INTO `area` VALUES ('331082', '331000', '临海市');
+INSERT INTO `area` VALUES ('331100', '330000', '丽水市');
+INSERT INTO `area` VALUES ('331102', '331100', '莲都区');
+INSERT INTO `area` VALUES ('331121', '331100', '青田县');
+INSERT INTO `area` VALUES ('331122', '331100', '缙云县');
+INSERT INTO `area` VALUES ('331123', '331100', '遂昌县');
+INSERT INTO `area` VALUES ('331124', '331100', '松阳县');
+INSERT INTO `area` VALUES ('331125', '331100', '云和县');
+INSERT INTO `area` VALUES ('331126', '331100', '庆元县');
+INSERT INTO `area` VALUES ('331127', '331100', '景宁畲族自治县');
+INSERT INTO `area` VALUES ('331181', '331100', '龙泉市');
+INSERT INTO `area` VALUES ('340000', '0', '安徽省');
+INSERT INTO `area` VALUES ('340100', '340000', '合肥市');
+INSERT INTO `area` VALUES ('340102', '340100', '瑶海区');
+INSERT INTO `area` VALUES ('340103', '340100', '庐阳区');
+INSERT INTO `area` VALUES ('340104', '340100', '蜀山区');
+INSERT INTO `area` VALUES ('340111', '340100', '包河区');
+INSERT INTO `area` VALUES ('340121', '340100', '长丰县');
+INSERT INTO `area` VALUES ('340122', '340100', '肥东县');
+INSERT INTO `area` VALUES ('340123', '340100', '肥西县');
+INSERT INTO `area` VALUES ('340124', '340100', '庐江县');
+INSERT INTO `area` VALUES ('340181', '340100', '巢湖市');
+INSERT INTO `area` VALUES ('340200', '340000', '芜湖市');
+INSERT INTO `area` VALUES ('340202', '340200', '镜湖区');
+INSERT INTO `area` VALUES ('340203', '340200', '弋江区');
+INSERT INTO `area` VALUES ('340207', '340200', '鸠江区');
+INSERT INTO `area` VALUES ('340208', '340200', '三山区');
+INSERT INTO `area` VALUES ('340221', '340200', '芜湖县');
+INSERT INTO `area` VALUES ('340222', '340200', '繁昌县');
+INSERT INTO `area` VALUES ('340223', '340200', '南陵县');
+INSERT INTO `area` VALUES ('340225', '340200', '无为县');
+INSERT INTO `area` VALUES ('340300', '340000', '蚌埠市');
+INSERT INTO `area` VALUES ('340302', '340300', '龙子湖区');
+INSERT INTO `area` VALUES ('340303', '340300', '蚌山区');
+INSERT INTO `area` VALUES ('340304', '340300', '禹会区');
+INSERT INTO `area` VALUES ('340311', '340300', '淮上区');
+INSERT INTO `area` VALUES ('340321', '340300', '怀远县');
+INSERT INTO `area` VALUES ('340322', '340300', '五河县');
+INSERT INTO `area` VALUES ('340323', '340300', '固镇县');
+INSERT INTO `area` VALUES ('340400', '340000', '淮南市');
+INSERT INTO `area` VALUES ('340402', '340400', '大通区');
+INSERT INTO `area` VALUES ('340403', '340400', '田家庵区');
+INSERT INTO `area` VALUES ('340404', '340400', '谢家集区');
+INSERT INTO `area` VALUES ('340405', '340400', '八公山区');
+INSERT INTO `area` VALUES ('340406', '340400', '潘集区');
+INSERT INTO `area` VALUES ('340421', '340400', '凤台县');
+INSERT INTO `area` VALUES ('340500', '340000', '马鞍山市');
+INSERT INTO `area` VALUES ('340502', '340500', '金家庄区');
+INSERT INTO `area` VALUES ('340503', '340500', '花山区');
+INSERT INTO `area` VALUES ('340504', '340500', '雨山区');
+INSERT INTO `area` VALUES ('340521', '340500', '当涂县');
+INSERT INTO `area` VALUES ('340522', '340500', '含山县');
+INSERT INTO `area` VALUES ('340523', '340500', '和县');
+INSERT INTO `area` VALUES ('340600', '340000', '淮北市');
+INSERT INTO `area` VALUES ('340602', '340600', '杜集区');
+INSERT INTO `area` VALUES ('340603', '340600', '相山区');
+INSERT INTO `area` VALUES ('340604', '340600', '烈山区');
+INSERT INTO `area` VALUES ('340621', '340600', '濉溪县');
+INSERT INTO `area` VALUES ('340700', '340000', '铜陵市');
+INSERT INTO `area` VALUES ('340702', '340700', '铜官山区');
+INSERT INTO `area` VALUES ('340703', '340700', '狮子山区');
+INSERT INTO `area` VALUES ('340711', '340700', '郊区');
+INSERT INTO `area` VALUES ('340721', '340700', '铜陵县');
+INSERT INTO `area` VALUES ('340800', '340000', '安庆市');
+INSERT INTO `area` VALUES ('340802', '340800', '迎江区');
+INSERT INTO `area` VALUES ('340803', '340800', '大观区');
+INSERT INTO `area` VALUES ('340811', '340800', '宜秀区');
+INSERT INTO `area` VALUES ('340822', '340800', '怀宁县');
+INSERT INTO `area` VALUES ('340823', '340800', '枞阳县');
+INSERT INTO `area` VALUES ('340824', '340800', '潜山县');
+INSERT INTO `area` VALUES ('340825', '340800', '太湖县');
+INSERT INTO `area` VALUES ('340826', '340800', '宿松县');
+INSERT INTO `area` VALUES ('340827', '340800', '望江县');
+INSERT INTO `area` VALUES ('340828', '340800', '岳西县');
+INSERT INTO `area` VALUES ('340881', '340800', '桐城市');
+INSERT INTO `area` VALUES ('341000', '340000', '黄山市');
+INSERT INTO `area` VALUES ('341002', '341000', '屯溪区');
+INSERT INTO `area` VALUES ('341003', '341000', '黄山区');
+INSERT INTO `area` VALUES ('341004', '341000', '徽州区');
+INSERT INTO `area` VALUES ('341021', '341000', '歙县');
+INSERT INTO `area` VALUES ('341022', '341000', '休宁县');
+INSERT INTO `area` VALUES ('341023', '341000', '黟县');
+INSERT INTO `area` VALUES ('341024', '341000', '祁门县');
+INSERT INTO `area` VALUES ('341100', '340000', '滁州市');
+INSERT INTO `area` VALUES ('341102', '341100', '琅琊区');
+INSERT INTO `area` VALUES ('341103', '341100', '南谯区');
+INSERT INTO `area` VALUES ('341122', '341100', '来安县');
+INSERT INTO `area` VALUES ('341124', '341100', '全椒县');
+INSERT INTO `area` VALUES ('341125', '341100', '定远县');
+INSERT INTO `area` VALUES ('341126', '341100', '凤阳县');
+INSERT INTO `area` VALUES ('341181', '341100', '天长市');
+INSERT INTO `area` VALUES ('341182', '341100', '明光市');
+INSERT INTO `area` VALUES ('341200', '340000', '阜阳市');
+INSERT INTO `area` VALUES ('341202', '341200', '颍州区');
+INSERT INTO `area` VALUES ('341203', '341200', '颍东区');
+INSERT INTO `area` VALUES ('341204', '341200', '颍泉区');
+INSERT INTO `area` VALUES ('341221', '341200', '临泉县');
+INSERT INTO `area` VALUES ('341222', '341200', '太和县');
+INSERT INTO `area` VALUES ('341225', '341200', '阜南县');
+INSERT INTO `area` VALUES ('341226', '341200', '颍上县');
+INSERT INTO `area` VALUES ('341282', '341200', '界首市');
+INSERT INTO `area` VALUES ('341300', '340000', '宿州市');
+INSERT INTO `area` VALUES ('341302', '341300', '埇桥区');
+INSERT INTO `area` VALUES ('341321', '341300', '砀山县');
+INSERT INTO `area` VALUES ('341322', '341300', '萧县');
+INSERT INTO `area` VALUES ('341323', '341300', '灵璧县');
+INSERT INTO `area` VALUES ('341324', '341300', '泗县');
+INSERT INTO `area` VALUES ('341500', '340000', '六安市');
+INSERT INTO `area` VALUES ('341502', '341500', '金安区');
+INSERT INTO `area` VALUES ('341503', '341500', '裕安区');
+INSERT INTO `area` VALUES ('341521', '341500', '寿县');
+INSERT INTO `area` VALUES ('341522', '341500', '霍邱县');
+INSERT INTO `area` VALUES ('341523', '341500', '舒城县');
+INSERT INTO `area` VALUES ('341524', '341500', '金寨县');
+INSERT INTO `area` VALUES ('341525', '341500', '霍山县');
+INSERT INTO `area` VALUES ('341600', '340000', '亳州市');
+INSERT INTO `area` VALUES ('341602', '341600', '谯城区');
+INSERT INTO `area` VALUES ('341621', '341600', '涡阳县');
+INSERT INTO `area` VALUES ('341622', '341600', '蒙城县');
+INSERT INTO `area` VALUES ('341623', '341600', '利辛县');
+INSERT INTO `area` VALUES ('341700', '340000', '池州市');
+INSERT INTO `area` VALUES ('341702', '341700', '贵池区');
+INSERT INTO `area` VALUES ('341721', '341700', '东至县');
+INSERT INTO `area` VALUES ('341722', '341700', '石台县');
+INSERT INTO `area` VALUES ('341723', '341700', '青阳县');
+INSERT INTO `area` VALUES ('341800', '340000', '宣城市');
+INSERT INTO `area` VALUES ('341802', '341800', '宣州区');
+INSERT INTO `area` VALUES ('341821', '341800', '郎溪县');
+INSERT INTO `area` VALUES ('341822', '341800', '广德县');
+INSERT INTO `area` VALUES ('341823', '341800', '泾县');
+INSERT INTO `area` VALUES ('341824', '341800', '绩溪县');
+INSERT INTO `area` VALUES ('341825', '341800', '旌德县');
+INSERT INTO `area` VALUES ('341881', '341800', '宁国市');
+INSERT INTO `area` VALUES ('350000', '0', '福建省');
+INSERT INTO `area` VALUES ('350100', '350000', '福州市');
+INSERT INTO `area` VALUES ('350102', '350100', '鼓楼区');
+INSERT INTO `area` VALUES ('350103', '350100', '台江区');
+INSERT INTO `area` VALUES ('350104', '350100', '仓山区');
+INSERT INTO `area` VALUES ('350105', '350100', '马尾区');
+INSERT INTO `area` VALUES ('350111', '350100', '晋安区');
+INSERT INTO `area` VALUES ('350121', '350100', '闽侯县');
+INSERT INTO `area` VALUES ('350122', '350100', '连江县');
+INSERT INTO `area` VALUES ('350123', '350100', '罗源县');
+INSERT INTO `area` VALUES ('350124', '350100', '闽清县');
+INSERT INTO `area` VALUES ('350125', '350100', '永泰县');
+INSERT INTO `area` VALUES ('350128', '350100', '平潭县');
+INSERT INTO `area` VALUES ('350181', '350100', '福清市');
+INSERT INTO `area` VALUES ('350182', '350100', '长乐市');
+INSERT INTO `area` VALUES ('350200', '350000', '厦门市');
+INSERT INTO `area` VALUES ('350203', '350200', '思明区');
+INSERT INTO `area` VALUES ('350205', '350200', '海沧区');
+INSERT INTO `area` VALUES ('350206', '350200', '湖里区');
+INSERT INTO `area` VALUES ('350211', '350200', '集美区');
+INSERT INTO `area` VALUES ('350212', '350200', '同安区');
+INSERT INTO `area` VALUES ('350213', '350200', '翔安区');
+INSERT INTO `area` VALUES ('350300', '350000', '莆田市');
+INSERT INTO `area` VALUES ('350302', '350300', '城厢区');
+INSERT INTO `area` VALUES ('350303', '350300', '涵江区');
+INSERT INTO `area` VALUES ('350304', '350300', '荔城区');
+INSERT INTO `area` VALUES ('350305', '350300', '秀屿区');
+INSERT INTO `area` VALUES ('350322', '350300', '仙游县');
+INSERT INTO `area` VALUES ('350400', '350000', '三明市');
+INSERT INTO `area` VALUES ('350402', '350400', '梅列区');
+INSERT INTO `area` VALUES ('350403', '350400', '三元区');
+INSERT INTO `area` VALUES ('350421', '350400', '明溪县');
+INSERT INTO `area` VALUES ('350423', '350400', '清流县');
+INSERT INTO `area` VALUES ('350424', '350400', '宁化县');
+INSERT INTO `area` VALUES ('350425', '350400', '大田县');
+INSERT INTO `area` VALUES ('350426', '350400', '尤溪县');
+INSERT INTO `area` VALUES ('350427', '350400', '沙县');
+INSERT INTO `area` VALUES ('350428', '350400', '将乐县');
+INSERT INTO `area` VALUES ('350429', '350400', '泰宁县');
+INSERT INTO `area` VALUES ('350430', '350400', '建宁县');
+INSERT INTO `area` VALUES ('350481', '350400', '永安市');
+INSERT INTO `area` VALUES ('350500', '350000', '泉州市');
+INSERT INTO `area` VALUES ('350502', '350500', '鲤城区');
+INSERT INTO `area` VALUES ('350503', '350500', '丰泽区');
+INSERT INTO `area` VALUES ('350504', '350500', '洛江区');
+INSERT INTO `area` VALUES ('350505', '350500', '泉港区');
+INSERT INTO `area` VALUES ('350521', '350500', '惠安县');
+INSERT INTO `area` VALUES ('350524', '350500', '安溪县');
+INSERT INTO `area` VALUES ('350525', '350500', '永春县');
+INSERT INTO `area` VALUES ('350526', '350500', '德化县');
+INSERT INTO `area` VALUES ('350527', '350500', '金门县');
+INSERT INTO `area` VALUES ('350581', '350500', '石狮市');
+INSERT INTO `area` VALUES ('350582', '350500', '晋江市');
+INSERT INTO `area` VALUES ('350583', '350500', '南安市');
+INSERT INTO `area` VALUES ('350600', '350000', '漳州市');
+INSERT INTO `area` VALUES ('350602', '350600', '芗城区');
+INSERT INTO `area` VALUES ('350603', '350600', '龙文区');
+INSERT INTO `area` VALUES ('350622', '350600', '云霄县');
+INSERT INTO `area` VALUES ('350623', '350600', '漳浦县');
+INSERT INTO `area` VALUES ('350624', '350600', '诏安县');
+INSERT INTO `area` VALUES ('350625', '350600', '长泰县');
+INSERT INTO `area` VALUES ('350626', '350600', '东山县');
+INSERT INTO `area` VALUES ('350627', '350600', '南靖县');
+INSERT INTO `area` VALUES ('350628', '350600', '平和县');
+INSERT INTO `area` VALUES ('350629', '350600', '华安县');
+INSERT INTO `area` VALUES ('350681', '350600', '龙海市');
+INSERT INTO `area` VALUES ('350700', '350000', '南平市');
+INSERT INTO `area` VALUES ('350702', '350700', '延平区');
+INSERT INTO `area` VALUES ('350721', '350700', '顺昌县');
+INSERT INTO `area` VALUES ('350722', '350700', '浦城县');
+INSERT INTO `area` VALUES ('350723', '350700', '光泽县');
+INSERT INTO `area` VALUES ('350724', '350700', '松溪县');
+INSERT INTO `area` VALUES ('350725', '350700', '政和县');
+INSERT INTO `area` VALUES ('350781', '350700', '邵武市');
+INSERT INTO `area` VALUES ('350782', '350700', '武夷山市');
+INSERT INTO `area` VALUES ('350783', '350700', '建瓯市');
+INSERT INTO `area` VALUES ('350784', '350700', '建阳市');
+INSERT INTO `area` VALUES ('350800', '350000', '龙岩市');
+INSERT INTO `area` VALUES ('350802', '350800', '新罗区');
+INSERT INTO `area` VALUES ('350821', '350800', '长汀县');
+INSERT INTO `area` VALUES ('350822', '350800', '永定县');
+INSERT INTO `area` VALUES ('350823', '350800', '上杭县');
+INSERT INTO `area` VALUES ('350824', '350800', '武平县');
+INSERT INTO `area` VALUES ('350825', '350800', '连城县');
+INSERT INTO `area` VALUES ('350881', '350800', '漳平市');
+INSERT INTO `area` VALUES ('350900', '350000', '宁德市');
+INSERT INTO `area` VALUES ('350902', '350900', '蕉城区');
+INSERT INTO `area` VALUES ('350921', '350900', '霞浦县');
+INSERT INTO `area` VALUES ('350922', '350900', '古田县');
+INSERT INTO `area` VALUES ('350923', '350900', '屏南县');
+INSERT INTO `area` VALUES ('350924', '350900', '寿宁县');
+INSERT INTO `area` VALUES ('350925', '350900', '周宁县');
+INSERT INTO `area` VALUES ('350926', '350900', '柘荣县');
+INSERT INTO `area` VALUES ('350981', '350900', '福安市');
+INSERT INTO `area` VALUES ('350982', '350900', '福鼎市');
+INSERT INTO `area` VALUES ('360000', '0', '江西省');
+INSERT INTO `area` VALUES ('360100', '360000', '南昌市');
+INSERT INTO `area` VALUES ('360102', '360100', '东湖区');
+INSERT INTO `area` VALUES ('360103', '360100', '西湖区');
+INSERT INTO `area` VALUES ('360104', '360100', '青云谱区');
+INSERT INTO `area` VALUES ('360105', '360100', '湾里区');
+INSERT INTO `area` VALUES ('360111', '360100', '青山湖区');
+INSERT INTO `area` VALUES ('360121', '360100', '南昌县');
+INSERT INTO `area` VALUES ('360122', '360100', '新建县');
+INSERT INTO `area` VALUES ('360123', '360100', '安义县');
+INSERT INTO `area` VALUES ('360124', '360100', '进贤县');
+INSERT INTO `area` VALUES ('360200', '360000', '景德镇市');
+INSERT INTO `area` VALUES ('360202', '360200', '昌江区');
+INSERT INTO `area` VALUES ('360203', '360200', '珠山区');
+INSERT INTO `area` VALUES ('360222', '360200', '浮梁县');
+INSERT INTO `area` VALUES ('360281', '360200', '乐平市');
+INSERT INTO `area` VALUES ('360300', '360000', '萍乡市');
+INSERT INTO `area` VALUES ('360302', '360300', '安源区');
+INSERT INTO `area` VALUES ('360313', '360300', '湘东区');
+INSERT INTO `area` VALUES ('360321', '360300', '莲花县');
+INSERT INTO `area` VALUES ('360322', '360300', '上栗县');
+INSERT INTO `area` VALUES ('360323', '360300', '芦溪县');
+INSERT INTO `area` VALUES ('360400', '360000', '九江市');
+INSERT INTO `area` VALUES ('360402', '360400', '庐山区');
+INSERT INTO `area` VALUES ('360403', '360400', '浔阳区');
+INSERT INTO `area` VALUES ('360421', '360400', '九江县');
+INSERT INTO `area` VALUES ('360423', '360400', '武宁县');
+INSERT INTO `area` VALUES ('360424', '360400', '修水县');
+INSERT INTO `area` VALUES ('360425', '360400', '永修县');
+INSERT INTO `area` VALUES ('360426', '360400', '德安县');
+INSERT INTO `area` VALUES ('360427', '360400', '星子县');
+INSERT INTO `area` VALUES ('360428', '360400', '都昌县');
+INSERT INTO `area` VALUES ('360429', '360400', '湖口县');
+INSERT INTO `area` VALUES ('360430', '360400', '彭泽县');
+INSERT INTO `area` VALUES ('360481', '360400', '瑞昌市');
+INSERT INTO `area` VALUES ('360482', '360400', '共青城市');
+INSERT INTO `area` VALUES ('360500', '360000', '新余市');
+INSERT INTO `area` VALUES ('360502', '360500', '渝水区');
+INSERT INTO `area` VALUES ('360521', '360500', '分宜县');
+INSERT INTO `area` VALUES ('360600', '360000', '鹰潭市');
+INSERT INTO `area` VALUES ('360602', '360600', '月湖区');
+INSERT INTO `area` VALUES ('360622', '360600', '余江县');
+INSERT INTO `area` VALUES ('360681', '360600', '贵溪市');
+INSERT INTO `area` VALUES ('360700', '360000', '赣州市');
+INSERT INTO `area` VALUES ('360702', '360700', '章贡区');
+INSERT INTO `area` VALUES ('360721', '360700', '赣县');
+INSERT INTO `area` VALUES ('360722', '360700', '信丰县');
+INSERT INTO `area` VALUES ('360723', '360700', '大余县');
+INSERT INTO `area` VALUES ('360724', '360700', '上犹县');
+INSERT INTO `area` VALUES ('360725', '360700', '崇义县');
+INSERT INTO `area` VALUES ('360726', '360700', '安远县');
+INSERT INTO `area` VALUES ('360727', '360700', '龙南县');
+INSERT INTO `area` VALUES ('360728', '360700', '定南县');
+INSERT INTO `area` VALUES ('360729', '360700', '全南县');
+INSERT INTO `area` VALUES ('360730', '360700', '宁都县');
+INSERT INTO `area` VALUES ('360731', '360700', '于都县');
+INSERT INTO `area` VALUES ('360732', '360700', '兴国县');
+INSERT INTO `area` VALUES ('360733', '360700', '会昌县');
+INSERT INTO `area` VALUES ('360734', '360700', '寻乌县');
+INSERT INTO `area` VALUES ('360735', '360700', '石城县');
+INSERT INTO `area` VALUES ('360781', '360700', '瑞金市');
+INSERT INTO `area` VALUES ('360782', '360700', '南康市');
+INSERT INTO `area` VALUES ('360800', '360000', '吉安市');
+INSERT INTO `area` VALUES ('360802', '360800', '吉州区');
+INSERT INTO `area` VALUES ('360803', '360800', '青原区');
+INSERT INTO `area` VALUES ('360821', '360800', '吉安县');
+INSERT INTO `area` VALUES ('360822', '360800', '吉水县');
+INSERT INTO `area` VALUES ('360823', '360800', '峡江县');
+INSERT INTO `area` VALUES ('360824', '360800', '新干县');
+INSERT INTO `area` VALUES ('360825', '360800', '永丰县');
+INSERT INTO `area` VALUES ('360826', '360800', '泰和县');
+INSERT INTO `area` VALUES ('360827', '360800', '遂川县');
+INSERT INTO `area` VALUES ('360828', '360800', '万安县');
+INSERT INTO `area` VALUES ('360829', '360800', '安福县');
+INSERT INTO `area` VALUES ('360830', '360800', '永新县');
+INSERT INTO `area` VALUES ('360881', '360800', '井冈山市');
+INSERT INTO `area` VALUES ('360900', '360000', '宜春市');
+INSERT INTO `area` VALUES ('360902', '360900', '袁州区');
+INSERT INTO `area` VALUES ('360921', '360900', '奉新县');
+INSERT INTO `area` VALUES ('360922', '360900', '万载县');
+INSERT INTO `area` VALUES ('360923', '360900', '上高县');
+INSERT INTO `area` VALUES ('360924', '360900', '宜丰县');
+INSERT INTO `area` VALUES ('360925', '360900', '靖安县');
+INSERT INTO `area` VALUES ('360926', '360900', '铜鼓县');
+INSERT INTO `area` VALUES ('360981', '360900', '丰城市');
+INSERT INTO `area` VALUES ('360982', '360900', '樟树市');
+INSERT INTO `area` VALUES ('360983', '360900', '高安市');
+INSERT INTO `area` VALUES ('361000', '360000', '抚州市');
+INSERT INTO `area` VALUES ('361002', '361000', '临川区');
+INSERT INTO `area` VALUES ('361021', '361000', '南城县');
+INSERT INTO `area` VALUES ('361022', '361000', '黎川县');
+INSERT INTO `area` VALUES ('361023', '361000', '南丰县');
+INSERT INTO `area` VALUES ('361024', '361000', '崇仁县');
+INSERT INTO `area` VALUES ('361025', '361000', '乐安县');
+INSERT INTO `area` VALUES ('361026', '361000', '宜黄县');
+INSERT INTO `area` VALUES ('361027', '361000', '金溪县');
+INSERT INTO `area` VALUES ('361028', '361000', '资溪县');
+INSERT INTO `area` VALUES ('361029', '361000', '东乡县');
+INSERT INTO `area` VALUES ('361030', '361000', '广昌县');
+INSERT INTO `area` VALUES ('361100', '360000', '上饶市');
+INSERT INTO `area` VALUES ('361102', '361100', '信州区');
+INSERT INTO `area` VALUES ('361121', '361100', '上饶县');
+INSERT INTO `area` VALUES ('361122', '361100', '广丰县');
+INSERT INTO `area` VALUES ('361123', '361100', '玉山县');
+INSERT INTO `area` VALUES ('361124', '361100', '铅山县');
+INSERT INTO `area` VALUES ('361125', '361100', '横峰县');
+INSERT INTO `area` VALUES ('361126', '361100', '弋阳县');
+INSERT INTO `area` VALUES ('361127', '361100', '余干县');
+INSERT INTO `area` VALUES ('361128', '361100', '鄱阳县');
+INSERT INTO `area` VALUES ('361129', '361100', '万年县');
+INSERT INTO `area` VALUES ('361130', '361100', '婺源县');
+INSERT INTO `area` VALUES ('361181', '361100', '德兴市');
+INSERT INTO `area` VALUES ('370000', '0', '山东省');
+INSERT INTO `area` VALUES ('370100', '370000', '济南市');
+INSERT INTO `area` VALUES ('370102', '370100', '历下区');
+INSERT INTO `area` VALUES ('370103', '370100', '市中区');
+INSERT INTO `area` VALUES ('370104', '370100', '槐荫区');
+INSERT INTO `area` VALUES ('370105', '370100', '天桥区');
+INSERT INTO `area` VALUES ('370112', '370100', '历城区');
+INSERT INTO `area` VALUES ('370113', '370100', '长清区');
+INSERT INTO `area` VALUES ('370124', '370100', '平阴县');
+INSERT INTO `area` VALUES ('370125', '370100', '济阳县');
+INSERT INTO `area` VALUES ('370126', '370100', '商河县');
+INSERT INTO `area` VALUES ('370181', '370100', '章丘市');
+INSERT INTO `area` VALUES ('370200', '370000', '青岛市');
+INSERT INTO `area` VALUES ('370202', '370200', '市南区');
+INSERT INTO `area` VALUES ('370203', '370200', '市北区');
+INSERT INTO `area` VALUES ('370205', '370200', '四方区');
+INSERT INTO `area` VALUES ('370211', '370200', '黄岛区');
+INSERT INTO `area` VALUES ('370212', '370200', '崂山区');
+INSERT INTO `area` VALUES ('370213', '370200', '李沧区');
+INSERT INTO `area` VALUES ('370214', '370200', '城阳区');
+INSERT INTO `area` VALUES ('370281', '370200', '胶州市');
+INSERT INTO `area` VALUES ('370282', '370200', '即墨市');
+INSERT INTO `area` VALUES ('370283', '370200', '平度市');
+INSERT INTO `area` VALUES ('370284', '370200', '胶南市');
+INSERT INTO `area` VALUES ('370285', '370200', '莱西市');
+INSERT INTO `area` VALUES ('370300', '370000', '淄博市');
+INSERT INTO `area` VALUES ('370302', '370300', '淄川区');
+INSERT INTO `area` VALUES ('370303', '370300', '张店区');
+INSERT INTO `area` VALUES ('370304', '370300', '博山区');
+INSERT INTO `area` VALUES ('370305', '370300', '临淄区');
+INSERT INTO `area` VALUES ('370306', '370300', '周村区');
+INSERT INTO `area` VALUES ('370321', '370300', '桓台县');
+INSERT INTO `area` VALUES ('370322', '370300', '高青县');
+INSERT INTO `area` VALUES ('370323', '370300', '沂源县');
+INSERT INTO `area` VALUES ('370400', '370000', '枣庄市');
+INSERT INTO `area` VALUES ('370402', '370400', '市中区');
+INSERT INTO `area` VALUES ('370403', '370400', '薛城区');
+INSERT INTO `area` VALUES ('370404', '370400', '峄城区');
+INSERT INTO `area` VALUES ('370405', '370400', '台儿庄区');
+INSERT INTO `area` VALUES ('370406', '370400', '山亭区');
+INSERT INTO `area` VALUES ('370481', '370400', '滕州市');
+INSERT INTO `area` VALUES ('370500', '370000', '东营市');
+INSERT INTO `area` VALUES ('370502', '370500', '东营区');
+INSERT INTO `area` VALUES ('370503', '370500', '河口区');
+INSERT INTO `area` VALUES ('370521', '370500', '垦利县');
+INSERT INTO `area` VALUES ('370522', '370500', '利津县');
+INSERT INTO `area` VALUES ('370523', '370500', '广饶县');
+INSERT INTO `area` VALUES ('370600', '370000', '烟台市');
+INSERT INTO `area` VALUES ('370602', '370600', '芝罘区');
+INSERT INTO `area` VALUES ('370611', '370600', '福山区');
+INSERT INTO `area` VALUES ('370612', '370600', '牟平区');
+INSERT INTO `area` VALUES ('370613', '370600', '莱山区');
+INSERT INTO `area` VALUES ('370634', '370600', '长岛县');
+INSERT INTO `area` VALUES ('370681', '370600', '龙口市');
+INSERT INTO `area` VALUES ('370682', '370600', '莱阳市');
+INSERT INTO `area` VALUES ('370683', '370600', '莱州市');
+INSERT INTO `area` VALUES ('370684', '370600', '蓬莱市');
+INSERT INTO `area` VALUES ('370685', '370600', '招远市');
+INSERT INTO `area` VALUES ('370686', '370600', '栖霞市');
+INSERT INTO `area` VALUES ('370687', '370600', '海阳市');
+INSERT INTO `area` VALUES ('370700', '370000', '潍坊市');
+INSERT INTO `area` VALUES ('370702', '370700', '潍城区');
+INSERT INTO `area` VALUES ('370703', '370700', '寒亭区');
+INSERT INTO `area` VALUES ('370704', '370700', '坊子区');
+INSERT INTO `area` VALUES ('370705', '370700', '奎文区');
+INSERT INTO `area` VALUES ('370724', '370700', '临朐县');
+INSERT INTO `area` VALUES ('370725', '370700', '昌乐县');
+INSERT INTO `area` VALUES ('370781', '370700', '青州市');
+INSERT INTO `area` VALUES ('370782', '370700', '诸城市');
+INSERT INTO `area` VALUES ('370783', '370700', '寿光市');
+INSERT INTO `area` VALUES ('370784', '370700', '安丘市');
+INSERT INTO `area` VALUES ('370785', '370700', '高密市');
+INSERT INTO `area` VALUES ('370786', '370700', '昌邑市');
+INSERT INTO `area` VALUES ('370800', '370000', '济宁市');
+INSERT INTO `area` VALUES ('370802', '370800', '市中区');
+INSERT INTO `area` VALUES ('370811', '370800', '任城区');
+INSERT INTO `area` VALUES ('370826', '370800', '微山县');
+INSERT INTO `area` VALUES ('370827', '370800', '鱼台县');
+INSERT INTO `area` VALUES ('370828', '370800', '金乡县');
+INSERT INTO `area` VALUES ('370829', '370800', '嘉祥县');
+INSERT INTO `area` VALUES ('370830', '370800', '汶上县');
+INSERT INTO `area` VALUES ('370831', '370800', '泗水县');
+INSERT INTO `area` VALUES ('370832', '370800', '梁山县');
+INSERT INTO `area` VALUES ('370881', '370800', '曲阜市');
+INSERT INTO `area` VALUES ('370882', '370800', '兖州市');
+INSERT INTO `area` VALUES ('370883', '370800', '邹城市');
+INSERT INTO `area` VALUES ('370900', '370000', '泰安市');
+INSERT INTO `area` VALUES ('370902', '370900', '泰山区');
+INSERT INTO `area` VALUES ('370911', '370900', '岱岳区');
+INSERT INTO `area` VALUES ('370921', '370900', '宁阳县');
+INSERT INTO `area` VALUES ('370923', '370900', '东平县');
+INSERT INTO `area` VALUES ('370982', '370900', '新泰市');
+INSERT INTO `area` VALUES ('370983', '370900', '肥城市');
+INSERT INTO `area` VALUES ('371000', '370000', '威海市');
+INSERT INTO `area` VALUES ('371002', '371000', '环翠区');
+INSERT INTO `area` VALUES ('371081', '371000', '文登市');
+INSERT INTO `area` VALUES ('371082', '371000', '荣成市');
+INSERT INTO `area` VALUES ('371083', '371000', '乳山市');
+INSERT INTO `area` VALUES ('371100', '370000', '日照市');
+INSERT INTO `area` VALUES ('371102', '371100', '东港区');
+INSERT INTO `area` VALUES ('371103', '371100', '岚山区');
+INSERT INTO `area` VALUES ('371121', '371100', '五莲县');
+INSERT INTO `area` VALUES ('371122', '371100', '莒县');
+INSERT INTO `area` VALUES ('371200', '370000', '莱芜市');
+INSERT INTO `area` VALUES ('371202', '371200', '莱城区');
+INSERT INTO `area` VALUES ('371203', '371200', '钢城区');
+INSERT INTO `area` VALUES ('371300', '370000', '临沂市');
+INSERT INTO `area` VALUES ('371302', '371300', '兰山区');
+INSERT INTO `area` VALUES ('371311', '371300', '罗庄区');
+INSERT INTO `area` VALUES ('371312', '371300', '河东区');
+INSERT INTO `area` VALUES ('371321', '371300', '沂南县');
+INSERT INTO `area` VALUES ('371322', '371300', '郯城县');
+INSERT INTO `area` VALUES ('371323', '371300', '沂水县');
+INSERT INTO `area` VALUES ('371324', '371300', '苍山县');
+INSERT INTO `area` VALUES ('371325', '371300', '费县');
+INSERT INTO `area` VALUES ('371326', '371300', '平邑县');
+INSERT INTO `area` VALUES ('371327', '371300', '莒南县');
+INSERT INTO `area` VALUES ('371328', '371300', '蒙阴县');
+INSERT INTO `area` VALUES ('371329', '371300', '临沭县');
+INSERT INTO `area` VALUES ('371400', '370000', '德州市');
+INSERT INTO `area` VALUES ('371402', '371400', '德城区');
+INSERT INTO `area` VALUES ('371421', '371400', '陵县');
+INSERT INTO `area` VALUES ('371422', '371400', '宁津县');
+INSERT INTO `area` VALUES ('371423', '371400', '庆云县');
+INSERT INTO `area` VALUES ('371424', '371400', '临邑县');
+INSERT INTO `area` VALUES ('371425', '371400', '齐河县');
+INSERT INTO `area` VALUES ('371426', '371400', '平原县');
+INSERT INTO `area` VALUES ('371427', '371400', '夏津县');
+INSERT INTO `area` VALUES ('371428', '371400', '武城县');
+INSERT INTO `area` VALUES ('371481', '371400', '乐陵市');
+INSERT INTO `area` VALUES ('371482', '371400', '禹城市');
+INSERT INTO `area` VALUES ('371500', '370000', '聊城市');
+INSERT INTO `area` VALUES ('371502', '371500', '东昌府区');
+INSERT INTO `area` VALUES ('371521', '371500', '阳谷县');
+INSERT INTO `area` VALUES ('371522', '371500', '莘县');
+INSERT INTO `area` VALUES ('371523', '371500', '茌平县');
+INSERT INTO `area` VALUES ('371524', '371500', '东阿县');
+INSERT INTO `area` VALUES ('371525', '371500', '冠县');
+INSERT INTO `area` VALUES ('371526', '371500', '高唐县');
+INSERT INTO `area` VALUES ('371581', '371500', '临清市');
+INSERT INTO `area` VALUES ('371600', '370000', '滨州市');
+INSERT INTO `area` VALUES ('371602', '371600', '滨城区');
+INSERT INTO `area` VALUES ('371621', '371600', '惠民县');
+INSERT INTO `area` VALUES ('371622', '371600', '阳信县');
+INSERT INTO `area` VALUES ('371623', '371600', '无棣县');
+INSERT INTO `area` VALUES ('371624', '371600', '沾化县');
+INSERT INTO `area` VALUES ('371625', '371600', '博兴县');
+INSERT INTO `area` VALUES ('371626', '371600', '邹平县');
+INSERT INTO `area` VALUES ('371700', '370000', '菏泽市');
+INSERT INTO `area` VALUES ('371702', '371700', '牡丹区');
+INSERT INTO `area` VALUES ('371721', '371700', '曹县');
+INSERT INTO `area` VALUES ('371722', '371700', '单县');
+INSERT INTO `area` VALUES ('371723', '371700', '成武县');
+INSERT INTO `area` VALUES ('371724', '371700', '巨野县');
+INSERT INTO `area` VALUES ('371725', '371700', '郓城县');
+INSERT INTO `area` VALUES ('371726', '371700', '鄄城县');
+INSERT INTO `area` VALUES ('371727', '371700', '定陶县');
+INSERT INTO `area` VALUES ('371728', '371700', '东明县');
+INSERT INTO `area` VALUES ('410000', '0', '河南省');
+INSERT INTO `area` VALUES ('410100', '410000', '郑州市');
+INSERT INTO `area` VALUES ('410102', '410100', '中原区');
+INSERT INTO `area` VALUES ('410103', '410100', '二七区');
+INSERT INTO `area` VALUES ('410104', '410100', '管城回族区');
+INSERT INTO `area` VALUES ('410105', '410100', '金水区');
+INSERT INTO `area` VALUES ('410106', '410100', '上街区');
+INSERT INTO `area` VALUES ('410108', '410100', '惠济区');
+INSERT INTO `area` VALUES ('410122', '410100', '中牟县');
+INSERT INTO `area` VALUES ('410181', '410100', '巩义市');
+INSERT INTO `area` VALUES ('410182', '410100', '荥阳市');
+INSERT INTO `area` VALUES ('410183', '410100', '新密市');
+INSERT INTO `area` VALUES ('410184', '410100', '新郑市');
+INSERT INTO `area` VALUES ('410185', '410100', '登封市');
+INSERT INTO `area` VALUES ('410200', '410000', '开封市');
+INSERT INTO `area` VALUES ('410202', '410200', '龙亭区');
+INSERT INTO `area` VALUES ('410203', '410200', '顺河回族区');
+INSERT INTO `area` VALUES ('410204', '410200', '鼓楼区');
+INSERT INTO `area` VALUES ('410205', '410200', '禹王台区');
+INSERT INTO `area` VALUES ('410211', '410200', '金明区');
+INSERT INTO `area` VALUES ('410221', '410200', '杞县');
+INSERT INTO `area` VALUES ('410222', '410200', '通许县');
+INSERT INTO `area` VALUES ('410223', '410200', '尉氏县');
+INSERT INTO `area` VALUES ('410224', '410200', '开封县');
+INSERT INTO `area` VALUES ('410225', '410200', '兰考县');
+INSERT INTO `area` VALUES ('410300', '410000', '洛阳市');
+INSERT INTO `area` VALUES ('410302', '410300', '老城区');
+INSERT INTO `area` VALUES ('410303', '410300', '西工区');
+INSERT INTO `area` VALUES ('410304', '410300', '瀍河回族区');
+INSERT INTO `area` VALUES ('410305', '410300', '涧西区');
+INSERT INTO `area` VALUES ('410306', '410300', '吉利区');
+INSERT INTO `area` VALUES ('410311', '410300', '洛龙区');
+INSERT INTO `area` VALUES ('410322', '410300', '孟津县');
+INSERT INTO `area` VALUES ('410323', '410300', '新安县');
+INSERT INTO `area` VALUES ('410324', '410300', '栾川县');
+INSERT INTO `area` VALUES ('410325', '410300', '嵩县');
+INSERT INTO `area` VALUES ('410326', '410300', '汝阳县');
+INSERT INTO `area` VALUES ('410327', '410300', '宜阳县');
+INSERT INTO `area` VALUES ('410328', '410300', '洛宁县');
+INSERT INTO `area` VALUES ('410329', '410300', '伊川县');
+INSERT INTO `area` VALUES ('410381', '410300', '偃师市');
+INSERT INTO `area` VALUES ('410400', '410000', '平顶山市');
+INSERT INTO `area` VALUES ('410402', '410400', '新华区');
+INSERT INTO `area` VALUES ('410403', '410400', '卫东区');
+INSERT INTO `area` VALUES ('410404', '410400', '石龙区');
+INSERT INTO `area` VALUES ('410411', '410400', '湛河区');
+INSERT INTO `area` VALUES ('410421', '410400', '宝丰县');
+INSERT INTO `area` VALUES ('410422', '410400', '叶县');
+INSERT INTO `area` VALUES ('410423', '410400', '鲁山县');
+INSERT INTO `area` VALUES ('410425', '410400', '郏县');
+INSERT INTO `area` VALUES ('410481', '410400', '舞钢市');
+INSERT INTO `area` VALUES ('410482', '410400', '汝州市');
+INSERT INTO `area` VALUES ('410500', '410000', '安阳市');
+INSERT INTO `area` VALUES ('410502', '410500', '文峰区');
+INSERT INTO `area` VALUES ('410503', '410500', '北关区');
+INSERT INTO `area` VALUES ('410505', '410500', '殷都区');
+INSERT INTO `area` VALUES ('410506', '410500', '龙安区');
+INSERT INTO `area` VALUES ('410522', '410500', '安阳县');
+INSERT INTO `area` VALUES ('410523', '410500', '汤阴县');
+INSERT INTO `area` VALUES ('410526', '410500', '滑县');
+INSERT INTO `area` VALUES ('410527', '410500', '内黄县');
+INSERT INTO `area` VALUES ('410581', '410500', '林州市');
+INSERT INTO `area` VALUES ('410600', '410000', '鹤壁市');
+INSERT INTO `area` VALUES ('410602', '410600', '鹤山区');
+INSERT INTO `area` VALUES ('410603', '410600', '山城区');
+INSERT INTO `area` VALUES ('410611', '410600', '淇滨区');
+INSERT INTO `area` VALUES ('410621', '410600', '浚县');
+INSERT INTO `area` VALUES ('410622', '410600', '淇县');
+INSERT INTO `area` VALUES ('410700', '410000', '新乡市');
+INSERT INTO `area` VALUES ('410702', '410700', '红旗区');
+INSERT INTO `area` VALUES ('410703', '410700', '卫滨区');
+INSERT INTO `area` VALUES ('410704', '410700', '凤泉区');
+INSERT INTO `area` VALUES ('410711', '410700', '牧野区');
+INSERT INTO `area` VALUES ('410721', '410700', '新乡县');
+INSERT INTO `area` VALUES ('410724', '410700', '获嘉县');
+INSERT INTO `area` VALUES ('410725', '410700', '原阳县');
+INSERT INTO `area` VALUES ('410726', '410700', '延津县');
+INSERT INTO `area` VALUES ('410727', '410700', '封丘县');
+INSERT INTO `area` VALUES ('410728', '410700', '长垣县');
+INSERT INTO `area` VALUES ('410781', '410700', '卫辉市');
+INSERT INTO `area` VALUES ('410782', '410700', '辉县市');
+INSERT INTO `area` VALUES ('410800', '410000', '焦作市');
+INSERT INTO `area` VALUES ('410802', '410800', '解放区');
+INSERT INTO `area` VALUES ('410803', '410800', '中站区');
+INSERT INTO `area` VALUES ('410804', '410800', '马村区');
+INSERT INTO `area` VALUES ('410811', '410800', '山阳区');
+INSERT INTO `area` VALUES ('410821', '410800', '修武县');
+INSERT INTO `area` VALUES ('410822', '410800', '博爱县');
+INSERT INTO `area` VALUES ('410823', '410800', '武陟县');
+INSERT INTO `area` VALUES ('410825', '410800', '温县');
+INSERT INTO `area` VALUES ('410882', '410800', '沁阳市');
+INSERT INTO `area` VALUES ('410883', '410800', '孟州市');
+INSERT INTO `area` VALUES ('410900', '410000', '濮阳市');
+INSERT INTO `area` VALUES ('410902', '410900', '华龙区');
+INSERT INTO `area` VALUES ('410922', '410900', '清丰县');
+INSERT INTO `area` VALUES ('410923', '410900', '南乐县');
+INSERT INTO `area` VALUES ('410926', '410900', '范县');
+INSERT INTO `area` VALUES ('410927', '410900', '台前县');
+INSERT INTO `area` VALUES ('410928', '410900', '濮阳县');
+INSERT INTO `area` VALUES ('411000', '410000', '许昌市');
+INSERT INTO `area` VALUES ('411002', '411000', '魏都区');
+INSERT INTO `area` VALUES ('411023', '411000', '许昌县');
+INSERT INTO `area` VALUES ('411024', '411000', '鄢陵县');
+INSERT INTO `area` VALUES ('411025', '411000', '襄城县');
+INSERT INTO `area` VALUES ('411081', '411000', '禹州市');
+INSERT INTO `area` VALUES ('411082', '411000', '长葛市');
+INSERT INTO `area` VALUES ('411100', '410000', '漯河市');
+INSERT INTO `area` VALUES ('411102', '411100', '源汇区');
+INSERT INTO `area` VALUES ('411103', '411100', '郾城区');
+INSERT INTO `area` VALUES ('411104', '411100', '召陵区');
+INSERT INTO `area` VALUES ('411121', '411100', '舞阳县');
+INSERT INTO `area` VALUES ('411122', '411100', '临颍县');
+INSERT INTO `area` VALUES ('411200', '410000', '三门峡市');
+INSERT INTO `area` VALUES ('411202', '411200', '湖滨区');
+INSERT INTO `area` VALUES ('411221', '411200', '渑池县');
+INSERT INTO `area` VALUES ('411222', '411200', '陕县');
+INSERT INTO `area` VALUES ('411224', '411200', '卢氏县');
+INSERT INTO `area` VALUES ('411281', '411200', '义马市');
+INSERT INTO `area` VALUES ('411282', '411200', '灵宝市');
+INSERT INTO `area` VALUES ('411300', '410000', '南阳市');
+INSERT INTO `area` VALUES ('411302', '411300', '宛城区');
+INSERT INTO `area` VALUES ('411303', '411300', '卧龙区');
+INSERT INTO `area` VALUES ('411321', '411300', '南召县');
+INSERT INTO `area` VALUES ('411322', '411300', '方城县');
+INSERT INTO `area` VALUES ('411323', '411300', '西峡县');
+INSERT INTO `area` VALUES ('411324', '411300', '镇平县');
+INSERT INTO `area` VALUES ('411325', '411300', '内乡县');
+INSERT INTO `area` VALUES ('411326', '411300', '淅川县');
+INSERT INTO `area` VALUES ('411327', '411300', '社旗县');
+INSERT INTO `area` VALUES ('411328', '411300', '唐河县');
+INSERT INTO `area` VALUES ('411329', '411300', '新野县');
+INSERT INTO `area` VALUES ('411330', '411300', '桐柏县');
+INSERT INTO `area` VALUES ('411381', '411300', '邓州市');
+INSERT INTO `area` VALUES ('411400', '410000', '商丘市');
+INSERT INTO `area` VALUES ('411402', '411400', '梁园区');
+INSERT INTO `area` VALUES ('411403', '411400', '睢阳区');
+INSERT INTO `area` VALUES ('411421', '411400', '民权县');
+INSERT INTO `area` VALUES ('411422', '411400', '睢县');
+INSERT INTO `area` VALUES ('411423', '411400', '宁陵县');
+INSERT INTO `area` VALUES ('411424', '411400', '柘城县');
+INSERT INTO `area` VALUES ('411425', '411400', '虞城县');
+INSERT INTO `area` VALUES ('411426', '411400', '夏邑县');
+INSERT INTO `area` VALUES ('411481', '411400', '永城市');
+INSERT INTO `area` VALUES ('411500', '410000', '信阳市');
+INSERT INTO `area` VALUES ('411502', '411500', '浉河区');
+INSERT INTO `area` VALUES ('411503', '411500', '平桥区');
+INSERT INTO `area` VALUES ('411521', '411500', '罗山县');
+INSERT INTO `area` VALUES ('411522', '411500', '光山县');
+INSERT INTO `area` VALUES ('411523', '411500', '新县');
+INSERT INTO `area` VALUES ('411524', '411500', '商城县');
+INSERT INTO `area` VALUES ('411525', '411500', '固始县');
+INSERT INTO `area` VALUES ('411526', '411500', '潢川县');
+INSERT INTO `area` VALUES ('411527', '411500', '淮滨县');
+INSERT INTO `area` VALUES ('411528', '411500', '息县');
+INSERT INTO `area` VALUES ('411600', '410000', '周口市');
+INSERT INTO `area` VALUES ('411602', '411600', '川汇区');
+INSERT INTO `area` VALUES ('411621', '411600', '扶沟县');
+INSERT INTO `area` VALUES ('411622', '411600', '西华县');
+INSERT INTO `area` VALUES ('411623', '411600', '商水县');
+INSERT INTO `area` VALUES ('411624', '411600', '沈丘县');
+INSERT INTO `area` VALUES ('411625', '411600', '郸城县');
+INSERT INTO `area` VALUES ('411626', '411600', '淮阳县');
+INSERT INTO `area` VALUES ('411627', '411600', '太康县');
+INSERT INTO `area` VALUES ('411628', '411600', '鹿邑县');
+INSERT INTO `area` VALUES ('411681', '411600', '项城市');
+INSERT INTO `area` VALUES ('411700', '410000', '驻马店市');
+INSERT INTO `area` VALUES ('411702', '411700', '驿城区');
+INSERT INTO `area` VALUES ('411721', '411700', '西平县');
+INSERT INTO `area` VALUES ('411722', '411700', '上蔡县');
+INSERT INTO `area` VALUES ('411723', '411700', '平舆县');
+INSERT INTO `area` VALUES ('411724', '411700', '正阳县');
+INSERT INTO `area` VALUES ('411725', '411700', '确山县');
+INSERT INTO `area` VALUES ('411726', '411700', '泌阳县');
+INSERT INTO `area` VALUES ('411727', '411700', '汝南县');
+INSERT INTO `area` VALUES ('411728', '411700', '遂平县');
+INSERT INTO `area` VALUES ('411729', '411700', '新蔡县');
+INSERT INTO `area` VALUES ('419000', '410000', '省直辖县级行政区划');
+INSERT INTO `area` VALUES ('419001', '419000', '济源市');
+INSERT INTO `area` VALUES ('420000', '0', '湖北省');
+INSERT INTO `area` VALUES ('420100', '420000', '武汉市');
+INSERT INTO `area` VALUES ('420102', '420100', '江岸区');
+INSERT INTO `area` VALUES ('420103', '420100', '江汉区');
+INSERT INTO `area` VALUES ('420104', '420100', '硚口区');
+INSERT INTO `area` VALUES ('420105', '420100', '汉阳区');
+INSERT INTO `area` VALUES ('420106', '420100', '武昌区');
+INSERT INTO `area` VALUES ('420107', '420100', '青山区');
+INSERT INTO `area` VALUES ('420111', '420100', '洪山区');
+INSERT INTO `area` VALUES ('420112', '420100', '东西湖区');
+INSERT INTO `area` VALUES ('420113', '420100', '汉南区');
+INSERT INTO `area` VALUES ('420114', '420100', '蔡甸区');
+INSERT INTO `area` VALUES ('420115', '420100', '江夏区');
+INSERT INTO `area` VALUES ('420116', '420100', '黄陂区');
+INSERT INTO `area` VALUES ('420117', '420100', '新洲区');
+INSERT INTO `area` VALUES ('420200', '420000', '黄石市');
+INSERT INTO `area` VALUES ('420202', '420200', '黄石港区');
+INSERT INTO `area` VALUES ('420203', '420200', '西塞山区');
+INSERT INTO `area` VALUES ('420204', '420200', '下陆区');
+INSERT INTO `area` VALUES ('420205', '420200', '铁山区');
+INSERT INTO `area` VALUES ('420222', '420200', '阳新县');
+INSERT INTO `area` VALUES ('420281', '420200', '大冶市');
+INSERT INTO `area` VALUES ('420300', '420000', '十堰市');
+INSERT INTO `area` VALUES ('420302', '420300', '茅箭区');
+INSERT INTO `area` VALUES ('420303', '420300', '张湾区');
+INSERT INTO `area` VALUES ('420321', '420300', '郧县');
+INSERT INTO `area` VALUES ('420322', '420300', '郧西县');
+INSERT INTO `area` VALUES ('420323', '420300', '竹山县');
+INSERT INTO `area` VALUES ('420324', '420300', '竹溪县');
+INSERT INTO `area` VALUES ('420325', '420300', '房县');
+INSERT INTO `area` VALUES ('420381', '420300', '丹江口市');
+INSERT INTO `area` VALUES ('420500', '420000', '宜昌市');
+INSERT INTO `area` VALUES ('420502', '420500', '西陵区');
+INSERT INTO `area` VALUES ('420503', '420500', '伍家岗区');
+INSERT INTO `area` VALUES ('420504', '420500', '点军区');
+INSERT INTO `area` VALUES ('420505', '420500', '猇亭区');
+INSERT INTO `area` VALUES ('420506', '420500', '夷陵区');
+INSERT INTO `area` VALUES ('420525', '420500', '远安县');
+INSERT INTO `area` VALUES ('420526', '420500', '兴山县');
+INSERT INTO `area` VALUES ('420527', '420500', '秭归县');
+INSERT INTO `area` VALUES ('420528', '420500', '长阳土家族自治县');
+INSERT INTO `area` VALUES ('420529', '420500', '五峰土家族自治县');
+INSERT INTO `area` VALUES ('420581', '420500', '宜都市');
+INSERT INTO `area` VALUES ('420582', '420500', '当阳市');
+INSERT INTO `area` VALUES ('420583', '420500', '枝江市');
+INSERT INTO `area` VALUES ('420600', '420000', '襄阳市');
+INSERT INTO `area` VALUES ('420602', '420600', '襄城区');
+INSERT INTO `area` VALUES ('420606', '420600', '樊城区');
+INSERT INTO `area` VALUES ('420607', '420600', '襄州区');
+INSERT INTO `area` VALUES ('420624', '420600', '南漳县');
+INSERT INTO `area` VALUES ('420625', '420600', '谷城县');
+INSERT INTO `area` VALUES ('420626', '420600', '保康县');
+INSERT INTO `area` VALUES ('420682', '420600', '老河口市');
+INSERT INTO `area` VALUES ('420683', '420600', '枣阳市');
+INSERT INTO `area` VALUES ('420684', '420600', '宜城市');
+INSERT INTO `area` VALUES ('420700', '420000', '鄂州市');
+INSERT INTO `area` VALUES ('420702', '420700', '梁子湖区');
+INSERT INTO `area` VALUES ('420703', '420700', '华容区');
+INSERT INTO `area` VALUES ('420704', '420700', '鄂城区');
+INSERT INTO `area` VALUES ('420800', '420000', '荆门市');
+INSERT INTO `area` VALUES ('420802', '420800', '东宝区');
+INSERT INTO `area` VALUES ('420804', '420800', '掇刀区');
+INSERT INTO `area` VALUES ('420821', '420800', '京山县');
+INSERT INTO `area` VALUES ('420822', '420800', '沙洋县');
+INSERT INTO `area` VALUES ('420881', '420800', '钟祥市');
+INSERT INTO `area` VALUES ('420900', '420000', '孝感市');
+INSERT INTO `area` VALUES ('420902', '420900', '孝南区');
+INSERT INTO `area` VALUES ('420921', '420900', '孝昌县');
+INSERT INTO `area` VALUES ('420922', '420900', '大悟县');
+INSERT INTO `area` VALUES ('420923', '420900', '云梦县');
+INSERT INTO `area` VALUES ('420981', '420900', '应城市');
+INSERT INTO `area` VALUES ('420982', '420900', '安陆市');
+INSERT INTO `area` VALUES ('420984', '420900', '汉川市');
+INSERT INTO `area` VALUES ('421000', '420000', '荆州市');
+INSERT INTO `area` VALUES ('421002', '421000', '沙市区');
+INSERT INTO `area` VALUES ('421003', '421000', '荆州区');
+INSERT INTO `area` VALUES ('421022', '421000', '公安县');
+INSERT INTO `area` VALUES ('421023', '421000', '监利县');
+INSERT INTO `area` VALUES ('421024', '421000', '江陵县');
+INSERT INTO `area` VALUES ('421081', '421000', '石首市');
+INSERT INTO `area` VALUES ('421083', '421000', '洪湖市');
+INSERT INTO `area` VALUES ('421087', '421000', '松滋市');
+INSERT INTO `area` VALUES ('421100', '420000', '黄冈市');
+INSERT INTO `area` VALUES ('421102', '421100', '黄州区');
+INSERT INTO `area` VALUES ('421121', '421100', '团风县');
+INSERT INTO `area` VALUES ('421122', '421100', '红安县');
+INSERT INTO `area` VALUES ('421123', '421100', '罗田县');
+INSERT INTO `area` VALUES ('421124', '421100', '英山县');
+INSERT INTO `area` VALUES ('421125', '421100', '浠水县');
+INSERT INTO `area` VALUES ('421126', '421100', '蕲春县');
+INSERT INTO `area` VALUES ('421127', '421100', '黄梅县');
+INSERT INTO `area` VALUES ('421181', '421100', '麻城市');
+INSERT INTO `area` VALUES ('421182', '421100', '武穴市');
+INSERT INTO `area` VALUES ('421200', '420000', '咸宁市');
+INSERT INTO `area` VALUES ('421202', '421200', '咸安区');
+INSERT INTO `area` VALUES ('421221', '421200', '嘉鱼县');
+INSERT INTO `area` VALUES ('421222', '421200', '通城县');
+INSERT INTO `area` VALUES ('421223', '421200', '崇阳县');
+INSERT INTO `area` VALUES ('421224', '421200', '通山县');
+INSERT INTO `area` VALUES ('421281', '421200', '赤壁市');
+INSERT INTO `area` VALUES ('421300', '420000', '随州市');
+INSERT INTO `area` VALUES ('421303', '421300', '曾都区');
+INSERT INTO `area` VALUES ('421321', '421300', '随县');
+INSERT INTO `area` VALUES ('421381', '421300', '广水市');
+INSERT INTO `area` VALUES ('422800', '420000', '恩施土家族苗族自治州');
+INSERT INTO `area` VALUES ('422801', '422800', '恩施市');
+INSERT INTO `area` VALUES ('422802', '422800', '利川市');
+INSERT INTO `area` VALUES ('422822', '422800', '建始县');
+INSERT INTO `area` VALUES ('422823', '422800', '巴东县');
+INSERT INTO `area` VALUES ('422825', '422800', '宣恩县');
+INSERT INTO `area` VALUES ('422826', '422800', '咸丰县');
+INSERT INTO `area` VALUES ('422827', '422800', '来凤县');
+INSERT INTO `area` VALUES ('422828', '422800', '鹤峰县');
+INSERT INTO `area` VALUES ('429000', '420000', '省直辖县级行政区划');
+INSERT INTO `area` VALUES ('429004', '429000', '仙桃市');
+INSERT INTO `area` VALUES ('429005', '429000', '潜江市');
+INSERT INTO `area` VALUES ('429006', '429000', '天门市');
+INSERT INTO `area` VALUES ('429021', '429000', '神农架林区');
+INSERT INTO `area` VALUES ('430000', '0', '湖南省');
+INSERT INTO `area` VALUES ('430100', '430000', '长沙市');
+INSERT INTO `area` VALUES ('430102', '430100', '芙蓉区');
+INSERT INTO `area` VALUES ('430103', '430100', '天心区');
+INSERT INTO `area` VALUES ('430104', '430100', '岳麓区');
+INSERT INTO `area` VALUES ('430105', '430100', '开福区');
+INSERT INTO `area` VALUES ('430111', '430100', '雨花区');
+INSERT INTO `area` VALUES ('430112', '430100', '望城区');
+INSERT INTO `area` VALUES ('430121', '430100', '长沙县');
+INSERT INTO `area` VALUES ('430124', '430100', '宁乡县');
+INSERT INTO `area` VALUES ('430181', '430100', '浏阳市');
+INSERT INTO `area` VALUES ('430200', '430000', '株洲市');
+INSERT INTO `area` VALUES ('430202', '430200', '荷塘区');
+INSERT INTO `area` VALUES ('430203', '430200', '芦淞区');
+INSERT INTO `area` VALUES ('430204', '430200', '石峰区');
+INSERT INTO `area` VALUES ('430211', '430200', '天元区');
+INSERT INTO `area` VALUES ('430221', '430200', '株洲县');
+INSERT INTO `area` VALUES ('430223', '430200', '攸县');
+INSERT INTO `area` VALUES ('430224', '430200', '茶陵县');
+INSERT INTO `area` VALUES ('430225', '430200', '炎陵县');
+INSERT INTO `area` VALUES ('430281', '430200', '醴陵市');
+INSERT INTO `area` VALUES ('430300', '430000', '湘潭市');
+INSERT INTO `area` VALUES ('430302', '430300', '雨湖区');
+INSERT INTO `area` VALUES ('430304', '430300', '岳塘区');
+INSERT INTO `area` VALUES ('430321', '430300', '湘潭县');
+INSERT INTO `area` VALUES ('430381', '430300', '湘乡市');
+INSERT INTO `area` VALUES ('430382', '430300', '韶山市');
+INSERT INTO `area` VALUES ('430400', '430000', '衡阳市');
+INSERT INTO `area` VALUES ('430405', '430400', '珠晖区');
+INSERT INTO `area` VALUES ('430406', '430400', '雁峰区');
+INSERT INTO `area` VALUES ('430407', '430400', '石鼓区');
+INSERT INTO `area` VALUES ('430408', '430400', '蒸湘区');
+INSERT INTO `area` VALUES ('430412', '430400', '南岳区');
+INSERT INTO `area` VALUES ('430421', '430400', '衡阳县');
+INSERT INTO `area` VALUES ('430422', '430400', '衡南县');
+INSERT INTO `area` VALUES ('430423', '430400', '衡山县');
+INSERT INTO `area` VALUES ('430424', '430400', '衡东县');
+INSERT INTO `area` VALUES ('430426', '430400', '祁东县');
+INSERT INTO `area` VALUES ('430481', '430400', '耒阳市');
+INSERT INTO `area` VALUES ('430482', '430400', '常宁市');
+INSERT INTO `area` VALUES ('430500', '430000', '邵阳市');
+INSERT INTO `area` VALUES ('430502', '430500', '双清区');
+INSERT INTO `area` VALUES ('430503', '430500', '大祥区');
+INSERT INTO `area` VALUES ('430511', '430500', '北塔区');
+INSERT INTO `area` VALUES ('430521', '430500', '邵东县');
+INSERT INTO `area` VALUES ('430522', '430500', '新邵县');
+INSERT INTO `area` VALUES ('430523', '430500', '邵阳县');
+INSERT INTO `area` VALUES ('430524', '430500', '隆回县');
+INSERT INTO `area` VALUES ('430525', '430500', '洞口县');
+INSERT INTO `area` VALUES ('430527', '430500', '绥宁县');
+INSERT INTO `area` VALUES ('430528', '430500', '新宁县');
+INSERT INTO `area` VALUES ('430529', '430500', '城步苗族自治县');
+INSERT INTO `area` VALUES ('430581', '430500', '武冈市');
+INSERT INTO `area` VALUES ('430600', '430000', '岳阳市');
+INSERT INTO `area` VALUES ('430602', '430600', '岳阳楼区');
+INSERT INTO `area` VALUES ('430603', '430600', '云溪区');
+INSERT INTO `area` VALUES ('430611', '430600', '君山区');
+INSERT INTO `area` VALUES ('430621', '430600', '岳阳县');
+INSERT INTO `area` VALUES ('430623', '430600', '华容县');
+INSERT INTO `area` VALUES ('430624', '430600', '湘阴县');
+INSERT INTO `area` VALUES ('430626', '430600', '平江县');
+INSERT INTO `area` VALUES ('430681', '430600', '汨罗市');
+INSERT INTO `area` VALUES ('430682', '430600', '临湘市');
+INSERT INTO `area` VALUES ('430700', '430000', '常德市');
+INSERT INTO `area` VALUES ('430702', '430700', '武陵区');
+INSERT INTO `area` VALUES ('430703', '430700', '鼎城区');
+INSERT INTO `area` VALUES ('430721', '430700', '安乡县');
+INSERT INTO `area` VALUES ('430722', '430700', '汉寿县');
+INSERT INTO `area` VALUES ('430723', '430700', '澧县');
+INSERT INTO `area` VALUES ('430724', '430700', '临澧县');
+INSERT INTO `area` VALUES ('430725', '430700', '桃源县');
+INSERT INTO `area` VALUES ('430726', '430700', '石门县');
+INSERT INTO `area` VALUES ('430781', '430700', '津市市');
+INSERT INTO `area` VALUES ('430800', '430000', '张家界市');
+INSERT INTO `area` VALUES ('430802', '430800', '永定区');
+INSERT INTO `area` VALUES ('430811', '430800', '武陵源区');
+INSERT INTO `area` VALUES ('430821', '430800', '慈利县');
+INSERT INTO `area` VALUES ('430822', '430800', '桑植县');
+INSERT INTO `area` VALUES ('430900', '430000', '益阳市');
+INSERT INTO `area` VALUES ('430902', '430900', '资阳区');
+INSERT INTO `area` VALUES ('430903', '430900', '赫山区');
+INSERT INTO `area` VALUES ('430921', '430900', '南县');
+INSERT INTO `area` VALUES ('430922', '430900', '桃江县');
+INSERT INTO `area` VALUES ('430923', '430900', '安化县');
+INSERT INTO `area` VALUES ('430981', '430900', '沅江市');
+INSERT INTO `area` VALUES ('431000', '430000', '郴州市');
+INSERT INTO `area` VALUES ('431002', '431000', '北湖区');
+INSERT INTO `area` VALUES ('431003', '431000', '苏仙区');
+INSERT INTO `area` VALUES ('431021', '431000', '桂阳县');
+INSERT INTO `area` VALUES ('431022', '431000', '宜章县');
+INSERT INTO `area` VALUES ('431023', '431000', '永兴县');
+INSERT INTO `area` VALUES ('431024', '431000', '嘉禾县');
+INSERT INTO `area` VALUES ('431025', '431000', '临武县');
+INSERT INTO `area` VALUES ('431026', '431000', '汝城县');
+INSERT INTO `area` VALUES ('431027', '431000', '桂东县');
+INSERT INTO `area` VALUES ('431028', '431000', '安仁县');
+INSERT INTO `area` VALUES ('431081', '431000', '资兴市');
+INSERT INTO `area` VALUES ('431100', '430000', '永州市');
+INSERT INTO `area` VALUES ('431102', '431100', '零陵区');
+INSERT INTO `area` VALUES ('431103', '431100', '冷水滩区');
+INSERT INTO `area` VALUES ('431121', '431100', '祁阳县');
+INSERT INTO `area` VALUES ('431122', '431100', '东安县');
+INSERT INTO `area` VALUES ('431123', '431100', '双牌县');
+INSERT INTO `area` VALUES ('431124', '431100', '道县');
+INSERT INTO `area` VALUES ('431125', '431100', '江永县');
+INSERT INTO `area` VALUES ('431126', '431100', '宁远县');
+INSERT INTO `area` VALUES ('431127', '431100', '蓝山县');
+INSERT INTO `area` VALUES ('431128', '431100', '新田县');
+INSERT INTO `area` VALUES ('431129', '431100', '江华瑶族自治县');
+INSERT INTO `area` VALUES ('431200', '430000', '怀化市');
+INSERT INTO `area` VALUES ('431202', '431200', '鹤城区');
+INSERT INTO `area` VALUES ('431221', '431200', '中方县');
+INSERT INTO `area` VALUES ('431222', '431200', '沅陵县');
+INSERT INTO `area` VALUES ('431223', '431200', '辰溪县');
+INSERT INTO `area` VALUES ('431224', '431200', '溆浦县');
+INSERT INTO `area` VALUES ('431225', '431200', '会同县');
+INSERT INTO `area` VALUES ('431226', '431200', '麻阳苗族自治县');
+INSERT INTO `area` VALUES ('431227', '431200', '新晃侗族自治县');
+INSERT INTO `area` VALUES ('431228', '431200', '芷江侗族自治县');
+INSERT INTO `area` VALUES ('431229', '431200', '靖州苗族侗族自治县');
+INSERT INTO `area` VALUES ('431230', '431200', '通道侗族自治县');
+INSERT INTO `area` VALUES ('431281', '431200', '洪江市');
+INSERT INTO `area` VALUES ('431300', '430000', '娄底市');
+INSERT INTO `area` VALUES ('431302', '431300', '娄星区');
+INSERT INTO `area` VALUES ('431321', '431300', '双峰县');
+INSERT INTO `area` VALUES ('431322', '431300', '新化县');
+INSERT INTO `area` VALUES ('431381', '431300', '冷水江市');
+INSERT INTO `area` VALUES ('431382', '431300', '涟源市');
+INSERT INTO `area` VALUES ('433100', '430000', '湘西土家族苗族自治州');
+INSERT INTO `area` VALUES ('433101', '433100', '吉首市');
+INSERT INTO `area` VALUES ('433122', '433100', '泸溪县');
+INSERT INTO `area` VALUES ('433123', '433100', '凤凰县');
+INSERT INTO `area` VALUES ('433124', '433100', '花垣县');
+INSERT INTO `area` VALUES ('433125', '433100', '保靖县');
+INSERT INTO `area` VALUES ('433126', '433100', '古丈县');
+INSERT INTO `area` VALUES ('433127', '433100', '永顺县');
+INSERT INTO `area` VALUES ('433130', '433100', '龙山县');
+INSERT INTO `area` VALUES ('440000', '0', '广东省');
+INSERT INTO `area` VALUES ('440100', '440000', '广州市');
+INSERT INTO `area` VALUES ('440103', '440100', '荔湾区');
+INSERT INTO `area` VALUES ('440104', '440100', '越秀区');
+INSERT INTO `area` VALUES ('440105', '440100', '海珠区');
+INSERT INTO `area` VALUES ('440106', '440100', '天河区');
+INSERT INTO `area` VALUES ('440111', '440100', '白云区');
+INSERT INTO `area` VALUES ('440112', '440100', '黄埔区');
+INSERT INTO `area` VALUES ('440113', '440100', '番禺区');
+INSERT INTO `area` VALUES ('440114', '440100', '花都区');
+INSERT INTO `area` VALUES ('440115', '440100', '南沙区');
+INSERT INTO `area` VALUES ('440116', '440100', '萝岗区');
+INSERT INTO `area` VALUES ('440183', '440100', '增城市');
+INSERT INTO `area` VALUES ('440184', '440100', '从化市');
+INSERT INTO `area` VALUES ('440200', '440000', '韶关市');
+INSERT INTO `area` VALUES ('440203', '440200', '武江区');
+INSERT INTO `area` VALUES ('440204', '440200', '浈江区');
+INSERT INTO `area` VALUES ('440205', '440200', '曲江区');
+INSERT INTO `area` VALUES ('440222', '440200', '始兴县');
+INSERT INTO `area` VALUES ('440224', '440200', '仁化县');
+INSERT INTO `area` VALUES ('440229', '440200', '翁源县');
+INSERT INTO `area` VALUES ('440232', '440200', '乳源瑶族自治县');
+INSERT INTO `area` VALUES ('440233', '440200', '新丰县');
+INSERT INTO `area` VALUES ('440281', '440200', '乐昌市');
+INSERT INTO `area` VALUES ('440282', '440200', '南雄市');
+INSERT INTO `area` VALUES ('440300', '440000', '深圳市');
+INSERT INTO `area` VALUES ('440303', '440300', '罗湖区');
+INSERT INTO `area` VALUES ('440304', '440300', '福田区');
+INSERT INTO `area` VALUES ('440305', '440300', '南山区');
+INSERT INTO `area` VALUES ('440306', '440300', '宝安区');
+INSERT INTO `area` VALUES ('440307', '440300', '龙岗区');
+INSERT INTO `area` VALUES ('440308', '440300', '盐田区');
+INSERT INTO `area` VALUES ('440400', '440000', '珠海市');
+INSERT INTO `area` VALUES ('440402', '440400', '香洲区');
+INSERT INTO `area` VALUES ('440403', '440400', '斗门区');
+INSERT INTO `area` VALUES ('440404', '440400', '金湾区');
+INSERT INTO `area` VALUES ('440500', '440000', '汕头市');
+INSERT INTO `area` VALUES ('440507', '440500', '龙湖区');
+INSERT INTO `area` VALUES ('440511', '440500', '金平区');
+INSERT INTO `area` VALUES ('440512', '440500', '濠江区');
+INSERT INTO `area` VALUES ('440513', '440500', '潮阳区');
+INSERT INTO `area` VALUES ('440514', '440500', '潮南区');
+INSERT INTO `area` VALUES ('440515', '440500', '澄海区');
+INSERT INTO `area` VALUES ('440523', '440500', '南澳县');
+INSERT INTO `area` VALUES ('440600', '440000', '佛山市');
+INSERT INTO `area` VALUES ('440604', '440600', '禅城区');
+INSERT INTO `area` VALUES ('440605', '440600', '南海区');
+INSERT INTO `area` VALUES ('440606', '440600', '顺德区');
+INSERT INTO `area` VALUES ('440607', '440600', '三水区');
+INSERT INTO `area` VALUES ('440608', '440600', '高明区');
+INSERT INTO `area` VALUES ('440700', '440000', '江门市');
+INSERT INTO `area` VALUES ('440703', '440700', '蓬江区');
+INSERT INTO `area` VALUES ('440704', '440700', '江海区');
+INSERT INTO `area` VALUES ('440705', '440700', '新会区');
+INSERT INTO `area` VALUES ('440781', '440700', '台山市');
+INSERT INTO `area` VALUES ('440783', '440700', '开平市');
+INSERT INTO `area` VALUES ('440784', '440700', '鹤山市');
+INSERT INTO `area` VALUES ('440785', '440700', '恩平市');
+INSERT INTO `area` VALUES ('440800', '440000', '湛江市');
+INSERT INTO `area` VALUES ('440802', '440800', '赤坎区');
+INSERT INTO `area` VALUES ('440803', '440800', '霞山区');
+INSERT INTO `area` VALUES ('440804', '440800', '坡头区');
+INSERT INTO `area` VALUES ('440811', '440800', '麻章区');
+INSERT INTO `area` VALUES ('440823', '440800', '遂溪县');
+INSERT INTO `area` VALUES ('440825', '440800', '徐闻县');
+INSERT INTO `area` VALUES ('440881', '440800', '廉江市');
+INSERT INTO `area` VALUES ('440882', '440800', '雷州市');
+INSERT INTO `area` VALUES ('440883', '440800', '吴川市');
+INSERT INTO `area` VALUES ('440900', '440000', '茂名市');
+INSERT INTO `area` VALUES ('440902', '440900', '茂南区');
+INSERT INTO `area` VALUES ('440903', '440900', '茂港区');
+INSERT INTO `area` VALUES ('440923', '440900', '电白县');
+INSERT INTO `area` VALUES ('440981', '440900', '高州市');
+INSERT INTO `area` VALUES ('440982', '440900', '化州市');
+INSERT INTO `area` VALUES ('440983', '440900', '信宜市');
+INSERT INTO `area` VALUES ('441200', '440000', '肇庆市');
+INSERT INTO `area` VALUES ('441202', '441200', '端州区');
+INSERT INTO `area` VALUES ('441203', '441200', '鼎湖区');
+INSERT INTO `area` VALUES ('441223', '441200', '广宁县');
+INSERT INTO `area` VALUES ('441224', '441200', '怀集县');
+INSERT INTO `area` VALUES ('441225', '441200', '封开县');
+INSERT INTO `area` VALUES ('441226', '441200', '德庆县');
+INSERT INTO `area` VALUES ('441283', '441200', '高要市');
+INSERT INTO `area` VALUES ('441284', '441200', '四会市');
+INSERT INTO `area` VALUES ('441300', '440000', '惠州市');
+INSERT INTO `area` VALUES ('441302', '441300', '惠城区');
+INSERT INTO `area` VALUES ('441303', '441300', '惠阳区');
+INSERT INTO `area` VALUES ('441322', '441300', '博罗县');
+INSERT INTO `area` VALUES ('441323', '441300', '惠东县');
+INSERT INTO `area` VALUES ('441324', '441300', '龙门县');
+INSERT INTO `area` VALUES ('441400', '440000', '梅州市');
+INSERT INTO `area` VALUES ('441402', '441400', '梅江区');
+INSERT INTO `area` VALUES ('441421', '441400', '梅县');
+INSERT INTO `area` VALUES ('441422', '441400', '大埔县');
+INSERT INTO `area` VALUES ('441423', '441400', '丰顺县');
+INSERT INTO `area` VALUES ('441424', '441400', '五华县');
+INSERT INTO `area` VALUES ('441426', '441400', '平远县');
+INSERT INTO `area` VALUES ('441427', '441400', '蕉岭县');
+INSERT INTO `area` VALUES ('441481', '441400', '兴宁市');
+INSERT INTO `area` VALUES ('441500', '440000', '汕尾市');
+INSERT INTO `area` VALUES ('441502', '441500', '城区');
+INSERT INTO `area` VALUES ('441521', '441500', '海丰县');
+INSERT INTO `area` VALUES ('441523', '441500', '陆河县');
+INSERT INTO `area` VALUES ('441581', '441500', '陆丰市');
+INSERT INTO `area` VALUES ('441600', '440000', '河源市');
+INSERT INTO `area` VALUES ('441602', '441600', '源城区');
+INSERT INTO `area` VALUES ('441621', '441600', '紫金县');
+INSERT INTO `area` VALUES ('441622', '441600', '龙川县');
+INSERT INTO `area` VALUES ('441623', '441600', '连平县');
+INSERT INTO `area` VALUES ('441624', '441600', '和平县');
+INSERT INTO `area` VALUES ('441625', '441600', '东源县');
+INSERT INTO `area` VALUES ('441700', '440000', '阳江市');
+INSERT INTO `area` VALUES ('441702', '441700', '江城区');
+INSERT INTO `area` VALUES ('441721', '441700', '阳西县');
+INSERT INTO `area` VALUES ('441723', '441700', '阳东县');
+INSERT INTO `area` VALUES ('441781', '441700', '阳春市');
+INSERT INTO `area` VALUES ('441800', '440000', '清远市');
+INSERT INTO `area` VALUES ('441802', '441800', '清城区');
+INSERT INTO `area` VALUES ('441821', '441800', '佛冈县');
+INSERT INTO `area` VALUES ('441823', '441800', '阳山县');
+INSERT INTO `area` VALUES ('441825', '441800', '连山壮族瑶族自治县');
+INSERT INTO `area` VALUES ('441826', '441800', '连南瑶族自治县');
+INSERT INTO `area` VALUES ('441827', '441800', '清新县');
+INSERT INTO `area` VALUES ('441881', '441800', '英德市');
+INSERT INTO `area` VALUES ('441882', '441800', '连州市');
+INSERT INTO `area` VALUES ('441900', '440000', '东莞市');
+INSERT INTO `area` VALUES ('441901', '441900', '东莞市');
+INSERT INTO `area` VALUES ('442000', '440000', '中山市');
+INSERT INTO `area` VALUES ('442001', '442000', '中山市');
+INSERT INTO `area` VALUES ('445100', '440000', '潮州市');
+INSERT INTO `area` VALUES ('445102', '445100', '湘桥区');
+INSERT INTO `area` VALUES ('445121', '445100', '潮安县');
+INSERT INTO `area` VALUES ('445122', '445100', '饶平县');
+INSERT INTO `area` VALUES ('445200', '440000', '揭阳市');
+INSERT INTO `area` VALUES ('445202', '445200', '榕城区');
+INSERT INTO `area` VALUES ('445221', '445200', '揭东县');
+INSERT INTO `area` VALUES ('445222', '445200', '揭西县');
+INSERT INTO `area` VALUES ('445224', '445200', '惠来县');
+INSERT INTO `area` VALUES ('445281', '445200', '普宁市');
+INSERT INTO `area` VALUES ('445300', '440000', '云浮市');
+INSERT INTO `area` VALUES ('445302', '445300', '云城区');
+INSERT INTO `area` VALUES ('445321', '445300', '新兴县');
+INSERT INTO `area` VALUES ('445322', '445300', '郁南县');
+INSERT INTO `area` VALUES ('445323', '445300', '云安县');
+INSERT INTO `area` VALUES ('445381', '445300', '罗定市');
+INSERT INTO `area` VALUES ('450000', '0', '广西壮族自治区');
+INSERT INTO `area` VALUES ('450100', '450000', '南宁市');
+INSERT INTO `area` VALUES ('450102', '450100', '兴宁区');
+INSERT INTO `area` VALUES ('450103', '450100', '青秀区');
+INSERT INTO `area` VALUES ('450105', '450100', '江南区');
+INSERT INTO `area` VALUES ('450107', '450100', '西乡塘区');
+INSERT INTO `area` VALUES ('450108', '450100', '良庆区');
+INSERT INTO `area` VALUES ('450109', '450100', '邕宁区');
+INSERT INTO `area` VALUES ('450122', '450100', '武鸣县');
+INSERT INTO `area` VALUES ('450123', '450100', '隆安县');
+INSERT INTO `area` VALUES ('450124', '450100', '马山县');
+INSERT INTO `area` VALUES ('450125', '450100', '上林县');
+INSERT INTO `area` VALUES ('450126', '450100', '宾阳县');
+INSERT INTO `area` VALUES ('450127', '450100', '横县');
+INSERT INTO `area` VALUES ('450200', '450000', '柳州市');
+INSERT INTO `area` VALUES ('450202', '450200', '城中区');
+INSERT INTO `area` VALUES ('450203', '450200', '鱼峰区');
+INSERT INTO `area` VALUES ('450204', '450200', '柳南区');
+INSERT INTO `area` VALUES ('450205', '450200', '柳北区');
+INSERT INTO `area` VALUES ('450221', '450200', '柳江县');
+INSERT INTO `area` VALUES ('450222', '450200', '柳城县');
+INSERT INTO `area` VALUES ('450223', '450200', '鹿寨县');
+INSERT INTO `area` VALUES ('450224', '450200', '融安县');
+INSERT INTO `area` VALUES ('450225', '450200', '融水苗族自治县');
+INSERT INTO `area` VALUES ('450226', '450200', '三江侗族自治县');
+INSERT INTO `area` VALUES ('450300', '450000', '桂林市');
+INSERT INTO `area` VALUES ('450302', '450300', '秀峰区');
+INSERT INTO `area` VALUES ('450303', '450300', '叠彩区');
+INSERT INTO `area` VALUES ('450304', '450300', '象山区');
+INSERT INTO `area` VALUES ('450305', '450300', '七星区');
+INSERT INTO `area` VALUES ('450311', '450300', '雁山区');
+INSERT INTO `area` VALUES ('450321', '450300', '阳朔县');
+INSERT INTO `area` VALUES ('450322', '450300', '临桂县');
+INSERT INTO `area` VALUES ('450323', '450300', '灵川县');
+INSERT INTO `area` VALUES ('450324', '450300', '全州县');
+INSERT INTO `area` VALUES ('450325', '450300', '兴安县');
+INSERT INTO `area` VALUES ('450326', '450300', '永福县');
+INSERT INTO `area` VALUES ('450327', '450300', '灌阳县');
+INSERT INTO `area` VALUES ('450328', '450300', '龙胜各族自治县');
+INSERT INTO `area` VALUES ('450329', '450300', '资源县');
+INSERT INTO `area` VALUES ('450330', '450300', '平乐县');
+INSERT INTO `area` VALUES ('450331', '450300', '荔蒲县');
+INSERT INTO `area` VALUES ('450332', '450300', '恭城瑶族自治县');
+INSERT INTO `area` VALUES ('450400', '450000', '梧州市');
+INSERT INTO `area` VALUES ('450403', '450400', '万秀区');
+INSERT INTO `area` VALUES ('450404', '450400', '蝶山区');
+INSERT INTO `area` VALUES ('450405', '450400', '长洲区');
+INSERT INTO `area` VALUES ('450421', '450400', '苍梧县');
+INSERT INTO `area` VALUES ('450422', '450400', '藤县');
+INSERT INTO `area` VALUES ('450423', '450400', '蒙山县');
+INSERT INTO `area` VALUES ('450481', '450400', '岑溪市');
+INSERT INTO `area` VALUES ('450500', '450000', '北海市');
+INSERT INTO `area` VALUES ('450502', '450500', '海城区');
+INSERT INTO `area` VALUES ('450503', '450500', '银海区');
+INSERT INTO `area` VALUES ('450512', '450500', '铁山港区');
+INSERT INTO `area` VALUES ('450521', '450500', '合浦县');
+INSERT INTO `area` VALUES ('450600', '450000', '防城港市');
+INSERT INTO `area` VALUES ('450602', '450600', '港口区');
+INSERT INTO `area` VALUES ('450603', '450600', '防城区');
+INSERT INTO `area` VALUES ('450621', '450600', '上思县');
+INSERT INTO `area` VALUES ('450681', '450600', '东兴市');
+INSERT INTO `area` VALUES ('450700', '450000', '钦州市');
+INSERT INTO `area` VALUES ('450702', '450700', '钦南区');
+INSERT INTO `area` VALUES ('450703', '450700', '钦北区');
+INSERT INTO `area` VALUES ('450721', '450700', '灵山县');
+INSERT INTO `area` VALUES ('450722', '450700', '浦北县');
+INSERT INTO `area` VALUES ('450800', '450000', '贵港市');
+INSERT INTO `area` VALUES ('450802', '450800', '港北区');
+INSERT INTO `area` VALUES ('450803', '450800', '港南区');
+INSERT INTO `area` VALUES ('450804', '450800', '覃塘区');
+INSERT INTO `area` VALUES ('450821', '450800', '平南县');
+INSERT INTO `area` VALUES ('450881', '450800', '桂平市');
+INSERT INTO `area` VALUES ('450900', '450000', '玉林市');
+INSERT INTO `area` VALUES ('450902', '450900', '玉州区');
+INSERT INTO `area` VALUES ('450921', '450900', '容县');
+INSERT INTO `area` VALUES ('450922', '450900', '陆川县');
+INSERT INTO `area` VALUES ('450923', '450900', '博白县');
+INSERT INTO `area` VALUES ('450924', '450900', '兴业县');
+INSERT INTO `area` VALUES ('450981', '450900', '北流市');
+INSERT INTO `area` VALUES ('451000', '450000', '百色市');
+INSERT INTO `area` VALUES ('451002', '451000', '右江区');
+INSERT INTO `area` VALUES ('451021', '451000', '田阳县');
+INSERT INTO `area` VALUES ('451022', '451000', '田东县');
+INSERT INTO `area` VALUES ('451023', '451000', '平果县');
+INSERT INTO `area` VALUES ('451024', '451000', '德保县');
+INSERT INTO `area` VALUES ('451025', '451000', '靖西县');
+INSERT INTO `area` VALUES ('451026', '451000', '那坡县');
+INSERT INTO `area` VALUES ('451027', '451000', '凌云县');
+INSERT INTO `area` VALUES ('451028', '451000', '乐业县');
+INSERT INTO `area` VALUES ('451029', '451000', '田林县');
+INSERT INTO `area` VALUES ('451030', '451000', '西林县');
+INSERT INTO `area` VALUES ('451031', '451000', '隆林各族自治县');
+INSERT INTO `area` VALUES ('451100', '450000', '贺州市');
+INSERT INTO `area` VALUES ('451102', '451100', '八步区');
+INSERT INTO `area` VALUES ('451121', '451100', '昭平县');
+INSERT INTO `area` VALUES ('451122', '451100', '钟山县');
+INSERT INTO `area` VALUES ('451123', '451100', '富川瑶族自治县');
+INSERT INTO `area` VALUES ('451200', '450000', '河池市');
+INSERT INTO `area` VALUES ('451202', '451200', '金城江区');
+INSERT INTO `area` VALUES ('451221', '451200', '南丹县');
+INSERT INTO `area` VALUES ('451222', '451200', '天峨县');
+INSERT INTO `area` VALUES ('451223', '451200', '凤山县');
+INSERT INTO `area` VALUES ('451224', '451200', '东兰县');
+INSERT INTO `area` VALUES ('451225', '451200', '罗城仫佬族自治县');
+INSERT INTO `area` VALUES ('451226', '451200', '环江毛南族自治县');
+INSERT INTO `area` VALUES ('451227', '451200', '巴马瑶族自治县');
+INSERT INTO `area` VALUES ('451228', '451200', '都安瑶族自治县');
+INSERT INTO `area` VALUES ('451229', '451200', '大化瑶族自治县');
+INSERT INTO `area` VALUES ('451281', '451200', '宜州市');
+INSERT INTO `area` VALUES ('451300', '450000', '来宾市');
+INSERT INTO `area` VALUES ('451302', '451300', '兴宾区');
+INSERT INTO `area` VALUES ('451321', '451300', '忻城县');
+INSERT INTO `area` VALUES ('451322', '451300', '象州县');
+INSERT INTO `area` VALUES ('451323', '451300', '武宣县');
+INSERT INTO `area` VALUES ('451324', '451300', '金秀瑶族自治县');
+INSERT INTO `area` VALUES ('451381', '451300', '合山市');
+INSERT INTO `area` VALUES ('451400', '450000', '崇左市');
+INSERT INTO `area` VALUES ('451402', '451400', '江洲区');
+INSERT INTO `area` VALUES ('451421', '451400', '扶绥县');
+INSERT INTO `area` VALUES ('451422', '451400', '宁明县');
+INSERT INTO `area` VALUES ('451423', '451400', '龙州县');
+INSERT INTO `area` VALUES ('451424', '451400', '大新县');
+INSERT INTO `area` VALUES ('451425', '451400', '天等县');
+INSERT INTO `area` VALUES ('451481', '451400', '凭祥市');
+INSERT INTO `area` VALUES ('460000', '0', '海南省');
+INSERT INTO `area` VALUES ('460100', '460000', '海口市');
+INSERT INTO `area` VALUES ('460105', '460100', '秀英区');
+INSERT INTO `area` VALUES ('460106', '460100', '龙华区');
+INSERT INTO `area` VALUES ('460107', '460100', '琼山区');
+INSERT INTO `area` VALUES ('460108', '460100', '美兰区');
+INSERT INTO `area` VALUES ('460200', '460000', '三亚市');
+INSERT INTO `area` VALUES ('469000', '460000', '省直辖县级行政区划');
+INSERT INTO `area` VALUES ('469001', '469000', '五指山市');
+INSERT INTO `area` VALUES ('469002', '469000', '琼海市');
+INSERT INTO `area` VALUES ('469003', '469000', '儋州市');
+INSERT INTO `area` VALUES ('469005', '469000', '文昌市');
+INSERT INTO `area` VALUES ('469006', '469000', '万宁市');
+INSERT INTO `area` VALUES ('469007', '469000', '东方市');
+INSERT INTO `area` VALUES ('469021', '469000', '定安县');
+INSERT INTO `area` VALUES ('469022', '469000', '屯昌县');
+INSERT INTO `area` VALUES ('469023', '469000', '澄迈县');
+INSERT INTO `area` VALUES ('469024', '469000', '临高县');
+INSERT INTO `area` VALUES ('469025', '469000', '白沙黎族自治县');
+INSERT INTO `area` VALUES ('469026', '469000', '昌江黎族自治县');
+INSERT INTO `area` VALUES ('469027', '469000', '乐东黎族自治县');
+INSERT INTO `area` VALUES ('469028', '469000', '陵水黎族自治县');
+INSERT INTO `area` VALUES ('469029', '469000', '保亭黎族苗族自治县');
+INSERT INTO `area` VALUES ('469030', '469000', '琼中黎族苗族自治县');
+INSERT INTO `area` VALUES ('469031', '469000', '西沙群岛');
+INSERT INTO `area` VALUES ('469032', '469000', '南沙群岛');
+INSERT INTO `area` VALUES ('469033', '469000', '中沙群岛的岛礁及其海域');
+INSERT INTO `area` VALUES ('500000', '0', '重庆市');
+INSERT INTO `area` VALUES ('500100', '500000', '市辖区');
+INSERT INTO `area` VALUES ('500101', '500100', '万州区');
+INSERT INTO `area` VALUES ('500102', '500100', '涪陵区');
+INSERT INTO `area` VALUES ('500103', '500100', '渝中区');
+INSERT INTO `area` VALUES ('500104', '500100', '大渡口区');
+INSERT INTO `area` VALUES ('500105', '500100', '江北区');
+INSERT INTO `area` VALUES ('500106', '500100', '沙坪坝区');
+INSERT INTO `area` VALUES ('500107', '500100', '九龙坡区');
+INSERT INTO `area` VALUES ('500108', '500100', '南岸区');
+INSERT INTO `area` VALUES ('500109', '500100', '北碚区');
+INSERT INTO `area` VALUES ('500110', '500100', '綦江区');
+INSERT INTO `area` VALUES ('500111', '500100', '大足区');
+INSERT INTO `area` VALUES ('500112', '500100', '渝北区');
+INSERT INTO `area` VALUES ('500113', '500100', '巴南区');
+INSERT INTO `area` VALUES ('500114', '500100', '黔江区');
+INSERT INTO `area` VALUES ('500115', '500100', '长寿区');
+INSERT INTO `area` VALUES ('500116', '500100', '江津区');
+INSERT INTO `area` VALUES ('500117', '500100', '合川区');
+INSERT INTO `area` VALUES ('500118', '500100', '永川区');
+INSERT INTO `area` VALUES ('500119', '500100', '南川区');
+INSERT INTO `area` VALUES ('500200', '500000', '县');
+INSERT INTO `area` VALUES ('500223', '500200', '潼南县');
+INSERT INTO `area` VALUES ('500224', '500200', '铜梁县');
+INSERT INTO `area` VALUES ('500226', '500200', '荣昌县');
+INSERT INTO `area` VALUES ('500227', '500200', '璧山县');
+INSERT INTO `area` VALUES ('500228', '500200', '梁平县');
+INSERT INTO `area` VALUES ('500229', '500200', '城口县');
+INSERT INTO `area` VALUES ('500230', '500200', '丰都县');
+INSERT INTO `area` VALUES ('500231', '500200', '垫江县');
+INSERT INTO `area` VALUES ('500232', '500200', '武隆县');
+INSERT INTO `area` VALUES ('500233', '500200', '忠县');
+INSERT INTO `area` VALUES ('500234', '500200', '开县');
+INSERT INTO `area` VALUES ('500235', '500200', '云阳县');
+INSERT INTO `area` VALUES ('500236', '500200', '奉节县');
+INSERT INTO `area` VALUES ('500237', '500200', '巫山县');
+INSERT INTO `area` VALUES ('500238', '500200', '巫溪县');
+INSERT INTO `area` VALUES ('500240', '500200', '石柱土家族自治县');
+INSERT INTO `area` VALUES ('500241', '500200', '秀山土家族苗族自治县');
+INSERT INTO `area` VALUES ('500242', '500200', '酉阳土家族苗族自治县');
+INSERT INTO `area` VALUES ('500243', '500200', '彭水苗族土家族自治县');
+INSERT INTO `area` VALUES ('510000', '0', '四川省');
+INSERT INTO `area` VALUES ('510100', '510000', '成都市');
+INSERT INTO `area` VALUES ('510104', '510100', '锦江区');
+INSERT INTO `area` VALUES ('510105', '510100', '青羊区');
+INSERT INTO `area` VALUES ('510106', '510100', '金牛区');
+INSERT INTO `area` VALUES ('510107', '510100', '武侯区');
+INSERT INTO `area` VALUES ('510108', '510100', '成华区');
+INSERT INTO `area` VALUES ('510112', '510100', '龙泉驿区');
+INSERT INTO `area` VALUES ('510113', '510100', '青白江区');
+INSERT INTO `area` VALUES ('510114', '510100', '新都区');
+INSERT INTO `area` VALUES ('510115', '510100', '温江区');
+INSERT INTO `area` VALUES ('510121', '510100', '金堂县');
+INSERT INTO `area` VALUES ('510122', '510100', '双流县');
+INSERT INTO `area` VALUES ('510124', '510100', '郫县');
+INSERT INTO `area` VALUES ('510129', '510100', '大邑县');
+INSERT INTO `area` VALUES ('510131', '510100', '蒲江县');
+INSERT INTO `area` VALUES ('510132', '510100', '新津县');
+INSERT INTO `area` VALUES ('510181', '510100', '都江堰市');
+INSERT INTO `area` VALUES ('510182', '510100', '彭州市');
+INSERT INTO `area` VALUES ('510183', '510100', '邛崃市');
+INSERT INTO `area` VALUES ('510184', '510100', '崇州市');
+INSERT INTO `area` VALUES ('510300', '510000', '自贡市');
+INSERT INTO `area` VALUES ('510302', '510300', '自流井区');
+INSERT INTO `area` VALUES ('510303', '510300', '贡井区');
+INSERT INTO `area` VALUES ('510304', '510300', '大安区');
+INSERT INTO `area` VALUES ('510311', '510300', '沿滩区');
+INSERT INTO `area` VALUES ('510321', '510300', '荣县');
+INSERT INTO `area` VALUES ('510322', '510300', '富顺县');
+INSERT INTO `area` VALUES ('510400', '510000', '攀枝花市');
+INSERT INTO `area` VALUES ('510402', '510400', '东区');
+INSERT INTO `area` VALUES ('510403', '510400', '西区');
+INSERT INTO `area` VALUES ('510411', '510400', '仁和区');
+INSERT INTO `area` VALUES ('510421', '510400', '米易县');
+INSERT INTO `area` VALUES ('510422', '510400', '盐边县');
+INSERT INTO `area` VALUES ('510500', '510000', '泸州市');
+INSERT INTO `area` VALUES ('510502', '510500', '江阳区');
+INSERT INTO `area` VALUES ('510503', '510500', '纳溪区');
+INSERT INTO `area` VALUES ('510504', '510500', '龙马潭区');
+INSERT INTO `area` VALUES ('510521', '510500', '泸县');
+INSERT INTO `area` VALUES ('510522', '510500', '合江县');
+INSERT INTO `area` VALUES ('510524', '510500', '叙永县');
+INSERT INTO `area` VALUES ('510525', '510500', '古蔺县');
+INSERT INTO `area` VALUES ('510600', '510000', '德阳市');
+INSERT INTO `area` VALUES ('510603', '510600', '旌阳区');
+INSERT INTO `area` VALUES ('510623', '510600', '中江县');
+INSERT INTO `area` VALUES ('510626', '510600', '罗江县');
+INSERT INTO `area` VALUES ('510681', '510600', '广汉市');
+INSERT INTO `area` VALUES ('510682', '510600', '什邡市');
+INSERT INTO `area` VALUES ('510683', '510600', '绵竹市');
+INSERT INTO `area` VALUES ('510700', '510000', '绵阳市');
+INSERT INTO `area` VALUES ('510703', '510700', '涪城区');
+INSERT INTO `area` VALUES ('510704', '510700', '游仙区');
+INSERT INTO `area` VALUES ('510722', '510700', '三台县');
+INSERT INTO `area` VALUES ('510723', '510700', '盐亭县');
+INSERT INTO `area` VALUES ('510724', '510700', '安县');
+INSERT INTO `area` VALUES ('510725', '510700', '梓潼县');
+INSERT INTO `area` VALUES ('510726', '510700', '北川羌族自治县');
+INSERT INTO `area` VALUES ('510727', '510700', '平武县');
+INSERT INTO `area` VALUES ('510781', '510700', '江油市');
+INSERT INTO `area` VALUES ('510800', '510000', '广元市');
+INSERT INTO `area` VALUES ('510802', '510800', '利州区');
+INSERT INTO `area` VALUES ('510811', '510800', '元坝区');
+INSERT INTO `area` VALUES ('510812', '510800', '朝天区');
+INSERT INTO `area` VALUES ('510821', '510800', '旺苍县');
+INSERT INTO `area` VALUES ('510822', '510800', '青川县');
+INSERT INTO `area` VALUES ('510823', '510800', '剑阁县');
+INSERT INTO `area` VALUES ('510824', '510800', '苍溪县');
+INSERT INTO `area` VALUES ('510900', '510000', '遂宁市');
+INSERT INTO `area` VALUES ('510903', '510900', '船山区');
+INSERT INTO `area` VALUES ('510904', '510900', '安居区');
+INSERT INTO `area` VALUES ('510921', '510900', '蓬溪县');
+INSERT INTO `area` VALUES ('510922', '510900', '射洪县');
+INSERT INTO `area` VALUES ('510923', '510900', '大英县');
+INSERT INTO `area` VALUES ('511000', '510000', '内江市');
+INSERT INTO `area` VALUES ('511002', '511000', '市中区');
+INSERT INTO `area` VALUES ('511011', '511000', '东兴区');
+INSERT INTO `area` VALUES ('511024', '511000', '威远县');
+INSERT INTO `area` VALUES ('511025', '511000', '资中县');
+INSERT INTO `area` VALUES ('511028', '511000', '隆昌县');
+INSERT INTO `area` VALUES ('511100', '510000', '乐山市');
+INSERT INTO `area` VALUES ('511102', '511100', '市中区');
+INSERT INTO `area` VALUES ('511111', '511100', '沙湾区');
+INSERT INTO `area` VALUES ('511112', '511100', '五通桥区');
+INSERT INTO `area` VALUES ('511113', '511100', '金口河区');
+INSERT INTO `area` VALUES ('511123', '511100', '犍为县');
+INSERT INTO `area` VALUES ('511124', '511100', '井研县');
+INSERT INTO `area` VALUES ('511126', '511100', '夹江县');
+INSERT INTO `area` VALUES ('511129', '511100', '沐川县');
+INSERT INTO `area` VALUES ('511132', '511100', '峨边彝族自治县');
+INSERT INTO `area` VALUES ('511133', '511100', '马边彝族自治县');
+INSERT INTO `area` VALUES ('511181', '511100', '峨眉山市');
+INSERT INTO `area` VALUES ('511300', '510000', '南充市');
+INSERT INTO `area` VALUES ('511302', '511300', '顺庆区');
+INSERT INTO `area` VALUES ('511303', '511300', '高坪区');
+INSERT INTO `area` VALUES ('511304', '511300', '嘉陵区');
+INSERT INTO `area` VALUES ('511321', '511300', '南部县');
+INSERT INTO `area` VALUES ('511322', '511300', '营山县');
+INSERT INTO `area` VALUES ('511323', '511300', '蓬安县');
+INSERT INTO `area` VALUES ('511324', '511300', '仪陇县');
+INSERT INTO `area` VALUES ('511325', '511300', '西充县');
+INSERT INTO `area` VALUES ('511381', '511300', '阆中市');
+INSERT INTO `area` VALUES ('511400', '510000', '眉山市');
+INSERT INTO `area` VALUES ('511402', '511400', '东坡区');
+INSERT INTO `area` VALUES ('511421', '511400', '仁寿县');
+INSERT INTO `area` VALUES ('511422', '511400', '彭山县');
+INSERT INTO `area` VALUES ('511423', '511400', '洪雅县');
+INSERT INTO `area` VALUES ('511424', '511400', '丹棱县');
+INSERT INTO `area` VALUES ('511425', '511400', '青神县');
+INSERT INTO `area` VALUES ('511500', '510000', '宜宾市');
+INSERT INTO `area` VALUES ('511502', '511500', '翠屏区');
+INSERT INTO `area` VALUES ('511503', '511500', '南溪区');
+INSERT INTO `area` VALUES ('511521', '511500', '宜宾县');
+INSERT INTO `area` VALUES ('511523', '511500', '江安县');
+INSERT INTO `area` VALUES ('511524', '511500', '长宁县');
+INSERT INTO `area` VALUES ('511525', '511500', '高县');
+INSERT INTO `area` VALUES ('511526', '511500', '珙县');
+INSERT INTO `area` VALUES ('511527', '511500', '筠连县');
+INSERT INTO `area` VALUES ('511528', '511500', '兴文县');
+INSERT INTO `area` VALUES ('511529', '511500', '屏山县');
+INSERT INTO `area` VALUES ('511600', '510000', '广安市');
+INSERT INTO `area` VALUES ('511602', '511600', '广安区');
+INSERT INTO `area` VALUES ('511621', '511600', '岳池县');
+INSERT INTO `area` VALUES ('511622', '511600', '武胜县');
+INSERT INTO `area` VALUES ('511623', '511600', '邻水县');
+INSERT INTO `area` VALUES ('511681', '511600', '华蓥市');
+INSERT INTO `area` VALUES ('511700', '510000', '达州市');
+INSERT INTO `area` VALUES ('511702', '511700', '通川区');
+INSERT INTO `area` VALUES ('511721', '511700', '达县');
+INSERT INTO `area` VALUES ('511722', '511700', '宣汉县');
+INSERT INTO `area` VALUES ('511723', '511700', '开江县');
+INSERT INTO `area` VALUES ('511724', '511700', '大竹县');
+INSERT INTO `area` VALUES ('511725', '511700', '渠县');
+INSERT INTO `area` VALUES ('511781', '511700', '万源市');
+INSERT INTO `area` VALUES ('511800', '510000', '雅安市');
+INSERT INTO `area` VALUES ('511802', '511800', '雨城区');
+INSERT INTO `area` VALUES ('511821', '511800', '名山县');
+INSERT INTO `area` VALUES ('511822', '511800', '荥经县');
+INSERT INTO `area` VALUES ('511823', '511800', '汉源县');
+INSERT INTO `area` VALUES ('511824', '511800', '石棉县');
+INSERT INTO `area` VALUES ('511825', '511800', '天全县');
+INSERT INTO `area` VALUES ('511826', '511800', '芦山县');
+INSERT INTO `area` VALUES ('511827', '511800', '宝兴县');
+INSERT INTO `area` VALUES ('511900', '510000', '巴中市');
+INSERT INTO `area` VALUES ('511902', '511900', '巴州区');
+INSERT INTO `area` VALUES ('511921', '511900', '通江县');
+INSERT INTO `area` VALUES ('511922', '511900', '南江县');
+INSERT INTO `area` VALUES ('511923', '511900', '平昌县');
+INSERT INTO `area` VALUES ('512000', '510000', '资阳市');
+INSERT INTO `area` VALUES ('512002', '512000', '雁江区');
+INSERT INTO `area` VALUES ('512021', '512000', '安岳县');
+INSERT INTO `area` VALUES ('512022', '512000', '乐至县');
+INSERT INTO `area` VALUES ('512081', '512000', '简阳市');
+INSERT INTO `area` VALUES ('513200', '510000', '阿坝藏族羌族自治州');
+INSERT INTO `area` VALUES ('513221', '513200', '汶川县');
+INSERT INTO `area` VALUES ('513222', '513200', '理县');
+INSERT INTO `area` VALUES ('513223', '513200', '茂县');
+INSERT INTO `area` VALUES ('513224', '513200', '松潘县');
+INSERT INTO `area` VALUES ('513225', '513200', '九寨沟县');
+INSERT INTO `area` VALUES ('513226', '513200', '金川县');
+INSERT INTO `area` VALUES ('513227', '513200', '小金县');
+INSERT INTO `area` VALUES ('513228', '513200', '黑水县');
+INSERT INTO `area` VALUES ('513229', '513200', '马尔康县');
+INSERT INTO `area` VALUES ('513230', '513200', '壤塘县');
+INSERT INTO `area` VALUES ('513231', '513200', '阿坝县');
+INSERT INTO `area` VALUES ('513232', '513200', '若尔盖县');
+INSERT INTO `area` VALUES ('513233', '513200', '红原县');
+INSERT INTO `area` VALUES ('513300', '510000', '甘孜藏族自治州');
+INSERT INTO `area` VALUES ('513321', '513300', '康定县');
+INSERT INTO `area` VALUES ('513322', '513300', '泸定县');
+INSERT INTO `area` VALUES ('513323', '513300', '丹巴县');
+INSERT INTO `area` VALUES ('513324', '513300', '九龙县');
+INSERT INTO `area` VALUES ('513325', '513300', '雅江县');
+INSERT INTO `area` VALUES ('513326', '513300', '道孚县');
+INSERT INTO `area` VALUES ('513327', '513300', '炉霍县');
+INSERT INTO `area` VALUES ('513328', '513300', '甘孜县');
+INSERT INTO `area` VALUES ('513329', '513300', '新龙县');
+INSERT INTO `area` VALUES ('513330', '513300', '德格县');
+INSERT INTO `area` VALUES ('513331', '513300', '白玉县');
+INSERT INTO `area` VALUES ('513332', '513300', '石渠县');
+INSERT INTO `area` VALUES ('513333', '513300', '色达县');
+INSERT INTO `area` VALUES ('513334', '513300', '理塘县');
+INSERT INTO `area` VALUES ('513335', '513300', '巴塘县');
+INSERT INTO `area` VALUES ('513336', '513300', '乡城县');
+INSERT INTO `area` VALUES ('513337', '513300', '稻城县');
+INSERT INTO `area` VALUES ('513338', '513300', '得荣县');
+INSERT INTO `area` VALUES ('513400', '510000', '凉山彝族自治州');
+INSERT INTO `area` VALUES ('513401', '513400', '西昌市');
+INSERT INTO `area` VALUES ('513422', '513400', '木里藏族自治县');
+INSERT INTO `area` VALUES ('513423', '513400', '盐源县');
+INSERT INTO `area` VALUES ('513424', '513400', '德昌县');
+INSERT INTO `area` VALUES ('513425', '513400', '会理县');
+INSERT INTO `area` VALUES ('513426', '513400', '会东县');
+INSERT INTO `area` VALUES ('513427', '513400', '宁南县');
+INSERT INTO `area` VALUES ('513428', '513400', '普格县');
+INSERT INTO `area` VALUES ('513429', '513400', '布拖县');
+INSERT INTO `area` VALUES ('513430', '513400', '金阳县');
+INSERT INTO `area` VALUES ('513431', '513400', '昭觉县');
+INSERT INTO `area` VALUES ('513432', '513400', '喜德县');
+INSERT INTO `area` VALUES ('513433', '513400', '冕宁县');
+INSERT INTO `area` VALUES ('513434', '513400', '越西县');
+INSERT INTO `area` VALUES ('513435', '513400', '甘洛县');
+INSERT INTO `area` VALUES ('513436', '513400', '美姑县');
+INSERT INTO `area` VALUES ('513437', '513400', '雷波县');
+INSERT INTO `area` VALUES ('520000', '0', '贵州省');
+INSERT INTO `area` VALUES ('520100', '520000', '贵阳市');
+INSERT INTO `area` VALUES ('520102', '520100', '南明区');
+INSERT INTO `area` VALUES ('520103', '520100', '云岩区');
+INSERT INTO `area` VALUES ('520111', '520100', '花溪区');
+INSERT INTO `area` VALUES ('520112', '520100', '乌当区');
+INSERT INTO `area` VALUES ('520113', '520100', '白云区');
+INSERT INTO `area` VALUES ('520114', '520100', '小河区');
+INSERT INTO `area` VALUES ('520121', '520100', '开阳县');
+INSERT INTO `area` VALUES ('520122', '520100', '息烽县');
+INSERT INTO `area` VALUES ('520123', '520100', '修文县');
+INSERT INTO `area` VALUES ('520181', '520100', '清镇市');
+INSERT INTO `area` VALUES ('520200', '520000', '六盘水市');
+INSERT INTO `area` VALUES ('520201', '520200', '钟山区');
+INSERT INTO `area` VALUES ('520203', '520200', '六枝特区');
+INSERT INTO `area` VALUES ('520221', '520200', '水城县');
+INSERT INTO `area` VALUES ('520222', '520200', '盘县');
+INSERT INTO `area` VALUES ('520300', '520000', '遵义市');
+INSERT INTO `area` VALUES ('520302', '520300', '红花岗区');
+INSERT INTO `area` VALUES ('520303', '520300', '汇川区');
+INSERT INTO `area` VALUES ('520321', '520300', '遵义县');
+INSERT INTO `area` VALUES ('520322', '520300', '桐梓县');
+INSERT INTO `area` VALUES ('520323', '520300', '绥阳县');
+INSERT INTO `area` VALUES ('520324', '520300', '正安县');
+INSERT INTO `area` VALUES ('520325', '520300', '道真仡佬族苗族自治县');
+INSERT INTO `area` VALUES ('520326', '520300', '务川仡佬族苗族自治县');
+INSERT INTO `area` VALUES ('520327', '520300', '凤冈县');
+INSERT INTO `area` VALUES ('520328', '520300', '湄潭县');
+INSERT INTO `area` VALUES ('520329', '520300', '余庆县');
+INSERT INTO `area` VALUES ('520330', '520300', '习水县');
+INSERT INTO `area` VALUES ('520381', '520300', '赤水市');
+INSERT INTO `area` VALUES ('520382', '520300', '仁怀市');
+INSERT INTO `area` VALUES ('520400', '520000', '安顺市');
+INSERT INTO `area` VALUES ('520402', '520400', '西秀区');
+INSERT INTO `area` VALUES ('520421', '520400', '平坝县');
+INSERT INTO `area` VALUES ('520422', '520400', '普定县');
+INSERT INTO `area` VALUES ('520423', '520400', '镇宁布依族苗族自治县');
+INSERT INTO `area` VALUES ('520424', '520400', '关岭布依族苗族自治县');
+INSERT INTO `area` VALUES ('520425', '520400', '紫云苗族布依族自治县');
+INSERT INTO `area` VALUES ('520500', '520000', '毕节市');
+INSERT INTO `area` VALUES ('520502', '520500', '七星关区');
+INSERT INTO `area` VALUES ('520521', '520500', '大方县');
+INSERT INTO `area` VALUES ('520522', '520500', '黔西县');
+INSERT INTO `area` VALUES ('520523', '520500', '金沙县');
+INSERT INTO `area` VALUES ('520524', '520500', '织金县');
+INSERT INTO `area` VALUES ('520525', '520500', '纳雍县');
+INSERT INTO `area` VALUES ('520526', '520500', '威宁彝族回族苗族自治县');
+INSERT INTO `area` VALUES ('520527', '520500', '赫章县');
+INSERT INTO `area` VALUES ('520600', '520000', '铜仁市');
+INSERT INTO `area` VALUES ('520602', '520600', '碧江区');
+INSERT INTO `area` VALUES ('520603', '520600', '万山区');
+INSERT INTO `area` VALUES ('520621', '520600', '江口县');
+INSERT INTO `area` VALUES ('520622', '520600', '玉屏侗族自治县');
+INSERT INTO `area` VALUES ('520623', '520600', '石阡县');
+INSERT INTO `area` VALUES ('520624', '520600', '思南县');
+INSERT INTO `area` VALUES ('520625', '520600', '印江土家族苗族自治县');
+INSERT INTO `area` VALUES ('520626', '520600', '德江县');
+INSERT INTO `area` VALUES ('520627', '520600', '沿河土家族自治县');
+INSERT INTO `area` VALUES ('520628', '520600', '松桃苗族自治县');
+INSERT INTO `area` VALUES ('522300', '520000', '黔西南布依族苗族自治州');
+INSERT INTO `area` VALUES ('522301', '522300', '兴义市');
+INSERT INTO `area` VALUES ('522322', '522300', '兴仁县');
+INSERT INTO `area` VALUES ('522323', '522300', '普安县');
+INSERT INTO `area` VALUES ('522324', '522300', '晴隆县');
+INSERT INTO `area` VALUES ('522325', '522300', '贞丰县');
+INSERT INTO `area` VALUES ('522326', '522300', '望谟县');
+INSERT INTO `area` VALUES ('522327', '522300', '册亨县');
+INSERT INTO `area` VALUES ('522328', '522300', '安龙县');
+INSERT INTO `area` VALUES ('522600', '520000', '黔东南苗族侗族自治州');
+INSERT INTO `area` VALUES ('522601', '522600', '凯里市');
+INSERT INTO `area` VALUES ('522622', '522600', '黄平县');
+INSERT INTO `area` VALUES ('522623', '522600', '施秉县');
+INSERT INTO `area` VALUES ('522624', '522600', '三穗县');
+INSERT INTO `area` VALUES ('522625', '522600', '镇远县');
+INSERT INTO `area` VALUES ('522626', '522600', '岑巩县');
+INSERT INTO `area` VALUES ('522627', '522600', '天柱县');
+INSERT INTO `area` VALUES ('522628', '522600', '锦屏县');
+INSERT INTO `area` VALUES ('522629', '522600', '剑河县');
+INSERT INTO `area` VALUES ('522630', '522600', '台江县');
+INSERT INTO `area` VALUES ('522631', '522600', '黎平县');
+INSERT INTO `area` VALUES ('522632', '522600', '榕江县');
+INSERT INTO `area` VALUES ('522633', '522600', '从江县');
+INSERT INTO `area` VALUES ('522634', '522600', '雷山县');
+INSERT INTO `area` VALUES ('522635', '522600', '麻江县');
+INSERT INTO `area` VALUES ('522636', '522600', '丹寨县');
+INSERT INTO `area` VALUES ('522700', '520000', '黔南布依族苗族自治州');
+INSERT INTO `area` VALUES ('522701', '522700', '都匀市');
+INSERT INTO `area` VALUES ('522702', '522700', '福泉市');
+INSERT INTO `area` VALUES ('522722', '522700', '荔波县');
+INSERT INTO `area` VALUES ('522723', '522700', '贵定县');
+INSERT INTO `area` VALUES ('522725', '522700', '瓮安县');
+INSERT INTO `area` VALUES ('522726', '522700', '独山县');
+INSERT INTO `area` VALUES ('522727', '522700', '平塘县');
+INSERT INTO `area` VALUES ('522728', '522700', '罗甸县');
+INSERT INTO `area` VALUES ('522729', '522700', '长顺县');
+INSERT INTO `area` VALUES ('522730', '522700', '龙里县');
+INSERT INTO `area` VALUES ('522731', '522700', '惠水县');
+INSERT INTO `area` VALUES ('522732', '522700', '三都水族自治县');
+INSERT INTO `area` VALUES ('530000', '0', '云南省');
+INSERT INTO `area` VALUES ('530100', '530000', '昆明市');
+INSERT INTO `area` VALUES ('530102', '530100', '五华区');
+INSERT INTO `area` VALUES ('530103', '530100', '盘龙区');
+INSERT INTO `area` VALUES ('530111', '530100', '官渡区');
+INSERT INTO `area` VALUES ('530112', '530100', '西山区');
+INSERT INTO `area` VALUES ('530113', '530100', '东川区');
+INSERT INTO `area` VALUES ('530114', '530100', '呈贡区');
+INSERT INTO `area` VALUES ('530122', '530100', '晋宁县');
+INSERT INTO `area` VALUES ('530124', '530100', '富民县');
+INSERT INTO `area` VALUES ('530125', '530100', '宜良县');
+INSERT INTO `area` VALUES ('530126', '530100', '石林彝族自治县');
+INSERT INTO `area` VALUES ('530127', '530100', '嵩明县');
+INSERT INTO `area` VALUES ('530128', '530100', '禄劝彝族苗族自治县');
+INSERT INTO `area` VALUES ('530129', '530100', '寻甸回族彝族自治县');
+INSERT INTO `area` VALUES ('530181', '530100', '安宁市');
+INSERT INTO `area` VALUES ('530300', '530000', '曲靖市');
+INSERT INTO `area` VALUES ('530302', '530300', '麒麟区');
+INSERT INTO `area` VALUES ('530321', '530300', '马龙县');
+INSERT INTO `area` VALUES ('530322', '530300', '陆良县');
+INSERT INTO `area` VALUES ('530323', '530300', '师宗县');
+INSERT INTO `area` VALUES ('530324', '530300', '罗平县');
+INSERT INTO `area` VALUES ('530325', '530300', '富源县');
+INSERT INTO `area` VALUES ('530326', '530300', '会泽县');
+INSERT INTO `area` VALUES ('530328', '530300', '沾益县');
+INSERT INTO `area` VALUES ('530381', '530300', '宣威市');
+INSERT INTO `area` VALUES ('530400', '530000', '玉溪市');
+INSERT INTO `area` VALUES ('530402', '530400', '红塔区');
+INSERT INTO `area` VALUES ('530421', '530400', '江川县');
+INSERT INTO `area` VALUES ('530422', '530400', '澄江县');
+INSERT INTO `area` VALUES ('530423', '530400', '通海县');
+INSERT INTO `area` VALUES ('530424', '530400', '华宁县');
+INSERT INTO `area` VALUES ('530425', '530400', '易门县');
+INSERT INTO `area` VALUES ('530426', '530400', '峨山彝族自治县');
+INSERT INTO `area` VALUES ('530427', '530400', '新平彝族傣族自治县');
+INSERT INTO `area` VALUES ('530428', '530400', '元江哈尼族彝族傣族自治县');
+INSERT INTO `area` VALUES ('530500', '530000', '保山市');
+INSERT INTO `area` VALUES ('530502', '530500', '隆阳区');
+INSERT INTO `area` VALUES ('530521', '530500', '施甸县');
+INSERT INTO `area` VALUES ('530522', '530500', '腾冲县');
+INSERT INTO `area` VALUES ('530523', '530500', '龙陵县');
+INSERT INTO `area` VALUES ('530524', '530500', '昌宁县');
+INSERT INTO `area` VALUES ('530600', '530000', '昭通市');
+INSERT INTO `area` VALUES ('530602', '530600', '昭阳区');
+INSERT INTO `area` VALUES ('530621', '530600', '鲁甸县');
+INSERT INTO `area` VALUES ('530622', '530600', '巧家县');
+INSERT INTO `area` VALUES ('530623', '530600', '盐津县');
+INSERT INTO `area` VALUES ('530624', '530600', '大关县');
+INSERT INTO `area` VALUES ('530625', '530600', '永善县');
+INSERT INTO `area` VALUES ('530626', '530600', '绥江县');
+INSERT INTO `area` VALUES ('530627', '530600', '镇雄县');
+INSERT INTO `area` VALUES ('530628', '530600', '彝良县');
+INSERT INTO `area` VALUES ('530629', '530600', '威信县');
+INSERT INTO `area` VALUES ('530630', '530600', '水富县');
+INSERT INTO `area` VALUES ('530700', '530000', '丽江市');
+INSERT INTO `area` VALUES ('530702', '530700', '古城区');
+INSERT INTO `area` VALUES ('530721', '530700', '玉龙纳西族自治县');
+INSERT INTO `area` VALUES ('530722', '530700', '永胜县');
+INSERT INTO `area` VALUES ('530723', '530700', '华坪县');
+INSERT INTO `area` VALUES ('530724', '530700', '宁蒗彝族自治县');
+INSERT INTO `area` VALUES ('530800', '530000', '普洱市');
+INSERT INTO `area` VALUES ('530802', '530800', '思茅区');
+INSERT INTO `area` VALUES ('530821', '530800', '宁洱哈尼族彝族自治县');
+INSERT INTO `area` VALUES ('530822', '530800', '墨江哈尼族自治县');
+INSERT INTO `area` VALUES ('530823', '530800', '景东彝族自治县');
+INSERT INTO `area` VALUES ('530824', '530800', '景谷傣族彝族自治县');
+INSERT INTO `area` VALUES ('530825', '530800', '镇沅彝族哈尼族拉祜族自治县');
+INSERT INTO `area` VALUES ('530826', '530800', '江城哈尼族彝族自治县');
+INSERT INTO `area` VALUES ('530827', '530800', '孟连傣族拉祜族佤族自治县');
+INSERT INTO `area` VALUES ('530828', '530800', '澜沧拉祜族自治县');
+INSERT INTO `area` VALUES ('530829', '530800', '西盟佤族自治县');
+INSERT INTO `area` VALUES ('530900', '530000', '临沧市');
+INSERT INTO `area` VALUES ('530902', '530900', '临翔区');
+INSERT INTO `area` VALUES ('530921', '530900', '凤庆县');
+INSERT INTO `area` VALUES ('530922', '530900', '云县');
+INSERT INTO `area` VALUES ('530923', '530900', '永德县');
+INSERT INTO `area` VALUES ('530924', '530900', '镇康县');
+INSERT INTO `area` VALUES ('530925', '530900', '双江拉祜族佤族布朗族傣族自治县');
+INSERT INTO `area` VALUES ('530926', '530900', '耿马傣族佤族自治县');
+INSERT INTO `area` VALUES ('530927', '530900', '沧源佤族自治县');
+INSERT INTO `area` VALUES ('532300', '530000', '楚雄彝族自治州');
+INSERT INTO `area` VALUES ('532301', '532300', '楚雄市');
+INSERT INTO `area` VALUES ('532322', '532300', '双柏县');
+INSERT INTO `area` VALUES ('532323', '532300', '牟定县');
+INSERT INTO `area` VALUES ('532324', '532300', '南华县');
+INSERT INTO `area` VALUES ('532325', '532300', '姚安县');
+INSERT INTO `area` VALUES ('532326', '532300', '大姚县');
+INSERT INTO `area` VALUES ('532327', '532300', '永仁县');
+INSERT INTO `area` VALUES ('532328', '532300', '元谋县');
+INSERT INTO `area` VALUES ('532329', '532300', '武定县');
+INSERT INTO `area` VALUES ('532331', '532300', '禄丰县');
+INSERT INTO `area` VALUES ('532500', '530000', '红河哈尼族彝族自治州');
+INSERT INTO `area` VALUES ('532501', '532500', '个旧市');
+INSERT INTO `area` VALUES ('532502', '532500', '开远市');
+INSERT INTO `area` VALUES ('532503', '532500', '蒙自市');
+INSERT INTO `area` VALUES ('532523', '532500', '屏边苗族自治县');
+INSERT INTO `area` VALUES ('532524', '532500', '建水县');
+INSERT INTO `area` VALUES ('532525', '532500', '石屏县');
+INSERT INTO `area` VALUES ('532526', '532500', '弥勒县');
+INSERT INTO `area` VALUES ('532527', '532500', '泸西县');
+INSERT INTO `area` VALUES ('532528', '532500', '元阳县');
+INSERT INTO `area` VALUES ('532529', '532500', '红河县');
+INSERT INTO `area` VALUES ('532530', '532500', '金平苗族瑶族傣族自治县');
+INSERT INTO `area` VALUES ('532531', '532500', '绿春县');
+INSERT INTO `area` VALUES ('532532', '532500', '河口瑶族自治县');
+INSERT INTO `area` VALUES ('532600', '530000', '文山壮族苗族自治州');
+INSERT INTO `area` VALUES ('532601', '532600', '文山市');
+INSERT INTO `area` VALUES ('532622', '532600', '砚山县');
+INSERT INTO `area` VALUES ('532623', '532600', '西畴县');
+INSERT INTO `area` VALUES ('532624', '532600', '麻栗坡县');
+INSERT INTO `area` VALUES ('532625', '532600', '马关县');
+INSERT INTO `area` VALUES ('532626', '532600', '丘北县');
+INSERT INTO `area` VALUES ('532627', '532600', '广南县');
+INSERT INTO `area` VALUES ('532628', '532600', '富宁县');
+INSERT INTO `area` VALUES ('532800', '530000', '西双版纳傣族自治州');
+INSERT INTO `area` VALUES ('532801', '532800', '景洪市');
+INSERT INTO `area` VALUES ('532822', '532800', '勐海县');
+INSERT INTO `area` VALUES ('532823', '532800', '勐腊县');
+INSERT INTO `area` VALUES ('532900', '530000', '大理白族自治州');
+INSERT INTO `area` VALUES ('532901', '532900', '大理市');
+INSERT INTO `area` VALUES ('532922', '532900', '漾濞彝族自治县');
+INSERT INTO `area` VALUES ('532923', '532900', '祥云县');
+INSERT INTO `area` VALUES ('532924', '532900', '宾川县');
+INSERT INTO `area` VALUES ('532925', '532900', '弥渡县');
+INSERT INTO `area` VALUES ('532926', '532900', '南涧彝族自治县');
+INSERT INTO `area` VALUES ('532927', '532900', '巍山彝族回族自治县');
+INSERT INTO `area` VALUES ('532928', '532900', '永平县');
+INSERT INTO `area` VALUES ('532929', '532900', '云龙县');
+INSERT INTO `area` VALUES ('532930', '532900', '洱源县');
+INSERT INTO `area` VALUES ('532931', '532900', '剑川县');
+INSERT INTO `area` VALUES ('532932', '532900', '鹤庆县');
+INSERT INTO `area` VALUES ('533100', '530000', '德宏傣族景颇族自治州');
+INSERT INTO `area` VALUES ('533102', '533100', '瑞丽市');
+INSERT INTO `area` VALUES ('533103', '533100', '芒市');
+INSERT INTO `area` VALUES ('533122', '533100', '梁河县');
+INSERT INTO `area` VALUES ('533123', '533100', '盈江县');
+INSERT INTO `area` VALUES ('533124', '533100', '陇川县');
+INSERT INTO `area` VALUES ('533300', '530000', '怒江傈僳族自治州');
+INSERT INTO `area` VALUES ('533321', '533300', '泸水县');
+INSERT INTO `area` VALUES ('533323', '533300', '福贡县');
+INSERT INTO `area` VALUES ('533324', '533300', '贡山独龙族怒族自治县');
+INSERT INTO `area` VALUES ('533325', '533300', '兰坪白族普米族自治县');
+INSERT INTO `area` VALUES ('533400', '530000', '迪庆藏族自治州');
+INSERT INTO `area` VALUES ('533421', '533400', '香格里拉县');
+INSERT INTO `area` VALUES ('533422', '533400', '德钦县');
+INSERT INTO `area` VALUES ('533423', '533400', '维西傈僳族自治县');
+INSERT INTO `area` VALUES ('540000', '0', '西藏自治区');
+INSERT INTO `area` VALUES ('540100', '540000', '拉萨市');
+INSERT INTO `area` VALUES ('540102', '540100', '城关区');
+INSERT INTO `area` VALUES ('540121', '540100', '林周县');
+INSERT INTO `area` VALUES ('540122', '540100', '当雄县');
+INSERT INTO `area` VALUES ('540123', '540100', '尼木县');
+INSERT INTO `area` VALUES ('540124', '540100', '曲水县');
+INSERT INTO `area` VALUES ('540125', '540100', '堆龙德庆县');
+INSERT INTO `area` VALUES ('540126', '540100', '达孜县');
+INSERT INTO `area` VALUES ('540127', '540100', '墨竹工卡县');
+INSERT INTO `area` VALUES ('542100', '540000', '昌都地区');
+INSERT INTO `area` VALUES ('542121', '542100', '昌都县');
+INSERT INTO `area` VALUES ('542122', '542100', '江达县');
+INSERT INTO `area` VALUES ('542123', '542100', '贡觉县');
+INSERT INTO `area` VALUES ('542124', '542100', '类乌齐县');
+INSERT INTO `area` VALUES ('542125', '542100', '丁青县');
+INSERT INTO `area` VALUES ('542126', '542100', '察雅县');
+INSERT INTO `area` VALUES ('542127', '542100', '八宿县');
+INSERT INTO `area` VALUES ('542128', '542100', '左贡县');
+INSERT INTO `area` VALUES ('542129', '542100', '芒康县');
+INSERT INTO `area` VALUES ('542132', '542100', '洛隆县');
+INSERT INTO `area` VALUES ('542133', '542100', '边坝县');
+INSERT INTO `area` VALUES ('542200', '540000', '山南地区');
+INSERT INTO `area` VALUES ('542221', '542200', '乃东县');
+INSERT INTO `area` VALUES ('542222', '542200', '扎囊县');
+INSERT INTO `area` VALUES ('542223', '542200', '贡嘎县');
+INSERT INTO `area` VALUES ('542224', '542200', '桑日县');
+INSERT INTO `area` VALUES ('542225', '542200', '琼结县');
+INSERT INTO `area` VALUES ('542226', '542200', '曲松县');
+INSERT INTO `area` VALUES ('542227', '542200', '措美县');
+INSERT INTO `area` VALUES ('542228', '542200', '洛扎县');
+INSERT INTO `area` VALUES ('542229', '542200', '加查县');
+INSERT INTO `area` VALUES ('542231', '542200', '隆子县');
+INSERT INTO `area` VALUES ('542232', '542200', '错那县');
+INSERT INTO `area` VALUES ('542233', '542200', '浪卡子县');
+INSERT INTO `area` VALUES ('542300', '540000', '日喀则地区');
+INSERT INTO `area` VALUES ('542301', '542300', '日喀则市');
+INSERT INTO `area` VALUES ('542322', '542300', '南木林县');
+INSERT INTO `area` VALUES ('542323', '542300', '江孜县');
+INSERT INTO `area` VALUES ('542324', '542300', '定日县');
+INSERT INTO `area` VALUES ('542325', '542300', '萨迦县');
+INSERT INTO `area` VALUES ('542326', '542300', '拉孜县');
+INSERT INTO `area` VALUES ('542327', '542300', '昂仁县');
+INSERT INTO `area` VALUES ('542328', '542300', '谢通门县');
+INSERT INTO `area` VALUES ('542329', '542300', '白朗县');
+INSERT INTO `area` VALUES ('542330', '542300', '仁布县');
+INSERT INTO `area` VALUES ('542331', '542300', '康马县');
+INSERT INTO `area` VALUES ('542332', '542300', '定结县');
+INSERT INTO `area` VALUES ('542333', '542300', '仲巴县');
+INSERT INTO `area` VALUES ('542334', '542300', '亚东县');
+INSERT INTO `area` VALUES ('542335', '542300', '吉隆县');
+INSERT INTO `area` VALUES ('542336', '542300', '聂拉木县');
+INSERT INTO `area` VALUES ('542337', '542300', '萨嘎县');
+INSERT INTO `area` VALUES ('542338', '542300', '岗巴县');
+INSERT INTO `area` VALUES ('542400', '540000', '那曲地区');
+INSERT INTO `area` VALUES ('542421', '542400', '那曲县');
+INSERT INTO `area` VALUES ('542422', '542400', '嘉黎县');
+INSERT INTO `area` VALUES ('542423', '542400', '比如县');
+INSERT INTO `area` VALUES ('542424', '542400', '聂荣县');
+INSERT INTO `area` VALUES ('542425', '542400', '安多县');
+INSERT INTO `area` VALUES ('542426', '542400', '申扎县');
+INSERT INTO `area` VALUES ('542427', '542400', '索县');
+INSERT INTO `area` VALUES ('542428', '542400', '班戈县');
+INSERT INTO `area` VALUES ('542429', '542400', '巴青县');
+INSERT INTO `area` VALUES ('542430', '542400', '尼玛县');
+INSERT INTO `area` VALUES ('542500', '540000', '阿里地区');
+INSERT INTO `area` VALUES ('542521', '542500', '普兰县');
+INSERT INTO `area` VALUES ('542522', '542500', '札达县');
+INSERT INTO `area` VALUES ('542523', '542500', '噶尔县');
+INSERT INTO `area` VALUES ('542524', '542500', '日土县');
+INSERT INTO `area` VALUES ('542525', '542500', '革吉县');
+INSERT INTO `area` VALUES ('542526', '542500', '改则县');
+INSERT INTO `area` VALUES ('542527', '542500', '措勤县');
+INSERT INTO `area` VALUES ('542600', '540000', '林芝地区');
+INSERT INTO `area` VALUES ('542621', '542600', '林芝县');
+INSERT INTO `area` VALUES ('542622', '542600', '工布江达县');
+INSERT INTO `area` VALUES ('542623', '542600', '米林县');
+INSERT INTO `area` VALUES ('542624', '542600', '墨脱县');
+INSERT INTO `area` VALUES ('542625', '542600', '波密县');
+INSERT INTO `area` VALUES ('542626', '542600', '察隅县');
+INSERT INTO `area` VALUES ('542627', '542600', '朗县');
+INSERT INTO `area` VALUES ('610000', '0', '陕西省');
+INSERT INTO `area` VALUES ('610100', '610000', '西安市');
+INSERT INTO `area` VALUES ('610102', '610100', '新城区');
+INSERT INTO `area` VALUES ('610103', '610100', '碑林区');
+INSERT INTO `area` VALUES ('610104', '610100', '莲湖区');
+INSERT INTO `area` VALUES ('610111', '610100', '灞桥区');
+INSERT INTO `area` VALUES ('610112', '610100', '未央区');
+INSERT INTO `area` VALUES ('610113', '610100', '雁塔区');
+INSERT INTO `area` VALUES ('610114', '610100', '阎良区');
+INSERT INTO `area` VALUES ('610115', '610100', '临潼区');
+INSERT INTO `area` VALUES ('610116', '610100', '长安区');
+INSERT INTO `area` VALUES ('610122', '610100', '蓝田县');
+INSERT INTO `area` VALUES ('610124', '610100', '周至县');
+INSERT INTO `area` VALUES ('610125', '610100', '户县');
+INSERT INTO `area` VALUES ('610126', '610100', '高陵县');
+INSERT INTO `area` VALUES ('610200', '610000', '铜川市');
+INSERT INTO `area` VALUES ('610202', '610200', '王益区');
+INSERT INTO `area` VALUES ('610203', '610200', '印台区');
+INSERT INTO `area` VALUES ('610204', '610200', '耀州区');
+INSERT INTO `area` VALUES ('610222', '610200', '宜君县');
+INSERT INTO `area` VALUES ('610300', '610000', '宝鸡市');
+INSERT INTO `area` VALUES ('610302', '610300', '渭滨区');
+INSERT INTO `area` VALUES ('610303', '610300', '金台区');
+INSERT INTO `area` VALUES ('610304', '610300', '陈仓区');
+INSERT INTO `area` VALUES ('610322', '610300', '凤翔县');
+INSERT INTO `area` VALUES ('610323', '610300', '岐山县');
+INSERT INTO `area` VALUES ('610324', '610300', '扶风县');
+INSERT INTO `area` VALUES ('610326', '610300', '眉县');
+INSERT INTO `area` VALUES ('610327', '610300', '陇县');
+INSERT INTO `area` VALUES ('610328', '610300', '千阳县');
+INSERT INTO `area` VALUES ('610329', '610300', '麟游县');
+INSERT INTO `area` VALUES ('610330', '610300', '凤县');
+INSERT INTO `area` VALUES ('610331', '610300', '太白县');
+INSERT INTO `area` VALUES ('610400', '610000', '咸阳市');
+INSERT INTO `area` VALUES ('610402', '610400', '秦都区');
+INSERT INTO `area` VALUES ('610403', '610400', '杨陵区');
+INSERT INTO `area` VALUES ('610404', '610400', '渭城区');
+INSERT INTO `area` VALUES ('610422', '610400', '三原县');
+INSERT INTO `area` VALUES ('610423', '610400', '泾阳县');
+INSERT INTO `area` VALUES ('610424', '610400', '乾县');
+INSERT INTO `area` VALUES ('610425', '610400', '礼泉县');
+INSERT INTO `area` VALUES ('610426', '610400', '永寿县');
+INSERT INTO `area` VALUES ('610427', '610400', '彬县');
+INSERT INTO `area` VALUES ('610428', '610400', '长武县');
+INSERT INTO `area` VALUES ('610429', '610400', '旬邑县');
+INSERT INTO `area` VALUES ('610430', '610400', '淳化县');
+INSERT INTO `area` VALUES ('610431', '610400', '武功县');
+INSERT INTO `area` VALUES ('610481', '610400', '兴平市');
+INSERT INTO `area` VALUES ('610500', '610000', '渭南市');
+INSERT INTO `area` VALUES ('610502', '610500', '临渭区');
+INSERT INTO `area` VALUES ('610521', '610500', '华县');
+INSERT INTO `area` VALUES ('610522', '610500', '潼关县');
+INSERT INTO `area` VALUES ('610523', '610500', '大荔县');
+INSERT INTO `area` VALUES ('610524', '610500', '合阳县');
+INSERT INTO `area` VALUES ('610525', '610500', '澄城县');
+INSERT INTO `area` VALUES ('610526', '610500', '蒲城县');
+INSERT INTO `area` VALUES ('610527', '610500', '白水县');
+INSERT INTO `area` VALUES ('610528', '610500', '富平县');
+INSERT INTO `area` VALUES ('610581', '610500', '韩城市');
+INSERT INTO `area` VALUES ('610582', '610500', '华阴市');
+INSERT INTO `area` VALUES ('610600', '610000', '延安市');
+INSERT INTO `area` VALUES ('610602', '610600', '宝塔区');
+INSERT INTO `area` VALUES ('610621', '610600', '延长县');
+INSERT INTO `area` VALUES ('610622', '610600', '延川县');
+INSERT INTO `area` VALUES ('610623', '610600', '子长县');
+INSERT INTO `area` VALUES ('610624', '610600', '安塞县');
+INSERT INTO `area` VALUES ('610625', '610600', '志丹县');
+INSERT INTO `area` VALUES ('610626', '610600', '吴起县');
+INSERT INTO `area` VALUES ('610627', '610600', '甘泉县');
+INSERT INTO `area` VALUES ('610628', '610600', '富县');
+INSERT INTO `area` VALUES ('610629', '610600', '洛川县');
+INSERT INTO `area` VALUES ('610630', '610600', '宜川县');
+INSERT INTO `area` VALUES ('610631', '610600', '黄龙县');
+INSERT INTO `area` VALUES ('610632', '610600', '黄陵县');
+INSERT INTO `area` VALUES ('610700', '610000', '汉中市');
+INSERT INTO `area` VALUES ('610702', '610700', '汉台区');
+INSERT INTO `area` VALUES ('610721', '610700', '南郑县');
+INSERT INTO `area` VALUES ('610722', '610700', '城固县');
+INSERT INTO `area` VALUES ('610723', '610700', '洋县');
+INSERT INTO `area` VALUES ('610724', '610700', '西乡县');
+INSERT INTO `area` VALUES ('610725', '610700', '勉县');
+INSERT INTO `area` VALUES ('610726', '610700', '宁强县');
+INSERT INTO `area` VALUES ('610727', '610700', '略阳县');
+INSERT INTO `area` VALUES ('610728', '610700', '镇巴县');
+INSERT INTO `area` VALUES ('610729', '610700', '留坝县');
+INSERT INTO `area` VALUES ('610730', '610700', '佛坪县');
+INSERT INTO `area` VALUES ('610800', '610000', '榆林市');
+INSERT INTO `area` VALUES ('610802', '610800', '榆阳区');
+INSERT INTO `area` VALUES ('610821', '610800', '神木县');
+INSERT INTO `area` VALUES ('610822', '610800', '府谷县');
+INSERT INTO `area` VALUES ('610823', '610800', '横山县');
+INSERT INTO `area` VALUES ('610824', '610800', '靖边县');
+INSERT INTO `area` VALUES ('610825', '610800', '定边县');
+INSERT INTO `area` VALUES ('610826', '610800', '绥德县');
+INSERT INTO `area` VALUES ('610827', '610800', '米脂县');
+INSERT INTO `area` VALUES ('610828', '610800', '佳县');
+INSERT INTO `area` VALUES ('610829', '610800', '吴堡县');
+INSERT INTO `area` VALUES ('610830', '610800', '清涧县');
+INSERT INTO `area` VALUES ('610831', '610800', '子洲县');
+INSERT INTO `area` VALUES ('610900', '610000', '安康市');
+INSERT INTO `area` VALUES ('610902', '610900', '汉滨区');
+INSERT INTO `area` VALUES ('610921', '610900', '汉阴县');
+INSERT INTO `area` VALUES ('610922', '610900', '石泉县');
+INSERT INTO `area` VALUES ('610923', '610900', '宁陕县');
+INSERT INTO `area` VALUES ('610924', '610900', '紫阳县');
+INSERT INTO `area` VALUES ('610925', '610900', '岚皋县');
+INSERT INTO `area` VALUES ('610926', '610900', '平利县');
+INSERT INTO `area` VALUES ('610927', '610900', '镇坪县');
+INSERT INTO `area` VALUES ('610928', '610900', '旬阳县');
+INSERT INTO `area` VALUES ('610929', '610900', '白河县');
+INSERT INTO `area` VALUES ('611000', '610000', '商洛市');
+INSERT INTO `area` VALUES ('611002', '611000', '商州区');
+INSERT INTO `area` VALUES ('611021', '611000', '洛南县');
+INSERT INTO `area` VALUES ('611022', '611000', '丹凤县');
+INSERT INTO `area` VALUES ('611023', '611000', '商南县');
+INSERT INTO `area` VALUES ('611024', '611000', '山阳县');
+INSERT INTO `area` VALUES ('611025', '611000', '镇安县');
+INSERT INTO `area` VALUES ('611026', '611000', '柞水县');
+INSERT INTO `area` VALUES ('620000', '0', '甘肃省');
+INSERT INTO `area` VALUES ('620100', '620000', '兰州市');
+INSERT INTO `area` VALUES ('620102', '620100', '城关区');
+INSERT INTO `area` VALUES ('620103', '620100', '七里河区');
+INSERT INTO `area` VALUES ('620104', '620100', '西固区');
+INSERT INTO `area` VALUES ('620105', '620100', '安宁区');
+INSERT INTO `area` VALUES ('620111', '620100', '红古区');
+INSERT INTO `area` VALUES ('620121', '620100', '永登县');
+INSERT INTO `area` VALUES ('620122', '620100', '皋兰县');
+INSERT INTO `area` VALUES ('620123', '620100', '榆中县');
+INSERT INTO `area` VALUES ('620200', '620000', '嘉峪关市');
+INSERT INTO `area` VALUES ('620300', '620000', '金昌市');
+INSERT INTO `area` VALUES ('620302', '620300', '金川区');
+INSERT INTO `area` VALUES ('620321', '620300', '永昌县');
+INSERT INTO `area` VALUES ('620400', '620000', '白银市');
+INSERT INTO `area` VALUES ('620402', '620400', '白银区');
+INSERT INTO `area` VALUES ('620403', '620400', '平川区');
+INSERT INTO `area` VALUES ('620421', '620400', '靖远县');
+INSERT INTO `area` VALUES ('620422', '620400', '会宁县');
+INSERT INTO `area` VALUES ('620423', '620400', '景泰县');
+INSERT INTO `area` VALUES ('620500', '620000', '天水市');
+INSERT INTO `area` VALUES ('620502', '620500', '秦州区');
+INSERT INTO `area` VALUES ('620503', '620500', '麦积区');
+INSERT INTO `area` VALUES ('620521', '620500', '清水县');
+INSERT INTO `area` VALUES ('620522', '620500', '秦安县');
+INSERT INTO `area` VALUES ('620523', '620500', '甘谷县');
+INSERT INTO `area` VALUES ('620524', '620500', '武山县');
+INSERT INTO `area` VALUES ('620525', '620500', '张家川回族自治县');
+INSERT INTO `area` VALUES ('620600', '620000', '武威市');
+INSERT INTO `area` VALUES ('620602', '620600', '凉州区');
+INSERT INTO `area` VALUES ('620621', '620600', '民勤县');
+INSERT INTO `area` VALUES ('620622', '620600', '古浪县');
+INSERT INTO `area` VALUES ('620623', '620600', '天祝藏族自治县');
+INSERT INTO `area` VALUES ('620700', '620000', '张掖市');
+INSERT INTO `area` VALUES ('620702', '620700', '甘州区');
+INSERT INTO `area` VALUES ('620721', '620700', '肃南裕固族自治县');
+INSERT INTO `area` VALUES ('620722', '620700', '民乐县');
+INSERT INTO `area` VALUES ('620723', '620700', '临泽县');
+INSERT INTO `area` VALUES ('620724', '620700', '高台县');
+INSERT INTO `area` VALUES ('620725', '620700', '山丹县');
+INSERT INTO `area` VALUES ('620800', '620000', '平凉市');
+INSERT INTO `area` VALUES ('620802', '620800', '崆峒区');
+INSERT INTO `area` VALUES ('620821', '620800', '泾川县');
+INSERT INTO `area` VALUES ('620822', '620800', '灵台县');
+INSERT INTO `area` VALUES ('620823', '620800', '崇信县');
+INSERT INTO `area` VALUES ('620824', '620800', '华亭县');
+INSERT INTO `area` VALUES ('620825', '620800', '庄浪县');
+INSERT INTO `area` VALUES ('620826', '620800', '静宁县');
+INSERT INTO `area` VALUES ('620900', '620000', '酒泉市');
+INSERT INTO `area` VALUES ('620902', '620900', '肃州区');
+INSERT INTO `area` VALUES ('620921', '620900', '金塔县');
+INSERT INTO `area` VALUES ('620922', '620900', '瓜州县');
+INSERT INTO `area` VALUES ('620923', '620900', '肃北蒙古族自治县');
+INSERT INTO `area` VALUES ('620924', '620900', '阿克塞哈萨克族自治县');
+INSERT INTO `area` VALUES ('620981', '620900', '玉门市');
+INSERT INTO `area` VALUES ('620982', '620900', '敦煌市');
+INSERT INTO `area` VALUES ('621000', '620000', '庆阳市');
+INSERT INTO `area` VALUES ('621002', '621000', '西峰区');
+INSERT INTO `area` VALUES ('621021', '621000', '庆城县');
+INSERT INTO `area` VALUES ('621022', '621000', '环县');
+INSERT INTO `area` VALUES ('621023', '621000', '华池县');
+INSERT INTO `area` VALUES ('621024', '621000', '合水县');
+INSERT INTO `area` VALUES ('621025', '621000', '正宁县');
+INSERT INTO `area` VALUES ('621026', '621000', '宁县');
+INSERT INTO `area` VALUES ('621027', '621000', '镇原县');
+INSERT INTO `area` VALUES ('621100', '620000', '定西市');
+INSERT INTO `area` VALUES ('621102', '621100', '安定区');
+INSERT INTO `area` VALUES ('621121', '621100', '通渭县');
+INSERT INTO `area` VALUES ('621122', '621100', '陇西县');
+INSERT INTO `area` VALUES ('621123', '621100', '渭源县');
+INSERT INTO `area` VALUES ('621124', '621100', '临洮县');
+INSERT INTO `area` VALUES ('621125', '621100', '漳县');
+INSERT INTO `area` VALUES ('621126', '621100', '岷县');
+INSERT INTO `area` VALUES ('621200', '620000', '陇南市');
+INSERT INTO `area` VALUES ('621202', '621200', '武都区');
+INSERT INTO `area` VALUES ('621221', '621200', '成县');
+INSERT INTO `area` VALUES ('621222', '621200', '文县');
+INSERT INTO `area` VALUES ('621223', '621200', '宕昌县');
+INSERT INTO `area` VALUES ('621224', '621200', '康县');
+INSERT INTO `area` VALUES ('621225', '621200', '西和县');
+INSERT INTO `area` VALUES ('621226', '621200', '礼县');
+INSERT INTO `area` VALUES ('621227', '621200', '徽县');
+INSERT INTO `area` VALUES ('621228', '621200', '两当县');
+INSERT INTO `area` VALUES ('622900', '620000', '临夏回族自治州');
+INSERT INTO `area` VALUES ('622901', '622900', '临夏市');
+INSERT INTO `area` VALUES ('622921', '622900', '临夏县');
+INSERT INTO `area` VALUES ('622922', '622900', '康乐县');
+INSERT INTO `area` VALUES ('622923', '622900', '永靖县');
+INSERT INTO `area` VALUES ('622924', '622900', '广河县');
+INSERT INTO `area` VALUES ('622925', '622900', '和政县');
+INSERT INTO `area` VALUES ('622926', '622900', '东乡族自治县');
+INSERT INTO `area` VALUES ('622927', '622900', '积石山保安族东乡族撒拉族自治县');
+INSERT INTO `area` VALUES ('623000', '620000', '甘南藏族自治州');
+INSERT INTO `area` VALUES ('623001', '623000', '合作市');
+INSERT INTO `area` VALUES ('623021', '623000', '临潭县');
+INSERT INTO `area` VALUES ('623022', '623000', '卓尼县');
+INSERT INTO `area` VALUES ('623023', '623000', '舟曲县');
+INSERT INTO `area` VALUES ('623024', '623000', '迭部县');
+INSERT INTO `area` VALUES ('623025', '623000', '玛曲县');
+INSERT INTO `area` VALUES ('623026', '623000', '碌曲县');
+INSERT INTO `area` VALUES ('623027', '623000', '夏河县');
+INSERT INTO `area` VALUES ('630000', '0', '青海省');
+INSERT INTO `area` VALUES ('630100', '630000', '西宁市');
+INSERT INTO `area` VALUES ('630102', '630100', '城东区');
+INSERT INTO `area` VALUES ('630103', '630100', '城中区');
+INSERT INTO `area` VALUES ('630104', '630100', '城西区');
+INSERT INTO `area` VALUES ('630105', '630100', '城北区');
+INSERT INTO `area` VALUES ('630121', '630100', '大通回族土族自治县');
+INSERT INTO `area` VALUES ('630122', '630100', '湟中县');
+INSERT INTO `area` VALUES ('630123', '630100', '湟源县');
+INSERT INTO `area` VALUES ('632100', '630000', '海东地区');
+INSERT INTO `area` VALUES ('632121', '632100', '平安县');
+INSERT INTO `area` VALUES ('632122', '632100', '民和回族土族自治县');
+INSERT INTO `area` VALUES ('632123', '632100', '乐都县');
+INSERT INTO `area` VALUES ('632126', '632100', '互助土族自治县');
+INSERT INTO `area` VALUES ('632127', '632100', '化隆回族自治县');
+INSERT INTO `area` VALUES ('632128', '632100', '循化撒拉族自治县');
+INSERT INTO `area` VALUES ('632200', '630000', '海北藏族自治州');
+INSERT INTO `area` VALUES ('632221', '632200', '门源回族自治县');
+INSERT INTO `area` VALUES ('632222', '632200', '祁连县');
+INSERT INTO `area` VALUES ('632223', '632200', '海晏县');
+INSERT INTO `area` VALUES ('632224', '632200', '刚察县');
+INSERT INTO `area` VALUES ('632300', '630000', '黄南藏族自治州');
+INSERT INTO `area` VALUES ('632321', '632300', '同仁县');
+INSERT INTO `area` VALUES ('632322', '632300', '尖扎县');
+INSERT INTO `area` VALUES ('632323', '632300', '泽库县');
+INSERT INTO `area` VALUES ('632324', '632300', '河南蒙古族自治县');
+INSERT INTO `area` VALUES ('632500', '630000', '海南藏族自治州');
+INSERT INTO `area` VALUES ('632521', '632500', '共和县');
+INSERT INTO `area` VALUES ('632522', '632500', '同德县');
+INSERT INTO `area` VALUES ('632523', '632500', '贵德县');
+INSERT INTO `area` VALUES ('632524', '632500', '兴海县');
+INSERT INTO `area` VALUES ('632525', '632500', '贵南县');
+INSERT INTO `area` VALUES ('632600', '630000', '果洛藏族自治州');
+INSERT INTO `area` VALUES ('632621', '632600', '玛沁县');
+INSERT INTO `area` VALUES ('632622', '632600', '班玛县');
+INSERT INTO `area` VALUES ('632623', '632600', '甘德县');
+INSERT INTO `area` VALUES ('632624', '632600', '达日县');
+INSERT INTO `area` VALUES ('632625', '632600', '久治县');
+INSERT INTO `area` VALUES ('632626', '632600', '玛多县');
+INSERT INTO `area` VALUES ('632700', '630000', '玉树藏族自治州');
+INSERT INTO `area` VALUES ('632721', '632700', '玉树县');
+INSERT INTO `area` VALUES ('632722', '632700', '杂多县');
+INSERT INTO `area` VALUES ('632723', '632700', '称多县');
+INSERT INTO `area` VALUES ('632724', '632700', '治多县');
+INSERT INTO `area` VALUES ('632725', '632700', '囊谦县');
+INSERT INTO `area` VALUES ('632726', '632700', '曲麻莱县');
+INSERT INTO `area` VALUES ('632800', '630000', '海西蒙古族藏族自治州');
+INSERT INTO `area` VALUES ('632801', '632800', '格尔木市');
+INSERT INTO `area` VALUES ('632802', '632800', '德令哈市');
+INSERT INTO `area` VALUES ('632821', '632800', '乌兰县');
+INSERT INTO `area` VALUES ('632822', '632800', '都兰县');
+INSERT INTO `area` VALUES ('632823', '632800', '天峻县');
+INSERT INTO `area` VALUES ('640000', '0', '宁夏回族自治区');
+INSERT INTO `area` VALUES ('640100', '640000', '银川市');
+INSERT INTO `area` VALUES ('640104', '640100', '兴庆区');
+INSERT INTO `area` VALUES ('640105', '640100', '西夏区');
+INSERT INTO `area` VALUES ('640106', '640100', '金凤区');
+INSERT INTO `area` VALUES ('640121', '640100', '永宁县');
+INSERT INTO `area` VALUES ('640122', '640100', '贺兰县');
+INSERT INTO `area` VALUES ('640181', '640100', '灵武市');
+INSERT INTO `area` VALUES ('640200', '640000', '石嘴山市');
+INSERT INTO `area` VALUES ('640202', '640200', '大武口区');
+INSERT INTO `area` VALUES ('640205', '640200', '惠农区');
+INSERT INTO `area` VALUES ('640221', '640200', '平罗县');
+INSERT INTO `area` VALUES ('640300', '640000', '吴忠市');
+INSERT INTO `area` VALUES ('640302', '640300', '利通区');
+INSERT INTO `area` VALUES ('640303', '640300', '红寺堡区');
+INSERT INTO `area` VALUES ('640323', '640300', '盐池县');
+INSERT INTO `area` VALUES ('640324', '640300', '同心县');
+INSERT INTO `area` VALUES ('640381', '640300', '青铜峡市');
+INSERT INTO `area` VALUES ('640400', '640000', '固原市');
+INSERT INTO `area` VALUES ('640402', '640400', '原州区');
+INSERT INTO `area` VALUES ('640422', '640400', '西吉县');
+INSERT INTO `area` VALUES ('640423', '640400', '隆德县');
+INSERT INTO `area` VALUES ('640424', '640400', '泾源县');
+INSERT INTO `area` VALUES ('640425', '640400', '彭阳县');
+INSERT INTO `area` VALUES ('640500', '640000', '中卫市');
+INSERT INTO `area` VALUES ('640502', '640500', '沙坡头区');
+INSERT INTO `area` VALUES ('640521', '640500', '中宁县');
+INSERT INTO `area` VALUES ('640522', '640500', '海原县');
+INSERT INTO `area` VALUES ('650000', '0', '新疆维吾尔自治区');
+INSERT INTO `area` VALUES ('650100', '650000', '乌鲁木齐市');
+INSERT INTO `area` VALUES ('650102', '650100', '天山区');
+INSERT INTO `area` VALUES ('650103', '650100', '沙依巴克区');
+INSERT INTO `area` VALUES ('650104', '650100', '新市区');
+INSERT INTO `area` VALUES ('650105', '650100', '水磨沟区');
+INSERT INTO `area` VALUES ('650106', '650100', '头屯河区');
+INSERT INTO `area` VALUES ('650107', '650100', '达坂城区');
+INSERT INTO `area` VALUES ('650109', '650100', '米东区');
+INSERT INTO `area` VALUES ('650121', '650100', '乌鲁木齐县');
+INSERT INTO `area` VALUES ('650200', '650000', '克拉玛依市');
+INSERT INTO `area` VALUES ('650202', '650200', '独山子区');
+INSERT INTO `area` VALUES ('650203', '650200', '克拉玛依区');
+INSERT INTO `area` VALUES ('650204', '650200', '白碱滩区');
+INSERT INTO `area` VALUES ('650205', '650200', '乌尔禾区');
+INSERT INTO `area` VALUES ('652100', '650000', '吐鲁番地区');
+INSERT INTO `area` VALUES ('652101', '652100', '吐鲁番市');
+INSERT INTO `area` VALUES ('652122', '652100', '鄯善县');
+INSERT INTO `area` VALUES ('652123', '652100', '托克逊县');
+INSERT INTO `area` VALUES ('652200', '650000', '哈密地区');
+INSERT INTO `area` VALUES ('652201', '652200', '哈密市');
+INSERT INTO `area` VALUES ('652222', '652200', '巴里坤哈萨克自治县');
+INSERT INTO `area` VALUES ('652223', '652200', '伊吾县');
+INSERT INTO `area` VALUES ('652300', '650000', '昌吉回族自治州');
+INSERT INTO `area` VALUES ('652301', '652300', '昌吉市');
+INSERT INTO `area` VALUES ('652302', '652300', '阜康市');
+INSERT INTO `area` VALUES ('652323', '652300', '呼图壁县');
+INSERT INTO `area` VALUES ('652324', '652300', '玛纳斯县');
+INSERT INTO `area` VALUES ('652325', '652300', '奇台县');
+INSERT INTO `area` VALUES ('652327', '652300', '吉木萨尔县');
+INSERT INTO `area` VALUES ('652328', '652300', '木垒哈萨克自治县');
+INSERT INTO `area` VALUES ('652700', '650000', '博尔塔拉蒙古自治州');
+INSERT INTO `area` VALUES ('652701', '652700', '博乐市');
+INSERT INTO `area` VALUES ('652722', '652700', '精河县');
+INSERT INTO `area` VALUES ('652723', '652700', '温泉县');
+INSERT INTO `area` VALUES ('652800', '650000', '巴音郭楞蒙古自治州');
+INSERT INTO `area` VALUES ('652801', '652800', '库尔勒市');
+INSERT INTO `area` VALUES ('652822', '652800', '轮台县');
+INSERT INTO `area` VALUES ('652823', '652800', '尉犁县');
+INSERT INTO `area` VALUES ('652824', '652800', '若羌县');
+INSERT INTO `area` VALUES ('652825', '652800', '且末县');
+INSERT INTO `area` VALUES ('652826', '652800', '焉耆回族自治县');
+INSERT INTO `area` VALUES ('652827', '652800', '和静县');
+INSERT INTO `area` VALUES ('652828', '652800', '和硕县');
+INSERT INTO `area` VALUES ('652829', '652800', '博湖县');
+INSERT INTO `area` VALUES ('652900', '650000', '阿克苏地区');
+INSERT INTO `area` VALUES ('652901', '652900', '阿克苏市');
+INSERT INTO `area` VALUES ('652922', '652900', '温宿县');
+INSERT INTO `area` VALUES ('652923', '652900', '库车县');
+INSERT INTO `area` VALUES ('652924', '652900', '沙雅县');
+INSERT INTO `area` VALUES ('652925', '652900', '新和县');
+INSERT INTO `area` VALUES ('652926', '652900', '拜城县');
+INSERT INTO `area` VALUES ('652927', '652900', '乌什县');
+INSERT INTO `area` VALUES ('652928', '652900', '阿瓦提县');
+INSERT INTO `area` VALUES ('652929', '652900', '柯坪县');
+INSERT INTO `area` VALUES ('653000', '650000', '克孜勒苏柯尔克孜自治州');
+INSERT INTO `area` VALUES ('653001', '653000', '阿图什市');
+INSERT INTO `area` VALUES ('653022', '653000', '阿克陶县');
+INSERT INTO `area` VALUES ('653023', '653000', '阿合奇县');
+INSERT INTO `area` VALUES ('653024', '653000', '乌恰县');
+INSERT INTO `area` VALUES ('653100', '650000', '喀什地区');
+INSERT INTO `area` VALUES ('653101', '653100', '喀什市');
+INSERT INTO `area` VALUES ('653121', '653100', '疏附县');
+INSERT INTO `area` VALUES ('653122', '653100', '疏勒县');
+INSERT INTO `area` VALUES ('653123', '653100', '英吉沙县');
+INSERT INTO `area` VALUES ('653124', '653100', '泽普县');
+INSERT INTO `area` VALUES ('653125', '653100', '莎车县');
+INSERT INTO `area` VALUES ('653126', '653100', '叶城县');
+INSERT INTO `area` VALUES ('653127', '653100', '麦盖提县');
+INSERT INTO `area` VALUES ('653128', '653100', '岳普湖县');
+INSERT INTO `area` VALUES ('653129', '653100', '伽师县');
+INSERT INTO `area` VALUES ('653130', '653100', '巴楚县');
+INSERT INTO `area` VALUES ('653131', '653100', '塔什库尔干塔吉克自治县');
+INSERT INTO `area` VALUES ('653200', '650000', '和田地区');
+INSERT INTO `area` VALUES ('653201', '653200', '和田市');
+INSERT INTO `area` VALUES ('653221', '653200', '和田县');
+INSERT INTO `area` VALUES ('653222', '653200', '墨玉县');
+INSERT INTO `area` VALUES ('653223', '653200', '皮山县');
+INSERT INTO `area` VALUES ('653224', '653200', '洛浦县');
+INSERT INTO `area` VALUES ('653225', '653200', '策勒县');
+INSERT INTO `area` VALUES ('653226', '653200', '于田县');
+INSERT INTO `area` VALUES ('653227', '653200', '民丰县');
+INSERT INTO `area` VALUES ('654000', '650000', '伊犁哈萨克自治州');
+INSERT INTO `area` VALUES ('654002', '654000', '伊宁市');
+INSERT INTO `area` VALUES ('654003', '654000', '奎屯市');
+INSERT INTO `area` VALUES ('654021', '654000', '伊宁县');
+INSERT INTO `area` VALUES ('654022', '654000', '察布查尔锡伯自治县');
+INSERT INTO `area` VALUES ('654023', '654000', '霍城县');
+INSERT INTO `area` VALUES ('654024', '654000', '巩留县');
+INSERT INTO `area` VALUES ('654025', '654000', '新源县');
+INSERT INTO `area` VALUES ('654026', '654000', '昭苏县');
+INSERT INTO `area` VALUES ('654027', '654000', '特克斯县');
+INSERT INTO `area` VALUES ('654028', '654000', '尼勒克县');
+INSERT INTO `area` VALUES ('654200', '650000', '塔城地区');
+INSERT INTO `area` VALUES ('654201', '654200', '塔城市');
+INSERT INTO `area` VALUES ('654202', '654200', '乌苏市');
+INSERT INTO `area` VALUES ('654221', '654200', '额敏县');
+INSERT INTO `area` VALUES ('654223', '654200', '沙湾县');
+INSERT INTO `area` VALUES ('654224', '654200', '托里县');
+INSERT INTO `area` VALUES ('654225', '654200', '裕民县');
+INSERT INTO `area` VALUES ('654226', '654200', '和布克赛尔蒙古自治县');
+INSERT INTO `area` VALUES ('654300', '650000', '阿勒泰地区');
+INSERT INTO `area` VALUES ('654301', '654300', '阿勒泰市');
+INSERT INTO `area` VALUES ('654321', '654300', '布尔津县');
+INSERT INTO `area` VALUES ('654322', '654300', '富蕴县');
+INSERT INTO `area` VALUES ('654323', '654300', '福海县');
+INSERT INTO `area` VALUES ('654324', '654300', '哈巴河县');
+INSERT INTO `area` VALUES ('654325', '654300', '青河县');
+INSERT INTO `area` VALUES ('654326', '654300', '吉木乃县');
+INSERT INTO `area` VALUES ('659000', '650000', '自治区直辖县级行政区划');
+INSERT INTO `area` VALUES ('659001', '659000', '石河子市');
+INSERT INTO `area` VALUES ('659002', '659000', '阿拉尔市');
+INSERT INTO `area` VALUES ('659003', '659000', '图木舒克市');
+INSERT INTO `area` VALUES ('659004', '659000', '五家渠市');
+INSERT INTO `area` VALUES ('520700', '520000', '贵安新区');
+INSERT INTO `area` VALUES ('520710', '520700', '贵安新区');
+
+-- ----------------------------
+-- Table structure for `characteristic_service_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `characteristic_service_type`;
+CREATE TABLE `characteristic_service_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id,为0则为系统定义',
+  `name` varchar(10) NOT NULL COMMENT '名称',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of characteristic_service_type
+-- ----------------------------
+INSERT INTO `characteristic_service_type` VALUES ('1', '0', '系统特色服务1', '1497258088');
+INSERT INTO `characteristic_service_type` VALUES ('2', '1', '商户特色服务2', '1493967103');
+INSERT INTO `characteristic_service_type` VALUES ('7', '1', '商户特色服务3', '1495017717');
+INSERT INTO `characteristic_service_type` VALUES ('8', '2', '商户特色服务4', '1495074608');
+INSERT INTO `characteristic_service_type` VALUES ('9', '1', '特色服务2', '1495104631');
+INSERT INTO `characteristic_service_type` VALUES ('10', '1', '特色服务2', '1495104646');
+INSERT INTO `characteristic_service_type` VALUES ('11', '12', '特色服务1', '1495176814');
+INSERT INTO `characteristic_service_type` VALUES ('12', '1', 'good', '1495177190');
+INSERT INTO `characteristic_service_type` VALUES ('13', '2', '测试测试', '1495177270');
+INSERT INTO `characteristic_service_type` VALUES ('24', '0', '系统特色服务234', '1497229933');
+INSERT INTO `characteristic_service_type` VALUES ('15', '3', '演唱会', '1495419879');
+INSERT INTO `characteristic_service_type` VALUES ('16', '17', '免费停车', '1495442530');
+INSERT INTO `characteristic_service_type` VALUES ('17', '22', '我的服务', '1495596983');
+INSERT INTO `characteristic_service_type` VALUES ('23', '0', '系统特色服务3', '1496991447');
+INSERT INTO `characteristic_service_type` VALUES ('33', '2', '推特', '1499398875');
+INSERT INTO `characteristic_service_type` VALUES ('25', '0', '如果特殊服务被删后情', '1497232656');
+INSERT INTO `characteristic_service_type` VALUES ('30', '10', '符文', '1497409217');
+INSERT INTO `characteristic_service_type` VALUES ('34', '2', '推特111', '1499398884');
+INSERT INTO `characteristic_service_type` VALUES ('35', '2', '推特112', '1499398888');
+INSERT INTO `characteristic_service_type` VALUES ('36', '13', '色色', '1499677131');
+INSERT INTO `characteristic_service_type` VALUES ('37', '28', '123', '1499910381');
+
+-- ----------------------------
+-- Table structure for `city`
+-- ----------------------------
+DROP TABLE IF EXISTS `city`;
+CREATE TABLE `city` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID自增',
+  `name` varchar(20) NOT NULL COMMENT '城市名称',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of city
+-- ----------------------------
+INSERT INTO `city` VALUES ('1', '广州市', '1494915705');
+INSERT INTO `city` VALUES ('2', '乌兰察布市', '1499239758');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_account`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_account`;
+CREATE TABLE `commercial_tenant_account` (
+  `id` int(11) NOT NULL COMMENT 'commercial_tenant_index 表(id)',
+  `money` int(11) NOT NULL COMMENT '余额',
+  `bank_name` varchar(20) NOT NULL COMMENT '开户银行',
+  `bank_accout_type` tinyint(1) NOT NULL COMMENT '银行帐号类型，1：个人',
+  `bank_accout` varchar(20) NOT NULL COMMENT '银行帐号',
+  `bank_account_holder` varchar(6) NOT NULL COMMENT '开户人',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_account
+-- ----------------------------
+INSERT INTO `commercial_tenant_account` VALUES ('1', '72944', '测试银行-11133212', '0', '1233211234567', '测试开户人2');
+INSERT INTO `commercial_tenant_account` VALUES ('2', '4995', '测试银行', '1', '1233211234567', '测试开户人');
+INSERT INTO `commercial_tenant_account` VALUES ('4', '0', '招打银行', '1', '1111111113', '李3雕');
+INSERT INTO `commercial_tenant_account` VALUES ('3', '0', '测试银行111', '1', '1233211234567', '测试开户人1');
+INSERT INTO `commercial_tenant_account` VALUES ('5', '0', '招打银行', '1', '1111111115', '李5雕');
+INSERT INTO `commercial_tenant_account` VALUES ('6', '0', '招打银行', '1', '1111111116', '李6雕');
+INSERT INTO `commercial_tenant_account` VALUES ('7', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('8', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('9', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('10', '300', '招商银行-琶洲路支行', '0', '1234567890123457', '张三');
+INSERT INTO `commercial_tenant_account` VALUES ('11', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('12', '45000000', '建设银行-新港东路支行', '1', '5245445625556655544', '李亚林');
+INSERT INTO `commercial_tenant_account` VALUES ('13', '1699', '建行-咸鱼支行', '1', '5245445625556655566', '小鸥酱');
+INSERT INTO `commercial_tenant_account` VALUES ('14', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('15', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('16', '0', '建设银行', '2', '5542514411121', '张汝斌');
+INSERT INTO `commercial_tenant_account` VALUES ('17', '0', '测试银行', '0', '2322222222222', '张志辉');
+INSERT INTO `commercial_tenant_account` VALUES ('18', '0', '建设银行', '0', '22222222222222222222', '张志辉');
+INSERT INTO `commercial_tenant_account` VALUES ('19', '0', '建设', '0', '5451245652255', '阿林');
+INSERT INTO `commercial_tenant_account` VALUES ('20', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('21', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('22', '10000000', '建设银行', '1', '5551245245545525', '阿林');
+INSERT INTO `commercial_tenant_account` VALUES ('23', '0', '建设银行', '1', '22222222222222222', '张逗比');
+INSERT INTO `commercial_tenant_account` VALUES ('24', '0', 'dfdfd', '1', '4556456465456', 'aaaa');
+INSERT INTO `commercial_tenant_account` VALUES ('25', '0', '测试', '1', '2222222', '测试');
+INSERT INTO `commercial_tenant_account` VALUES ('26', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('27', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('28', '0', '222222', '1', '22222', '222222');
+INSERT INTO `commercial_tenant_account` VALUES ('29', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('30', '0', 'e234776站-123123333', '1', '123213', '123');
+INSERT INTO `commercial_tenant_account` VALUES ('31', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('32', '0', '建行-琶洲支行', '1', '1234567890123457', '李四');
+INSERT INTO `commercial_tenant_account` VALUES ('33', '0', '', '0', '', '');
+INSERT INTO `commercial_tenant_account` VALUES ('34', '55173303', '王五-王五', '1', '123', '王五');
+INSERT INTO `commercial_tenant_account` VALUES ('35', '0', '建设银行', '2', '4655145456245522455', '李亚林');
+INSERT INTO `commercial_tenant_account` VALUES ('36', '0', '', '0', '', '');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_action`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_action`;
+CREATE TABLE `commercial_tenant_action` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，商户id',
+  `note` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_action
+-- ----------------------------
+INSERT INTO `commercial_tenant_action` VALUES ('3', '{\"last_comment_read_time\":1495419771,\"last_order_read_time\":1495419787}');
+INSERT INTO `commercial_tenant_action` VALUES ('1', '{\"last_comment_read_time\":1497256322,\"last_order_read_time\":1499073186}');
+INSERT INTO `commercial_tenant_action` VALUES ('4', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('2', '{\"last_comment_read_time\":1499654538,\"last_order_read_time\":1499654529}');
+INSERT INTO `commercial_tenant_action` VALUES ('12', '{\"last_order_read_time\":1499849647,\"last_comment_read_time\":1495443769}');
+INSERT INTO `commercial_tenant_action` VALUES ('16', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('10', '{\"last_order_read_time\":1499407060,\"last_comment_read_time\":1499677055}');
+INSERT INTO `commercial_tenant_action` VALUES ('17', '{\"last_order_read_time\":1495442538,\"last_comment_read_time\":1495442583}');
+INSERT INTO `commercial_tenant_action` VALUES ('18', '{\"last_order_read_time\":1495608999,\"last_comment_read_time\":1495609022}');
+INSERT INTO `commercial_tenant_action` VALUES ('19', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('20', '{\"last_order_read_time\":1495532672}');
+INSERT INTO `commercial_tenant_action` VALUES ('22', '{\"last_order_read_time\":1499755764}');
+INSERT INTO `commercial_tenant_action` VALUES ('21', '{\"last_order_read_time\":1495850755,\"last_comment_read_time\":1495850770}');
+INSERT INTO `commercial_tenant_action` VALUES ('23', '{\"last_order_read_time\":1495691458,\"last_comment_read_time\":1495691582}');
+INSERT INTO `commercial_tenant_action` VALUES ('24', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('25', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('26', '{\"last_comment_read_time\":1496384202}');
+INSERT INTO `commercial_tenant_action` VALUES ('13', '{\"last_order_read_time\":1499762889,\"last_comment_read_time\":1499762892}');
+INSERT INTO `commercial_tenant_action` VALUES ('30', '[]');
+INSERT INTO `commercial_tenant_action` VALUES ('32', '{\"last_comment_read_time\":1499396299,\"last_order_read_time\":1499671893}');
+INSERT INTO `commercial_tenant_action` VALUES ('34', '{\"last_order_read_time\":1500365851,\"last_comment_read_time\":1499672307}');
+INSERT INTO `commercial_tenant_action` VALUES ('35', '{\"last_order_read_time\":1501551381,\"last_comment_read_time\":1501551369}');
+INSERT INTO `commercial_tenant_action` VALUES ('28', '{\"last_order_read_time\":1499918213,\"last_comment_read_time\":1499915218}');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_activity_announcement`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_activity_announcement`;
+CREATE TABLE `commercial_tenant_activity_announcement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `title` varchar(10) NOT NULL COMMENT '标题',
+  `content` varchar(100) NOT NULL COMMENT '内容',
+  `start_time` int(11) NOT NULL COMMENT '开始时间',
+  `end_time` int(11) NOT NULL COMMENT '结束时间',
+  `status` tinyint(1) NOT NULL COMMENT '状态,0.下线  1,上线',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_activity_announcement
+-- ----------------------------
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('1', '13', 'qweqwwqerr', 'qweqwwqerrsss', '1500220800', '1500307200', '1', '1500366585');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('2', '13', '这是标题', '这是内容', '1501603200', '1504195199', '1', '1500366611');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('4', '34', '测试标题1', '测试内容！！！！', '1500307200', '1500912000', '1', '1500371040');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('6', '34', '测试标题2', '测试内容！！！！！', '1501516800', '1504195199', '1', '1500427861');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('7', '34', '测试标题3', '测试！！！！！！！！！！！！！！！！！', '1500393600', '1500480000', '1', '1500427880');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('8', '34', '测试4', '测试￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥', '1501516800', '1503590399', '1', '1500427894');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('10', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('11', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('12', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('13', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('14', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('15', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('16', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('17', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('18', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('19', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('20', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+INSERT INTO `commercial_tenant_activity_announcement` VALUES ('21', '35', '优惠啦', '优惠啦啦啦', '1501516800', '1502035199', '1', '1501573650');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_announcement`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_announcement`;
+CREATE TABLE `commercial_tenant_announcement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `title` varchar(50) NOT NULL COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_announcement
+-- ----------------------------
+INSERT INTO `commercial_tenant_announcement` VALUES ('1', '公告标题', '公告内容', '65451');
+INSERT INTO `commercial_tenant_announcement` VALUES ('2', '标题1', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('3', '标题2', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('4', '标题3', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('5', '标题3', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('6', '标题4', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('7', '标题5', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('8', '标题6', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('9', '标题7', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('10', '标题8', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('11', '标题9', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('12', '标题10', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('13', '标题11', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('14', '标题12', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('15', '标题13', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('16', '标题13', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('17', '标题14', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('18', '标题15', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('19', '标题16', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('20', '标题17', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('21', '标题18', '内容', '1494296948');
+INSERT INTO `commercial_tenant_announcement` VALUES ('22', '标题19', '内容', '1494296948');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_approve`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_approve`;
+CREATE TABLE `commercial_tenant_approve` (
+  `id` int(11) NOT NULL COMMENT 'commercial_tenant_index 表(id)',
+  `tenant_info` text NOT NULL COMMENT '商户变更信息 [    ‘identity_card’ => [ ‘value’ => 43022514521451 ‘reson’ => ‘位数不对’ ] ]',
+  `shop_info` text NOT NULL COMMENT '商铺变更信息 [    ‘photo’ => [20,50] ]',
+  `tenant_approve_status` tinyint(1) NOT NULL COMMENT '商户审核状态，1：未审核，2：开始审核（不能编辑了）3：审核通过，4：审核不通过',
+  `shop_approve_status` tinyint(1) NOT NULL COMMENT '商铺审核状态，1：未审核，2：开始审核（不能编辑了）3：审核通过，4：审核不通过',
+  `last_edit_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_approve
+-- ----------------------------
+INSERT INTO `commercial_tenant_approve` VALUES ('1', '[]', '[]', '3', '3', '1499154659');
+INSERT INTO `commercial_tenant_approve` VALUES ('2', '{\"leading_official\":{\"value\":\"\\u6d4b\\u8bd5\\u8d1f\\u8d23\\u4eba111\",\"reason\":\"\"},\"identity_card\":{\"value\":\"2222222\",\"reason\":\"\"},\"email\":{\"value\":\"1233211234567@um.com\",\"reason\":\"\"},\"identity_card_front\":{\"value\":2,\"reason\":\"\"},\"identity_card_back\":{\"value\":3,\"reason\":\"\"},\"identity_card_in_hand\":{\"value\":4,\"reason\":\"\"},\"bank_accout\":{\"value\":\"1233211234567\"},\"bank_account_holder\":{\"value\":\"\\u6d4b\\u8bd5\\u5f00\\u6237\\u4eba111\"},\"bank_name\":{\"value\":\"\\u6d4b\\u8bd5\\u94f6\\u884c111\"},\"bank_card_photo\":{\"value\":4},\"other_info\":[{\"value\":2,\"reason\":\"\"},{\"value\":4,\"reason\":\"\"}],\"bank_accout_type\":{\"value\":2}}', '{\"name\":{\"value\":\"\\u6d4b\\u8bd5\\u5546\\u94fa333\"},\"profile\":{\"value\":965},\"lng\":{\"value\":113.40028},\"lat\":{\"value\":23.09362},\"address\":{\"value\":\"\\u6d4b\\u8bd5\\u5730\\u5740333\"},\"preferential_info\":{\"value\":\"\\u6d4b\\u8bd5\\u4f18\\u60e0\\u4fe1\\u606f333\"},\"contact_number\":{\"value\":\"333333\"},\"description\":{\"value\":\"\\u6d4b\\u8bd5\\u63cf\\u8ff0333\"},\"photo\":[{\"id\":0,\"resource_id\":\"3\"},{\"id\":0,\"resource_id\":\"2\"},{\"id\":0,\"resource_id\":\"397\"}],\"commercial_tenant_characteristic_service_relation\":[],\"commercial_tenant_type\":{\"value\":[\"1\",\"2\",\"3\",\"9\",\"8\",\"13\"]},\"teacher\":[{\"id\":0,\"profile\":935,\"name\":\"aa\",\"duty\":\"aa\",\"seniority\":11,\"description\":\"asdfasdfasdf\",\"order\":\"2\",\"create_time\":1499410838},{\"id\":0,\"profile\":936,\"name\":\"ee\",\"duty\":\"23\",\"seniority\":2,\"description\":\"asdfasdf\",\"order\":\"1\",\"create_time\":1499411074},{\"id\":0,\"profile\":938,\"name\":\"ggggggg\",\"duty\":\"we3423\",\"seniority\":1,\"description\":\"sadfasdf\",\"order\":3,\"create_time\":1499411480}]}', '1', '1', '1499659848');
+INSERT INTO `commercial_tenant_approve` VALUES ('3', '{\"other_info\":[]}', '{\"lng\":{\"value\":113.400342},\"lat\":{\"value\":23.095286},\"preferential_info\":{\"value\":\"\\u6d4b\\u8bd5\\u4f18\\u60e0\\u4fe1\\u606f333\"},\"photo\":[],\"commercial_tenant_characteristic_service_relation\":[{\"value\":\"1\",\"reason\":\"1122\"},{\"value\":\"14\",\"reason\":\"111\"}],\"commercial_tenant_type\":[{\"value\":\"1\"},{\"value\":\"2\"}]}', '3', '4', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('4', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('5', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('6', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('8', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('9', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('10', '[]', '{\"name\":{\"value\":\"\\u5f20\\u4e09\\u8d85\\u5e02~~\"},\"contact_number\":{\"value\":\"10086111\"},\"description\":{\"value\":\"\\u5f20\\u4e09\\u5546\\u54c1~~~~~~\\uff01\\uff01\\uff01\\uff01\"},\"lng\":{\"value\":\"113.393350\"},\"lat\":{\"value\":\"23.091210\"},\"address\":{\"value\":\"\\u6d77\\u73e0\\u533a\\u9ec4\\u57d4\\u6751\"},\"profile\":{\"value\":822},\"commercial_tenant_characteristic_service_relation\":[{\"value\":\"30\"}],\"commercial_tenant_type\":{\"value\":[\"1\",\"9\"]},\"photo\":[{\"id\":0,\"resource_id\":\"943\"},{\"id\":0,\"resource_id\":\"949\"},{\"id\":0,\"resource_id\":\"950\"},{\"id\":0,\"resource_id\":\"951\"},{\"id\":0,\"resource_id\":\"952\"}]}', '3', '1', '1499329776');
+INSERT INTO `commercial_tenant_approve` VALUES ('11', '{\"leading_official\":{\"value\":\"1232222144\"},\"identity_card\":{\"value\":\"123\"},\"email\":{\"value\":\"123@116.com\"},\"bank_account_holder\":{\"value\":\"1232222144\"},\"bank_name\":{\"value\":\"123444ppp678789\"},\"bank_accout\":{\"value\":\"1234\"},\"identity_card_front\":{\"value\":255},\"identity_card_back\":{\"value\":256},\"identity_card_in_hand\":{\"value\":257},\"bank_card_photo\":{\"value\":258},\"other_info\":[{\"value\":\"269\"}]}', '{\"name\":{\"value\":\"12123444\"},\"description\":{\"value\":\"123123123asdfasdf\"},\"contact_number\":{\"value\":\"12345222222\"},\"city_id\":{\"value\":1},\"lng\":{\"value\":\"2\"},\"lat\":{\"value\":\"3\"},\"address\":{\"value\":\"\\u6d4b\\u8bd5\\u5e97\\u94fa\"},\"profile\":{\"value\":294}}', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('12', '[]', '[]', '3', '3', '1499849890');
+INSERT INTO `commercial_tenant_approve` VALUES ('13', '[]', '{\"description\":{\"value\":\"\\u8fd9\\u4e48\\u8bf4\\u624d\\u597d\\u5462\\uff0c\\u5509,\\u5e05\\u7684\\u70e6\\u607c\"},\"commercial_tenant_type\":{\"value\":[\"1\",\"2\",\"3\",\"13\"]},\"contact_number\":{\"value\":\"020-8687888\"},\"lng\":{\"value\":\"113.34234\"},\"lat\":{\"value\":\"23.17072\"},\"address\":{\"value\":\"\\u5929\\u6cb3\\u533a\\u5929\\u6cb3\\u533a\\u5929\\u6cb3\\u5ba2\\u8fd0\\u7ad9\\u65c1\\u8fb9\\u7684\\u7ea2\\u706f\\u533a\"},\"photo\":[{\"id\":0,\"resource_id\":\"996\"}],\"commercial_tenant_characteristic_service_relation\":[{\"value\":\"1\"},{\"value\":\"23\"},{\"value\":\"36\"}],\"teacher\":[{\"id\":0,\"profile\":997,\"name\":\"\\u674e\\u5927\\u70ae\",\"duty\":\"\\u8feb\\u51fb\\u70ae\\u6307\\u5bfc\",\"seniority\":88,\"description\":\"\\u53c2\\u52a0\\u8fc7\\u671d\\u9c9c\\u6218\\u4e89\\uff0c\\u8d8a\\u5357\\u6218\\u4e89,\\u5c5e\\u7b2cXX\\u70ae\\u5175\\u56e2\\u56e2\\u957f,\\u6709\\u7740\\u591a\\u5e74\\u6253\\u70ae\\u7ecf\\u9a8c\\uff0c\\u6307\\u5bfc\\u591a\\u540d\\u73b0\\u4efb\\u7684\\u540d\\u5c06\",\"order\":1,\"create_time\":1499677291}]}', '3', '1', '1499677425');
+INSERT INTO `commercial_tenant_approve` VALUES ('32', '[]', '[]', '3', '3', '1499671527');
+INSERT INTO `commercial_tenant_approve` VALUES ('14', '{\"leading_official\":{\"value\":\"zhan\"},\"identity_card\":{\"value\":\"440183199003310311\"},\"email\":{\"value\":\"5685623@qq.com\"},\"bank_account_holder\":{\"value\":\"zhan\"},\"bank_name\":{\"value\":\"fengfengbank\"},\"bank_accout\":{\"value\":\"2265865646\"},\"identity_card_front\":{\"value\":347},\"identity_card_back\":{\"value\":348},\"identity_card_in_hand\":{\"value\":349},\"bank_card_photo\":{\"value\":350},\"other_info\":[{\"value\":\"\"}]}', '{\"name\":{\"value\":\"fetnd\"},\"description\":{\"value\":\"asdfasdfasdf\"},\"contact_number\":{\"value\":\"13265844\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"2\"},\"lat\":{\"value\":\"3\"},\"address\":{\"value\":\"\\u6d4b\\u8bd5\\u5e97\\u94fa\"},\"profile\":{\"value\":354},\"photo\":[{\"id\":0,\"resource_id\":\"356\"}],\"commercial_tenant_type\":{\"value\":[\"2\",\"13\"]}}', '1', '1', '1499306666');
+INSERT INTO `commercial_tenant_approve` VALUES ('16', '{\"leading_official\":{\"value\":\"\\u5f20\\u6c5d\\u658c\"},\"identity_card\":{\"value\":\"524524554145\"},\"email\":{\"value\":\"27855495@qq.com\"},\"bank_account_holder\":{\"value\":\"\\u5f20\\u6c5d\\u658c\"},\"bank_name\":{\"value\":\"\\u5efa\\u8bbe\\u94f6\\u884c\"},\"bank_accout\":{\"value\":\"5542514411121\"},\"identity_card_front\":{\"value\":399},\"identity_card_back\":{\"value\":400},\"identity_card_in_hand\":{\"value\":401},\"bank_card_photo\":{\"value\":482},\"other_info\":[{\"value\":\"412\"}],\"bank_accout_type\":{\"value\":2}}', '{\"photo\":[{\"id\":0,\"resource_id\":\"434\"},{\"id\":0,\"resource_id\":\"435\"},{\"id\":0,\"resource_id\":\"437\"},{\"id\":0,\"resource_id\":\"902\"}],\"name\":{\"value\":\"345345\"},\"description\":{\"value\":\"\\u5b9e\\u9645\\u4e0a\\u90fd\\u80fd\\u5f97\\u5230 you\"},\"contact_number\":{\"value\":\"13587561214\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"113.36199\"},\"lat\":{\"value\":\"23.12463\"},\"address\":{\"value\":\"\\u5929\\u6cb3\\u533a\\u5929\\u6cb3\\u533a123123\"},\"profile\":{\"value\":447},\"teacher\":[{\"tenant_id\":\"16\",\"profile\":441,\"name\":\"ddd\",\"duty\":\"ddd\",\"seniority\":12,\"description\":\"123123123\",\"create_time\":1495184279,\"id\":0,\"order\":0},{\"tenant_id\":\"16\",\"profile\":442,\"name\":\"123123\",\"duty\":\"444\",\"seniority\":23,\"description\":\"123123\",\"create_time\":1495184652,\"id\":0,\"order\":1},{\"tenant_id\":\"16\",\"profile\":449,\"name\":\"123\",\"duty\":\"421\",\"seniority\":12,\"description\":\"123123123\",\"create_time\":1495197780,\"id\":0,\"order\":2}]}', '4', '1', '1498634423');
+INSERT INTO `commercial_tenant_approve` VALUES ('15', '{\"leading_official\":{\"value\":\"\\u5f20\\u5fd7\\u8f89\"},\"identity_card\":{\"value\":\"222222222222222222222\"},\"email\":{\"value\":\"22222222@qq.com\"},\"bank_account_holder\":{\"value\":\"\\u5f20\\u5fd7\\u8f89\"},\"bank_name\":{\"value\":\"\\u5efa\\u8bbe\\u94f6\\u884c\"},\"bank_accout\":{\"value\":\"3333333333333333333333\"},\"identity_card_front\":{\"value\":370},\"identity_card_back\":{\"value\":371},\"identity_card_in_hand\":{\"value\":372},\"bank_card_photo\":{\"value\":369},\"other_info\":[]}', '[]', '1', '3', '1495164707');
+INSERT INTO `commercial_tenant_approve` VALUES ('22', '[]', '{\"commercial_tenant_characteristic_service_relation\":[{\"value\":\"1\"},{\"value\":\"17\"},{\"value\":\"24\"}],\"commercial_tenant_type\":{\"value\":[\"1\",\"2\",\"13\"]}}', '3', '1', '1499674936');
+INSERT INTO `commercial_tenant_approve` VALUES ('23', '[]', '[]', '3', '3', '1495609417');
+INSERT INTO `commercial_tenant_approve` VALUES ('29', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('17', '[]', '[]', '3', '3', '1495442459');
+INSERT INTO `commercial_tenant_approve` VALUES ('18', '[]', '[]', '3', '3', '1495444667');
+INSERT INTO `commercial_tenant_approve` VALUES ('20', '{\"leading_official\":{\"value\":\"bin2\"},\"identity_card\":{\"value\":\"440183111111111\"},\"email\":{\"value\":\"568232444@qq.com\"},\"bank_account_holder\":{\"value\":\"bin2\"},\"bank_name\":{\"value\":\"\\u6d4b\\u8bd5\\u94f6\\u884c\"},\"bank_accout\":{\"value\":\"123123123123123\"},\"bank_accout_type\":{\"value\":1},\"identity_card_front\":{\"value\":488},\"identity_card_back\":{\"value\":492},\"identity_card_in_hand\":{\"value\":490},\"bank_card_photo\":{\"value\":494},\"other_info\":[]}', '{\"name\":{\"value\":\"234234\"},\"description\":{\"value\":\"123123123123\"},\"contact_number\":{\"value\":\"13587561213\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"119.77606\"},\"lat\":{\"value\":\"39.97892\"},\"address\":{\"value\":\"\\u5c71\\u6d77\\u5173\\u533ayyyy\"},\"profile\":{\"value\":497},\"photo\":[{\"id\":0,\"resource_id\":\"498\"}]}', '1', '1', '1495525617');
+INSERT INTO `commercial_tenant_approve` VALUES ('19', '[]', '{\"photo\":{\"1\":{\"id\":0,\"resource_id\":\"509\",\"reason\":\"\\u592a\\u5927\\u4e86\"}}}', '3', '4', '1495445225');
+INSERT INTO `commercial_tenant_approve` VALUES ('27', '{\"leading_official\":{\"value\":\"2222222\"},\"identity_card\":{\"value\":\"222222222222\"},\"email\":{\"value\":\"2222222@qq.com\"},\"bank_account_holder\":{\"value\":\"22222222222\"},\"bank_name\":{\"value\":\"222222222222\"},\"bank_accout\":{\"value\":\"222222222\"},\"bank_accout_type\":{\"value\":1},\"identity_card_front\":{\"value\":847},\"identity_card_back\":{\"value\":848},\"identity_card_in_hand\":{\"value\":849},\"bank_card_photo\":{\"value\":850},\"other_info\":[]}', '[]', '1', '1', '1497857839');
+INSERT INTO `commercial_tenant_approve` VALUES ('21', '{\"leading_official\":{\"value\":\"zhan\"},\"identity_card\":{\"value\":\"12121212\"},\"email\":{\"value\":\"1211212@163.com\"},\"bank_account_holder\":{\"value\":\"zhan\"},\"bank_name\":{\"value\":\"wqerqwerqwer\"},\"bank_accout\":{\"value\":\"121212121212\"},\"bank_accout_type\":{\"value\":1},\"identity_card_front\":{\"value\":734},\"identity_card_back\":{\"value\":692},\"identity_card_in_hand\":{\"value\":624},\"bank_card_photo\":{\"value\":735},\"other_info\":[{\"value\":\"626\"}]}', '{\"photo\":[{\"id\":0,\"resource_id\":\"526\"},{\"id\":0,\"resource_id\":\"703\"},{\"id\":0,\"resource_id\":\"737\"}],\"name\":{\"value\":\"tiantian\"},\"description\":{\"value\":\"123123123\"},\"contact_number\":{\"value\":\"12121212\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"121.48461\"},\"lat\":{\"value\":\"31.23162\"},\"address\":{\"value\":\"\\u9ec4\\u6d66\\u533a1212\"},\"profile\":{\"value\":525}}', '1', '1', '1496199311');
+INSERT INTO `commercial_tenant_approve` VALUES ('24', '[]', '{\"photo\":[{\"id\":0,\"resource_id\":\"958\"}]}', '3', '1', '1495704686');
+INSERT INTO `commercial_tenant_approve` VALUES ('30', '[]', '{\"name\":{\"value\":\"123\"},\"description\":{\"value\":\"123123\"},\"contact_number\":{\"value\":\"123123\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"113.21095\"},\"lat\":{\"value\":\"40.78585\"},\"address\":{\"value\":\"\\u5bdf\\u54c8\\u5c14\\u53f3\\u7ffc\\u524d\\u65d7123123\"},\"profile\":{\"value\":908},\"photo\":[{\"id\":0,\"resource_id\":\"909\"},{\"id\":0,\"resource_id\":\"910\"}],\"commercial_tenant_type\":{\"value\":[\"2\",\"3\"]}}', '3', '3', '1499241132');
+INSERT INTO `commercial_tenant_approve` VALUES ('25', '[]', '[]', '3', '3', '1495706832');
+INSERT INTO `commercial_tenant_approve` VALUES ('31', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('28', '[]', '{\"commercial_tenant_characteristic_service_relation\":[{\"value\":\"1\"}]}', '3', '1', '1498033036');
+INSERT INTO `commercial_tenant_approve` VALUES ('26', '{\"leading_official\":{\"value\":\"zhan2\"},\"identity_card\":{\"value\":\"546468756465\"},\"email\":{\"value\":\"56853271@qq.com\"},\"bank_account_holder\":{\"value\":\"zhan22ee\"},\"bank_name\":{\"value\":\"mengshen\"},\"bank_accout\":{\"value\":\"45678654653231\"},\"bank_accout_type\":{\"value\":0},\"identity_card_front\":{\"value\":781},\"identity_card_back\":{\"value\":776},\"identity_card_in_hand\":{\"value\":782},\"bank_card_photo\":{\"value\":783},\"other_info\":[{\"value\":\"784\"}]}', '{\"name\":{\"value\":\"ffff\"},\"description\":{\"value\":\"asdfasdwqweqwefas231\"},\"contact_number\":{\"value\":\"13587561211\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"113.36072\"},\"lat\":{\"value\":\"23.14287\"},\"address\":{\"value\":\"\\u5929\\u6cb3\\u533a\\u9676\\u7136\\u5ead\\u82d1\\u6258\\u7ba1\\u4e2d\\u5fc3\"},\"profile\":{\"value\":824},\"photo\":[{\"id\":0,\"resource_id\":\"780\"}]}', '1', '1', '1497422258');
+INSERT INTO `commercial_tenant_approve` VALUES ('33', '[]', '[]', '1', '1', '0');
+INSERT INTO `commercial_tenant_approve` VALUES ('34', '[]', '[]', '3', '1', '1502778539');
+INSERT INTO `commercial_tenant_approve` VALUES ('36', '{\"leading_official\":{\"value\":\"\\u963f\\u67970810\"},\"identity_card\":{\"value\":\"43042215654852\"},\"email\":{\"value\":\"2700785@qq.com\"},\"bank_account_holder\":{\"value\":\"\\u963f\\u6797\"},\"bank_name\":{\"value\":\"\\u5efa\\u8bbe\\u94f6\\u884c\"},\"bank_accout\":{\"value\":\"546546958545445655\"},\"bank_accout_type\":{\"value\":1},\"identity_card_front\":{\"value\":1009},\"identity_card_back\":{\"value\":1010},\"identity_card_in_hand\":{\"value\":1011},\"bank_card_photo\":{\"value\":1012},\"other_info\":[{\"value\":\"1013\"}]}', '{\"photo\":[{\"id\":0,\"resource_id\":\"1015\"}],\"name\":{\"value\":\"\\u963f\\u6797\\u5546\\u94fa0810\"},\"description\":{\"value\":\"\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\\u94fa\\u6bd4\\u8f83\\u5c4c\\u8fd9\\u4e2a\\u5546\"},\"contact_number\":{\"value\":\"18620772029\"},\"city_id\":{\"value\":0},\"lng\":{\"value\":\"113.40007\"},\"lat\":{\"value\":\"23.09382\"},\"address\":{\"value\":\"\\u6d77\\u73e0\\u533a\\u6d77\\u73e0\\u79d1\\u6280\\u5927\\u697c\"},\"profile\":{\"value\":1014},\"commercial_tenant_type\":{\"value\":[\"1\",\"2\",\"13\"]}}', '1', '1', '1502336583');
+INSERT INTO `commercial_tenant_approve` VALUES ('35', '[]', '{\"photo\":[{\"id\":0,\"resource_id\":\"1033\"},{\"id\":0,\"resource_id\":\"1064\"}]}', '3', '1', '1499756087');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_auth`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_auth`;
+CREATE TABLE `commercial_tenant_auth` (
+  `id` int(11) NOT NULL COMMENT 'commercial_tenant_index 表(id)',
+  `leading_official` varchar(6) NOT NULL COMMENT '负责人',
+  `identity_card` varchar(18) NOT NULL COMMENT '身份证',
+  `email` varchar(108) NOT NULL COMMENT '邮箱',
+  `identity_card_front` int(11) NOT NULL COMMENT '身份证前面',
+  `identity_card_back` int(11) NOT NULL COMMENT '身份证背面',
+  `identity_card_in_hand` int(11) NOT NULL COMMENT '手持身份证',
+  `bank_card_photo` int(11) NOT NULL COMMENT '银行卡照片',
+  `other_info` text NOT NULL COMMENT '其他资料',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_auth
+-- ----------------------------
+INSERT INTO `commercial_tenant_auth` VALUES ('1', '测试负责人2', '22222221', 'tt123efe@um.com', '2', '3', '4', '391', '[\"2\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('2', '小黄车负责人', '111111', '1233211234567@um.com', '2', '3', '4', '4', '[2,4]');
+INSERT INTO `commercial_tenant_auth` VALUES ('3', '测试负责人1', '2222222', '1233211234567@um.com', '2', '3', '4', '4', '[2,4]');
+INSERT INTO `commercial_tenant_auth` VALUES ('4', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('5', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('6', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('7', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('8', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('9', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('10', '张三', '123456789012345678', 'ab@a.com', '427', '428', '429', '430', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('11', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('12', '李亚林', '430422199801015422', '270078578@qq.com', '338', '339', '340', '1007', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('13', '小鸥酱', '440823199009110365', '352591262@qq.com', '801', '802', '803', '998', '[805]');
+INSERT INTO `commercial_tenant_auth` VALUES ('14', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('15', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('16', '张汝斌', '524524554145', '27855495@qq.com', '399', '400', '401', '482', '[\"412\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('17', '张志辉', '122222222222222', '22222222@qq.com', '414', '415', '416', '417', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('18', '张志辉', '2222222222222', 'uexiao@umfun.com', '465', '466', '469', '467', '[\"468\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('19', '阿林', '55451445124154211', '270078578@qq.com', '474', '475', '476', '477', '[\"478\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('20', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('21', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('22', '阿林', '5452455525555', '270078578@qq.com', '530', '531', '532', '534', '[\"535\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('23', '张逗比', '222222222', '222222@qq.com', '581', '582', '583', '584', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('24', 'aaaa', '45654545', '485496@qq.com', '604', '605', '606', '607', '[\"608\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('25', '测试', '22222222222', '22222@qq.com', '654', '655', '656', '657', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('26', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('27', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('28', '222222', '222222', '22222@qq.com', '854', '855', '856', '857', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('29', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('30', '123', '123', '1233211234567@um.com', '904', '905', '906', '907', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('31', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('32', '李四', '110000198105298256', 'iamdhj@qq.com', '925', '926', '927', '991', '[\"929\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('33', '', '', '', '0', '0', '0', '0', '[]');
+INSERT INTO `commercial_tenant_auth` VALUES ('34', '王五', '123', 'a@a.com', '1016', '1017', '1018', '1019', '[\"1020\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('35', '李亚林', '430422198912144561', '270078578@qq.com', '999', '1000', '1001', '1002', '[\"1003\"]');
+INSERT INTO `commercial_tenant_auth` VALUES ('36', '', '', '', '0', '0', '0', '0', '[]');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_characteristic_service_relation`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_characteristic_service_relation`;
+CREATE TABLE `commercial_tenant_characteristic_service_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id ',
+  `service_type_id` int(11) NOT NULL COMMENT '特色服务类型',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_characteristic_service_relation
+-- ----------------------------
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('1', '1', '1', '0');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('2', '1', '2', '0');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('3', '2', '8', '0');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('9', '12', '11', '1495436934');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('8', '12', '1', '1495436934');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('6', '15', '12', '1495195718');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('7', '15', '13', '1495195718');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('10', '3', '15', '1495592355');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('11', '2', '13', '1495594047');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('15', '17', '16', '1499674600');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('14', '17', '1', '1499674600');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('16', '1', '7', '1499847138');
+INSERT INTO `commercial_tenant_characteristic_service_relation` VALUES ('17', '1', '12', '1499847138');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_index`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_index`;
+CREATE TABLE `commercial_tenant_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `name` varchar(20) NOT NULL COMMENT '商铺名称',
+  `mobile` varchar(11) NOT NULL COMMENT '绑定手机',
+  `password` varchar(32) NOT NULL COMMENT '密码md5',
+  `city_id` int(11) NOT NULL COMMENT '城市ID',
+  `lng` decimal(10,6) NOT NULL COMMENT '经度',
+  `lat` decimal(10,6) NOT NULL COMMENT '纬度',
+  `pay_discount` tinyint(3) NOT NULL COMMENT '买单折扣',
+  `online_status` tinyint(1) NOT NULL COMMENT '上线状态，1：资料完善中，2：上线审核中，3：已上线',
+  `data_perfect` tinyint(1) NOT NULL COMMENT '资料完善度，1：商户基本信息中，2：附件上传中，3：店铺信息完善中，4：都完善了',
+  `all_comment_count` int(11) NOT NULL COMMENT '总评分数量',
+  `avg_score` tinyint(2) NOT NULL COMMENT '评分',
+  `all_sales_count` int(11) NOT NULL COMMENT '总售出数量',
+  `all_score` int(11) NOT NULL COMMENT '总评分',
+  `balance_type` tinyint(1) NOT NULL COMMENT '结算类型',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_index
+-- ----------------------------
+INSERT INTO `commercial_tenant_index` VALUES ('1', '测试商铺3335', '13246813730', '93279e3308bdbbeed946fc965017f67a', '1', '113.393350', '23.091210', '98', '3', '4', '5', '34', '22', '170', '3', '1494051246');
+INSERT INTO `commercial_tenant_index` VALUES ('2', '小黄车', '18620772020', '93279e3308bdbbeed946fc965017f67a', '1', '113.399770', '23.095830', '1', '3', '4', '3', '73', '13', '220', '2', '1494051281');
+INSERT INTO `commercial_tenant_index` VALUES ('3', '测试商铺333', '15014191887', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '50', '3', '3', '0', '0', '0', '0', '3', '1494215067');
+INSERT INTO `commercial_tenant_index` VALUES ('11', '测试商1', '13246813736', 'e10adc3949ba59abbe56e057f20f883e', '1', '0.000000', '0.000000', '0', '1', '3', '0', '0', '0', '0', '3', '1494843642');
+INSERT INTO `commercial_tenant_index` VALUES ('5', '测试商2', '13246813789', '55587a910882016321201e6ebbc9f595', '1', '0.000000', '0.000000', '0', '1', '1', '0', '0', '0', '0', '3', '1494302202');
+INSERT INTO `commercial_tenant_index` VALUES ('12', '阿林的测试商户111', '18620772021', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '99', '3', '4', '0', '0', '1', '0', '3', '1494901557');
+INSERT INTO `commercial_tenant_index` VALUES ('10', '张三商品', '13642658466', '93279e3308bdbbeed946fc965017f67a', '1', '113.393350', '23.091210', '0', '3', '4', '1', '100', '8', '100', '3', '1494843344');
+INSERT INTO `commercial_tenant_index` VALUES ('13', '咸鱼饭', '13725478250', '93279e3308bdbbeed946fc965017f67a', '1', '113.342340', '23.170720', '95', '3', '4', '4', '80', '14', '320', '3', '1494905967');
+INSERT INTO `commercial_tenant_index` VALUES ('14', '', '13246813741', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '0', '1', '3', '0', '0', '0', '0', '3', '1495093056');
+INSERT INTO `commercial_tenant_index` VALUES ('15', '测试商行', '18667170310', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '0', '3', '4', '0', '0', '0', '0', '3', '1495099957');
+INSERT INTO `commercial_tenant_index` VALUES ('16', '345345', '13246813731', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '26', '1', '4', '0', '0', '0', '0', '3', '1494051246');
+INSERT INTO `commercial_tenant_index` VALUES ('17', '测试商户', '18667170315', '93279e3308bdbbeed946fc965017f67a', '1', '113.399770', '23.095830', '80', '3', '4', '0', '0', '0', '0', '3', '1495178079');
+INSERT INTO `commercial_tenant_index` VALUES ('30', '123', '13246813654', '93279e3308bdbbeed946fc965017f67a', '2', '113.210950', '40.785850', '0', '3', '4', '0', '0', '0', '0', '3', '1498634906');
+INSERT INTO `commercial_tenant_index` VALUES ('18', '优满堂万科城托管中心', '18667170317', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '0', '3', '4', '0', '0', '0', '0', '3', '1495443391');
+INSERT INTO `commercial_tenant_index` VALUES ('22', '阿林测试222', '18620772022', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '0', '3', '4', '0', '0', '0', '0', '3', '1495596825');
+INSERT INTO `commercial_tenant_index` VALUES ('26', '', '13246813731', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '0', '3', '4', '0', '0', '0', '0', '3', '1496199507');
+INSERT INTO `commercial_tenant_index` VALUES ('23', '测试商户', '18667170311', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '0', '3', '4', '0', '0', '0', '0', '3', '1495609230');
+INSERT INTO `commercial_tenant_index` VALUES ('24', '苯酚', '15014191886', '93279e3308bdbbeed946fc965017f67a', '1', '0.000000', '0.000000', '0', '3', '3', '0', '0', '0', '0', '3', '1495702794');
+INSERT INTO `commercial_tenant_index` VALUES ('27', '', '18667170300', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '0', '1', '3', '0', '0', '0', '0', '3', '1497857188');
+INSERT INTO `commercial_tenant_index` VALUES ('28', '222222', '18667170316', '93279e3308bdbbeed946fc965017f67a', '1', '113.321080', '23.133880', '0', '3', '3', '0', '0', '0', '0', '3', '1498032910');
+INSERT INTO `commercial_tenant_index` VALUES ('31', '', '15619410415', 'ede72770ec0daf60dc629deb00acebef', '0', '0.000000', '0.000000', '0', '1', '1', '0', '0', '0', '0', '3', '1499132391');
+INSERT INTO `commercial_tenant_index` VALUES ('32', '李四的商品', '13642658467', '93279e3308bdbbeed946fc965017f67a', '1', '113.393350', '23.091210', '0', '3', '4', '0', '0', '0', '0', '3', '1499395700');
+INSERT INTO `commercial_tenant_index` VALUES ('33', '', '13246813739', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '0', '1', '1', '0', '0', '0', '0', '3', '1499656755');
+INSERT INTO `commercial_tenant_index` VALUES ('34', '王五的商品', '13642658465', '93279e3308bdbbeed946fc965017f67a', '1', '113.393350', '23.091210', '99', '3', '4', '0', '0', '13', '0', '3', '1499670788');
+INSERT INTO `commercial_tenant_index` VALUES ('35', '阿林最近测试', '18620772023', '93279e3308bdbbeed946fc965017f67a', '1', '113.399570', '23.095650', '0', '3', '4', '0', '0', '0', '0', '2', '1499755900');
+INSERT INTO `commercial_tenant_index` VALUES ('36', '', '18620772029', '93279e3308bdbbeed946fc965017f67a', '0', '0.000000', '0.000000', '0', '2', '4', '0', '0', '0', '0', '3', '1502333656');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_limit`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_limit`;
+CREATE TABLE `commercial_tenant_limit` (
+  `id` int(11) NOT NULL COMMENT 'commercial_tenant_index 表(id)',
+  `note` text NOT NULL COMMENT '[    ‘name’ =>  1，    ‘mobile’ => 2, ]',
+  `last_modify_time` int(11) NOT NULL COMMENT '最后修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_limit
+-- ----------------------------
+INSERT INTO `commercial_tenant_limit` VALUES ('28', '[]', '1499909824');
+INSERT INTO `commercial_tenant_limit` VALUES ('35', '[]', '1501551347');
+INSERT INTO `commercial_tenant_limit` VALUES ('12', '{\"bank_accout\":1,\"bank_account_holder\":1,\"bank_name\":1}', '1499849635');
+INSERT INTO `commercial_tenant_limit` VALUES ('34', '[]', '1501554255');
+INSERT INTO `commercial_tenant_limit` VALUES ('32', '{\"bank_accout\":1,\"bank_account_holder\":1,\"bank_name\":1}', '1499396866');
+INSERT INTO `commercial_tenant_limit` VALUES ('22', '[]', '1499414489');
+INSERT INTO `commercial_tenant_limit` VALUES ('13', '[]', '1501573757');
+INSERT INTO `commercial_tenant_limit` VALUES ('2', '{\"profile\":1,\"bank_accout\":1,\"bank_account_holder\":1,\"bank_name\":1}', '1499241278');
+INSERT INTO `commercial_tenant_limit` VALUES ('1', '{\"bank_accout\":1,\"bank_account_holder\":1,\"bank_name\":1}', '1499154652');
+INSERT INTO `commercial_tenant_limit` VALUES ('10', '{\"bank_accout\":1,\"bank_account_holder\":1,\"bank_name\":1}', '1499156996');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_notice`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_notice`;
+CREATE TABLE `commercial_tenant_notice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `title` varchar(20) NOT NULL COMMENT '标题',
+  `content` varchar(100) NOT NULL COMMENT '内容',
+  `is_read` tinyint(1) NOT NULL COMMENT '是否已读',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=156 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_notice
+-- ----------------------------
+INSERT INTO `commercial_tenant_notice` VALUES ('1', '1', '测试通知', '通知内容笑嘻嘻笑嘻嘻笑嘻嘻', '1', '1494902839');
+INSERT INTO `commercial_tenant_notice` VALUES ('7', '2', '商铺审核不通过', '222', '1', '1495075427');
+INSERT INTO `commercial_tenant_notice` VALUES ('6', '1', '商户审核不通过', '1111', '1', '1495075281');
+INSERT INTO `commercial_tenant_notice` VALUES ('8', '2', '你的商品 商品2 已通过审核', '', '1', '1495160040');
+INSERT INTO `commercial_tenant_notice` VALUES ('9', '2', '你的商品 商品2 未通过审核', '你的商品 商品2 审核未通过，原因：长得不够帅', '1', '1495160082');
+INSERT INTO `commercial_tenant_notice` VALUES ('10', '2', '你的商品  已通过审核', '', '1', '1495162111');
+INSERT INTO `commercial_tenant_notice` VALUES ('11', '2', '你的商品 商品2 未通过审核', '你的商品 商品2 审核未通过，原因：审核不通过测试', '1', '1495162243');
+INSERT INTO `commercial_tenant_notice` VALUES ('12', '12', '你的商品  未通过审核', '你的商品  审核未通过，原因：反反复复', '1', '1495186166');
+INSERT INTO `commercial_tenant_notice` VALUES ('13', '12', '你的商品 商品1 未通过审核', '你的商品 商品1 审核未通过，原因：滴答滴答滴答滴答滴答滴答滴答滴答滴答滴答', '1', '1495186518');
+INSERT INTO `commercial_tenant_notice` VALUES ('22', '15', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('23', '15', '你的商铺名称更改已通过审核', '你的商铺名称审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('24', '15', '你的商铺描述更改已通过审核', '你的商铺描述审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('25', '15', '你的商铺电话更改已通过审核', '你的商铺电话审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('26', '15', '你的商铺地址更改已通过审核', '你的商铺地址审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('27', '15', '你的商铺头像更改已通过审核', '你的商铺头像审核通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('28', '15', '你的教师新增已通过审核', '你的教师新增 审核已通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('29', '15', '你的教师新增已通过审核', '你的教师新增 审核已通过', '0', '1495194804');
+INSERT INTO `commercial_tenant_notice` VALUES ('30', '15', '你的特色服务 good 更改未通过审核', '你的特色服务 good 审核未通过，原因：iiiii', '0', '1495195690');
+INSERT INTO `commercial_tenant_notice` VALUES ('31', '15', '你的特色服务 测试测试 更改未通过审核', '你的特色服务 测试测试 审核未通过，原因：ffffff', '0', '1495195690');
+INSERT INTO `commercial_tenant_notice` VALUES ('32', '15', '你的特色服务 good更改已通过审核', '你的特色服务 good审核通过', '0', '1495195718');
+INSERT INTO `commercial_tenant_notice` VALUES ('33', '15', '你的特色服务 测试测试更改已通过审核', '你的特色服务 测试测试审核通过', '0', '1495195718');
+INSERT INTO `commercial_tenant_notice` VALUES ('34', '12', '你的特色服务 系统特色服务1 更改已通过', '你的特色服务 系统特色服务1 审核通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('35', '12', '你的特色服务 特色服务1 更改已通过审核', '你的特色服务 特色服务1 审核通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('36', '12', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('37', '12', '你的商铺名称更改已通过审核', '你的商铺名称审核通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('38', '12', '你的商铺头像更改已通过审核', '你的商铺头像审核通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('39', '12', '你的教师新增已通过审核', '你的教师新增审核已通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('40', '12', '你的教师新增已通过审核', '你的教师新增审核已通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('41', '12', '你的教师新增已通过审核', '你的教师新增审核已通过', '1', '1495436934');
+INSERT INTO `commercial_tenant_notice` VALUES ('42', '12', '你的教师新增已通过审核', '你的教师新增审核已通过', '1', '1495442963');
+INSERT INTO `commercial_tenant_notice` VALUES ('43', '12', '你的教师新增已通过审核', '你的教师新增审核已通过', '1', '1495442963');
+INSERT INTO `commercial_tenant_notice` VALUES ('44', '12', '你的商铺头像更改已通过审核', '你的商铺头像审核通过', '1', '1495442963');
+INSERT INTO `commercial_tenant_notice` VALUES ('45', '12', '你的商铺地址更改已通过审核', '你的商铺地址审核通过', '1', '1495442963');
+INSERT INTO `commercial_tenant_notice` VALUES ('46', '12', '你的商铺描述更改已通过审核', '你的商铺描述审核通过', '1', '1495442963');
+INSERT INTO `commercial_tenant_notice` VALUES ('47', '12', '你的商铺描述更改已通过审核', '你的商铺描述审核通过', '1', '1495443077');
+INSERT INTO `commercial_tenant_notice` VALUES ('48', '12', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '1', '1495443077');
+INSERT INTO `commercial_tenant_notice` VALUES ('49', '19', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '1', '1495592070');
+INSERT INTO `commercial_tenant_notice` VALUES ('50', '3', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '0', '1495592355');
+INSERT INTO `commercial_tenant_notice` VALUES ('51', '3', '你的特色服务 系统特色服务1 更改未通过', '你的特色服务 系统特色服务1 审核未通过，原因：11', '0', '1495592355');
+INSERT INTO `commercial_tenant_notice` VALUES ('52', '3', '你的特色服务 系统特色服务2 更改未通过', '你的特色服务 系统特色服务2 审核未通过，原因：22', '0', '1495592355');
+INSERT INTO `commercial_tenant_notice` VALUES ('53', '3', '你的特色服务 演唱会 更改已通过审核', '你的特色服务 演唱会 审核通过', '0', '1495592355');
+INSERT INTO `commercial_tenant_notice` VALUES ('54', '3', '你的商铺相册更改已通过审核', '你的商铺相册审核通过', '0', '1495592557');
+INSERT INTO `commercial_tenant_notice` VALUES ('55', '3', '你的特色服务 系统特色服务1 更改未通过', '你的特色服务 系统特色服务1 审核未通过，原因：1122', '0', '1495592557');
+INSERT INTO `commercial_tenant_notice` VALUES ('56', '3', '你的特色服务 系统特色服务2 更改未通过', '你的特色服务 系统特色服务2 审核未通过，原因：111', '0', '1495592557');
+INSERT INTO `commercial_tenant_notice` VALUES ('57', '2', '你的商铺名称更改已通过审核', '你的商铺名称审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('58', '2', '你的商铺头像更改已通过审核', '你的商铺头像审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('59', '2', '你的商铺地址更改已通过审核', '你的商铺地址审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('60', '2', '你的商铺电话更改已通过审核', '你的商铺电话审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('61', '2', '你的商铺描述更改已通过审核', '你的商铺描述审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('62', '2', '你有2照片已通过审核', '你有2照片已通过审核', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('63', '2', '你有1照片未通过审核', '你有1照片未通过审核', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('64', '2', '你的特色服务 测试测试 更改已通过审核', '你的特色服务 测试测试 审核通过', '1', '1495594047');
+INSERT INTO `commercial_tenant_notice` VALUES ('65', '18', '你的商品 测试商品 已通过审核', '', '1', '1495595137');
+INSERT INTO `commercial_tenant_notice` VALUES ('66', '22', '你的特色服务 系统特色服务1 更改已通过', '', '1', '1495597043');
+INSERT INTO `commercial_tenant_notice` VALUES ('67', '22', '你的特色服务 我的服务 更改未通过审核', '你的特色服务 我的服务 审核未通过，原因：名字不正确', '1', '1495597043');
+INSERT INTO `commercial_tenant_notice` VALUES ('68', '22', '你有2照片已通过审核', '', '1', '1495597043');
+INSERT INTO `commercial_tenant_notice` VALUES ('69', '22', '你有1照片未通过审核', '', '1', '1495597043');
+INSERT INTO `commercial_tenant_notice` VALUES ('70', '22', '你的特色服务 系统特色服务2 更改未通过', '你的特色服务 系统特色服务2 审核未通过，原因：对对对', '1', '1495608647');
+INSERT INTO `commercial_tenant_notice` VALUES ('71', '22', '你的特色服务 我的服务 更改已通过审核', '', '1', '1495608647');
+INSERT INTO `commercial_tenant_notice` VALUES ('72', '22', '你有1照片已通过审核', '', '1', '1495608647');
+INSERT INTO `commercial_tenant_notice` VALUES ('73', '22', '你的商铺名称更改未通过审核', '你的商铺名称审核未通过，原因：公关稿', '1', '1495608701');
+INSERT INTO `commercial_tenant_notice` VALUES ('74', '22', '你的商品 商品1 未通过审核', '你的商品 商品1 审核未通过，原因：方芳芳', '1', '1495608880');
+INSERT INTO `commercial_tenant_notice` VALUES ('75', '22', '你的商品 商品1 已通过审核', '', '1', '1495609139');
+INSERT INTO `commercial_tenant_notice` VALUES ('76', '22', '你的商品 商品1 未通过审核', '你的商品 商品1 审核未通过，原因：名字重复', '1', '1495609151');
+INSERT INTO `commercial_tenant_notice` VALUES ('77', '22', '你的商品 商品1 已通过审核', '', '1', '1495702755');
+INSERT INTO `commercial_tenant_notice` VALUES ('78', '22', 'dddddd', 'ddddddd', '1', '1496202131');
+INSERT INTO `commercial_tenant_notice` VALUES ('79', '22', '你有1照片已通过审核', '', '1', '1496805661');
+INSERT INTO `commercial_tenant_notice` VALUES ('80', '13', '你的商品 咸鱼饭 已通过审核', '', '1', '1496990674');
+INSERT INTO `commercial_tenant_notice` VALUES ('81', '22', '你的教师新增已通过审核', '', '1', '1497322526');
+INSERT INTO `commercial_tenant_notice` VALUES ('82', '22', '你的教师编辑已通过审核', '', '1', '1497322980');
+INSERT INTO `commercial_tenant_notice` VALUES ('83', '22', '你的教师编辑未通过审核', '你的教师编辑审核未通过，原因：对对对', '1', '1497323025');
+INSERT INTO `commercial_tenant_notice` VALUES ('84', '22', '你的服务 商品1 已通过审核', '', '1', '1497323797');
+INSERT INTO `commercial_tenant_notice` VALUES ('85', '22', '你的服务 商品1 已通过审核', '', '1', '1497337314');
+INSERT INTO `commercial_tenant_notice` VALUES ('86', '22', '你的服务 服务1 已通过审核', '', '1', '1497337603');
+INSERT INTO `commercial_tenant_notice` VALUES ('87', '10', '你的服务 测试服务007 已通过审核', '', '0', '1497403838');
+INSERT INTO `commercial_tenant_notice` VALUES ('88', '10', '你的服务 测试 已通过审核', '', '0', '1497403934');
+INSERT INTO `commercial_tenant_notice` VALUES ('89', '10', '你的服务 测试 已通过审核', '', '0', '1497403942');
+INSERT INTO `commercial_tenant_notice` VALUES ('90', '10', '你的商铺名称更改已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('91', '10', '你的商铺描述更改已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('92', '10', '你的商铺电话更改已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('93', '10', '你的商铺地址更改已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('94', '10', '你的商铺头像更改已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('95', '10', '你有8照片已通过审核', '', '0', '1497408006');
+INSERT INTO `commercial_tenant_notice` VALUES ('96', '10', '提现成功', '提现金额0(元)操作成功,账户余额29998(元)', '1', '1497426664');
+INSERT INTO `commercial_tenant_notice` VALUES ('97', '10', '提现成功', '提现金额0(元)操作成功,账户余额299.97(元)', '1', '1497426768');
+INSERT INTO `commercial_tenant_notice` VALUES ('98', '10', '提现成功', '提现金额0.01(元)操作成功,账户余额299.96(元)', '1', '1497426892');
+INSERT INTO `commercial_tenant_notice` VALUES ('99', '1', '提现成功', '提现金额0.01(元)操作成功,账户余额0(元)', '0', '1497489139');
+INSERT INTO `commercial_tenant_notice` VALUES ('100', '1', '提现成功', '提现金额5(元)操作成功', '0', '1497597108');
+INSERT INTO `commercial_tenant_notice` VALUES ('101', '2', '你的商品 商品1已下架', '你的商品 商品1已下架', '0', '1498531499');
+INSERT INTO `commercial_tenant_notice` VALUES ('102', '13', '你的服务 咸鱼饭 已下架', '你的服务 咸鱼饭 已下架', '1', '1498719371');
+INSERT INTO `commercial_tenant_notice` VALUES ('103', '2', '你的服务 商品1 已下架', '你的服务 商品1 已被管理员下架，原因:xxx。如有异议请联系优满堂工作人员。', '0', '1498721446');
+INSERT INTO `commercial_tenant_notice` VALUES ('104', '2', '你的服务 商品3 已下架', '你的服务 商品3 已被管理员下架，原因：xxx。如有异议请联系优满堂工作人员。', '0', '1498721519');
+INSERT INTO `commercial_tenant_notice` VALUES ('105', '13', '你的服务 尼玛比 已通过审核', '', '1', '1499053516');
+INSERT INTO `commercial_tenant_notice` VALUES ('106', '13', '你的服务 尼玛比 已通过审核', '', '1', '1499054110');
+INSERT INTO `commercial_tenant_notice` VALUES ('107', '10', '你的服务 测试服务007 已通过审核', '', '0', '1499157811');
+INSERT INTO `commercial_tenant_notice` VALUES ('108', '10', '你的服务 高级服务 已通过审核', '', '0', '1499157822');
+INSERT INTO `commercial_tenant_notice` VALUES ('109', '10', '你的负责人更改已通过审核', '', '0', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('110', '10', '你的身份证更改已通过审核', '', '0', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('111', '10', '你的邮箱更改已通过审核', '', '0', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('112', '10', '你的开户人更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('113', '10', '你的开户银行更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('114', '10', '你的银行帐号更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('115', '10', '你的身份证正面更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('116', '10', '你的身份证反面更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('117', '10', '你的手持身份证更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('118', '10', '你的银行卡照片更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('119', '10', '你的其他资料更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('120', '10', '你的结算类型更改已通过审核', '', '1', '1499220805');
+INSERT INTO `commercial_tenant_notice` VALUES ('121', '34', '你的教师新增已通过审核', '', '0', '1499671772');
+INSERT INTO `commercial_tenant_notice` VALUES ('122', '17', '你的特色服务 系统特色服务1 更改已通过', '', '0', '1499674600');
+INSERT INTO `commercial_tenant_notice` VALUES ('123', '17', '你的特色服务 免费停车 更改已通过审核', '', '0', '1499674600');
+INSERT INTO `commercial_tenant_notice` VALUES ('124', '17', '你的商铺地址更改已通过审核', '', '0', '1499674600');
+INSERT INTO `commercial_tenant_notice` VALUES ('125', '17', '你的商铺描述更改已通过审核', '', '0', '1499674600');
+INSERT INTO `commercial_tenant_notice` VALUES ('126', '17', '你有2照片已通过审核', '', '0', '1499674600');
+INSERT INTO `commercial_tenant_notice` VALUES ('127', '22', '你的服务 商品1 已通过审核', '', '0', '1499841901');
+INSERT INTO `commercial_tenant_notice` VALUES ('128', '34', '你的银行帐号更改已通过审核', '', '0', '1499847406');
+INSERT INTO `commercial_tenant_notice` VALUES ('129', '34', '你的结算类型更改已通过审核', '', '0', '1499847406');
+INSERT INTO `commercial_tenant_notice` VALUES ('130', '34', '你的开户人更改已通过审核', '', '0', '1499847406');
+INSERT INTO `commercial_tenant_notice` VALUES ('131', '34', '你的开户银行更改已通过审核', '', '0', '1499847406');
+INSERT INTO `commercial_tenant_notice` VALUES ('132', '34', '你的银行卡照片更改已通过审核', '', '0', '1499847406');
+INSERT INTO `commercial_tenant_notice` VALUES ('133', '13', '你的银行帐号更改已通过审核', '', '0', '1499847753');
+INSERT INTO `commercial_tenant_notice` VALUES ('134', '13', '你的结算类型更改已通过审核', '', '0', '1499847753');
+INSERT INTO `commercial_tenant_notice` VALUES ('135', '13', '你的开户人更改已通过审核', '', '0', '1499847753');
+INSERT INTO `commercial_tenant_notice` VALUES ('136', '13', '你的开户银行更改已通过审核', '', '0', '1499847753');
+INSERT INTO `commercial_tenant_notice` VALUES ('137', '13', '你的银行卡照片更改已通过审核', '', '0', '1499847753');
+INSERT INTO `commercial_tenant_notice` VALUES ('138', '12', '你的银行帐号更改已通过审核', '', '0', '1499849922');
+INSERT INTO `commercial_tenant_notice` VALUES ('139', '12', '你的结算类型更改已通过审核', '', '0', '1499849922');
+INSERT INTO `commercial_tenant_notice` VALUES ('140', '12', '你的开户人更改已通过审核', '', '0', '1499849922');
+INSERT INTO `commercial_tenant_notice` VALUES ('141', '12', '你的开户银行更改已通过审核', '', '0', '1499849922');
+INSERT INTO `commercial_tenant_notice` VALUES ('142', '12', '你的银行卡照片更改已通过审核', '', '0', '1499849922');
+INSERT INTO `commercial_tenant_notice` VALUES ('143', '13', '提现成功', '提现金额1(元)操作成功,账户余额16.96(元)', '1', '1499916598');
+INSERT INTO `commercial_tenant_notice` VALUES ('144', '1', '提现成功', '提现金额5(元)操作成功,账户余额0.01(元)', '0', '1501035953');
+INSERT INTO `commercial_tenant_notice` VALUES ('145', '32', '你的银行帐号更改已通过审核', '', '0', '1501486970');
+INSERT INTO `commercial_tenant_notice` VALUES ('146', '32', '你的结算类型更改已通过审核', '', '0', '1501486970');
+INSERT INTO `commercial_tenant_notice` VALUES ('147', '32', '你的开户人更改已通过审核', '', '0', '1501486970');
+INSERT INTO `commercial_tenant_notice` VALUES ('148', '32', '你的开户银行更改已通过审核', '', '0', '1501486970');
+INSERT INTO `commercial_tenant_notice` VALUES ('149', '32', '你的银行卡照片更改已通过审核', '', '0', '1501486970');
+INSERT INTO `commercial_tenant_notice` VALUES ('150', '32', '你有1照片已通过审核', '', '0', '1501486994');
+INSERT INTO `commercial_tenant_notice` VALUES ('151', '32', '你的教师新增已通过审核', '', '0', '1501486994');
+INSERT INTO `commercial_tenant_notice` VALUES ('152', '13', '提现成功', '提现金额1(元)操作成功,账户余额17.96(元)', '0', '1502180141');
+INSERT INTO `commercial_tenant_notice` VALUES ('153', '35', '你的服务 商品1 已通过审核', '', '1', '1502767588');
+INSERT INTO `commercial_tenant_notice` VALUES ('154', '35', '你的服务 商品1 已通过审核', '', '1', '1502768920');
+INSERT INTO `commercial_tenant_notice` VALUES ('155', '35', '你的服务 商品1 已通过审核', '', '1', '1502769194');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_photo`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_photo`;
+CREATE TABLE `commercial_tenant_photo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `resource_id` int(11) NOT NULL COMMENT '资源id',
+  `is_cover` tinyint(1) NOT NULL COMMENT '是否封面',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_photo
+-- ----------------------------
+INSERT INTO `commercial_tenant_photo` VALUES ('24', '2', '3', '0', '1494579727');
+INSERT INTO `commercial_tenant_photo` VALUES ('2', '1', '183', '0', '1494400683');
+INSERT INTO `commercial_tenant_photo` VALUES ('25', '2', '4', '0', '1494579727');
+INSERT INTO `commercial_tenant_photo` VALUES ('27', '1', '4', '0', '1494835907');
+INSERT INTO `commercial_tenant_photo` VALUES ('23', '1', '4', '0', '1494579562');
+INSERT INTO `commercial_tenant_photo` VALUES ('60', '12', '463', '0', '1495443077');
+INSERT INTO `commercial_tenant_photo` VALUES ('31', '1', '2', '0', '1495100617');
+INSERT INTO `commercial_tenant_photo` VALUES ('20', '1', '3', '1', '1494578303');
+INSERT INTO `commercial_tenant_photo` VALUES ('21', '1', '4', '0', '1494578303');
+INSERT INTO `commercial_tenant_photo` VALUES ('30', '1', '3', '0', '1495100617');
+INSERT INTO `commercial_tenant_photo` VALUES ('15', '1', '196', '0', '1494405161');
+INSERT INTO `commercial_tenant_photo` VALUES ('22', '1', '3', '0', '1494579562');
+INSERT INTO `commercial_tenant_photo` VALUES ('63', '18', '472', '0', '1495444675');
+INSERT INTO `commercial_tenant_photo` VALUES ('32', '1', '3', '0', '1495101155');
+INSERT INTO `commercial_tenant_photo` VALUES ('33', '1', '2', '0', '1495101155');
+INSERT INTO `commercial_tenant_photo` VALUES ('34', '1', '3', '0', '1495101388');
+INSERT INTO `commercial_tenant_photo` VALUES ('92', '22', '752', '0', '1496805661');
+INSERT INTO `commercial_tenant_photo` VALUES ('61', '12', '464', '1', '1495443077');
+INSERT INTO `commercial_tenant_photo` VALUES ('93', '13', '807', '1', '1496989716');
+INSERT INTO `commercial_tenant_photo` VALUES ('38', '3', '3', '0', '1495118421');
+INSERT INTO `commercial_tenant_photo` VALUES ('39', '3', '2', '0', '1495118421');
+INSERT INTO `commercial_tenant_photo` VALUES ('40', '2', '3', '0', '1495155757');
+INSERT INTO `commercial_tenant_photo` VALUES ('41', '2', '2', '0', '1495155757');
+INSERT INTO `commercial_tenant_photo` VALUES ('46', '15', '374', '0', '1495194340');
+INSERT INTO `commercial_tenant_photo` VALUES ('47', '15', '375', '0', '1495194340');
+INSERT INTO `commercial_tenant_photo` VALUES ('62', '18', '471', '0', '1495444675');
+INSERT INTO `commercial_tenant_photo` VALUES ('45', '17', '420', '1', '1495179663');
+INSERT INTO `commercial_tenant_photo` VALUES ('48', '15', '376', '0', '1495194340');
+INSERT INTO `commercial_tenant_photo` VALUES ('49', '15', '377', '0', '1495194340');
+INSERT INTO `commercial_tenant_photo` VALUES ('50', '15', '374', '0', '1495194493');
+INSERT INTO `commercial_tenant_photo` VALUES ('51', '15', '375', '0', '1495194493');
+INSERT INTO `commercial_tenant_photo` VALUES ('52', '15', '376', '0', '1495194493');
+INSERT INTO `commercial_tenant_photo` VALUES ('53', '15', '377', '0', '1495194493');
+INSERT INTO `commercial_tenant_photo` VALUES ('54', '15', '374', '0', '1495194804');
+INSERT INTO `commercial_tenant_photo` VALUES ('55', '15', '375', '0', '1495194804');
+INSERT INTO `commercial_tenant_photo` VALUES ('56', '15', '376', '0', '1495194804');
+INSERT INTO `commercial_tenant_photo` VALUES ('57', '15', '377', '0', '1495194804');
+INSERT INTO `commercial_tenant_photo` VALUES ('83', '2', '397', '0', '1495594047');
+INSERT INTO `commercial_tenant_photo` VALUES ('82', '2', '2', '0', '1495594047');
+INSERT INTO `commercial_tenant_photo` VALUES ('81', '19', '517', '0', '1495593458');
+INSERT INTO `commercial_tenant_photo` VALUES ('80', '19', '516', '0', '1495593458');
+INSERT INTO `commercial_tenant_photo` VALUES ('108', '17', '462', '0', '1499674600');
+INSERT INTO `commercial_tenant_photo` VALUES ('106', '34', '988', '0', '1499671029');
+INSERT INTO `commercial_tenant_photo` VALUES ('107', '17', '461', '0', '1499674600');
+INSERT INTO `commercial_tenant_photo` VALUES ('91', '25', '659', '0', '1495706847');
+INSERT INTO `commercial_tenant_photo` VALUES ('74', '3', '457', '0', '1495592355');
+INSERT INTO `commercial_tenant_photo` VALUES ('90', '24', '610', '0', '1495705583');
+INSERT INTO `commercial_tenant_photo` VALUES ('109', '35', '1005', '1', '1499756179');
+INSERT INTO `commercial_tenant_photo` VALUES ('110', '1', '3', '0', '1499847138');
+INSERT INTO `commercial_tenant_photo` VALUES ('89', '23', '588', '0', '1495609428');
+INSERT INTO `commercial_tenant_photo` VALUES ('88', '23', '587', '0', '1495609428');
+INSERT INTO `commercial_tenant_photo` VALUES ('103', '30', '909', '0', '1499239758');
+INSERT INTO `commercial_tenant_photo` VALUES ('104', '30', '910', '0', '1499239758');
+INSERT INTO `commercial_tenant_photo` VALUES ('105', '32', '931', '1', '1499395932');
+INSERT INTO `commercial_tenant_photo` VALUES ('102', '28', '859', '0', '1498033044');
+INSERT INTO `commercial_tenant_photo` VALUES ('111', '32', '972', '0', '1501486994');
+INSERT INTO `commercial_tenant_photo` VALUES ('112', '34', '1021', '0', '1502778560');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_shop`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_shop`;
+CREATE TABLE `commercial_tenant_shop` (
+  `id` int(11) NOT NULL COMMENT 'commercial_tenant_index 表(id)',
+  `profile` int(11) NOT NULL COMMENT '头像资源id',
+  `contact_number` varchar(13) NOT NULL COMMENT '联系电话',
+  `address` varchar(50) NOT NULL COMMENT '详细地址',
+  `street` varchar(20) NOT NULL COMMENT '街道',
+  `description` varchar(200) NOT NULL COMMENT '商铺描述',
+  `preferential_info` varchar(25) NOT NULL COMMENT '优惠信息',
+  `subtract_list` varchar(100) NOT NULL COMMENT '满减信息, 格式是 [price:[[满值,减值]，...],time:[开始时间,结束时间]]',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_shop
+-- ----------------------------
+INSERT INTO `commercial_tenant_shop` VALUES ('1', '390', '3333331', '海珠区黄埔村', '大街', 'detwewr3rdehaha', '3234', '{\"price\":[[10000,1000],[80000,900],[8,1]],\"time\":[1500998400,1501171199]}');
+INSERT INTO `commercial_tenant_shop` VALUES ('2', '3', '111111', '测试地址', '', '测试描述', '优', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('3', '3', '333333', '测试地址333', '新港东路', '测试描述333', '折扣', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('4', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('5', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('6', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('7', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('8', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('9', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('10', '432', '100861', '海珠区黄埔村', '广州环城高速公路', '张三商品', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('11', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('12', '460', '18620772026', '海珠区黄埔村', '广州环城高速公路', '这是一个好地方啊', '全场99折', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('13', '806', '13800138000', '天河区天河客运站', '广州环城高速公路', '这么说才好呢，唉', '其实没有优惠,哼哼哼', '{\"price\":[[\"10000\",\"1000\"],[\"80000\",\"900\"],[\"800\",\"100\"]],\"time\":[1501084800,1501171199]}');
+INSERT INTO `commercial_tenant_shop` VALUES ('14', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('15', '373', '13444444444', '海珠区新港东路2433号启盛产业园907', '新港东路', '测试测试测试测试测试测试测试', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('16', '447', '13587561214', '天河区天河区123123', '', '实际上都能得到 you', '123122', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('17', '418', '020-23333333', '天河区海珠区新港东路2433号907', '新港东路', '商户描述商户描述商户描述商户描述商户描述商户描述商户描述', '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('18', '470', '020-22222222', '海珠区黄埔村', '广州环城高速公路', '22222222222222222222222222', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('19', '479', '18620772023', '荔湾区芳村', '新隆沙西', '顶顶顶顶顶顶顶顶顶顶顶顶', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('20', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('21', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('22', '536', '18620772029', '海珠区新港东路2433', '新港东路', '我是描述', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('23', '585', '020-22222222', '天河区珠江新城', '花城大道', '222222222222222222222222', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('24', '609', '020-699696', '海珠区黄埔村', '广州环城高速公路', 'dfdsfsfsdf', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('25', '658', '2222222', '海珠区黄埔村', '广州环城高速公路', '2222222222', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('26', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('27', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('28', '858', '222222', '越秀区天河路323', '体育西路', '222222', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('29', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('30', '908', '123123', '察哈尔右翼前旗123123', '解放路', '123123', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('31', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('32', '930', '13642658465', '海珠区黄埔村', '大街', '描述', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('33', '0', '', '', '', '', '', '');
+INSERT INTO `commercial_tenant_shop` VALUES ('34', '987', '13642658465', '海珠区黄埔村', '大街', '描述巴拉巴拉芭模板引擎 Velocity Engine 2.0 已发布', '优惠信息', '{\"price\":[[\"2\",\"1\"],[\"20000\",\"1000\"],[\"30000\",\"1500\"]],\"time\":[1501516800,1504195199]}');
+INSERT INTO `commercial_tenant_shop` VALUES ('35', '1004', '18620772029', '海珠区启盛产业圆', '新港东路', '这是一个很好的商铺', '', '{\"price\":[[\"10000\",\"1000\"],[\"30000\",\"2000\"]],\"time\":[1501516800,1502035199]}');
+INSERT INTO `commercial_tenant_shop` VALUES ('36', '0', '', '', '', '', '', '');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_type`;
+CREATE TABLE `commercial_tenant_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `name` varchar(10) NOT NULL COMMENT '类型名',
+  `fee_rate` smallint(3) NOT NULL COMMENT '费率,千分比',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_type
+-- ----------------------------
+INSERT INTO `commercial_tenant_type` VALUES ('1', '托管', '0', '1494051246');
+INSERT INTO `commercial_tenant_type` VALUES ('2', '钢琴', '0', '1494835907');
+INSERT INTO `commercial_tenant_type` VALUES ('3', '英语', '0', '1494918691');
+INSERT INTO `commercial_tenant_type` VALUES ('9', '数学', '0', '1497334079');
+INSERT INTO `commercial_tenant_type` VALUES ('8', '语文', '0', '1496991356');
+INSERT INTO `commercial_tenant_type` VALUES ('13', '其他', '0', '1498530884');
+
+-- ----------------------------
+-- Table structure for `commercial_tenant_type_relation`
+-- ----------------------------
+DROP TABLE IF EXISTS `commercial_tenant_type_relation`;
+CREATE TABLE `commercial_tenant_type_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `type_id` int(11) NOT NULL COMMENT '类型id',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of commercial_tenant_type_relation
+-- ----------------------------
+INSERT INTO `commercial_tenant_type_relation` VALUES ('1', '1', '1', '1494051246');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('2', '2', '1', '1494051281');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('3', '3', '1', '1494215067');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('4', '4', '1', '1494245665');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('5', '5', '1', '1494302202');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('6', '6', '1', '1494302363');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('7', '7', '1', '1494842720');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('8', '8', '1', '1494842932');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('9', '9', '1', '1494843017');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('10', '10', '1', '1494843344');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('11', '11', '1', '1494843642');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('12', '12', '1', '1494901557');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('13', '13', '1', '1494905967');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('14', '14', '1', '1495093056');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('15', '15', '1', '1495099957');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('16', '16', '1', '1495099957');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('17', '17', '1', '1495178079');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('18', '18', '1', '1495443391');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('19', '19', '1', '1495444941');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('20', '20', '1', '1495525051');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('21', '21', '1', '1495593633');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('22', '22', '1', '1495596825');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('23', '23', '1', '1495609230');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('24', '24', '1', '1495702794');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('25', '25', '1', '1495706668');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('26', '26', '1', '1496199507');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('27', '27', '1', '1497857188');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('28', '28', '1', '1498032910');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('29', '28', '13', '1498032910');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('74', '36', '1', '1502333656');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('31', '2', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('32', '3', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('33', '4', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('34', '5', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('35', '6', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('36', '7', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('37', '8', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('38', '9', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('39', '10', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('40', '11', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('41', '12', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('42', '13', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('43', '14', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('44', '15', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('45', '16', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('46', '17', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('47', '18', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('48', '19', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('49', '20', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('50', '21', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('51', '22', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('52', '23', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('53', '24', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('54', '25', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('55', '26', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('56', '27', '13', '1498534137');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('57', '29', '1', '1498552093');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('61', '30', '2', '1499239758');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('59', '31', '1', '1499132391');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('60', '31', '13', '1499132391');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('62', '30', '3', '1499239758');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('63', '32', '1', '1499395700');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('65', '32', '2', '1499395932');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('66', '32', '3', '1499395932');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('67', '33', '1', '1499656755');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('68', '33', '13', '1499656755');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('69', '34', '1', '1499670788');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('71', '35', '1', '1499755900');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('72', '35', '13', '1499755900');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('73', '35', '3', '1499756179');
+INSERT INTO `commercial_tenant_type_relation` VALUES ('75', '36', '13', '1502333656');
+
+-- ----------------------------
+-- Table structure for `goods`
+-- ----------------------------
+DROP TABLE IF EXISTS `goods`;
+CREATE TABLE `goods` (
+  `id` int(11) NOT NULL COMMENT 'goods_index表id',
+  `appointment_day` tinyint(2) NOT NULL COMMENT '提前多少天预约',
+  `suit_people` tinyint(3) NOT NULL COMMENT '适用人数',
+  `max_class_people` smallint(3) NOT NULL COMMENT '每班最大人数',
+  `notice` varchar(200) NOT NULL COMMENT '温馨提示',
+  `description` text NOT NULL COMMENT '图文介绍',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of goods
+-- ----------------------------
+INSERT INTO `goods` VALUES ('1', '1', '1', '30', '提示啊', '[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}]');
+INSERT INTO `goods` VALUES ('2', '2', '2', '100', '提示', '[{\"text\":\"\\u56fe\\u6587\"},{\"resource\":{\"resource_id\":\"352\",\"path\":\"tenant\\/image\\/4987528212fc3f06f2fbe23e7d4fa16e.jpg\"}}]');
+INSERT INTO `goods` VALUES ('3', '1', '3', '1000', '温馨提示', '[{\"text\":\"\\u4ecb\\u7ecd1211213344443333333\"},{\"resource\":{\"resource_id\":\"357\",\"path\":\"tenant\\/image\\/5c12b8fb2924e0a29d7bdf292e08adb3.png\"}}]');
+INSERT INTO `goods` VALUES ('4', '10', '2', '32', '温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示', '[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}]');
+INSERT INTO `goods` VALUES ('5', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('6', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('7', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('8', '3', '1', '3', '温馨提示测试温馨提示测试温馨提示测试温馨提示测试温馨提示测试温馨提示测试温馨提示测试', '[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\"},{\"resource\":{\"resource_id\":\"514\",\"path\":\"data\\/tenant\\/image\\/ecabcfa0b5922756325fbac2c581316e.jpg\"}},{\"resource\":{\"resource_id\":\"515\",\"path\":\"data\\/tenant\\/image\\/3b928b8d348175aac7631df7c3fa1b1b.jpg\"}},{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\\u56fe\\u6587\\u4ecb\\u7ecd\\u6d4b\\u8bd5\"}]');
+INSERT INTO `goods` VALUES ('9', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('10', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('11', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('12', '100', '100', '100', '100', '[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\\u56fe\\u6587\\u4ecb\\u7ecd\\u56fe\\u6587\\u4ecb\\u7ecd\\u56fe\\u6587\\u4ecb\\u7ecd\\u56fe\\u6587\\u4ecb\\u7ecd\"}]');
+INSERT INTO `goods` VALUES ('13', '1', '1', '1', '1222', '[{\"text\":\"1\"},{\"resource\":{\"resource_id\":\"575\",\"path\":\"data\\/tenant\\/image\\/241994775b9af60a1e8c4155650af181.jpg\"}}]');
+INSERT INTO `goods` VALUES ('14', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('15', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('16', '1', '1', '1', '2222', '[{\"text\":\"33333\\u70b9\\u70b9\\u6ef4\\u6ef4\\u6253\\u6253\"}]');
+INSERT INTO `goods` VALUES ('17', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('27', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('28', '1', '1', '10', 'dhddbn ', '[{\"text\":\"dddd\"}]');
+INSERT INTO `goods` VALUES ('29', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('19', '1', '1', '11', '1111', '[{\"text\":\"11111\"}]');
+INSERT INTO `goods` VALUES ('20', '1', '1', '1', '温馨提示', '[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}]');
+INSERT INTO `goods` VALUES ('21', '1', '1', '1', '对对对', '[{\"text\":\"\\u7b49\\u7b49\\u7b49\\u7b49\\u7b49\\u7b49\"}]');
+INSERT INTO `goods` VALUES ('22', '1', '1', '1', '高级服务提示', '[{\"text\":\"\\u9ad8\\u7ea7\\u670d\\u52a1\"}]');
+INSERT INTO `goods` VALUES ('23', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('24', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('25', '0', '0', '0', '', '');
+INSERT INTO `goods` VALUES ('26', '0', '0', '0', '', '');
+
+-- ----------------------------
+-- Table structure for `goods_approve`
+-- ----------------------------
+DROP TABLE IF EXISTS `goods_approve`;
+CREATE TABLE `goods_approve` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'goods_index表id',
+  `approved_status` tinyint(1) NOT NULL COMMENT '审核状态，1：未审核，2：审核通过，3：审核不通过',
+  `content` text NOT NULL COMMENT '商品信息 [    [       ‘id’ => 1,       ‘name’ => ‘xxxx’ ], [    ‘id’ => 0,    ‘name’ =>  ], ]',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of goods_approve
+-- ----------------------------
+INSERT INTO `goods_approve` VALUES ('1', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('5', '1', '{\"name\":\"\\u5546\\u54c11\",\"price\":\"100\",\"retail_price\":\"120\",\"type_id\":\"1\",\"validity_time\":\"1508457600\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u5927\\u5bb6\\u90fd\\u89c9\\u5f97\",\"description\":[{\"text\":\"\\u70b9\\u70b9\\u6ef4\\u6ef4\"},{\"resource\":{\"resource_id\":\"444\",\"path\":\"tenant\\/image\\/15ffec0187ce6bd7c1813715de63139f.png\"}}]}');
+INSERT INTO `goods_approve` VALUES ('2', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('6', '1', '{\"name\":\"\\u54b8\\u9c7c\\u996d\",\"type_id\":\"1\",\"price\":20000,\"retail_price\":10000,\"validity_time\":\"1501459200\",\"appointment_day\":\"1\",\"suit_people\":\"2\",\"max_class_people\":\"100\",\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a1\",\"description\":[{\"text\":\"\\u5565\\u6492\\u5927\\u58f0\\u5730\\u554a\"}]}');
+INSERT INTO `goods_approve` VALUES ('3', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('8', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('13', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('7', '1', '{\"name\":\"AK48\",\"type_id\":\"1\",\"price\":\"60000\",\"retail_price\":\"50000\",\"validity_time\":1501430399,\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"100\",\"notice\":\"\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\",\"description\":[{\"text\":\"\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\\u55d2\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"7\",\"resource_id\":518,\"is_cover\":0,\"create_time\":1495595187}]}');
+INSERT INTO `goods_approve` VALUES ('4', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('11', '1', '{\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\",\"price\":10000,\"retail_price\":0,\"type_id\":\"1\",\"validity_time\":\"1495065600\",\"appointment_day\":\"100\",\"suit_people\":\"100\",\"max_class_people\":\"100\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"11\",\"resource_id\":\"560\",\"is_cover\":0,\"create_time\":1495597474}]}');
+INSERT INTO `goods_approve` VALUES ('12', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('24', '1', '{\"name\":\"\\u5546\\u54c111\",\"price\":\"10000\",\"retail_price\":\"11000\",\"type_id\":\"1\",\"validity_time\":1501516799,\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"10\",\"notice\":\"\\u4f53\\u4f1a\\u548c\",\"description\":[{\"text\":\"\\u5730\\u5bf9\\u5730\\u5bfc\\u5f39\\u53cd\\u53cd\\u590d\\u590d\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"24\",\"resource_id\":\"903\",\"is_cover\":0,\"create_time\":1498808188}]}');
+INSERT INTO `goods_approve` VALUES ('28', '1', '{\"photo_list\":[{\"id\":0,\"goods_id\":\"28\",\"resource_id\":1031,\"is_cover\":0,\"create_time\":1502769738},{\"id\":0,\"goods_id\":\"28\",\"resource_id\":1032,\"is_cover\":0,\"create_time\":1502778392},{\"id\":0,\"goods_id\":\"28\",\"resource_id\":1065,\"is_cover\":0,\"create_time\":1502781047}]}');
+INSERT INTO `goods_approve` VALUES ('9', '1', '{\"name\":\"\\u65b0\\u5546\\u623700010\",\"price\":10000,\"retail_price\":10000,\"type_id\":\"1\",\"validity_time\":\"1495065600\",\"appointment_day\":\"1\",\"suit_people\":\"100\",\"max_class_people\":\"100\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}]}');
+INSERT INTO `goods_approve` VALUES ('10', '1', '{\"name\":\"\\u6d4b\\u8bd5\",\"price\":11100,\"retail_price\":121200,\"type_id\":\"1\",\"validity_time\":\"1495670400\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"1111\",\"description\":[{\"text\":\"111\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"10\",\"resource_id\":578,\"is_cover\":0,\"create_time\":1495607922}]}');
+INSERT INTO `goods_approve` VALUES ('22', '1', '{\"photo_list\":[{\"id\":0,\"goods_id\":\"22\",\"resource_id\":922,\"is_cover\":0,\"create_time\":1499333631},{\"id\":0,\"goods_id\":\"22\",\"resource_id\":923,\"is_cover\":0,\"create_time\":1499333681},{\"id\":0,\"goods_id\":\"22\",\"resource_id\":924,\"is_cover\":0,\"create_time\":1499333712}]}');
+INSERT INTO `goods_approve` VALUES ('25', '1', '{\"name\":\"\\u6258\\u7ba1\\u670d\\u52a1\",\"price\":\"100\",\"retail_price\":\"100\",\"type_id\":\"1\",\"validity_time\":1503763199,\"appointment_day\":\"10\",\"suit_people\":\"10\",\"max_class_people\":\"10\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u54d4\\u54e9\\u54d4\\u54e9~~~~\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"25\",\"resource_id\":\"994\",\"is_cover\":0,\"create_time\":1499672025}]}');
+INSERT INTO `goods_approve` VALUES ('23', '1', '{\"name\":\"\\u6253\\u7b97\\u7684\\u6492\",\"price\":\"111100\",\"retail_price\":\"11100\",\"type_id\":\"13\",\"validity_time\":1498838399,\"appointment_day\":\"1\",\"suit_people\":\"111\",\"max_class_people\":\"11\",\"notice\":\"\\u6253\\u7b97\\u6253\\u6253\",\"description\":[{\"text\":\"\\u5927\\u53d4\\u5927\\u5a76\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"23\",\"resource_id\":\"887\",\"is_cover\":0,\"create_time\":1498631740}]}');
+INSERT INTO `goods_approve` VALUES ('14', '1', '{\"name\":\"\\u6d4b\\u8bd5\",\"type_id\":\"1\",\"price\":\"12322112\",\"retail_price\":\"2\",\"validity_time\":\"1493942400\",\"appointment_day\":\"100\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"100\",\"description\":[{\"text\":\"12\"},{\"resource\":{\"resource_id\":\"576\",\"path\":\"data\\/tenant\\/image\\/095a7374a6b32bca260e6340dc0dab7b.jpg\"}}],\"photo_list\":[{\"id\":0,\"goods_id\":\"14\",\"resource_id\":686,\"is_cover\":0,\"create_time\":1495763084}]}');
+INSERT INTO `goods_approve` VALUES ('15', '1', '{\"name\":\"\\u5546\\u54c11\",\"price\":10000,\"retail_price\":12000,\"type_id\":\"1\",\"validity_time\":\"1496188800\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u65b9\\u82b3\\u82b3\",\"description\":[{\"text\":\"\\u5bf9\\u5bf9\\u5bf9\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"15\",\"resource_id\":\"580\",\"is_cover\":0,\"create_time\":1495608842}]}');
+INSERT INTO `goods_approve` VALUES ('16', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('21', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('17', '1', '{\"name\":\"\\u5229\\u76ca\\u4e0e\\u4ed6\",\"price\":\"11100\",\"retail_price\":\"111100\",\"type_id\":\"1\",\"validity_time\":1498838399,\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"11\",\"notice\":\"1111\",\"description\":[{\"text\":\"111\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"17\",\"resource_id\":\"799\",\"is_cover\":0,\"create_time\":1496806553}]}');
+INSERT INTO `goods_approve` VALUES ('27', '1', '{\"name\":\"1234\",\"price\":\"12000\",\"retail_price\":\"10000\",\"type_id\":\"1\",\"validity_time\":1501516799,\"appointment_day\":\"1\",\"suit_people\":\"10\",\"max_class_people\":\"10\",\"notice\":\"123\",\"description\":[{\"text\":\"123\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"27\",\"resource_id\":\"1008\",\"is_cover\":0,\"create_time\":1499910552}]}');
+INSERT INTO `goods_approve` VALUES ('19', '1', '{\"validity_time\":1519833599}');
+INSERT INTO `goods_approve` VALUES ('20', '2', '[]');
+INSERT INTO `goods_approve` VALUES ('26', '1', '{\"name\":\"\\u738b\\u4e94\\u5546\\u54c1\",\"price\":\"100\",\"retail_price\":\"100\",\"type_id\":\"1\",\"validity_time\":1501516799,\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"photo_list\":[{\"id\":0,\"goods_id\":\"26\",\"resource_id\":\"995\",\"is_cover\":0,\"create_time\":1499672089}]}');
+INSERT INTO `goods_approve` VALUES ('29', '1', '{\"name\":\"\\u6d4b\\u8bd5\",\"price\":\"100\",\"retail_price\":\"100\",\"type_id\":\"1\",\"validity_time\":1502899199,\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"photo_list\":[]}');
+
+-- ----------------------------
+-- Table structure for `goods_index`
+-- ----------------------------
+DROP TABLE IF EXISTS `goods_index`;
+CREATE TABLE `goods_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `name` varchar(15) NOT NULL COMMENT '商品名',
+  `type_id` int(11) NOT NULL COMMENT '对应commercial_tenant_type表的id',
+  `validity_time` int(11) NOT NULL COMMENT '有效期（超过订单不能激活了）',
+  `retail_price` int(11) NOT NULL COMMENT '门市价',
+  `price` int(11) NOT NULL COMMENT '价格',
+  `status` tinyint(1) NOT NULL COMMENT '状态，1：未上架、2：上架审核中，3：已上架，4：已下架',
+  `sales_count` int(11) NOT NULL COMMENT '售出数量',
+  `tenant_commission` smallint(4) NOT NULL COMMENT '商户分成',
+  `saler_commission` smallint(4) NOT NULL COMMENT '销售提成',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of goods_index
+-- ----------------------------
+INSERT INTO `goods_index` VALUES ('1', '2', '商品1', '1', '1503187200', '120000', '100000', '3', '1', '6000', '1000', '1495093174');
+INSERT INTO `goods_index` VALUES ('2', '2', '商品2', '1', '1503187200', '250', '200', '1', '0', '0', '0', '1495093230');
+INSERT INTO `goods_index` VALUES ('3', '2', '商品3', '1', '1503187200', '0', '300', '3', '0', '8000', '1023', '1495094239');
+INSERT INTO `goods_index` VALUES ('4', '2', '测试商品名称', '1', '1503187200', '333', '222', '3', '24', '7000', '1323', '1495161929');
+INSERT INTO `goods_index` VALUES ('5', '12', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495186150');
+INSERT INTO `goods_index` VALUES ('6', '1', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495526437');
+INSERT INTO `goods_index` VALUES ('7', '1', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495526819');
+INSERT INTO `goods_index` VALUES ('8', '18', '测试商品', '1', '1498867200', '90000', '80000', '3', '0', '0', '0', '1495593236');
+INSERT INTO `goods_index` VALUES ('9', '10', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495593365');
+INSERT INTO `goods_index` VALUES ('10', '18', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495593796');
+INSERT INTO `goods_index` VALUES ('11', '10', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495597474');
+INSERT INTO `goods_index` VALUES ('12', '10', '测试', '1', '1494460800', '10000', '10000', '3', '0', '0', '0', '1495597532');
+INSERT INTO `goods_index` VALUES ('13', '10', '测试', '1', '1493683200', '100', '100', '3', '0', '0', '0', '1495606801');
+INSERT INTO `goods_index` VALUES ('14', '10', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495606889');
+INSERT INTO `goods_index` VALUES ('15', '22', '', '0', '0', '0', '0', '1', '0', '0', '0', '1495608842');
+INSERT INTO `goods_index` VALUES ('16', '22', '商品1', '1', '1514735999', '12000', '10000', '3', '0', '0', '0', '1495608961');
+INSERT INTO `goods_index` VALUES ('17', '1', '', '0', '0', '0', '0', '2', '0', '0', '0', '1496806553');
+INSERT INTO `goods_index` VALUES ('27', '28', '', '0', '0', '0', '0', '1', '0', '0', '0', '1499910552');
+INSERT INTO `goods_index` VALUES ('19', '13', '尼玛比', '1', '1512057599', '11111100', '111100', '3', '3', '0', '0', '1497320121');
+INSERT INTO `goods_index` VALUES ('20', '10', '测试服务007', '1', '1513871999', '100', '100', '3', '306', '0', '0', '1497322960');
+INSERT INTO `goods_index` VALUES ('21', '22', '服务1', '1', '1497455999', '11000', '10000', '3', '0', '0', '0', '1497337425');
+INSERT INTO `goods_index` VALUES ('22', '10', '高级服务', '1', '1512057599', '100', '100', '3', '1', '0', '0', '1497427668');
+INSERT INTO `goods_index` VALUES ('23', '13', '', '0', '0', '0', '0', '1', '0', '0', '0', '1498631740');
+INSERT INTO `goods_index` VALUES ('24', '22', '', '0', '0', '0', '0', '1', '0', '0', '0', '1498808188');
+INSERT INTO `goods_index` VALUES ('25', '32', '', '0', '0', '0', '0', '1', '0', '0', '0', '1499672025');
+INSERT INTO `goods_index` VALUES ('26', '34', '', '0', '0', '0', '0', '1', '0', '0', '0', '1499672089');
+INSERT INTO `goods_index` VALUES ('28', '35', '商品1', '1', '1509465599', '10000', '10000', '3', '0', '8000', '2000', '1502767567');
+INSERT INTO `goods_index` VALUES ('29', '34', '', '0', '0', '0', '0', '1', '0', '0', '0', '1502779951');
+
+-- ----------------------------
+-- Table structure for `goods_photo`
+-- ----------------------------
+DROP TABLE IF EXISTS `goods_photo`;
+CREATE TABLE `goods_photo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `goods_id` int(11) NOT NULL COMMENT '商品id',
+  `resource_id` int(11) NOT NULL COMMENT '资源id',
+  `is_cover` tinyint(1) NOT NULL COMMENT '是否封面',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of goods_photo
+-- ----------------------------
+INSERT INTO `goods_photo` VALUES ('1', '1', '378', '1', '1495114128');
+INSERT INTO `goods_photo` VALUES ('2', '1', '379', '1', '1495114128');
+INSERT INTO `goods_photo` VALUES ('3', '3', '380', '0', '1495114255');
+INSERT INTO `goods_photo` VALUES ('4', '1', '385', '0', '1495117591');
+INSERT INTO `goods_photo` VALUES ('5', '2', '381', '0', '1495159889');
+INSERT INTO `goods_photo` VALUES ('31', '28', '1030', '1', '1502769194');
+INSERT INTO `goods_photo` VALUES ('19', '12', '563', '0', '1497403934');
+INSERT INTO `goods_photo` VALUES ('18', '12', '562', '0', '1497403934');
+INSERT INTO `goods_photo` VALUES ('17', '12', '561', '0', '1497403934');
+INSERT INTO `goods_photo` VALUES ('16', '20', '820', '1', '1497403838');
+INSERT INTO `goods_photo` VALUES ('15', '21', '821', '0', '1497337603');
+INSERT INTO `goods_photo` VALUES ('14', '16', '644', '0', '1497323797');
+INSERT INTO `goods_photo` VALUES ('20', '13', '570', '0', '1497403942');
+INSERT INTO `goods_photo` VALUES ('21', '13', '571', '0', '1497403942');
+INSERT INTO `goods_photo` VALUES ('22', '13', '572', '0', '1497403942');
+INSERT INTO `goods_photo` VALUES ('23', '13', '573', '0', '1497403942');
+INSERT INTO `goods_photo` VALUES ('24', '13', '574', '0', '1497403942');
+INSERT INTO `goods_photo` VALUES ('25', '19', '813', '0', '1499053516');
+INSERT INTO `goods_photo` VALUES ('26', '20', '842', '0', '1499157811');
+INSERT INTO `goods_photo` VALUES ('27', '22', '837', '0', '1499157822');
+INSERT INTO `goods_photo` VALUES ('30', '28', '1029', '0', '1502769194');
+
+-- ----------------------------
+-- Table structure for `join_category`
+-- ----------------------------
+DROP TABLE IF EXISTS `join_category`;
+CREATE TABLE `join_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `name` varchar(50) NOT NULL COMMENT '分类名',
+  `orders` int(11) NOT NULL COMMENT '排序',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of join_category
+-- ----------------------------
+INSERT INTO `join_category` VALUES ('1', '产品类', '19', '1493114092');
+INSERT INTO `join_category` VALUES ('2', '技术类', '11', '1493114162');
+INSERT INTO `join_category` VALUES ('3', '其他类', '18', '1493169670');
+
+-- ----------------------------
+-- Table structure for `join_list`
+-- ----------------------------
+DROP TABLE IF EXISTS `join_list`;
+CREATE TABLE `join_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `name` varchar(50) NOT NULL COMMENT '职位名称',
+  `category_id` int(11) NOT NULL COMMENT '所属分类id',
+  `number_min` tinyint(3) unsigned NOT NULL COMMENT '最小招聘人数',
+  `number_max` tinyint(3) unsigned NOT NULL COMMENT '最大招聘人数',
+  `province_id` int(11) NOT NULL COMMENT '省id',
+  `city_id` int(11) NOT NULL COMMENT '城市id',
+  `area_id` int(11) NOT NULL COMMENT '区id',
+  `company` varchar(50) NOT NULL COMMENT '所属公司',
+  `department` varchar(50) NOT NULL COMMENT '所属部门',
+  `address` varchar(255) NOT NULL COMMENT '详细地址',
+  `job_task` text NOT NULL COMMENT '工作职责',
+  `job_claim` text NOT NULL COMMENT '职位要求',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of join_list
+-- ----------------------------
+INSERT INTO `join_list` VALUES ('1', '用品测试工程师', '3', '5', '8', '440000', '440100', '440104', '阿里妈妈', '站街部', '黄德清10号', '      只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。', '只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>', '1493174999');
+INSERT INTO `join_list` VALUES ('3', '用品测试工程师', '1', '5', '5', '440000', '440100', '440104', '阿里妈妈', '站街部', '黄德清10号', '      只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。', '只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>', '1493174999');
+INSERT INTO `join_list` VALUES ('4', '用品测试工程1', '3', '5', '5', '440000', '440100', '440104', '阿里妈妈', '站街部', '黄德清10号', '      只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。', '只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>\n只是单纯的测试而已，别想歪了。<br>', '1493174999');
+INSERT INTO `join_list` VALUES ('5', '产品经理', '1', '2', '4', '440000', '440100', '440105', '广州新宜讯网络科技有限公司', '技术部', '新港东路2433号启盛会展产业园907', '测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试', '测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试', '1493345629');
+
+-- ----------------------------
+-- Table structure for `login_log`
+-- ----------------------------
+DROP TABLE IF EXISTS `login_log`;
+CREATE TABLE `login_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(自增)',
+  `type` tinyint(1) NOT NULL COMMENT '1：商户，2：用户',
+  `user_id` int(11) NOT NULL COMMENT '登录用户id',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=351 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of login_log
+-- ----------------------------
+INSERT INTO `login_log` VALUES ('1', '1', '1', '1494391558');
+INSERT INTO `login_log` VALUES ('2', '1', '1', '1494398817');
+INSERT INTO `login_log` VALUES ('3', '1', '1', '1494486443');
+INSERT INTO `login_log` VALUES ('4', '1', '1', '1494552750');
+INSERT INTO `login_log` VALUES ('5', '1', '1', '1494811963');
+INSERT INTO `login_log` VALUES ('6', '1', '4', '1494812747');
+INSERT INTO `login_log` VALUES ('7', '1', '4', '1494815625');
+INSERT INTO `login_log` VALUES ('8', '1', '3', '1494816118');
+INSERT INTO `login_log` VALUES ('9', '1', '4', '1494817820');
+INSERT INTO `login_log` VALUES ('10', '1', '4', '1494820207');
+INSERT INTO `login_log` VALUES ('11', '1', '4', '1494828263');
+INSERT INTO `login_log` VALUES ('12', '1', '4', '1494836451');
+INSERT INTO `login_log` VALUES ('13', '1', '8', '1494842932');
+INSERT INTO `login_log` VALUES ('14', '1', '9', '1494843017');
+INSERT INTO `login_log` VALUES ('15', '1', '10', '1494843344');
+INSERT INTO `login_log` VALUES ('16', '1', '11', '1494898166');
+INSERT INTO `login_log` VALUES ('17', '1', '12', '1494901557');
+INSERT INTO `login_log` VALUES ('18', '1', '10', '1494902057');
+INSERT INTO `login_log` VALUES ('19', '1', '1', '1494902531');
+INSERT INTO `login_log` VALUES ('20', '1', '2', '1494904141');
+INSERT INTO `login_log` VALUES ('21', '1', '1', '1494905115');
+INSERT INTO `login_log` VALUES ('22', '1', '13', '1494905967');
+INSERT INTO `login_log` VALUES ('23', '1', '2', '1494926729');
+INSERT INTO `login_log` VALUES ('24', '1', '1', '1494984666');
+INSERT INTO `login_log` VALUES ('25', '1', '1', '1495002221');
+INSERT INTO `login_log` VALUES ('26', '1', '1', '1495071315');
+INSERT INTO `login_log` VALUES ('27', '1', '1', '1495074967');
+INSERT INTO `login_log` VALUES ('28', '1', '12', '1495077467');
+INSERT INTO `login_log` VALUES ('29', '1', '1', '1495078726');
+INSERT INTO `login_log` VALUES ('30', '1', '12', '1495092470');
+INSERT INTO `login_log` VALUES ('31', '1', '2', '1495092485');
+INSERT INTO `login_log` VALUES ('32', '1', '14', '1495093056');
+INSERT INTO `login_log` VALUES ('33', '1', '12', '1495094284');
+INSERT INTO `login_log` VALUES ('34', '1', '1', '1495094388');
+INSERT INTO `login_log` VALUES ('35', '1', '2', '1495097993');
+INSERT INTO `login_log` VALUES ('36', '1', '10', '1495098304');
+INSERT INTO `login_log` VALUES ('37', '1', '1', '1495098335');
+INSERT INTO `login_log` VALUES ('38', '1', '15', '1495099957');
+INSERT INTO `login_log` VALUES ('39', '1', '2', '1495100482');
+INSERT INTO `login_log` VALUES ('40', '1', '1', '1495101016');
+INSERT INTO `login_log` VALUES ('41', '1', '15', '1495102157');
+INSERT INTO `login_log` VALUES ('42', '1', '2', '1495102308');
+INSERT INTO `login_log` VALUES ('43', '1', '10', '1495104322');
+INSERT INTO `login_log` VALUES ('44', '1', '1', '1495104340');
+INSERT INTO `login_log` VALUES ('45', '1', '1', '1495158128');
+INSERT INTO `login_log` VALUES ('46', '1', '2', '1495159827');
+INSERT INTO `login_log` VALUES ('47', '1', '1', '1495160979');
+INSERT INTO `login_log` VALUES ('48', '1', '12', '1495161527');
+INSERT INTO `login_log` VALUES ('49', '1', '1', '1495163487');
+INSERT INTO `login_log` VALUES ('50', '1', '15', '1495164641');
+INSERT INTO `login_log` VALUES ('51', '1', '16', '1495165368');
+INSERT INTO `login_log` VALUES ('52', '1', '16', '1495173942');
+INSERT INTO `login_log` VALUES ('53', '1', '2', '1495176098');
+INSERT INTO `login_log` VALUES ('54', '1', '1', '1495176286');
+INSERT INTO `login_log` VALUES ('55', '1', '12', '1495176772');
+INSERT INTO `login_log` VALUES ('56', '1', '16', '1495177491');
+INSERT INTO `login_log` VALUES ('57', '1', '17', '1495178079');
+INSERT INTO `login_log` VALUES ('58', '1', '10', '1495178331');
+INSERT INTO `login_log` VALUES ('59', '1', '17', '1495179982');
+INSERT INTO `login_log` VALUES ('60', '1', '1', '1495182421');
+INSERT INTO `login_log` VALUES ('61', '1', '2', '1495182485');
+INSERT INTO `login_log` VALUES ('62', '1', '1', '1495195865');
+INSERT INTO `login_log` VALUES ('63', '1', '16', '1495196550');
+INSERT INTO `login_log` VALUES ('64', '1', '16', '1495418590');
+INSERT INTO `login_log` VALUES ('65', '1', '3', '1495419484');
+INSERT INTO `login_log` VALUES ('66', '1', '12', '1495420357');
+INSERT INTO `login_log` VALUES ('67', '1', '17', '1495433091');
+INSERT INTO `login_log` VALUES ('68', '1', '16', '1495434372');
+INSERT INTO `login_log` VALUES ('69', '1', '1', '1495434759');
+INSERT INTO `login_log` VALUES ('70', '1', '10', '1495434728');
+INSERT INTO `login_log` VALUES ('71', '1', '1', '1495436657');
+INSERT INTO `login_log` VALUES ('72', '1', '2', '1495439563');
+INSERT INTO `login_log` VALUES ('73', '1', '3', '1495439876');
+INSERT INTO `login_log` VALUES ('74', '1', '17', '1495442384');
+INSERT INTO `login_log` VALUES ('75', '1', '16', '1495442498');
+INSERT INTO `login_log` VALUES ('76', '1', '12', '1495442825');
+INSERT INTO `login_log` VALUES ('77', '1', '10', '1495442923');
+INSERT INTO `login_log` VALUES ('78', '1', '18', '1495443391');
+INSERT INTO `login_log` VALUES ('79', '1', '1', '1495443193');
+INSERT INTO `login_log` VALUES ('80', '1', '19', '1495444941');
+INSERT INTO `login_log` VALUES ('81', '1', '16', '1495445389');
+INSERT INTO `login_log` VALUES ('82', '1', '16', '1495447298');
+INSERT INTO `login_log` VALUES ('83', '1', '18', '1495506095');
+INSERT INTO `login_log` VALUES ('84', '1', '1', '1495508908');
+INSERT INTO `login_log` VALUES ('85', '1', '18', '1495510542');
+INSERT INTO `login_log` VALUES ('86', '1', '10', '1495511377');
+INSERT INTO `login_log` VALUES ('87', '1', '3', '1495519819');
+INSERT INTO `login_log` VALUES ('88', '1', '2', '1495520672');
+INSERT INTO `login_log` VALUES ('89', '1', '16', '1495521749');
+INSERT INTO `login_log` VALUES ('90', '1', '18', '1495521873');
+INSERT INTO `login_log` VALUES ('91', '1', '20', '1495525051');
+INSERT INTO `login_log` VALUES ('92', '1', '10', '1495525895');
+INSERT INTO `login_log` VALUES ('93', '1', '18', '1495526858');
+INSERT INTO `login_log` VALUES ('94', '1', '20', '1495527859');
+INSERT INTO `login_log` VALUES ('95', '1', '20', '1495529737');
+INSERT INTO `login_log` VALUES ('96', '1', '20', '1495532658');
+INSERT INTO `login_log` VALUES ('97', '1', '18', '1495533235');
+INSERT INTO `login_log` VALUES ('98', '1', '19', '1495591871');
+INSERT INTO `login_log` VALUES ('99', '1', '18', '1495592811');
+INSERT INTO `login_log` VALUES ('100', '1', '10', '1495592573');
+INSERT INTO `login_log` VALUES ('101', '1', '21', '1495593633');
+INSERT INTO `login_log` VALUES ('102', '2', '3', '1495594788');
+INSERT INTO `login_log` VALUES ('103', '1', '1', '1495595162');
+INSERT INTO `login_log` VALUES ('104', '1', '11', '1495595245');
+INSERT INTO `login_log` VALUES ('105', '1', '5', '1495595448');
+INSERT INTO `login_log` VALUES ('106', '1', '10', '1495595462');
+INSERT INTO `login_log` VALUES ('107', '1', '21', '1495595650');
+INSERT INTO `login_log` VALUES ('108', '1', '22', '1495596825');
+INSERT INTO `login_log` VALUES ('109', '2', '3', '1495599905');
+INSERT INTO `login_log` VALUES ('110', '1', '21', '1495599900');
+INSERT INTO `login_log` VALUES ('111', '1', '10', '1495605585');
+INSERT INTO `login_log` VALUES ('112', '1', '1', '1495605722');
+INSERT INTO `login_log` VALUES ('113', '1', '18', '1495607752');
+INSERT INTO `login_log` VALUES ('114', '1', '23', '1495609230');
+INSERT INTO `login_log` VALUES ('115', '1', '21', '1495610303');
+INSERT INTO `login_log` VALUES ('116', '1', '23', '1495611246');
+INSERT INTO `login_log` VALUES ('117', '2', '3', '1495612183');
+INSERT INTO `login_log` VALUES ('118', '1', '21', '1495612843');
+INSERT INTO `login_log` VALUES ('119', '2', '3', '1495614126');
+INSERT INTO `login_log` VALUES ('120', '1', '1', '1495615534');
+INSERT INTO `login_log` VALUES ('121', '1', '23', '1495678126');
+INSERT INTO `login_log` VALUES ('122', '1', '23', '1495691088');
+INSERT INTO `login_log` VALUES ('123', '1', '21', '1495693952');
+INSERT INTO `login_log` VALUES ('124', '1', '21', '1495697136');
+INSERT INTO `login_log` VALUES ('125', '1', '23', '1495699178');
+INSERT INTO `login_log` VALUES ('126', '1', '3', '1495699510');
+INSERT INTO `login_log` VALUES ('127', '1', '10', '1495699513');
+INSERT INTO `login_log` VALUES ('128', '1', '22', '1495700455');
+INSERT INTO `login_log` VALUES ('129', '1', '24', '1495702794');
+INSERT INTO `login_log` VALUES ('130', '1', '25', '1495706668');
+INSERT INTO `login_log` VALUES ('131', '1', '10', '1495762570');
+INSERT INTO `login_log` VALUES ('132', '1', '25', '1495766319');
+INSERT INTO `login_log` VALUES ('133', '1', '22', '1495768147');
+INSERT INTO `login_log` VALUES ('134', '1', '10', '1495768909');
+INSERT INTO `login_log` VALUES ('135', '2', '3', '1495863897');
+INSERT INTO `login_log` VALUES ('136', '1', '10', '1495867336');
+INSERT INTO `login_log` VALUES ('137', '2', '3', '1495869596');
+INSERT INTO `login_log` VALUES ('138', '2', '3', '1495871790');
+INSERT INTO `login_log` VALUES ('139', '1', '21', '1496198502');
+INSERT INTO `login_log` VALUES ('140', '1', '26', '1496199507');
+INSERT INTO `login_log` VALUES ('141', '1', '22', '1496200714');
+INSERT INTO `login_log` VALUES ('142', '1', '10', '1496213890');
+INSERT INTO `login_log` VALUES ('143', '1', '1', '1496213919');
+INSERT INTO `login_log` VALUES ('144', '2', '3', '1496216163');
+INSERT INTO `login_log` VALUES ('145', '2', '3', '1496283765');
+INSERT INTO `login_log` VALUES ('146', '2', '3', '1496286203');
+INSERT INTO `login_log` VALUES ('147', '2', '1', '1496287682');
+INSERT INTO `login_log` VALUES ('148', '2', '3', '1496303126');
+INSERT INTO `login_log` VALUES ('149', '1', '25', '1496382926');
+INSERT INTO `login_log` VALUES ('150', '1', '26', '1496383593');
+INSERT INTO `login_log` VALUES ('151', '1', '22', '1496383936');
+INSERT INTO `login_log` VALUES ('152', '1', '10', '1496385423');
+INSERT INTO `login_log` VALUES ('153', '2', '4', '1496390699');
+INSERT INTO `login_log` VALUES ('154', '2', '3', '1496393838');
+INSERT INTO `login_log` VALUES ('155', '2', '3', '1496630138');
+INSERT INTO `login_log` VALUES ('156', '1', '10', '1496632121');
+INSERT INTO `login_log` VALUES ('157', '2', '3', '1496643476');
+INSERT INTO `login_log` VALUES ('158', '2', '3', '1496648692');
+INSERT INTO `login_log` VALUES ('159', '2', '3', '1496729069');
+INSERT INTO `login_log` VALUES ('160', '2', '3', '1496733466');
+INSERT INTO `login_log` VALUES ('161', '2', '3', '1496738963');
+INSERT INTO `login_log` VALUES ('162', '2', '4', '1496739879');
+INSERT INTO `login_log` VALUES ('163', '1', '10', '1496799716');
+INSERT INTO `login_log` VALUES ('164', '1', '22', '1496805175');
+INSERT INTO `login_log` VALUES ('165', '1', '1', '1496806305');
+INSERT INTO `login_log` VALUES ('166', '1', '10', '1496818777');
+INSERT INTO `login_log` VALUES ('167', '1', '1', '1496818815');
+INSERT INTO `login_log` VALUES ('168', '2', '3', '1496818889');
+INSERT INTO `login_log` VALUES ('169', '1', '2', '1496818907');
+INSERT INTO `login_log` VALUES ('170', '1', '1', '1496903863');
+INSERT INTO `login_log` VALUES ('171', '2', '3', '1496906506');
+INSERT INTO `login_log` VALUES ('172', '1', '26', '1496913919');
+INSERT INTO `login_log` VALUES ('173', '1', '2', '1496972352');
+INSERT INTO `login_log` VALUES ('174', '1', '10', '1496978932');
+INSERT INTO `login_log` VALUES ('175', '1', '13', '1496989227');
+INSERT INTO `login_log` VALUES ('176', '2', '3', '1496994740');
+INSERT INTO `login_log` VALUES ('177', '2', '3', '1496994740');
+INSERT INTO `login_log` VALUES ('178', '2', '4', '1497000125');
+INSERT INTO `login_log` VALUES ('179', '1', '1', '1497234929');
+INSERT INTO `login_log` VALUES ('180', '2', '3', '1497236896');
+INSERT INTO `login_log` VALUES ('181', '1', '10', '1497247616');
+INSERT INTO `login_log` VALUES ('182', '1', '22', '1497249435');
+INSERT INTO `login_log` VALUES ('183', '1', '24', '1497249541');
+INSERT INTO `login_log` VALUES ('184', '1', '2', '1497249775');
+INSERT INTO `login_log` VALUES ('185', '1', '1', '1497250709');
+INSERT INTO `login_log` VALUES ('186', '1', '10', '1497252415');
+INSERT INTO `login_log` VALUES ('187', '1', '2', '1497252425');
+INSERT INTO `login_log` VALUES ('188', '2', '3', '1497252448');
+INSERT INTO `login_log` VALUES ('189', '1', '10', '1497316414');
+INSERT INTO `login_log` VALUES ('190', '1', '13', '1497319901');
+INSERT INTO `login_log` VALUES ('191', '1', '22', '1497322484');
+INSERT INTO `login_log` VALUES ('192', '1', '13', '1497323255');
+INSERT INTO `login_log` VALUES ('193', '1', '2', '1497338079');
+INSERT INTO `login_log` VALUES ('194', '1', '10', '1497346133');
+INSERT INTO `login_log` VALUES ('195', '2', '3', '1497346523');
+INSERT INTO `login_log` VALUES ('196', '1', '1', '1497403021');
+INSERT INTO `login_log` VALUES ('197', '1', '10', '1497403039');
+INSERT INTO `login_log` VALUES ('198', '2', '3', '1497404086');
+INSERT INTO `login_log` VALUES ('199', '1', '13', '1497404315');
+INSERT INTO `login_log` VALUES ('200', '1', '1', '1497406766');
+INSERT INTO `login_log` VALUES ('201', '1', '10', '1497406815');
+INSERT INTO `login_log` VALUES ('202', '1', '26', '1497409057');
+INSERT INTO `login_log` VALUES ('203', '2', '3', '1497412188');
+INSERT INTO `login_log` VALUES ('204', '2', '3', '1497412188');
+INSERT INTO `login_log` VALUES ('205', '2', '3', '1497419910');
+INSERT INTO `login_log` VALUES ('206', '2', '3', '1497422309');
+INSERT INTO `login_log` VALUES ('207', '2', '3', '1497424594');
+INSERT INTO `login_log` VALUES ('208', '1', '1', '1497427262');
+INSERT INTO `login_log` VALUES ('209', '1', '22', '1497493489');
+INSERT INTO `login_log` VALUES ('210', '1', '24', '1497838742');
+INSERT INTO `login_log` VALUES ('211', '1', '25', '1497856650');
+INSERT INTO `login_log` VALUES ('212', '1', '27', '1497857188');
+INSERT INTO `login_log` VALUES ('213', '1', '28', '1498032910');
+INSERT INTO `login_log` VALUES ('214', '1', '22', '1498464051');
+INSERT INTO `login_log` VALUES ('215', '2', '3', '1498465344');
+INSERT INTO `login_log` VALUES ('216', '1', '13', '1498530577');
+INSERT INTO `login_log` VALUES ('217', '1', '24', '1498531098');
+INSERT INTO `login_log` VALUES ('218', '2', '3', '1498532260');
+INSERT INTO `login_log` VALUES ('219', '2', '3', '1498545230');
+INSERT INTO `login_log` VALUES ('220', '1', '16', '1498546757');
+INSERT INTO `login_log` VALUES ('221', '1', '16', '1498549194');
+INSERT INTO `login_log` VALUES ('222', '1', '29', '1498552093');
+INSERT INTO `login_log` VALUES ('223', '1', '16', '1498621964');
+INSERT INTO `login_log` VALUES ('224', '1', '10', '1498888874');
+INSERT INTO `login_log` VALUES ('225', '1', '16', '1498631253');
+INSERT INTO `login_log` VALUES ('226', '2', '3', '1498631686');
+INSERT INTO `login_log` VALUES ('227', '1', '24', '1498633643');
+INSERT INTO `login_log` VALUES ('228', '1', '30', '1498634906');
+INSERT INTO `login_log` VALUES ('229', '1', '22', '1498705684');
+INSERT INTO `login_log` VALUES ('230', '1', '13', '1498707598');
+INSERT INTO `login_log` VALUES ('231', '1', '1', '1498707759');
+INSERT INTO `login_log` VALUES ('232', '1', '1', '1498806579');
+INSERT INTO `login_log` VALUES ('233', '1', '22', '1498808151');
+INSERT INTO `login_log` VALUES ('234', '1', '13', '1498808457');
+INSERT INTO `login_log` VALUES ('235', '1', '13', '1498816100');
+INSERT INTO `login_log` VALUES ('236', '1', '30', '1498816735');
+INSERT INTO `login_log` VALUES ('237', '1', '30', '1499046315');
+INSERT INTO `login_log` VALUES ('238', '1', '1', '1499046353');
+INSERT INTO `login_log` VALUES ('239', '1', '10', '1499046679');
+INSERT INTO `login_log` VALUES ('240', '1', '13', '1499048341');
+INSERT INTO `login_log` VALUES ('241', '1', '30', '1499049169');
+INSERT INTO `login_log` VALUES ('242', '1', '1', '1499049656');
+INSERT INTO `login_log` VALUES ('243', '1', '11', '1499049693');
+INSERT INTO `login_log` VALUES ('244', '1', '10', '1499049777');
+INSERT INTO `login_log` VALUES ('245', '1', '13', '1499050604');
+INSERT INTO `login_log` VALUES ('246', '1', '30', '1499050976');
+INSERT INTO `login_log` VALUES ('247', '1', '1', '1499051816');
+INSERT INTO `login_log` VALUES ('248', '1', '13', '1499053458');
+INSERT INTO `login_log` VALUES ('249', '1', '13', '1499057671');
+INSERT INTO `login_log` VALUES ('250', '1', '13', '1499060750');
+INSERT INTO `login_log` VALUES ('251', '1', '10', '1499061724');
+INSERT INTO `login_log` VALUES ('252', '1', '13', '1499062569');
+INSERT INTO `login_log` VALUES ('253', '1', '30', '1499064246');
+INSERT INTO `login_log` VALUES ('254', '1', '13', '1499064555');
+INSERT INTO `login_log` VALUES ('255', '1', '10', '1499065293');
+INSERT INTO `login_log` VALUES ('256', '1', '22', '1499066845');
+INSERT INTO `login_log` VALUES ('257', '1', '1', '1499070452');
+INSERT INTO `login_log` VALUES ('258', '1', '13', '1499070763');
+INSERT INTO `login_log` VALUES ('259', '1', '10', '1499071800');
+INSERT INTO `login_log` VALUES ('260', '1', '2', '1499073193');
+INSERT INTO `login_log` VALUES ('261', '1', '31', '1499132391');
+INSERT INTO `login_log` VALUES ('262', '1', '10', '1499132538');
+INSERT INTO `login_log` VALUES ('263', '2', '3', '1499132782');
+INSERT INTO `login_log` VALUES ('264', '1', '30', '1499140797');
+INSERT INTO `login_log` VALUES ('265', '1', '12', '1499147666');
+INSERT INTO `login_log` VALUES ('266', '1', '30', '1499148129');
+INSERT INTO `login_log` VALUES ('267', '1', '1', '1499150384');
+INSERT INTO `login_log` VALUES ('268', '1', '30', '1499155387');
+INSERT INTO `login_log` VALUES ('269', '1', '30', '1499160007');
+INSERT INTO `login_log` VALUES ('270', '1', '16', '1499160146');
+INSERT INTO `login_log` VALUES ('271', '1', '10', '1499218530');
+INSERT INTO `login_log` VALUES ('272', '1', '30', '1499236310');
+INSERT INTO `login_log` VALUES ('273', '1', '10', '1499240997');
+INSERT INTO `login_log` VALUES ('274', '1', '2', '1499241248');
+INSERT INTO `login_log` VALUES ('275', '1', '10', '1499304807');
+INSERT INTO `login_log` VALUES ('276', '1', '30', '1499305937');
+INSERT INTO `login_log` VALUES ('277', '1', '14', '1499305966');
+INSERT INTO `login_log` VALUES ('278', '1', '1', '1499307319');
+INSERT INTO `login_log` VALUES ('279', '1', '2', '1499307335');
+INSERT INTO `login_log` VALUES ('280', '2', '3', '1499322946');
+INSERT INTO `login_log` VALUES ('281', '1', '10', '1499328541');
+INSERT INTO `login_log` VALUES ('282', '1', '13', '1499328929');
+INSERT INTO `login_log` VALUES ('283', '1', '1', '1499329017');
+INSERT INTO `login_log` VALUES ('284', '1', '2', '1499329038');
+INSERT INTO `login_log` VALUES ('285', '1', '10', '1499330873');
+INSERT INTO `login_log` VALUES ('286', '1', '10', '1499334542');
+INSERT INTO `login_log` VALUES ('287', '1', '10', '1499392613');
+INSERT INTO `login_log` VALUES ('288', '1', '2', '1499395005');
+INSERT INTO `login_log` VALUES ('289', '1', '32', '1499395700');
+INSERT INTO `login_log` VALUES ('290', '1', '10', '1499406942');
+INSERT INTO `login_log` VALUES ('291', '1', '22', '1499414486');
+INSERT INTO `login_log` VALUES ('292', '1', '32', '1499414755');
+INSERT INTO `login_log` VALUES ('293', '1', '10', '1499414770');
+INSERT INTO `login_log` VALUES ('294', '1', '24', '1499415186');
+INSERT INTO `login_log` VALUES ('295', '1', '32', '1499416767');
+INSERT INTO `login_log` VALUES ('296', '1', '32', '1499421777');
+INSERT INTO `login_log` VALUES ('297', '1', '32', '1499649640');
+INSERT INTO `login_log` VALUES ('298', '1', '32', '1499652585');
+INSERT INTO `login_log` VALUES ('299', '1', '30', '1499656580');
+INSERT INTO `login_log` VALUES ('300', '1', '14', '1499656617');
+INSERT INTO `login_log` VALUES ('301', '1', '27', '1499656698');
+INSERT INTO `login_log` VALUES ('302', '1', '33', '1499656755');
+INSERT INTO `login_log` VALUES ('303', '1', '2', '1499656832');
+INSERT INTO `login_log` VALUES ('304', '2', '3', '1499666868');
+INSERT INTO `login_log` VALUES ('305', '1', '22', '1499668673');
+INSERT INTO `login_log` VALUES ('306', '1', '34', '1499670788');
+INSERT INTO `login_log` VALUES ('307', '1', '33', '1499670819');
+INSERT INTO `login_log` VALUES ('308', '1', '32', '1499670945');
+INSERT INTO `login_log` VALUES ('309', '1', '10', '1499672319');
+INSERT INTO `login_log` VALUES ('310', '1', '34', '1499674416');
+INSERT INTO `login_log` VALUES ('311', '1', '13', '1499676731');
+INSERT INTO `login_log` VALUES ('312', '1', '22', '1499755753');
+INSERT INTO `login_log` VALUES ('313', '1', '35', '1499755900');
+INSERT INTO `login_log` VALUES ('314', '1', '13', '1499758739');
+INSERT INTO `login_log` VALUES ('315', '1', '35', '1499839921');
+INSERT INTO `login_log` VALUES ('316', '1', '34', '1499846435');
+INSERT INTO `login_log` VALUES ('317', '1', '1', '1499847126');
+INSERT INTO `login_log` VALUES ('318', '1', '23', '1499847188');
+INSERT INTO `login_log` VALUES ('319', '1', '12', '1499849607');
+INSERT INTO `login_log` VALUES ('320', '1', '28', '1499909291');
+INSERT INTO `login_log` VALUES ('321', '1', '31', '1499910898');
+INSERT INTO `login_log` VALUES ('322', '1', '28', '1499912070');
+INSERT INTO `login_log` VALUES ('323', '1', '34', '1499912273');
+INSERT INTO `login_log` VALUES ('324', '1', '33', '1499913543');
+INSERT INTO `login_log` VALUES ('325', '1', '34', '1499935358');
+INSERT INTO `login_log` VALUES ('326', '1', '34', '1500361254');
+INSERT INTO `login_log` VALUES ('327', '1', '13', '1500363982');
+INSERT INTO `login_log` VALUES ('328', '1', '34', '1500427809');
+INSERT INTO `login_log` VALUES ('329', '1', '13', '1501036559');
+INSERT INTO `login_log` VALUES ('330', '1', '13', '1501121150');
+INSERT INTO `login_log` VALUES ('331', '1', '34', '1501134893');
+INSERT INTO `login_log` VALUES ('332', '1', '34', '1501144260');
+INSERT INTO `login_log` VALUES ('333', '1', '34', '1501205806');
+INSERT INTO `login_log` VALUES ('334', '1', '13', '1501470814');
+INSERT INTO `login_log` VALUES ('335', '1', '34', '1501486647');
+INSERT INTO `login_log` VALUES ('336', '1', '35', '1501551320');
+INSERT INTO `login_log` VALUES ('337', '1', '34', '1501554052');
+INSERT INTO `login_log` VALUES ('338', '1', '35', '1501657008');
+INSERT INTO `login_log` VALUES ('339', '2', '3', '1501660057');
+INSERT INTO `login_log` VALUES ('340', '2', '3', '1501831794');
+INSERT INTO `login_log` VALUES ('341', '2', '3', '1501836089');
+INSERT INTO `login_log` VALUES ('342', '1', '34', '1501837373');
+INSERT INTO `login_log` VALUES ('343', '1', '36', '1502333656');
+INSERT INTO `login_log` VALUES ('344', '1', '34', '1502334432');
+INSERT INTO `login_log` VALUES ('345', '1', '36', '1502336170');
+INSERT INTO `login_log` VALUES ('346', '1', '36', '1502767469');
+INSERT INTO `login_log` VALUES ('347', '1', '35', '1502767508');
+INSERT INTO `login_log` VALUES ('348', '1', '34', '1502778469');
+INSERT INTO `login_log` VALUES ('349', '1', '34', '1503632836');
+INSERT INTO `login_log` VALUES ('350', '2', '3', '1504510189');
+
+-- ----------------------------
+-- Table structure for `manager`
+-- ----------------------------
+DROP TABLE IF EXISTS `manager`;
+CREATE TABLE `manager` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `group_id` int(11) NOT NULL COMMENT '分组id',
+  `email` varchar(50) NOT NULL COMMENT '邮箱',
+  `password` varchar(255) NOT NULL COMMENT '密码',
+  `name` varchar(64) NOT NULL COMMENT '名字',
+  `is_forbidden` tinyint(1) NOT NULL COMMENT '是否被禁用',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of manager
+-- ----------------------------
+INSERT INTO `manager` VALUES ('1', '3', 'admin@um.com', '93279e3308bdbbeed946fc965017f67a', '管理员', '0', '1480521600');
+INSERT INTO `manager` VALUES ('3', '4', '270078578@qq.com', '93279e3308bdbbeed946fc965017f67a', 'alvin', '0', '1501146418');
+
+-- ----------------------------
+-- Table structure for `manager_group`
+-- ----------------------------
+DROP TABLE IF EXISTS `manager_group`;
+CREATE TABLE `manager_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` varchar(255) NOT NULL COMMENT '组名',
+  `permission` text NOT NULL COMMENT '权限列表',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of manager_group
+-- ----------------------------
+INSERT INTO `manager_group` VALUES ('3', '管理员组', 'tenant_approve,goods_approve,characteristic_service_manage,tenant_type_manage,order_manage,order_refund_manage,withdraw_cash_manage,announcement_manage,tenant_manage,manage_manager');
+INSERT INTO `manager_group` VALUES ('4', '运营组', 'characteristic_service_manage,tenant_type_manage,order_manage,order_refund_manage');
+
+-- ----------------------------
+-- Table structure for `order`
+-- ----------------------------
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `order_num` varchar(20) NOT NULL COMMENT '订单号',
+  `type` tinyint(1) NOT NULL COMMENT '类型：1，买单。2，商品订单。',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id ',
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `mobile` varchar(11) NOT NULL COMMENT '购买手机号',
+  `serial_number` varchar(32) NOT NULL COMMENT '交易流水号',
+  `original_price` int(11) NOT NULL COMMENT '原价',
+  `price` int(11) NOT NULL COMMENT '订单价格',
+  `fee` int(11) NOT NULL COMMENT '手续费用',
+  `accumulate_points_money` int(11) NOT NULL COMMENT '积分抵扣',
+  `pay_money` int(11) NOT NULL COMMENT '实际支付金额',
+  `pay_time` int(11) NOT NULL COMMENT '付款时间',
+  `refund_money` int(11) NOT NULL COMMENT '退款金额',
+  `refund_time` int(11) NOT NULL COMMENT '退款时间',
+  `status` tinyint(1) NOT NULL COMMENT '1:待支付，2：已支付， 3：申请退款，4：已激活，5：已退款6：待评价，7：已完成',
+  `goods_id` int(11) NOT NULL COMMENT '商品id',
+  `quantity` tinyint(1) NOT NULL COMMENT '购买数量',
+  `validity_time` int(11) NOT NULL COMMENT '有效期，和商品的有效期一样',
+  `activation_code` varchar(10) NOT NULL COMMENT '激活码',
+  `activation_time` int(11) NOT NULL COMMENT '激活时间',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1183 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of order
+-- ----------------------------
+INSERT INTO `order` VALUES ('1001', '11111111', '1', '1', '1', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '0', '0', '6', '1', '1', '0', '123456', '0', '1494259200');
+INSERT INTO `order` VALUES ('1002', '11111112', '2', '1', '1', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '0', '0', '6', '2', '1', '0', '223456', '1495436690', '1494259200');
+INSERT INTO `order` VALUES ('1003', '11111113', '2', '1', '1', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '0', '0', '2', '1', '1', '0', '323456', '0', '1494259200');
+INSERT INTO `order` VALUES ('1004', '11111114', '2', '1', '1', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '0', '0', '2', '1', '1', '0', '423456', '0', '1494259200');
+INSERT INTO `order` VALUES ('1005', '11111115', '2', '2', '2', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '0', '0', '7', '1', '1', '0', '1234561234', '0', '1494259200');
+INSERT INTO `order` VALUES ('1006', '11111116', '1', '12', '2', '13800139800', 'dsfghjkl;s43124124', '60000', '50000', '0', '1000', '49000', '1494259200', '233', '1496820312', '5', '1', '1', '0', '12345612', '0', '1494259200');
+INSERT INTO `order` VALUES ('1108', '11085130', '1', '1', '3', '13642658465', '', '2', '1', '0', '1', '400', '1496643810', '0', '1496743069', '3', '0', '0', '0', '0', '1496643810', '1496643810');
+INSERT INTO `order` VALUES ('1102', '11026976', '1', '1', '3', '13642658465', '', '10000', '9900', '0', '9900', '500', '1496375781', '0', '0', '3', '0', '0', '0', '0', '1496375781', '1496375781');
+INSERT INTO `order` VALUES ('1101', '11011394', '1', '1', '3', '13642658465', '', '10000', '9900', '0', '9900', '0', '1496375345', '0', '0', '7', '0', '0', '0', '0', '1496375345', '1496375345');
+INSERT INTO `order` VALUES ('1100', '11007097', '1', '1', '3', '13642658465', '', '1', '0', '0', '0', '0', '1496375117', '0', '0', '6', '0', '0', '0', '0', '1496375117', '1496375117');
+INSERT INTO `order` VALUES ('1097', '10973259', '1', '1', '3', '13642658465', '', '1', '0', '0', '0', '0', '1496374253', '0', '0', '6', '0', '0', '0', '0', '1496374253', '1496374253');
+INSERT INTO `order` VALUES ('1094', '10948438', '1', '1', '3', '13642658465', '', '100', '99', '0', '99', '0', '1496373842', '0', '0', '6', '0', '0', '0', '0', '1496373842', '1496373842');
+INSERT INTO `order` VALUES ('1092', '10927708', '2', '2', '3', '13642658465', '', '100', '100', '0', '100', '600', '1496373306', '33', '1496818977', '5', '1', '1', '0', 'lqen1092', '0', '1496373306');
+INSERT INTO `order` VALUES ('1090', '10906237', '1', '1', '3', '13642658465', '', '100', '99', '0', '99', '0', '1496373162', '0', '0', '6', '0', '0', '0', '0', '1496373162', '1496373162');
+INSERT INTO `order` VALUES ('1089', '10897827', '1', '1', '3', '13642658465', '', '100', '99', '0', '99', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1496372816', '1496372816');
+INSERT INTO `order` VALUES ('1021', '10214927', '1', '1', '3', '', '', '0', '0', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495770799', '1495770799');
+INSERT INTO `order` VALUES ('1022', '10221996', '1', '1', '3', '', '', '10000', '9900', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495770808');
+INSERT INTO `order` VALUES ('1023', '10233274', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495771156');
+INSERT INTO `order` VALUES ('1024', '10246205', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495778107');
+INSERT INTO `order` VALUES ('1025', '10252842', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495778161');
+INSERT INTO `order` VALUES ('1079', '10795994', '1', '1', '3', '13642658465', '', '100', '0', '0', '99', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '1496371536');
+INSERT INTO `order` VALUES ('1027', '10278152', '2', '2', '3', '', '', '300', '300', '0', '60500', '0', '0', '0', '0', '2', '1', '3', '0', '0', '1495778393', '1495778393');
+INSERT INTO `order` VALUES ('1028', '10284169', '2', '2', '3', '', '', '300', '300', '0', '60500', '0', '0', '0', '0', '7', '1', '3', '0', '111111', '1495778395', '1495778395');
+INSERT INTO `order` VALUES ('1029', '10295980', '1', '1', '3', '', '', '2000', '1980', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495778504');
+INSERT INTO `order` VALUES ('1030', '10307997', '1', '1', '3', '', '', '2000', '1980', '0', '60500', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495778506');
+INSERT INTO `order` VALUES ('1031', '10317964', '1', '1', '3', '', '', '1000000', '990000', '0', '0', '0', '0', '0', '0', '6', '0', '0', '0', '0', '1495770799', '1495778578');
+INSERT INTO `order` VALUES ('1032', '10326763', '1', '1', '3', '', '', '1000000', '990000', '0', '0', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778582', '1495778582');
+INSERT INTO `order` VALUES ('1033', '10336737', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778619', '1495778619');
+INSERT INTO `order` VALUES ('1034', '10343889', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778901', '1495778901');
+INSERT INTO `order` VALUES ('1035', '10355608', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778923', '1495778923');
+INSERT INTO `order` VALUES ('1036', '10369242', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778943', '1495778943');
+INSERT INTO `order` VALUES ('1037', '10372820', '1', '1', '3', '', '', '1000000', '990000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495778951', '1495778951');
+INSERT INTO `order` VALUES ('1038', '10389925', '1', '1', '3', '', '', '10000000', '9900000', '0', '60500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495779128', '1495779128');
+INSERT INTO `order` VALUES ('1039', '10398101', '2', '2', '3', '', '', '300', '0', '0', '300', '0', '0', '0', '0', '2', '1', '3', '0', '111123', '0', '1495787972');
+INSERT INTO `order` VALUES ('1121', '10284171', '2', '2', '3', '', '', '300', '300', '0', '0', '10000', '1495778395', '100', '1499653300', '5', '1', '1', '0', '111222', '0', '1495778395');
+INSERT INTO `order` VALUES ('1120', '11206750', '2', '2', '3', '13642658465', '', '222', '222', '0', '222', '0', '1496818925', '0', '0', '2', '4', '1', '0', 'f4tx1120', '0', '1496818925');
+INSERT INTO `order` VALUES ('1119', '11198400', '1', '1', '1', '18620772020', '', '50', '49', '0', '49', '0', '1496815723', '0', '0', '6', '0', '0', '0', '0', '1496815723', '1496815723');
+INSERT INTO `order` VALUES ('1118', '11188412', '1', '1', '1', '18620772020', '', '50', '49', '0', '49', '0', '1496815634', '0', '0', '6', '0', '0', '0', '0', '1496815634', '1496815634');
+INSERT INTO `order` VALUES ('1113', '11133129', '1', '1', '4', '13246813739', '', '100', '98', '0', '98', '0', '1496740019', '0', '0', '6', '0', '0', '0', '0', '1496740019', '1496740019');
+INSERT INTO `order` VALUES ('1052', '10527726', '1', '1', '3', '', '', '50000', '0', '0', '49500', '0', '0', '0', '0', '7', '0', '0', '0', '0', '1495788898', '1495788898');
+INSERT INTO `order` VALUES ('1117', '11175482', '1', '1', '1', '18620772020', '', '50', '49', '0', '49', '0', '1496815565', '0', '0', '6', '0', '0', '0', '0', '1496815565', '1496815565');
+INSERT INTO `order` VALUES ('1116', '11162902', '2', '2', '4', '13246813739', '', '100', '100', '0', '100', '0', '1496740252', '0', '0', '2', '1', '1', '0', 'f1G61116', '0', '1496740252');
+INSERT INTO `order` VALUES ('1110', '11102213', '1', '1', '1', '18620772020', '', '1', '1', '0', '0', '0', '1496653237', '0', '0', '6', '0', '0', '0', '0', '1496653237', '1496653237');
+INSERT INTO `order` VALUES ('1111', '11113671', '1', '1', '1', '18620772020', '', '50', '49', '0', '49', '0', '1496653319', '0', '0', '6', '0', '0', '0', '0', '1496653319', '1496653319');
+INSERT INTO `order` VALUES ('1076', '10761587', '1', '1', '3', '13725478250', '', '0', '0', '0', '0', '0', '0', '0', '0', '6', '0', '0', '0', '0', '0', '1496217861');
+INSERT INTO `order` VALUES ('1122', '11225979', '2', '2', '3', '13642658465', '', '222', '222', '0', '222', '0', '1496819349', '0', '0', '2', '4', '1', '0', 'CWb51122', '0', '1496819349');
+INSERT INTO `order` VALUES ('1124', '11244521', '2', '2', '3', '13642658465', '', '444', '444', '0', '444', '0', '1496819650', '0', '0', '2', '4', '2', '0', 'mkWa1124', '0', '1496819650');
+INSERT INTO `order` VALUES ('1125', '11256369', '2', '2', '3', '13642658465', '', '444', '444', '0', '444', '0', '1496819650', '0', '0', '2', '4', '2', '0', 'dKnD1125', '0', '1496819650');
+INSERT INTO `order` VALUES ('1126', '11268255', '2', '2', '3', '13642658465', '', '666', '666', '0', '666', '0', '1496821278', '0', '0', '6', '4', '3', '0', '', '1497338992', '1496821278');
+INSERT INTO `order` VALUES ('1133', '11339156', '1', '13', '3', '13642658465', '', '200', '200', '0', '200', '0', '1496994926', '0', '0', '6', '0', '0', '0', '0', '1496994926', '1496994926');
+INSERT INTO `order` VALUES ('1132', '11323531', '1', '13', '3', '13642658465', '', '100', '100', '0', '100', '0', '1496994839', '0', '0', '6', '0', '0', '0', '0', '1496994839', '1496994839');
+INSERT INTO `order` VALUES ('1134', '11346187', '1', '13', '3', '13642658465', '', '300', '300', '0', '300', '0', '1496994976', '0', '0', '6', '0', '0', '0', '0', '1496994976', '1496994976');
+INSERT INTO `order` VALUES ('1135', '11354793', '1', '13', '3', '13642658465', '', '400', '400', '0', '400', '0', '1496994981', '0', '0', '6', '0', '0', '0', '0', '1496994981', '1496994981');
+INSERT INTO `order` VALUES ('1136', '11369391', '2', '2', '3', '13642658465', '', '2220', '2220', '0', '2220', '0', '1497252575', '0', '0', '7', '4', '10', '1503187200', '', '1497252605', '1497252575');
+INSERT INTO `order` VALUES ('1137', '11372895', '2', '2', '3', '13642658465', '', '1110', '1110', '0', '1110', '0', '1497253097', '0', '0', '7', '4', '5', '1503187200', '', '1497253178', '1497253097');
+INSERT INTO `order` VALUES ('1138', '11387122', '1', '2', '3', '13642658465', '', '99900', '999', '0', '999', '0', '1497338131', '0', '0', '6', '0', '0', '0', '0', '1497338131', '1497338131');
+INSERT INTO `order` VALUES ('1140', '11409463', '1', '1', '1', '18620772020', '', '1', '1', '0', '0', '0', '1497338656', '0', '0', '6', '0', '0', '0', '0', '1497338656', '1497338656');
+INSERT INTO `order` VALUES ('1141', '11418645', '2', '10', '3', '13642658465', '', '10000', '10000', '0', '10000', '0', '1497404097', '0', '0', '6', '20', '100', '1497455999', '', '1497404112', '1497404097');
+INSERT INTO `order` VALUES ('1144', '11442206', '2', '10', '3', '13642658465', '', '10000', '10000', '0', '10000', '0', '1497404522', '0', '0', '6', '20', '100', '1497455999', 'zn9h72', '1497404537', '1497404522');
+INSERT INTO `order` VALUES ('1143', '11439134', '2', '10', '3', '13642658465', '', '10000', '10000', '0', '10000', '0', '1497404328', '0', '0', '6', '20', '100', '1497455999', 'zm7sgz', '1497404388', '1497404328');
+INSERT INTO `order` VALUES ('1148', '11485779', '2', '10', '3', '13642658465', '', '100', '100', '0', '100', '0', '1497404948', '0', '0', '2', '20', '1', '1497455999', 'zs1imw', '0', '1497404948');
+INSERT INTO `order` VALUES ('1149', '11494960', '2', '10', '3', '13642658465', '', '300', '300', '0', '300', '0', '1497406168', '0', '0', '6', '20', '3', '1497455999', 'ztpswa', '1497406194', '1497406168');
+INSERT INTO `order` VALUES ('1150', '11506967', '2', '10', '3', '13642658465', '', '100', '100', '0', '100', '0', '1497406375', '0', '0', '2', '20', '1', '1497455999', 'zu04f5', '0', '1497406375');
+INSERT INTO `order` VALUES ('1152', '11525536', '1', '1', '3', '13642658465', '', '1', '1', '0', '1', '0', '1497406517', '0', '0', '6', '0', '0', '0', '0', '1497406517', '1497406517');
+INSERT INTO `order` VALUES ('1154', '11547954', '1', '1', '3', '13642658465', '', '2800', '2744', '0', '2744', '0', '1497406552', '0', '0', '6', '0', '0', '0', '0', '1497406552', '1497406552');
+INSERT INTO `order` VALUES ('1156', '11565834', '2', '13', '1', '18620772020', '', '111100', '111100', '0', '0', '111100', '1499054227', '0', '0', '3', '19', '1', '1512057599', '100jux4', '0', '1499054227');
+INSERT INTO `order` VALUES ('1157', '11572514', '2', '13', '1', '18620772020', '', '111100', '111100', '0', '0', '111100', '1499068466', '0', '0', '3', '19', '1', '1512057599', '101udgy', '0', '1499068466');
+INSERT INTO `order` VALUES ('1158', '11588192', '2', '13', '1', '18620772020', '', '111100', '111100', '0', '0', '111100', '1499068489', '0', '0', '3', '19', '1', '1512057599', '102wv72', '0', '1499068489');
+INSERT INTO `order` VALUES ('1159', '11595858', '1', '13', '1', '18620772020', '', '600', '600', '0', '600', '0', '1499068615', '0', '0', '6', '0', '0', '0', '0', '1499068615', '1499068615');
+INSERT INTO `order` VALUES ('1161', '11616503', '2', '10', '3', '13642658465', '', '100', '100', '0', '100', '0', '1499157853', '0', '0', '6', '20', '1', '1513871999', '105tkzf', '1499159357', '1499157853');
+INSERT INTO `order` VALUES ('1162', '11623196', '2', '10', '3', '13642658465', '', '100', '100', '0', '100', '0', '1499159399', '0', '0', '7', '22', '1', '1512057599', '106c6b2', '1499159423', '1499159399');
+INSERT INTO `order` VALUES ('1163', '11631866', '1', '13', '1', '18620772020', '', '200', '198', '0', '198', '0', '1499653475', '0', '0', '7', '0', '0', '0', '0', '1499653475', '1499653475');
+INSERT INTO `order` VALUES ('1164', '11644003', '1', '13', '1', '18620772020', '', '200', '198', '0', '198', '0', '1499653690', '0', '0', '7', '0', '0', '0', '0', '1499653690', '1499653690');
+INSERT INTO `order` VALUES ('1165', '11651028', '1', '13', '1', '18620772020', '', '200', '198', '0', '198', '0', '1499653744', '0', '0', '7', '0', '0', '0', '0', '1499653744', '1499653744');
+INSERT INTO `order` VALUES ('1166', '11665745', '1', '13', '1', '18620772020', '', '200', '198', '0', '198', '0', '1499658317', '0', '0', '7', '0', '0', '0', '0', '1499658317', '1499658317');
+INSERT INTO `order` VALUES ('1168', '11684937', '1', '34', '3', '13642658465', '', '10000', '10000', '0', '10000', '0', '1499847289', '0', '0', '6', '0', '0', '0', '0', '1499847289', '1499847289');
+INSERT INTO `order` VALUES ('1169', '11697544', '1', '34', '3', '13642658465', '', '5000000', '5000000', '0', '5000000', '0', '1499847495', '0', '0', '6', '0', '0', '0', '0', '1499847495', '1499847495');
+INSERT INTO `order` VALUES ('1170', '11702100', '1', '34', '3', '13642658465', '', '50000000', '50000000', '0', '50000000', '0', '1499847509', '0', '0', '6', '0', '0', '0', '0', '1499847509', '1499847509');
+INSERT INTO `order` VALUES ('1171', '11712249', '1', '13', '1', '18620772020', '', '10', '3', '0', '3', '0', '1501123144', '0', '0', '6', '0', '0', '0', '0', '1501123144', '1501123144');
+INSERT INTO `order` VALUES ('1172', '11722012', '1', '34', '3', '13642658465', '', '25000', '22500', '0', '22500', '0', '1501555086', '0', '0', '6', '0', '0', '0', '0', '1501555086', '1501555086');
+INSERT INTO `order` VALUES ('1173', '11737612', '1', '34', '3', '13642658465', '', '25000', '22500', '0', '22500', '0', '1501555394', '0', '0', '6', '0', '0', '0', '0', '1501555394', '1501555394');
+INSERT INTO `order` VALUES ('1174', '11744425', '1', '34', '3', '13642658465', '', '25000', '22500', '0', '22500', '0', '1501556162', '0', '0', '6', '0', '0', '0', '0', '1501556162', '1501556162');
+INSERT INTO `order` VALUES ('1176', '11764771', '1', '34', '3', '13642658465', '', '25000', '22500', '0', '22500', '0', '1501557919', '0', '0', '6', '0', '0', '0', '0', '1501557919', '1501557919');
+INSERT INTO `order` VALUES ('1177', '11772040', '1', '34', '3', '13642658465', '', '25000', '21500', '0', '21500', '0', '1501567985', '0', '0', '6', '0', '0', '0', '0', '1501567985', '1501567985');
+INSERT INTO `order` VALUES ('1178', '11787182', '1', '34', '3', '13642658465', '', '25000', '21500', '0', '21500', '0', '1501569308', '0', '0', '6', '0', '0', '0', '0', '1501569308', '1501569308');
+INSERT INTO `order` VALUES ('1179', '11792656', '1', '34', '3', '13642658465', '', '12000', '10300', '0', '10300', '0', '1501569661', '0', '0', '6', '0', '0', '0', '0', '1501569661', '1501569661');
+INSERT INTO `order` VALUES ('1180', '11803573', '1', '34', '3', '13642658465', '', '35000', '30000', '0', '30000', '0', '1501569695', '0', '0', '6', '0', '0', '0', '0', '1501569695', '1501569695');
+INSERT INTO `order` VALUES ('1181', '11813816', '1', '34', '3', '13642658465', '', '1', '1', '0', '1', '0', '1501836103', '0', '0', '6', '0', '0', '0', '0', '1501836103', '1501836103');
+INSERT INTO `order` VALUES ('1182', '11827838', '1', '34', '3', '13642658465', '', '3', '2', '0', '2', '0', '1501837424', '0', '1502098825', '5', '0', '0', '0', '0', '1501837424', '1501837424');
+
+-- ----------------------------
+-- Table structure for `order_comment`
+-- ----------------------------
+DROP TABLE IF EXISTS `order_comment`;
+CREATE TABLE `order_comment` (
+  `id` int(11) NOT NULL COMMENT '主键(order_comment_index的id)',
+  `content` varchar(100) NOT NULL COMMENT '内容',
+  `resource_ids` varchar(100) NOT NULL COMMENT '资源id集 json',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of order_comment
+-- ----------------------------
+INSERT INTO `order_comment` VALUES ('1', 'aaaaaaaaaaaaa', '[1,2]');
+INSERT INTO `order_comment` VALUES ('2', 'bbbbbbbbbbbbbbbbbbbbb', '');
+INSERT INTO `order_comment` VALUES ('3', 'cccccccccccccc', '');
+INSERT INTO `order_comment` VALUES ('4', 'bbbbbbbbbbbbbbbbbbbbb', '[1]');
+INSERT INTO `order_comment` VALUES ('5', 'bbbbbbbbbbbbbbbbbbbbb', '[2]');
+INSERT INTO `order_comment` VALUES ('19', '22222222222222222222222', '[]');
+INSERT INTO `order_comment` VALUES ('7', 'bbbbbbbbbbbbbbbbbbbbb', '');
+INSERT INTO `order_comment` VALUES ('8', '是啊，怎么滴，啊啊啊啊啊啊，别打了，俺投降', '[]');
+INSERT INTO `order_comment` VALUES ('11', '商品1评论！！！', '[\"789\"]');
+INSERT INTO `order_comment` VALUES ('10', '测试商评价！！！', '[\"788\"]');
+INSERT INTO `order_comment` VALUES ('21', '3333333333333333', '[]');
+INSERT INTO `order_comment` VALUES ('22', '很好！！！！', '[\"793\"]');
+INSERT INTO `order_comment` VALUES ('23', '评价内容！！！！！！！！！！', '[\"797\"]');
+INSERT INTO `order_comment` VALUES ('24', 'aaaaaaaaaa', '[]');
+INSERT INTO `order_comment` VALUES ('25', '评价内容！！！！！！！！', 'null');
+INSERT INTO `order_comment` VALUES ('26', 'aaaaaaaaaaaaaaaa', '[]');
+INSERT INTO `order_comment` VALUES ('27', '我很焦灼，啊啊啊啊啊啊啊啊啊啊', '[]');
+INSERT INTO `order_comment` VALUES ('28', '我很焦灼，啊啊啊啊啊啊啊啊啊啊', '[]');
+INSERT INTO `order_comment` VALUES ('29', '追评论！！！！！', '[]');
+INSERT INTO `order_comment` VALUES ('30', '回复评价内容！！！！！', '[]');
+INSERT INTO `order_comment` VALUES ('31', '回复内容！！！！！！', '[]');
+INSERT INTO `order_comment` VALUES ('32', '评论~~~~~~~', 'null');
+INSERT INTO `order_comment` VALUES ('33', '回复内容！！！！！！！', '[]');
+INSERT INTO `order_comment` VALUES ('34', '2222', '[]');
+INSERT INTO `order_comment` VALUES ('35', '很好，巴拉巴拉巴拉！！', 'null');
+INSERT INTO `order_comment` VALUES ('36', '回复内容，巴拉巴拉', '[]');
+INSERT INTO `order_comment` VALUES ('37', '好东西124', 'null');
+INSERT INTO `order_comment` VALUES ('38', '好东西124', 'null');
+INSERT INTO `order_comment` VALUES ('39', '好东西123', 'null');
+INSERT INTO `order_comment` VALUES ('40', '好东西123', 'null');
+INSERT INTO `order_comment` VALUES ('41', '啊啊啊啊啊啊啊啊啊', '[]');
+
+-- ----------------------------
+-- Table structure for `order_comment_index`
+-- ----------------------------
+DROP TABLE IF EXISTS `order_comment_index`;
+CREATE TABLE `order_comment_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `order_id` int(11) NOT NULL COMMENT '评价哪条订单',
+  `pid` int(11) NOT NULL COMMENT '父级id',
+  `is_reply` tinyint(1) NOT NULL COMMENT '是否已回复',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id ',
+  `is_superaddition` tinyint(1) NOT NULL COMMENT '是否追评',
+  `user_id` int(11) NOT NULL COMMENT '用户id，如果为0就是商户回复',
+  `score` tinyint(2) NOT NULL COMMENT '评分',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of order_comment_index
+-- ----------------------------
+INSERT INTO `order_comment_index` VALUES ('1', '1001', '0', '1', '1', '0', '1', '50', '1495008854');
+INSERT INTO `order_comment_index` VALUES ('2', '1001', '1', '0', '1', '0', '0', '0', '1495008858');
+INSERT INTO `order_comment_index` VALUES ('3', '1001', '0', '0', '1', '1', '1', '0', '1495008866');
+INSERT INTO `order_comment_index` VALUES ('4', '1002', '0', '1', '1', '0', '2', '60', '1495008899');
+INSERT INTO `order_comment_index` VALUES ('5', '1002', '4', '0', '1', '0', '0', '0', '1495009000');
+INSERT INTO `order_comment_index` VALUES ('19', '1028', '11', '0', '2', '1', '3', '0', '1496309553');
+INSERT INTO `order_comment_index` VALUES ('7', '1001', '3', '0', '1', '0', '0', '0', '1495008867');
+INSERT INTO `order_comment_index` VALUES ('8', '1003', '6', '0', '1', '0', '0', '0', '1495079006');
+INSERT INTO `order_comment_index` VALUES ('11', '1028', '0', '1', '2', '0', '3', '20', '1496288550');
+INSERT INTO `order_comment_index` VALUES ('10', '1021', '0', '1', '1', '0', '3', '20', '1496288041');
+INSERT INTO `order_comment_index` VALUES ('21', '1021', '10', '0', '1', '1', '3', '0', '1496309626');
+INSERT INTO `order_comment_index` VALUES ('22', '1102', '0', '1', '1', '0', '3', '20', '1496642109');
+INSERT INTO `order_comment_index` VALUES ('23', '1101', '0', '1', '1', '0', '3', '20', '1496648756');
+INSERT INTO `order_comment_index` VALUES ('24', '1102', '22', '0', '1', '0', '0', '0', '1497250915');
+INSERT INTO `order_comment_index` VALUES ('25', '1136', '0', '1', '2', '0', '3', '100', '1497252634');
+INSERT INTO `order_comment_index` VALUES ('26', '1021', '10', '0', '1', '0', '0', '0', '1497252870');
+INSERT INTO `order_comment_index` VALUES ('27', '1101', '23', '0', '1', '0', '0', '0', '1497252908');
+INSERT INTO `order_comment_index` VALUES ('28', '1101', '23', '0', '1', '0', '0', '0', '1497252912');
+INSERT INTO `order_comment_index` VALUES ('29', '1136', '25', '0', '2', '1', '3', '0', '1497252946');
+INSERT INTO `order_comment_index` VALUES ('30', '1136', '25', '0', '2', '0', '0', '0', '1497252964');
+INSERT INTO `order_comment_index` VALUES ('31', '1028', '11', '0', '2', '0', '0', '0', '1497253027');
+INSERT INTO `order_comment_index` VALUES ('32', '1137', '0', '1', '2', '0', '3', '100', '1497253201');
+INSERT INTO `order_comment_index` VALUES ('33', '1137', '32', '0', '2', '0', '0', '0', '1497253215');
+INSERT INTO `order_comment_index` VALUES ('34', '1137', '32', '0', '2', '0', '0', '0', '1497253225');
+INSERT INTO `order_comment_index` VALUES ('35', '1162', '0', '1', '10', '0', '3', '100', '1499323015');
+INSERT INTO `order_comment_index` VALUES ('36', '1162', '35', '0', '10', '0', '0', '0', '1499324319');
+INSERT INTO `order_comment_index` VALUES ('37', '1166', '0', '0', '13', '0', '1', '80', '1499668077');
+INSERT INTO `order_comment_index` VALUES ('38', '1165', '0', '0', '13', '0', '1', '80', '1499668220');
+INSERT INTO `order_comment_index` VALUES ('39', '1164', '0', '0', '13', '0', '1', '80', '1499668387');
+INSERT INTO `order_comment_index` VALUES ('40', '1163', '0', '1', '13', '0', '1', '80', '1499668416');
+INSERT INTO `order_comment_index` VALUES ('41', '1163', '40', '0', '13', '0', '0', '0', '1499762917');
+
+-- ----------------------------
+-- Table structure for `order_goods_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `order_goods_info`;
+CREATE TABLE `order_goods_info` (
+  `id` int(11) NOT NULL COMMENT '订单表id',
+  `goods_info` text NOT NULL COMMENT '商品信息',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of order_goods_info
+-- ----------------------------
+INSERT INTO `order_goods_info` VALUES ('1001', '{\"id\":1,\"name\":\"\\u4f60\\u8fd9\\u6837\\u4e0d\\u592a\\u597d\",\"price\":60000,\"retail_price\":\"\",\"type_id\":1,\"sales_count\":\"1\",\"validity_time\":1498752000,\"appointment_day\":2,\"suit_people\":3,\"max_class_people\":60,\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\",\"descrition\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\"}');
+INSERT INTO `order_goods_info` VALUES ('1002', '{\"id\":1,\"name\":\"\\u4f60\\u8fd9\\u6837\\u4e0d\\u592a\\u597d\",\"price\":60000,\"retail_price\":\"\",\"type_id\":1,\"sales_count\":\"0\",\"validity_time\":1498752000,\"appointment_day\":2,\"suit_people\":3,\"max_class_people\":60,\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\",\"descrition\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\"}');
+INSERT INTO `order_goods_info` VALUES ('1003', '{\"id\":1,\"name\":\"\\u4f60\\u8fd9\\u6837\\u4e0d\\u592a\\u597d\",\"price\":60000,\"retail_price\":\"\",\"type_id\":1,\"sales_count\":\"0\",\"validity_time\":1498752000,\"appointment_day\":2,\"suit_people\":3,\"max_class_people\":60,\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\",\"descrition\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\"}');
+INSERT INTO `order_goods_info` VALUES ('1004', '{\"id\":1,\"name\":\"\\u4f60\\u8fd9\\u6837\\u4e0d\\u592a\\u597d\",\"price\":60000,\"retail_price\":\"\",\"type_id\":1,\"sales_count\":\"0\",\"validity_time\":1498752000,\"appointment_day\":2,\"suit_people\":3,\"max_class_people\":60,\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\",\"descrition\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\"}');
+INSERT INTO `order_goods_info` VALUES ('1006', '{\"id\":1,\"name\":\"\\u4f60\\u8fd9\\u6837\\u4e0d\\u592a\\u597d\",\"price\":60000,\"retail_price\":\"\",\"type_id\":1,\"sales_count\":\"1\",\"validity_time\":1498752000,\"appointment_day\":2,\"suit_people\":3,\"max_class_people\":60,\"notice\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\",\"descrition\":\"\\u554a\\u554a\\u554a\\u554a\\u554a\\u554a\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\\u5bfb\"}');
+INSERT INTO `order_goods_info` VALUES ('1008', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1009', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1010', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1011', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1012', '[]');
+INSERT INTO `order_goods_info` VALUES ('1013', '[]');
+INSERT INTO `order_goods_info` VALUES ('1014', '[]');
+INSERT INTO `order_goods_info` VALUES ('1015', '[]');
+INSERT INTO `order_goods_info` VALUES ('1016', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1017', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1018', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1019', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1020', '[]');
+INSERT INTO `order_goods_info` VALUES ('1021', '[]');
+INSERT INTO `order_goods_info` VALUES ('1022', '[]');
+INSERT INTO `order_goods_info` VALUES ('1023', '[]');
+INSERT INTO `order_goods_info` VALUES ('1024', '[]');
+INSERT INTO `order_goods_info` VALUES ('1025', '[]');
+INSERT INTO `order_goods_info` VALUES ('1026', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1027', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1028', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1029', '[]');
+INSERT INTO `order_goods_info` VALUES ('1030', '[]');
+INSERT INTO `order_goods_info` VALUES ('1031', '[]');
+INSERT INTO `order_goods_info` VALUES ('1032', '[]');
+INSERT INTO `order_goods_info` VALUES ('1033', '[]');
+INSERT INTO `order_goods_info` VALUES ('1034', '[]');
+INSERT INTO `order_goods_info` VALUES ('1035', '[]');
+INSERT INTO `order_goods_info` VALUES ('1036', '[]');
+INSERT INTO `order_goods_info` VALUES ('1037', '[]');
+INSERT INTO `order_goods_info` VALUES ('1038', '[]');
+INSERT INTO `order_goods_info` VALUES ('1039', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1040', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1041', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1042', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1043', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1044', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1045', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1046', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1047', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1048', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1049', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1050', '[]');
+INSERT INTO `order_goods_info` VALUES ('1051', '[]');
+INSERT INTO `order_goods_info` VALUES ('1052', '[]');
+INSERT INTO `order_goods_info` VALUES ('1053', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1054', '[]');
+INSERT INTO `order_goods_info` VALUES ('1055', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1056', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1057', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1058', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1059', '{\"id\":\"16\",\"tenant_id\":\"22\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495756800\",\"retail_price\":\"12000\",\"price\":\"10000\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495608961\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"2222\",\"description\":[{\"text\":\"33333\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1060', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1061', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1062', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1063', '[]');
+INSERT INTO `order_goods_info` VALUES ('1064', '[]');
+INSERT INTO `order_goods_info` VALUES ('1065', '[]');
+INSERT INTO `order_goods_info` VALUES ('1066', '[]');
+INSERT INTO `order_goods_info` VALUES ('1067', '{\"id\":\"16\",\"tenant_id\":\"22\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495756800\",\"retail_price\":\"12000\",\"price\":\"10000\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495608961\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"2222\",\"description\":[{\"text\":\"33333\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1068', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1069', '[]');
+INSERT INTO `order_goods_info` VALUES ('1070', '[]');
+INSERT INTO `order_goods_info` VALUES ('1071', '[]');
+INSERT INTO `order_goods_info` VALUES ('1072', '[]');
+INSERT INTO `order_goods_info` VALUES ('1073', '[]');
+INSERT INTO `order_goods_info` VALUES ('1074', '[]');
+INSERT INTO `order_goods_info` VALUES ('1075', '[]');
+INSERT INTO `order_goods_info` VALUES ('1076', '[]');
+INSERT INTO `order_goods_info` VALUES ('1077', '[]');
+INSERT INTO `order_goods_info` VALUES ('1078', '[]');
+INSERT INTO `order_goods_info` VALUES ('1079', '[]');
+INSERT INTO `order_goods_info` VALUES ('1080', '[]');
+INSERT INTO `order_goods_info` VALUES ('1081', '[]');
+INSERT INTO `order_goods_info` VALUES ('1082', '[]');
+INSERT INTO `order_goods_info` VALUES ('1083', '[]');
+INSERT INTO `order_goods_info` VALUES ('1089', '[]');
+INSERT INTO `order_goods_info` VALUES ('1090', '[]');
+INSERT INTO `order_goods_info` VALUES ('1092', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1094', '[]');
+INSERT INTO `order_goods_info` VALUES ('1097', '[]');
+INSERT INTO `order_goods_info` VALUES ('1100', '[]');
+INSERT INTO `order_goods_info` VALUES ('1101', '[]');
+INSERT INTO `order_goods_info` VALUES ('1102', '[]');
+INSERT INTO `order_goods_info` VALUES ('1108', '[]');
+INSERT INTO `order_goods_info` VALUES ('1110', '[]');
+INSERT INTO `order_goods_info` VALUES ('1111', '[]');
+INSERT INTO `order_goods_info` VALUES ('1113', '[]');
+INSERT INTO `order_goods_info` VALUES ('1116', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1117', '[]');
+INSERT INTO `order_goods_info` VALUES ('1118', '[]');
+INSERT INTO `order_goods_info` VALUES ('1119', '[]');
+INSERT INTO `order_goods_info` VALUES ('1120', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1498780800\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1121', '{\"id\":\"1\",\"tenant_id\":\"2\",\"name\":\"\\u5546\\u54c11\",\"type_id\":\"1\",\"validity_time\":\"1495238400\",\"retail_price\":\"120\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1495093174\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"30\",\"notice\":\"\\u63d0\\u793a\\u554a\",\"description\":[{\"text\":\"\\u56fe\\u6587\\u4ecb\\u7ecd\"},{\"resource\":{\"resource_id\":\"346\",\"path\":\"tenant\\/image\\/743ee72e4333dadbc0e49296d8aff42d.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+INSERT INTO `order_goods_info` VALUES ('1122', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1498780800\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"1\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1124', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1498780800\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"2\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1125', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1498780800\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"4\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1126', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1498780800\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"6\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1132', '[]');
+INSERT INTO `order_goods_info` VALUES ('1133', '[]');
+INSERT INTO `order_goods_info` VALUES ('1134', '[]');
+INSERT INTO `order_goods_info` VALUES ('1135', '[]');
+INSERT INTO `order_goods_info` VALUES ('1136', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1503187200\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"9\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1137', '{\"id\":\"4\",\"tenant_id\":\"2\",\"name\":\"\\u6d4b\\u8bd5\\u5546\\u54c1\\u540d\\u79f0\",\"type_id\":\"1\",\"validity_time\":\"1503187200\",\"retail_price\":\"333\",\"price\":\"222\",\"status\":\"3\",\"sales_count\":\"19\",\"create_time\":\"1495161929\",\"appointment_day\":\"10\",\"suit_people\":\"2\",\"max_class_people\":\"32\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u591a\\u5403\\u70b9\\u7684\\u997f\"},{\"resource\":{\"resource_id\":\"393\",\"path\":\"tenant\\/image\\/2a6800dbb7ac2547bb5a5c10962a7110.png\"}}],\"goods_photo\":[],\"tenant_commission\":\"7000\",\"saler_commission\":\"1323\"}');
+INSERT INTO `order_goods_info` VALUES ('1138', '[]');
+INSERT INTO `order_goods_info` VALUES ('1140', '[]');
+INSERT INTO `order_goods_info` VALUES ('1141', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1143', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"100\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1144', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"200\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1148', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"300\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1149', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"301\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1150', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1497455999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"304\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1152', '[]');
+INSERT INTO `order_goods_info` VALUES ('1154', '[]');
+INSERT INTO `order_goods_info` VALUES ('1156', '{\"id\":\"19\",\"tenant_id\":\"13\",\"name\":\"\\u5c3c\\u739b\\u6bd4\",\"type_id\":\"1\",\"validity_time\":\"1512057599\",\"retail_price\":\"11111100\",\"price\":\"111100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1497320121\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"11\",\"notice\":\"1111\",\"description\":[{\"text\":\"11111\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1157', '{\"id\":\"19\",\"tenant_id\":\"13\",\"name\":\"\\u5c3c\\u739b\\u6bd4\",\"type_id\":\"1\",\"validity_time\":\"1512057599\",\"retail_price\":\"11111100\",\"price\":\"111100\",\"status\":\"3\",\"sales_count\":\"1\",\"create_time\":\"1497320121\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"11\",\"notice\":\"1111\",\"description\":[{\"text\":\"11111\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1158', '{\"id\":\"19\",\"tenant_id\":\"13\",\"name\":\"\\u5c3c\\u739b\\u6bd4\",\"type_id\":\"1\",\"validity_time\":\"1512057599\",\"retail_price\":\"11111100\",\"price\":\"111100\",\"status\":\"3\",\"sales_count\":\"2\",\"create_time\":\"1497320121\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"11\",\"notice\":\"1111\",\"description\":[{\"text\":\"11111\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1159', '[]');
+INSERT INTO `order_goods_info` VALUES ('1161', '{\"id\":\"20\",\"tenant_id\":\"10\",\"name\":\"\\u6d4b\\u8bd5\\u670d\\u52a1007\",\"type_id\":\"1\",\"validity_time\":\"1513871999\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"305\",\"create_time\":\"1497322960\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u6e29\\u99a8\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u6e29\\u99a8\\u63d0\\u793a\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1162', '{\"id\":\"22\",\"tenant_id\":\"10\",\"name\":\"\\u9ad8\\u7ea7\\u670d\\u52a1\",\"type_id\":\"1\",\"validity_time\":\"1512057599\",\"retail_price\":\"100\",\"price\":\"100\",\"status\":\"3\",\"sales_count\":\"0\",\"create_time\":\"1497427668\",\"appointment_day\":\"1\",\"suit_people\":\"1\",\"max_class_people\":\"1\",\"notice\":\"\\u9ad8\\u7ea7\\u670d\\u52a1\\u63d0\\u793a\",\"description\":[{\"text\":\"\\u9ad8\\u7ea7\\u670d\\u52a1\"}],\"goods_photo\":[]}');
+INSERT INTO `order_goods_info` VALUES ('1163', '[]');
+INSERT INTO `order_goods_info` VALUES ('1164', '[]');
+INSERT INTO `order_goods_info` VALUES ('1165', '[]');
+INSERT INTO `order_goods_info` VALUES ('1166', '[]');
+INSERT INTO `order_goods_info` VALUES ('1168', '[]');
+INSERT INTO `order_goods_info` VALUES ('1169', '[]');
+INSERT INTO `order_goods_info` VALUES ('1170', '[]');
+INSERT INTO `order_goods_info` VALUES ('1171', '[]');
+INSERT INTO `order_goods_info` VALUES ('1172', '[]');
+INSERT INTO `order_goods_info` VALUES ('1173', '[]');
+INSERT INTO `order_goods_info` VALUES ('1174', '[]');
+INSERT INTO `order_goods_info` VALUES ('1176', '[]');
+INSERT INTO `order_goods_info` VALUES ('1177', '[]');
+INSERT INTO `order_goods_info` VALUES ('1178', '[]');
+INSERT INTO `order_goods_info` VALUES ('1179', '[]');
+INSERT INTO `order_goods_info` VALUES ('1180', '[]');
+INSERT INTO `order_goods_info` VALUES ('1181', '[]');
+INSERT INTO `order_goods_info` VALUES ('1182', '[]');
+INSERT INTO `order_goods_info` VALUES ('1005', '{\"tenant_commission\":\"6000\",\"saler_commission\":\"1000\"}');
+
+-- ----------------------------
+-- Table structure for `redis`
+-- ----------------------------
+DROP TABLE IF EXISTS `redis`;
+CREATE TABLE `redis` (
+  `id` varchar(50) NOT NULL COMMENT '相当redis的key',
+  `value` text NOT NULL COMMENT '相当redis的value',
+  `expiration_time` int(11) NOT NULL COMMENT '过期时间, 默认1小时后',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of redis
+-- ----------------------------
+INSERT INTO `redis` VALUES ('mobile_15014191886', '754954', '1495703675');
+INSERT INTO `redis` VALUES ('mobile_13246813739', '310887', '1499657635');
+INSERT INTO `redis` VALUES ('mobile_18620772029', '514386', '1502334536');
+INSERT INTO `redis` VALUES ('get_money_mobile_13725478250', '845044', '1499848896');
+INSERT INTO `redis` VALUES ('mobile_13642658465', '615172', '1499671665');
+INSERT INTO `redis` VALUES ('mobile_13725478250', '389863', '1499065152');
+INSERT INTO `redis` VALUES ('get_money_mobile_13642658466', '320723', '900');
+INSERT INTO `redis` VALUES ('mobile_18667170316', '466155', '1498033793');
+INSERT INTO `redis` VALUES ('manager_login:1', '{\"id\":1,\"token\":\"3bf2560ac4394a7532dbdb3c6cf22d2d\",\"ip\":\"127.0.0.1\",\"agent\":\"mozilla\\/5.0 (windows nt 10.0; wow64) applewebkit\\/537.36 (khtml, like gecko) chrome\\/60.0.3112.90 safari\\/537.36\"}', '1503026380');
+INSERT INTO `redis` VALUES ('bind_user_mobile_13246813739', '222984', '1496397707');
+INSERT INTO `redis` VALUES ('bind_user_mobile_13216813739', '220646', '1496630066');
+INSERT INTO `redis` VALUES ('get_money_mobile_18620772020', '322069', '1497347014');
+INSERT INTO `redis` VALUES ('mobile_15619410415', '324847', '1499133234');
+
+-- ----------------------------
+-- Table structure for `refund_approve_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `refund_approve_record`;
+CREATE TABLE `refund_approve_record` (
+  `id` int(11) NOT NULL COMMENT '主键(对应order表id)',
+  `status` tinyint(1) NOT NULL COMMENT '状态, 1,等待审核 2审核通过 3 审核不过 4,批准通过，5批准不通过,6已完成',
+  `note` text NOT NULL COMMENT 'json [    ‘reson’ => 原因,    ‘remark’ => 备注,    ‘prepare’ => [         manager_id => 准备人id         time  => 时间 ], ‘approve’ => [         manager_id => 审核人id         time  => 时间 ], ‘approval=> [         manager_id => 批准人id         time  => 时间 ],  ‘cashier’ ',
+  `last_operation_time` int(11) NOT NULL COMMENT '最后操作时间',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of refund_approve_record
+-- ----------------------------
+INSERT INTO `refund_approve_record` VALUES ('1156', '4', '{\"reson\":\"\\u6211\\u60f3\\u9000\\u6b3e\\uff0c\\u7136\\u540e\\u5c31\\u8fd9\\u6837\\u3002 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"remark\":\"\\u91cd\\u590d\\uff0c\\u9000\\u6b3e \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1501745110},\"approve\":{\"manager_id\":\"1\",\"time\":1501831423},\"approval\":{\"manager_id\":\"1\",\"time\":1501831428}}', '1501831428', '1501745110');
+INSERT INTO `refund_approve_record` VALUES ('1157', '3', '{\"reson\":\"dasdsadsa \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"remark\":\"xxxxx \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1501834887},\"approve\":{\"manager_id\":\"1\",\"time\":1501834933}}', '1501834933', '1501834887');
+INSERT INTO `refund_approve_record` VALUES ('1182', '6', '{\"reson\":\"\\u5927\\u8428\\u8fbe \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe50\\u5143\\u3011\",\"remark\":\"\\u5c0f\\u64e6\\u64e6\\u64e6 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe50\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1502098790},\"approve\":{\"manager_id\":\"1\",\"time\":1502098804},\"approval\":{\"manager_id\":\"1\",\"time\":1502098810},\"cashier\":{\"manager_id\":\"1\",\"time\":1502098825}}', '1502098825', '1502074833');
+INSERT INTO `refund_approve_record` VALUES ('1181', '1', '{\"reson\":\"000000 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe50\\u5143\\u3011\",\"remark\":\"111111 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe50\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1502263734}}', '1502263734', '1502263734');
+INSERT INTO `refund_approve_record` VALUES ('1158', '1', '{\"reson\":\"0000000000 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"remark\":\"0000000000 \\u3010\\u7533\\u8bf7\\u91d1\\u989d\\u4e3a: \\uffe51111\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1502263756}}', '1502263756', '1502263756');
+
+-- ----------------------------
+-- Table structure for `resource`
+-- ----------------------------
+DROP TABLE IF EXISTS `resource`;
+CREATE TABLE `resource` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID自增',
+  `type` tinyint(1) NOT NULL COMMENT '类型：1相册2头像3商品图片4.用户评价上传图片',
+  `path` varchar(200) NOT NULL COMMENT '相对路径',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1066 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of resource
+-- ----------------------------
+INSERT INTO `resource` VALUES ('1', '1', 'resource/data/tenant/profile/1.jpg', '1494059776');
+INSERT INTO `resource` VALUES ('2', '1', 'data/1.jpg', '1494059776');
+INSERT INTO `resource` VALUES ('336', '2', 'data/tenant/upload/25/fac6dffd91c072b1ff85a6efd567a51f.jpg', '1495074023');
+INSERT INTO `resource` VALUES ('3', '1', 'data/2.jpg', '1494059776');
+INSERT INTO `resource` VALUES ('4', '1', 'data/3.jpg', '1494059776');
+INSERT INTO `resource` VALUES ('182', '3', 'tenant/image/b5e1310a373b6bcd8fe5a05062fccc69.jpg', '1494388027');
+INSERT INTO `resource` VALUES ('183', '6', 'data/tenant/upload/89//0ef54b43925a35eceaa3e02e96764cfe.jpg', '1494400683');
+INSERT INTO `resource` VALUES ('184', '6', 'data/tenant/upload/89//33f76f99c2145807cf7f5b85019370b1.jpg', '1494402604');
+INSERT INTO `resource` VALUES ('185', '6', 'data/tenant/upload/75/85f3995fea7df4563f0a889fdfe7c8d6.jpg', '1494402625');
+INSERT INTO `resource` VALUES ('186', '6', 'data/tenant/upload/64/9be55f11bf72c5410bb66e873c9fd782.jpg', '1494403116');
+INSERT INTO `resource` VALUES ('187', '6', 'data/tenant/upload/91/e7d9b7273eb4c0c5f65a51476835b4a1.jpg', '1494403898');
+INSERT INTO `resource` VALUES ('188', '6', 'data/tenant/upload/54/5ca340da28c16755f595997224abaa7c.jpg', '1494404329');
+INSERT INTO `resource` VALUES ('189', '6', 'data/tenant/upload/10/e1e2e428139c8dd74392b7631258d2da.jpg', '1494404377');
+INSERT INTO `resource` VALUES ('190', '6', 'data/tenant/upload/47/2024a00da52c0a4e306863de06d1666e.jpg', '1494404380');
+INSERT INTO `resource` VALUES ('191', '6', 'data/tenant/upload/52/08e1b96678b763a600da9eb52403871b.jpg', '1494404384');
+INSERT INTO `resource` VALUES ('192', '6', 'data/tenant/upload/58/5218cb8578cfae8bbc0dad6ae59a4053.jpg', '1494404388');
+INSERT INTO `resource` VALUES ('193', '6', 'data/tenant/upload/45/78c4e811277bfe9786466b17bf1d34b7.jpg', '1494404393');
+INSERT INTO `resource` VALUES ('194', '6', 'data/tenant/upload/63/d4b592dab566b1fddd6257952044696b.jpg', '1494404418');
+INSERT INTO `resource` VALUES ('195', '6', 'data/tenant/upload/60/befe778c07de77e294d993d7fbd5bc48.jpg', '1494404478');
+INSERT INTO `resource` VALUES ('196', '6', 'data/tenant/upload/75/d25f6bcabe9a2b87b37b1de6fd032190.jpg', '1494405161');
+INSERT INTO `resource` VALUES ('197', '6', 'data/tenant/upload/28/0732db13c75936353b43f8b20aa35da8.jpg', '1494405164');
+INSERT INTO `resource` VALUES ('198', '6', 'data/tenant/upload/96/c5dc99bc9f8de81e7d89dd440f0cf56f.jpg', '1494405166');
+INSERT INTO `resource` VALUES ('199', '6', 'data/tenant/upload/31/b498c9145884dda28391f08fdb18cba5.jpg', '1494405168');
+INSERT INTO `resource` VALUES ('200', '6', 'data/tenant/upload/37/270eee208ae6958aa5daaccec28cacfa.jpg', '1494405170');
+INSERT INTO `resource` VALUES ('201', '3', 'tenant/image/00b74d56787d8defc84445d800e5d2cb.jpg', '1494406770');
+INSERT INTO `resource` VALUES ('202', '3', 'tenant/image/65e260c6355c7cd05ce6f2b335f8a01b.jpg', '1494406910');
+INSERT INTO `resource` VALUES ('203', '3', 'tenant/image/332cd043d41e7e1ec11ff719c3939a02.jpg', '1494407024');
+INSERT INTO `resource` VALUES ('204', '3', 'tenant/image/e35b38b5f834e228115dee301d0acb55.jpg', '1494407245');
+INSERT INTO `resource` VALUES ('205', '3', 'tenant/image/d3996ad7e3356f62f9df8eed83f366d0.jpg', '1494468291');
+INSERT INTO `resource` VALUES ('206', '3', 'tenant/image/4af6699b43261fa3ff975e0fdea5b1aa.jpg', '1494468719');
+INSERT INTO `resource` VALUES ('207', '3', 'tenant/image/c7472de2cfb494bc9f8f548b6df040a7.jpg', '1494468863');
+INSERT INTO `resource` VALUES ('208', '3', 'tenant/image/2210caaa2d9d3f0dad3241622934bba3.jpg', '1494468896');
+INSERT INTO `resource` VALUES ('209', '3', 'tenant/image/7331a4a215f4229728033f25b2001178.jpg', '1494468916');
+INSERT INTO `resource` VALUES ('210', '3', 'tenant/image/58d146456cc6eb10f749e74ea1e7d0b5.jpg', '1494468949');
+INSERT INTO `resource` VALUES ('211', '3', 'tenant/image/b0f8e33bf1485c8da89c66bdf4bc15b0.jpg', '1494469010');
+INSERT INTO `resource` VALUES ('212', '3', 'tenant/image/564fecf1ba496194d3ea2fbc7ede4cec.jpg', '1494469040');
+INSERT INTO `resource` VALUES ('213', '3', 'tenant/image/bef97e65535954b343e2d4711b72d385.jpg', '1494469127');
+INSERT INTO `resource` VALUES ('214', '3', 'tenant/image/8dfd8d026c81ec60b19d6eb7595584d8.jpg', '1494474994');
+INSERT INTO `resource` VALUES ('215', '3', 'tenant/image/dba7b42c9d2d7b05b6361dc75e01894a.jpg', '1494475067');
+INSERT INTO `resource` VALUES ('216', '3', 'tenant/image/84bc97a0a4c3191286e7c15de2d4196a.jpg', '1494475082');
+INSERT INTO `resource` VALUES ('217', '3', 'tenant/image/b5f11941f53bea56e97289e754865222.jpg', '1494483744');
+INSERT INTO `resource` VALUES ('218', '3', 'tenant/image/3b846a6ae95d3bc9843f398a984976a0.jpg', '1494483753');
+INSERT INTO `resource` VALUES ('219', '3', 'tenant/image/45ed522ce80a2acc380dec1aa81d5ca5.jpg', '1494483815');
+INSERT INTO `resource` VALUES ('220', '1', 'data/tenant/upload/58/108ced09f6a229db57fce47846c33f9e.jpg', '1494903184');
+INSERT INTO `resource` VALUES ('221', '1', 'data/tenant/upload/86/c6b2ef92cf570a53316631e2c8827387.jpg', '1494903316');
+INSERT INTO `resource` VALUES ('222', '1', 'data/tenant/upload/95/176e706388edd4661beb31e635038a0c.jpg', '1494903838');
+INSERT INTO `resource` VALUES ('223', '3', 'tenant/image/09dbcd1d7578ba6eedd341941f1593ae.jpg', '1494904022');
+INSERT INTO `resource` VALUES ('224', '3', 'tenant/image/b16559d1ac0ad6416c54078cc002f228.jpg', '1494904025');
+INSERT INTO `resource` VALUES ('225', '3', 'tenant/image/217091d5cdf70c8784f457851b22a740.jpg', '1494904028');
+INSERT INTO `resource` VALUES ('226', '1', 'data/tenant/upload/60/0e96790c8d1d8b57779f67b9dffa7b96.jpg', '1494904079');
+INSERT INTO `resource` VALUES ('227', '1', 'data/tenant/upload/42/1bfb266d301a17b0dc406c338c382b2f.jpg', '1494904127');
+INSERT INTO `resource` VALUES ('228', '3', 'tenant/image/eb64120b38fab3976f819c90c55ee9c3.png', '1494904386');
+INSERT INTO `resource` VALUES ('229', '3', 'tenant/image/3a74efab101e6e8ae5489063c3ec1b19.jpg', '1494904401');
+INSERT INTO `resource` VALUES ('230', '3', 'tenant/image/a11aee9fbfb3edb2bfaa4119e69710ad.png', '1494904738');
+INSERT INTO `resource` VALUES ('231', '3', 'tenant/image/0a225876ccb89b10c8a234902a378f45.png', '1494904776');
+INSERT INTO `resource` VALUES ('232', '3', 'tenant/image/af94b3a3904943e6423271305b298268.jpg', '1494905133');
+INSERT INTO `resource` VALUES ('233', '3', 'tenant/image/328899284b17dbe00a49c35e7a6d7325.jpg', '1494906571');
+INSERT INTO `resource` VALUES ('234', '3', 'tenant/image/0eb641e1bf79901a6accf527e9300739.png', '1494906586');
+INSERT INTO `resource` VALUES ('235', '3', 'tenant/image/a70b69933ff6d964595efccac0ba3863.jpg', '1494906591');
+INSERT INTO `resource` VALUES ('236', '3', 'tenant/image/fc51b2deee1e31c83af3ab91bbbfe7e7.jpg', '1494906808');
+INSERT INTO `resource` VALUES ('237', '3', 'tenant/image/0ec9895c0516804ca2cd0f7c6856aad2.png', '1494906850');
+INSERT INTO `resource` VALUES ('238', '3', 'tenant/image/4b61769ba24a4544e630068a715ca28a.png', '1494906852');
+INSERT INTO `resource` VALUES ('239', '1', 'data/tenant/upload/13/febb4dca4b9559f85b9f0aa7a81d4eab.jpg', '1494914230');
+INSERT INTO `resource` VALUES ('240', '3', 'tenant/image/e798e4d05da310de4241b6aa7a810649.jpg', '1494914505');
+INSERT INTO `resource` VALUES ('241', '3', 'tenant/image/79719f0512f9dbef38c17431900f21b2.jpg', '1494914633');
+INSERT INTO `resource` VALUES ('242', '1', 'data/tenant/upload/47/9b56f573e4ca5e534f257d8bed5e527d.jpg', '1494917600');
+INSERT INTO `resource` VALUES ('243', '1', 'data/tenant/upload/63/155287caace8012a8e15607e659a7540.jpg', '1494917602');
+INSERT INTO `resource` VALUES ('244', '1', 'data/tenant/upload/49/ae82440bb21065f9484a39d72b50e4e3.jpg', '1494917604');
+INSERT INTO `resource` VALUES ('245', '1', 'data/tenant/upload/66/d3f709644f5460ce17cf0e5d0d62de10.jpg', '1494917615');
+INSERT INTO `resource` VALUES ('246', '1', 'data/tenant/upload/85/7d9a82bbc461153d793e18ee616b1d2c.jpg', '1494917868');
+INSERT INTO `resource` VALUES ('247', '1', 'data/tenant/upload/55/e2003cf77e347c0efb2a9686c1357bfb.jpg', '1494917870');
+INSERT INTO `resource` VALUES ('248', '1', 'data/tenant/upload/73/b1c8bedc88842661397cdb3ab86cac74.jpg', '1494917871');
+INSERT INTO `resource` VALUES ('249', '1', 'data/tenant/upload/63/e94b2b9aacacb0209842bf2d591448ef.jpg', '1494917891');
+INSERT INTO `resource` VALUES ('250', '1', 'data/tenant/upload/13/d94983ad7335e704271df8320bc86057.jpg', '1494918023');
+INSERT INTO `resource` VALUES ('251', '1', 'data/tenant/upload/15/b37ac66ed806f11136bdb13ccc6a62eb.jpg', '1494918025');
+INSERT INTO `resource` VALUES ('252', '1', 'data/tenant/upload/47/5e0163cbd3917aa17ff0877ebc493cb2.jpg', '1494918026');
+INSERT INTO `resource` VALUES ('253', '1', 'data/tenant/upload/92/18ea8fcd8f40d3b2e64b99b78719d125.jpg', '1494918036');
+INSERT INTO `resource` VALUES ('254', '1', 'data/tenant/upload/40/ef4ece0116748455708552ace6708959.jpg', '1494918038');
+INSERT INTO `resource` VALUES ('255', '1', 'data/tenant/upload/68/59591ccd5c5559260f503918df927aa7.jpg', '1494918214');
+INSERT INTO `resource` VALUES ('256', '1', 'data/tenant/upload/14/db0b752c3262c1bbe1bb0b6c508e2bc1.jpg', '1494918215');
+INSERT INTO `resource` VALUES ('257', '1', 'data/tenant/upload/66/11aacdc3307efd83f2c82d048eb0b5f8.jpg', '1494918217');
+INSERT INTO `resource` VALUES ('258', '1', 'data/tenant/upload/42/425acfd1dfb2f1a6dc86b75900e6ac9f.jpg', '1494918227');
+INSERT INTO `resource` VALUES ('259', '1', 'data/tenant/upload/87/1565d90e6c8bc1c450ea592b862d0ea4.jpg', '1494918229');
+INSERT INTO `resource` VALUES ('260', '1', 'data/tenant/upload/43/4c9fb9d26ac9e9cfd618d9eac84c600b.jpg', '1494920599');
+INSERT INTO `resource` VALUES ('261', '1', 'data/tenant/upload/15/a22cf5e2831cce1682d5c7c1d04a1271.jpg', '1494920612');
+INSERT INTO `resource` VALUES ('262', '1', 'data/tenant/upload/96/98efe49ca25b8f256b1a29dc242dd109.jpg', '1494920806');
+INSERT INTO `resource` VALUES ('263', '1', 'data/tenant/upload/48/e629c0c0053eb1cf83087ec45a4e0bcf.jpg', '1494920889');
+INSERT INTO `resource` VALUES ('264', '1', 'data/tenant/upload/20/a59ce683af7499213ba2d32f54f87be1.jpg', '1494921046');
+INSERT INTO `resource` VALUES ('265', '1', 'data/tenant/upload/88/39efa1e8b81ee12da4a5f4ae652b89c8.jpg', '1494921112');
+INSERT INTO `resource` VALUES ('266', '1', 'data/tenant/upload/55/4b9b41b3134b6756bd2df5a9618ff721.jpg', '1494921232');
+INSERT INTO `resource` VALUES ('267', '1', 'data/tenant/upload/63/9c723449e8392c301a5effbe5ce64bcf.jpg', '1494921239');
+INSERT INTO `resource` VALUES ('268', '1', 'data/tenant/upload/27/3f6da8a39b3dccde3dbb705fa23f2ced.jpg', '1494922647');
+INSERT INTO `resource` VALUES ('269', '1', 'data/tenant/upload/32/166ed186b29f3bffaf5c518e496266c1.jpg', '1494922873');
+INSERT INTO `resource` VALUES ('270', '3', 'tenant/image/bd3a6eba2f1725de684a50a170306ef8.png', '1494926873');
+INSERT INTO `resource` VALUES ('271', '3', 'tenant/image/6903e4ad9b2fb5a4ecbc9da8dd2f22e3.png', '1494926910');
+INSERT INTO `resource` VALUES ('272', '3', 'tenant/image/f3af16964d2ebd8e925db74bfb620994.png', '1494926914');
+INSERT INTO `resource` VALUES ('273', '3', 'tenant/image/c27d25aeab921c4883a633b82ed6c4b3.png', '1494927361');
+INSERT INTO `resource` VALUES ('274', '1', 'data/tenant/upload/28/c5fba08a612a792a471e26fb5b58c040.jpg', '1494929311');
+INSERT INTO `resource` VALUES ('275', '1', 'data/tenant/upload/93/387e8f48dc23292ec58b143aa3937ec6.jpg', '1494929342');
+INSERT INTO `resource` VALUES ('276', '3', 'tenant/image/99bf644aad41f66b8021a5799be515f5.jpg', '1494937568');
+INSERT INTO `resource` VALUES ('277', '3', 'tenant/image/da337870e25f55953506d1cd6ccc9ef4.png', '1494937588');
+INSERT INTO `resource` VALUES ('278', '3', 'tenant/image/1336b9262c0615a3347b8cf73cdbfc25.png', '1494937592');
+INSERT INTO `resource` VALUES ('279', '1', 'data/tenant/upload/38/15c8d15f1c487a20790dafd148429e8b.jpg', '1494985161');
+INSERT INTO `resource` VALUES ('280', '1', 'data/tenant/upload/48/e079662e5ae5d335db768701a3aa273b.jpg', '1494985168');
+INSERT INTO `resource` VALUES ('281', '1', 'data/tenant/upload/46/5989a5fa4bd99fddc134a486e89897fb.jpg', '1494986161');
+INSERT INTO `resource` VALUES ('282', '1', 'data/tenant/upload/29/f9205e6d507801948d0118d2e344fce2.jpg', '1494986318');
+INSERT INTO `resource` VALUES ('283', '1', 'data/tenant/upload/39/94ebfa1e7677bd58860edd06f29cc849.jpg', '1494986335');
+INSERT INTO `resource` VALUES ('284', '1', 'data/tenant/upload/80/fc43a28ff00f3bc272500bf75ebfbed5.jpg', '1494987575');
+INSERT INTO `resource` VALUES ('285', '1', 'data/tenant/upload/95/17fa521014fe86a83d5eb019673d73ce.jpg', '1494987719');
+INSERT INTO `resource` VALUES ('286', '1', 'data/tenant/upload/42/96fb18cf84afdaa0d25e03675676f830.jpg', '1494990185');
+INSERT INTO `resource` VALUES ('287', '1', 'data/tenant/upload/63/12e8e08a732b5ac40c105425b72c159d.jpg', '1494990190');
+INSERT INTO `resource` VALUES ('288', '1', 'data/tenant/upload/38/e5d971a0dca4051dd8388c44dfb11615.jpg', '1494990193');
+INSERT INTO `resource` VALUES ('289', '1', 'data/tenant/upload/36/fe85dbfc746bf5e6ed5eb583ab36070e.jpg', '1494990713');
+INSERT INTO `resource` VALUES ('290', '6', 'data/tenant/upload/21/a2dc7baff7730a2ee26451c0fd0ba924.jpg', '1494993485');
+INSERT INTO `resource` VALUES ('291', '1', 'data/tenant/upload/65/7c9c5a67f5acb44e83bebd6769f40490.jpg', '1495001054');
+INSERT INTO `resource` VALUES ('292', '1', 'data/tenant/upload/44/57bbbaa953669cbd85ba2fa15a1304af.jpg', '1495001057');
+INSERT INTO `resource` VALUES ('293', '1', 'data/tenant/upload/14/06b5eb3ba05e39000165372e4d66664b.jpg', '1495001156');
+INSERT INTO `resource` VALUES ('294', '1', 'data/tenant/upload/77/200bfa957ede4aff22de6086483f0591.jpg', '1495001159');
+INSERT INTO `resource` VALUES ('295', '1', 'data/tenant/upload/85/5cf43a2caaf1fb6309df9167d8986f3d.jpg', '1495001178');
+INSERT INTO `resource` VALUES ('296', '3', 'tenant/image/d65a94bdea2ea9103efd4f934f721b0c.png', '1495001595');
+INSERT INTO `resource` VALUES ('297', '6', 'data/tenant/upload/62/644e8822397858da3f63bacb24cb9683.jpg', '1495001570');
+INSERT INTO `resource` VALUES ('298', '3', 'tenant/image/ff83ab5e87dab3d16f1deaf83964a78e.png', '1495001617');
+INSERT INTO `resource` VALUES ('299', '6', 'data/tenant/upload/73/3c6f54b756f8aba01f1cd086a9516bcd.jpg', '1495002697');
+INSERT INTO `resource` VALUES ('300', '6', 'data/tenant/upload/81/02ec7cbea8d800aa6ca5b9491e07cc53.jpg', '1495003035');
+INSERT INTO `resource` VALUES ('301', '6', 'data/tenant/upload/42/3ff7b49dfba00b7c4dd227c8e6685309.jpg', '1495003173');
+INSERT INTO `resource` VALUES ('302', '6', 'data/tenant/upload/38/cb1d4c916ed4ce24b0c1ccf0dd92171a.jpg', '1495003203');
+INSERT INTO `resource` VALUES ('303', '6', 'data/tenant/upload/42/e9ddb207a3028041f37647ec37861afb.jpg', '1495003143');
+INSERT INTO `resource` VALUES ('304', '3', 'tenant/image/8a54756b1829f65efba10b1d4206f485.jpg', '1495003226');
+INSERT INTO `resource` VALUES ('305', '3', 'tenant/image/179bcf36e6a45726ca6768040be9087d.jpg', '1495003267');
+INSERT INTO `resource` VALUES ('306', '6', 'data/tenant/upload/22/7093ab9fddfd308e896c8f39d8e023e6.jpg', '1495003383');
+INSERT INTO `resource` VALUES ('307', '1', 'data/tenant/upload/94/fc7406f9a4266ecdf2eed624182e33db.jpg', '1495003443');
+INSERT INTO `resource` VALUES ('308', '6', 'data/tenant/upload/35/768ed599c8a517029eeafccb8a225848.jpg', '1495003471');
+INSERT INTO `resource` VALUES ('309', '6', 'data/tenant/upload/14/dd1111ce6b1182dd735c4bca0f996ac3.jpg', '1495003477');
+INSERT INTO `resource` VALUES ('310', '6', 'data/tenant/upload/97/375071d9a315be2c5d1d43520d8beacb.jpg', '1495003479');
+INSERT INTO `resource` VALUES ('311', '6', 'data/tenant/upload/66/ca5bcf735752e15b80c03d85654f3d85.jpg', '1495003766');
+INSERT INTO `resource` VALUES ('312', '6', 'data/tenant/upload/84/5c9b60c7e392e84e0c5365f134ecbe5d.jpg', '1495003768');
+INSERT INTO `resource` VALUES ('313', '6', 'data/tenant/upload/93/c7b9e583b83a75d90fbd3c5bc93c19b3.jpg', '1495003861');
+INSERT INTO `resource` VALUES ('314', '6', 'data/tenant/upload/49/ae7544ee6cfb4793816358e3fac97400.jpg', '1495003864');
+INSERT INTO `resource` VALUES ('315', '6', 'data/tenant/upload/16/5bd80629e6a45ccf9bbb92380bf10bcb.jpg', '1495003889');
+INSERT INTO `resource` VALUES ('316', '6', 'data/tenant/upload/51/60f79ef12ae3f71c4f6fd2c83fd68c55.jpg', '1495003891');
+INSERT INTO `resource` VALUES ('317', '6', 'data/tenant/upload/68/6af80d6bb970a6c6b17dcfedf61932eb.jpg', '1495003901');
+INSERT INTO `resource` VALUES ('318', '6', 'data/tenant/upload/46/510b4c6a44cf1ecdb9081710f0af48c2.jpg', '1495003903');
+INSERT INTO `resource` VALUES ('319', '6', 'data/tenant/upload/59/ac37f56cb6a40b57f343b5c90d6ba847.jpg', '1495003905');
+INSERT INTO `resource` VALUES ('320', '6', 'data/tenant/upload/88/a5d411099caee0529205dcb9d71bf368.jpg', '1495003911');
+INSERT INTO `resource` VALUES ('321', '3', 'tenant/image/4ae4606ce33463b2c6a65fd77fe665d9.jpg', '1495004031');
+INSERT INTO `resource` VALUES ('322', '6', 'data/tenant/upload/69/07e65b9a4a66a63503938a34ce6dd8fd.jpg', '1495004112');
+INSERT INTO `resource` VALUES ('323', '6', 'data/tenant/upload/40/0873f353de4c040047e4575332b7ac66.jpg', '1495004591');
+INSERT INTO `resource` VALUES ('324', '3', 'tenant/image/533eaa4f5834794adb5c5d1b1615305e.jpg', '1495004875');
+INSERT INTO `resource` VALUES ('325', '3', 'tenant/image/80cd03130037abd602f621c039f270f2.jpg', '1495004879');
+INSERT INTO `resource` VALUES ('326', '3', 'tenant/image/55c99bbc2d1c02c7f97f4c00c8e34fc6.jpg', '1495004881');
+INSERT INTO `resource` VALUES ('327', '6', 'data/tenant/upload/72/a54a5e68a7c0b30b1456144172d650f7.jpg', '1495006547');
+INSERT INTO `resource` VALUES ('328', '6', 'data/tenant/upload/11/fc56eb0d46c97a4d85bf213c3e197822.jpg', '1495006652');
+INSERT INTO `resource` VALUES ('329', '2', 'data/tenant/upload/22/70ee1a71a0f5b85ae42f238fa5b4f27c.jpg', '1495013574');
+INSERT INTO `resource` VALUES ('330', '2', 'data/tenant/upload/58/cd26da525c35094cb1ea6e18ed8d81ac.jpg', '1495014024');
+INSERT INTO `resource` VALUES ('331', '2', 'data/tenant/upload/29/201585648945df877694186aa675d09d.jpg', '1495014099');
+INSERT INTO `resource` VALUES ('332', '2', 'data/tenant/upload/26/7324d3e717f71d1f66768b745c01a596.jpg', '1495014191');
+INSERT INTO `resource` VALUES ('333', '2', 'data/tenant/upload/32/50601f17dee5206e01d508c2746f5c98.jpg', '1495014334');
+INSERT INTO `resource` VALUES ('334', '2', 'data/tenant/upload/44/fa37635617094386fa504568e8332128.jpg', '1495070884');
+INSERT INTO `resource` VALUES ('335', '2', 'data/tenant/upload/47/0185b5220d8c8e7f5894732904569bfd.jpg', '1495070902');
+INSERT INTO `resource` VALUES ('337', '2', 'data/tenant/upload/54/05c61b86d4424f1128ffa5ee0889d79f.jpg', '1495074374');
+INSERT INTO `resource` VALUES ('338', '1', 'data/tenant/upload/18/b5b84b5feca2c70c2e35c27176f82829.png', '1495092644');
+INSERT INTO `resource` VALUES ('339', '1', 'data/tenant/upload/57/699bd294dde8ee1ddb74819a39dd148e.png', '1495092647');
+INSERT INTO `resource` VALUES ('340', '1', 'data/tenant/upload/46/07a29d16dd85714dcc9946c41d82cd70.jpg', '1495092650');
+INSERT INTO `resource` VALUES ('341', '1', 'data/tenant/upload/85/0a464c39cbfbb2b23d116a39ce8c65d1.png', '1495092693');
+INSERT INTO `resource` VALUES ('342', '1', 'data/tenant/upload/48/bd807425e74832207c71468e7bd60d35.png', '1495092743');
+INSERT INTO `resource` VALUES ('343', '6', 'data/tenant/upload/92/051450b1a5ec5eb591f06f4108bdc38f.jpg', '1495092836');
+INSERT INTO `resource` VALUES ('344', '6', 'data/tenant/upload/41/1068baf89f451c6e0ac0a1ba1383b07a.jpg', '1495092846');
+INSERT INTO `resource` VALUES ('345', '1', 'data/tenant/upload/27/c72327b5bff2e007b20467f5f5895ae6.jpg', '1495093051');
+INSERT INTO `resource` VALUES ('346', '3', 'tenant/image/743ee72e4333dadbc0e49296d8aff42d.png', '1495093172');
+INSERT INTO `resource` VALUES ('347', '1', 'data/tenant/upload/98/f067203f55e1f26d5c33dd4569f01c1a.jpg', '1495093120');
+INSERT INTO `resource` VALUES ('348', '1', 'data/tenant/upload/23/2b73adc7bab6e58aac87071bbfb9f195.jpg', '1495093122');
+INSERT INTO `resource` VALUES ('349', '1', 'data/tenant/upload/31/7c4748ca612534c9e81a50b82d700ee7.jpg', '1495093124');
+INSERT INTO `resource` VALUES ('350', '1', 'data/tenant/upload/38/a64fcefef69c0f76702e6ff6fb62b987.jpg', '1495093146');
+INSERT INTO `resource` VALUES ('351', '1', 'data/tenant/upload/66/d15bca14730f24f1ad11989f03d2c5cc.jpg', '1495093157');
+INSERT INTO `resource` VALUES ('352', '3', 'tenant/image/4987528212fc3f06f2fbe23e7d4fa16e.jpg', '1495093228');
+INSERT INTO `resource` VALUES ('353', '6', 'data/tenant/upload/42/4a52dae30ac97bd5968c069f854cc5e7.jpg', '1495093479');
+INSERT INTO `resource` VALUES ('354', '1', 'data/tenant/upload/78/08bc860b2a8ee1c655cba82c0e30d97f.jpg', '1495093777');
+INSERT INTO `resource` VALUES ('355', '6', 'data/tenant/upload/93/026caa6469687ada4ab9cf3b614fdae2.jpg', '1495093809');
+INSERT INTO `resource` VALUES ('356', '6', 'data/tenant/upload/84/7f8ffd274eb89fea72edabe29ac4e49f.jpg', '1495093820');
+INSERT INTO `resource` VALUES ('357', '3', 'tenant/image/5c12b8fb2924e0a29d7bdf292e08adb3.png', '1495094238');
+INSERT INTO `resource` VALUES ('358', '6', 'data/tenant/upload/73/4d2b0d5124b3ceaba86a3ea2aed21475.png', '1495094296');
+INSERT INTO `resource` VALUES ('359', '6', 'data/tenant/upload/50/953ae20655a8030e742abff957e34025.png', '1495094298');
+INSERT INTO `resource` VALUES ('360', '6', 'data/tenant/upload/23/6fc3362b18360077d09c7a68479d9343.jpg', '1495094301');
+INSERT INTO `resource` VALUES ('361', '1', 'data/tenant/upload/85/1a69eed00fc2c71d0eef06b5b2324efe.jpg', '1495099381');
+INSERT INTO `resource` VALUES ('362', '1', 'data/tenant/upload/75/631033367eaebe3e2a70e9b3ea5ad61a.jpg', '1495099453');
+INSERT INTO `resource` VALUES ('363', '1', 'data/tenant/upload/96/fb1a6a987efd1325c76a4d0c00e6e181.jpg', '1495099521');
+INSERT INTO `resource` VALUES ('364', '1', 'data/tenant/upload/65/0d855e60780b782e14e6b829fb55de99.jpg', '1495099611');
+INSERT INTO `resource` VALUES ('365', '1', 'data/tenant/upload/84/d5ffe142d72a4dd3d92d1ec7b36b36ec.png', '1495100058');
+INSERT INTO `resource` VALUES ('366', '1', 'data/tenant/upload/51/619bd60bdccb84bd7783d1689f38e24f.png', '1495100061');
+INSERT INTO `resource` VALUES ('367', '1', 'data/tenant/upload/90/5fc0f6986c06a30e00d0ac75f193c13c.png', '1495100064');
+INSERT INTO `resource` VALUES ('368', '1', 'data/tenant/upload/99/aedd7c585259dae6e9457919ad19f7e0.png', '1495100091');
+INSERT INTO `resource` VALUES ('369', '1', 'data/tenant/upload/79/13389eed4aac35aeca1bfb405dd1131d.png', '1495100465');
+INSERT INTO `resource` VALUES ('370', '1', 'data/tenant/upload/30/517b6bd1de98d6e143e2cddad63352fd.png', '1495100474');
+INSERT INTO `resource` VALUES ('371', '1', 'data/tenant/upload/81/476c4c2533c9dc230587b3dc0c4342cc.png', '1495100476');
+INSERT INTO `resource` VALUES ('372', '1', 'data/tenant/upload/66/4cfc8ad3f9fcc141d78c020ad5e2f6f6.png', '1495100480');
+INSERT INTO `resource` VALUES ('373', '1', 'data/tenant/upload/62/d2c12f424c7508a481a4c2eb80375858.png', '1495100574');
+INSERT INTO `resource` VALUES ('374', '6', 'data/tenant/upload/72/9010684800807b82ab1fa04db3cb73c1.png', '1495100593');
+INSERT INTO `resource` VALUES ('375', '6', 'data/tenant/upload/80/6ee1ab8001f0e99b7ec67ceb06d5f848.png', '1495100596');
+INSERT INTO `resource` VALUES ('376', '6', 'data/tenant/upload/53/3ab19d7dcb858fdc003370b4a6c866cc.png', '1495100598');
+INSERT INTO `resource` VALUES ('377', '6', 'data/tenant/upload/74/4350298ee0613ea29024a43613f0801a.png', '1495100602');
+INSERT INTO `resource` VALUES ('378', '3', 'tenant/image/ece254693005955c08989f749f5f95c9.png', '1495101418');
+INSERT INTO `resource` VALUES ('379', '3', 'tenant/image/f717fbc45906944d41b774b809a5e493.png', '1495101420');
+INSERT INTO `resource` VALUES ('380', '3', 'tenant/image/7f852e042f6b983b17edb69bf1ee4ce4.jpg', '1495101466');
+INSERT INTO `resource` VALUES ('381', '3', 'tenant/image/fd0ae7dc441e5ae2622181568da03a24.png', '1495102524');
+INSERT INTO `resource` VALUES ('382', '2', 'data/tenant/upload/31/b1e8bafea7dec1741bc2900e8766aa56.jpg', '1495106900');
+INSERT INTO `resource` VALUES ('383', '2', 'data/tenant/upload/42/a506e324fb069a8255712cf14adb3272.jpg', '1495106982');
+INSERT INTO `resource` VALUES ('384', '2', 'data/tenant/upload/31/febba8f58e53e79218964bb626e3e6db.jpg', '1495107360');
+INSERT INTO `resource` VALUES ('385', '3', 'tenant/image/ba45dd692bb9520f3539e6109b64eded.jpg', '1495117567');
+INSERT INTO `resource` VALUES ('386', '2', 'data/tenant/upload/28/6d3beff3eb7d0d45a9459c4f2144199b.jpg', '1495158837');
+INSERT INTO `resource` VALUES ('387', '2', 'data/tenant/upload/72/4c7c25960e97beb30bcddbc383f0e7d9.jpg', '1495158855');
+INSERT INTO `resource` VALUES ('388', '2', 'data/tenant/upload/90/613c0bfc18795f9265873cbe27cb1e61.jpg', '1495158974');
+INSERT INTO `resource` VALUES ('389', '2', 'data/tenant/upload/52/572b56c3c56e5f41354236ec7e98ed7d.jpg', '1495159125');
+INSERT INTO `resource` VALUES ('390', '2', 'data/tenant/upload/30/ed6a8f28a17c33d5115ebb42f0bc7d02.jpg', '1495159130');
+INSERT INTO `resource` VALUES ('391', '1', 'data/tenant/upload/21/70cc40474404f5d6d3e2a066d07e6f02.jpg', '1495159175');
+INSERT INTO `resource` VALUES ('392', '1', 'data/tenant/upload/59/dff02bbe72f85cc30b7b8c770814ee2c.png', '1495161596');
+INSERT INTO `resource` VALUES ('393', '3', 'tenant/image/2a6800dbb7ac2547bb5a5c10962a7110.png', '1495161927');
+INSERT INTO `resource` VALUES ('394', '6', 'data/tenant/upload/56/c65d46144379b7f5e2122d5fa087d6aa.png', '1495161605');
+INSERT INTO `resource` VALUES ('395', '6', 'data/tenant/upload/68/0bfaaa3a53f17c2e979852669112612d.jpg', '1495161608');
+INSERT INTO `resource` VALUES ('396', '2', 'data/tenant/upload/96/32282dc820f722fd74cfdd91eab7d8b1.png', '1495162309');
+INSERT INTO `resource` VALUES ('397', '6', 'data/tenant/upload/14/2da26bac7ce59e9c2cab7be5a7fa623f.png', '1495162608');
+INSERT INTO `resource` VALUES ('398', '1', 'data/tenant/upload/29/bccdf23dde6465e4454590cc39b0ead1.png', '1495163093');
+INSERT INTO `resource` VALUES ('399', '1', 'data/tenant/upload/14/48974a2032def683612413f7b142d01c.png', '1495165417');
+INSERT INTO `resource` VALUES ('400', '1', 'data/tenant/upload/66/ece8c67b47b5684d91845046001b571a.png', '1495165420');
+INSERT INTO `resource` VALUES ('401', '1', 'data/tenant/upload/66/af03e5621187d0386260cb8f60ac6849.jpg', '1495165422');
+INSERT INTO `resource` VALUES ('402', '1', 'data/tenant/upload/40/034527e08c7a6b6896cde74b94a82d57.png', '1495165445');
+INSERT INTO `resource` VALUES ('403', '1', 'data/tenant/upload/33/25a45dbdc52b037787d3432ea0147a9c.png', '1495165456');
+INSERT INTO `resource` VALUES ('404', '1', 'data/tenant/upload/49/9a7213ddcb2be40fde496027793d284f.png', '1495165497');
+INSERT INTO `resource` VALUES ('405', '6', 'data/tenant/upload/75/5174aff5f4a530ce5dc49b9689a96160.png', '1495165522');
+INSERT INTO `resource` VALUES ('406', '1', 'data/tenant/upload/28/1a41f543af49dd17cf292823311ee579.png', '1495176362');
+INSERT INTO `resource` VALUES ('407', '1', 'data/tenant/upload/78/cd184dc600347cbf57dd0f25bea72583.png', '1495176367');
+INSERT INTO `resource` VALUES ('408', '1', 'data/tenant/upload/77/3dcbc550e6e90dd1d5a1c94cdfc89b43.png', '1495176373');
+INSERT INTO `resource` VALUES ('409', '1', 'data/tenant/upload/42/6a4a3c95a8d181a9021ee90568226aac.png', '1495176383');
+INSERT INTO `resource` VALUES ('410', '2', 'data/tenant/upload/58/d6d9c834c327226f18a5ee809523457c.png', '1495176797');
+INSERT INTO `resource` VALUES ('411', '2', 'data/tenant/upload/19/d04d84fd67c46b94900d27d5472555b4.jpg', '1495177124');
+INSERT INTO `resource` VALUES ('412', '1', 'data/tenant/upload/64/621d2f8846cbc81dad1200ebf096fb78.jpg', '1495177893');
+INSERT INTO `resource` VALUES ('413', '1', 'data/tenant/upload/86/d8e5e72da7406268a4e044a7e80ac258.jpg', '1495177895');
+INSERT INTO `resource` VALUES ('414', '1', 'data/tenant/upload/19/45ae28253a0c9890a6a560705d989297.png', '1495178343');
+INSERT INTO `resource` VALUES ('415', '1', 'data/tenant/upload/16/4e6ded7a3722806301ef3cd89cb4c3d1.png', '1495178345');
+INSERT INTO `resource` VALUES ('416', '1', 'data/tenant/upload/21/fdd67110c920cc23c695b2462b753052.png', '1495178348');
+INSERT INTO `resource` VALUES ('417', '1', 'data/tenant/upload/43/e90fac38482fbdc028d1442ad276b21b.png', '1495178363');
+INSERT INTO `resource` VALUES ('418', '1', 'data/tenant/upload/97/d680eda971316007f6063f4aaafcd01e.png', '1495178393');
+INSERT INTO `resource` VALUES ('419', '6', 'data/tenant/upload/18/1a7253f3cb107796dfd4757957181189.png', '1495178427');
+INSERT INTO `resource` VALUES ('420', '6', 'data/tenant/upload/57/edb2e9aca195f85b7dd9b1dea769e531.png', '1495178430');
+INSERT INTO `resource` VALUES ('421', '1', 'data/tenant/upload/34/cd23485dd09d1c82376c6ea03f082fa4.jpg', '1495178354');
+INSERT INTO `resource` VALUES ('422', '1', 'data/tenant/upload/15/f67078e614d435630e7bcaf737d3b76d.jpg', '1495178356');
+INSERT INTO `resource` VALUES ('423', '1', 'data/tenant/upload/27/62dff8472d42c3c47e55b74c5d42868c.jpg', '1495178358');
+INSERT INTO `resource` VALUES ('424', '1', 'data/tenant/upload/44/f1ca0366ca5b646db236bc57395b5534.jpg', '1495178374');
+INSERT INTO `resource` VALUES ('425', '1', 'data/tenant/upload/66/50671f25df93b2deb55f138c84752386.jpg', '1495178376');
+INSERT INTO `resource` VALUES ('426', '6', 'data/tenant/upload/55/f17dfc0b8ec7e360d69b3bb082a3263b.png', '1495178443');
+INSERT INTO `resource` VALUES ('427', '1', 'data/tenant/upload/10/19f7ccab929b705953cc34efc935bc29.jpg', '1495178679');
+INSERT INTO `resource` VALUES ('428', '1', 'data/tenant/upload/65/0e2e3719a593673f495b625b82b0b234.jpg', '1495178681');
+INSERT INTO `resource` VALUES ('429', '1', 'data/tenant/upload/95/23491f44fee5c1a6aeb38123040c1d25.jpg', '1495178683');
+INSERT INTO `resource` VALUES ('430', '1', 'data/tenant/upload/98/a70b5f6520fdf28b4b5c323efb41d575.jpg', '1495178711');
+INSERT INTO `resource` VALUES ('431', '1', 'data/tenant/upload/48/7f7a0a0d2b43efc7564b01cd1a8d7c22.jpg', '1495178791');
+INSERT INTO `resource` VALUES ('432', '1', 'data/tenant/upload/97/8a12caead239e55e588cba2e46dc33c2.jpg', '1495178824');
+INSERT INTO `resource` VALUES ('433', '6', 'data/tenant/upload/33/364897b5560537cf2b2b692751379e33.jpg', '1495178865');
+INSERT INTO `resource` VALUES ('434', '6', 'data/tenant/upload/47/306e0bb508d22776835f3934cbd82d44.jpg', '1495179398');
+INSERT INTO `resource` VALUES ('435', '6', 'data/tenant/upload/39/508aea28687f5ebfccecb4279a84a78d.jpg', '1495179403');
+INSERT INTO `resource` VALUES ('436', '6', 'data/tenant/upload/43/89f74026ee30d6355f72ffc0e2fe9c3a.jpg', '1495179584');
+INSERT INTO `resource` VALUES ('437', '6', 'data/tenant/upload/80/07d14e8188e70809635b1db7f241b2bf.jpg', '1495179743');
+INSERT INTO `resource` VALUES ('438', '6', 'data/tenant/upload/98/21dd6efe9c42267a3220313d52f437d8.png', '1495180012');
+INSERT INTO `resource` VALUES ('439', '6', 'data/tenant/upload/80/b9ecf7ecf688518aa64a77770a777851.png', '1495180024');
+INSERT INTO `resource` VALUES ('440', '2', 'data/tenant/upload/45/74baf2891ef959a9f3be6d217c74b4f1.jpg', '1495184242');
+INSERT INTO `resource` VALUES ('441', '2', 'data/tenant/upload/55/66d9018bf6ee45f0c7446a587dec3405.jpg', '1495184271');
+INSERT INTO `resource` VALUES ('442', '2', 'data/tenant/upload/14/e3243d49696df3bdb22efaa13196b324.jpg', '1495184645');
+INSERT INTO `resource` VALUES ('443', '2', 'data/tenant/upload/70/51b25021e82e1259d6d98d8601c0d3c8.jpg', '1495185342');
+INSERT INTO `resource` VALUES ('444', '3', 'tenant/image/15ffec0187ce6bd7c1813715de63139f.png', '1495186134');
+INSERT INTO `resource` VALUES ('445', '2', 'data/tenant/upload/82/80a08038a4b21cb8ee6a63cf7da398cd.png', '1495187189');
+INSERT INTO `resource` VALUES ('446', '1', 'data/tenant/upload/74/c49efe3f2de57a77832d98ab36a181b4.jpg', '1495187955');
+INSERT INTO `resource` VALUES ('447', '1', 'data/tenant/upload/82/7685e0bf1915d902a01e8479932e6555.jpg', '1495187964');
+INSERT INTO `resource` VALUES ('448', '2', 'data/tenant/upload/48/7bc841b4f66445303ebe1cc7cb2b7ccd.png', '1495195903');
+INSERT INTO `resource` VALUES ('449', '2', 'data/tenant/upload/29/528faab27374351f7937d5e35ea9889a.jpg', '1495197769');
+INSERT INTO `resource` VALUES ('450', '2', 'data/tenant/upload/35/5deff52beadcb34cd3aa6d5b5aec7303.png', '1495199044');
+INSERT INTO `resource` VALUES ('451', '2', 'data/tenant/upload/97/044ca466125cf81d69f8edf71ce7a2d0.png', '1495199087');
+INSERT INTO `resource` VALUES ('452', '2', 'data/tenant/upload/40/749f24ea3ba7e309f3379e245f4bf7d0.png', '1495199142');
+INSERT INTO `resource` VALUES ('453', '2', 'data/tenant/upload/69/4e5fbf9c9cac460c3d7321249425332f.jpg', '1495421032');
+INSERT INTO `resource` VALUES ('454', '2', 'data/tenant/upload/53/beb058dc40af75dbccbc52890e8cbbb4.jpg', '1495421135');
+INSERT INTO `resource` VALUES ('455', '2', 'data/tenant/upload/85/204aaeadb9c633a98267a9f1fc75ca6a.jpg', '1495421157');
+INSERT INTO `resource` VALUES ('456', '2', 'data/tenant/upload/72/2cb6345f3abd96f278febea7523a3f82.jpg', '1495421167');
+INSERT INTO `resource` VALUES ('457', '6', 'data/tenant/upload/54/b8c225441479b12d7e0e16f612d7dd92.png', '1495423100');
+INSERT INTO `resource` VALUES ('458', '2', 'data/tenant/upload/47/5a9e0403a8bba86a4a84c7ec1d518a50.jpg', '1495438251');
+INSERT INTO `resource` VALUES ('459', '2', 'data/tenant/upload/98/3efafd95d27775563d54f3ac29f273b9.jpg', '1495438923');
+INSERT INTO `resource` VALUES ('460', '2', 'data/tenant/upload/73/a76fa2bfc8bbb6d7a916726d09d546c5.jpg', '1495439023');
+INSERT INTO `resource` VALUES ('461', '6', 'data/tenant/upload/70/f41e9a1839426e43c37af5cf72e969bb.jpg', '1495442487');
+INSERT INTO `resource` VALUES ('462', '6', 'data/tenant/upload/61/ca3184e563399525be56a5a7d711d2b0.jpg', '1495442499');
+INSERT INTO `resource` VALUES ('463', '6', 'data/tenant/upload/26/de0201f1a385903eea363498f6a52e61.jpg', '1495443049');
+INSERT INTO `resource` VALUES ('464', '6', 'data/tenant/upload/67/501195f5cfe236ebc573de012ff68fa8.jpg', '1495443056');
+INSERT INTO `resource` VALUES ('465', '1', 'data/tenant/upload/83/c1e34749db398c31382cdc9a73c84c59.jpg', '1495444003');
+INSERT INTO `resource` VALUES ('466', '1', 'data/tenant/upload/95/5e09fde965324ba60a6c2574f0175335.jpg', '1495444006');
+INSERT INTO `resource` VALUES ('467', '1', 'data/tenant/upload/14/9fb611e882f2bcd9c54f853a5a033446.jpg', '1495444023');
+INSERT INTO `resource` VALUES ('468', '1', 'data/tenant/upload/92/db0f3f92b6b1a0ac24273bc9ab80c93c.jpg', '1495444028');
+INSERT INTO `resource` VALUES ('469', '1', 'data/tenant/upload/11/1fdac897c9f2affd2adafff66686cd68.jpg', '1495444159');
+INSERT INTO `resource` VALUES ('470', '1', 'data/tenant/upload/48/ab735da6283d581031fb62011cb21a21.jpg', '1495444478');
+INSERT INTO `resource` VALUES ('471', '6', 'data/tenant/upload/72/58162dc2c30e5ffc23ebcac6e9dbd53b.jpg', '1495444513');
+INSERT INTO `resource` VALUES ('472', '6', 'data/tenant/upload/90/492d575181587f55cae2d1ac56123605.jpg', '1495444516');
+INSERT INTO `resource` VALUES ('473', '1', 'data/tenant/upload/87/8a9e6f51bbce0af3bc4895045ae70dc0.jpg', '1495444965');
+INSERT INTO `resource` VALUES ('474', '1', 'data/tenant/upload/82/c03e7c595f5b022af4f406cf8050aca3.jpg', '1495444965');
+INSERT INTO `resource` VALUES ('475', '1', 'data/tenant/upload/86/42b3c59f3137f74dba68f6d7e51c82f1.jpg', '1495444967');
+INSERT INTO `resource` VALUES ('476', '1', 'data/tenant/upload/29/bb37ed4141150ddbefdcf823e647003c.jpg', '1495444970');
+INSERT INTO `resource` VALUES ('477', '1', 'data/tenant/upload/88/a5ab7f8a11fcb08c1cc89df24f74b638.jpg', '1495444987');
+INSERT INTO `resource` VALUES ('478', '1', 'data/tenant/upload/37/ecf07b606e29b3ef46788d6f33ba4cfc.jpg', '1495444989');
+INSERT INTO `resource` VALUES ('479', '1', 'data/tenant/upload/47/6b6332596ab1ba24bee46f3749dbc72b.jpg', '1495445016');
+INSERT INTO `resource` VALUES ('480', '6', 'data/tenant/upload/89/0f46b683c9df06d00034a3b6ada3c8ba.jpg', '1495445063');
+INSERT INTO `resource` VALUES ('481', '1', 'data/tenant/upload/46/71aee79f4413551de5b5ec02686b7791.jpg', '1495519642');
+INSERT INTO `resource` VALUES ('482', '1', 'data/tenant/upload/71/4f4a72bc919485c0d56b4ca138560873.jpg', '1495519654');
+INSERT INTO `resource` VALUES ('483', '1', 'data/tenant/upload/47/227face55ae22bb866e52fb4f2ca2a91.jpg', '1495519667');
+INSERT INTO `resource` VALUES ('484', '1', 'data/tenant/upload/80/8e2d62d94d01c4351097cd6379d56055.jpg', '1495525154');
+INSERT INTO `resource` VALUES ('485', '1', 'data/tenant/upload/28/20f156a32ed74c9f0c5639abd59fa5b0.jpg', '1495525156');
+INSERT INTO `resource` VALUES ('486', '1', 'data/tenant/upload/97/e5c7e796bd7651c0c4d20b96d6fec053.jpg', '1495525162');
+INSERT INTO `resource` VALUES ('487', '1', 'data/tenant/upload/31/823a3d6bb5730c1fc41ad6f14238c9d9.jpg', '1495525170');
+INSERT INTO `resource` VALUES ('488', '1', 'data/tenant/upload/22/433847751ffde0a38cacae329d62a8d4.jpg', '1495525270');
+INSERT INTO `resource` VALUES ('489', '1', 'data/tenant/upload/42/11fac1b6d1fba48b511cd76686d69179.jpg', '1495525333');
+INSERT INTO `resource` VALUES ('490', '1', 'data/tenant/upload/19/fda202f53fe893efeebe42243a04f489.jpg', '1495525339');
+INSERT INTO `resource` VALUES ('491', '1', 'data/tenant/upload/98/8e38805dc230e5fa2a27dc34318d55c5.jpg', '1495525347');
+INSERT INTO `resource` VALUES ('492', '1', 'data/tenant/upload/43/927eae8981f4592161534822a8054c77.jpg', '1495525354');
+INSERT INTO `resource` VALUES ('493', '1', 'data/tenant/upload/94/868833240fecd7c52ca251563f2a065e.jpg', '1495525375');
+INSERT INTO `resource` VALUES ('494', '1', 'data/tenant/upload/94/7cdafe020165deecd930288e02659958.jpg', '1495525384');
+INSERT INTO `resource` VALUES ('495', '1', 'data/tenant/upload/51/a88df2496a16d49159a645016fa875ab.jpg', '1495525537');
+INSERT INTO `resource` VALUES ('496', '1', 'data/tenant/upload/20/626cfaf1aedc7244f55bbb681b379224.jpg', '1495525549');
+INSERT INTO `resource` VALUES ('497', '1', 'data/tenant/upload/32/1ea2ac4100b7aaf2a7bd8d8063d5cda4.jpg', '1495525559');
+INSERT INTO `resource` VALUES ('498', '6', 'data/tenant/upload/91/e090078cc805af902031456e512eeec4.jpg', '1495525586');
+INSERT INTO `resource` VALUES ('499', '6', 'data/tenant/upload/63/ab543405abed2802a6f39024ebe23383.jpg', '1495591889');
+INSERT INTO `resource` VALUES ('500', '6', 'data/tenant/upload/40/2be7890e0fc5351a6e5b8fc456cd7c3c.jpg', '1495591892');
+INSERT INTO `resource` VALUES ('501', '6', 'data/tenant/upload/24/ee3da92874352a62d185488b8dc12f78.jpg', '1495591895');
+INSERT INTO `resource` VALUES ('502', '6', 'data/tenant/upload/57/09c085129e35442e662e481e7478b72d.jpg', '1495591897');
+INSERT INTO `resource` VALUES ('503', '6', 'data/tenant/upload/72/a52c1f01d4fb93606ecc0fc150cfda60.jpg', '1495591901');
+INSERT INTO `resource` VALUES ('504', '6', 'data/tenant/upload/22/d45112a2c69c0501975008ec872b972f.jpg', '1495591904');
+INSERT INTO `resource` VALUES ('505', '6', 'data/tenant/upload/84/13a7630ed0b27dd52fa9e30ba74b62d0.jpg', '1495591907');
+INSERT INTO `resource` VALUES ('506', '6', 'data/tenant/upload/84/667c32f4485cba7e3383ec102036ae91.jpg', '1495591909');
+INSERT INTO `resource` VALUES ('507', '6', 'data/tenant/upload/30/7df13959ec9e4b1bd2b173adc5f97feb.jpg', '1495591920');
+INSERT INTO `resource` VALUES ('508', '6', 'data/tenant/upload/18/640b00090647788a38c022adbf4480ba.jpg', '1495592146');
+INSERT INTO `resource` VALUES ('509', '6', 'data/tenant/upload/85/1fcf6cb7464c3c930648f776f50a01d1.jpg', '1495592148');
+INSERT INTO `resource` VALUES ('510', '6', 'data/tenant/upload/45/174554a69fd92c4e9f03761159a9bb1d.jpg', '1495592803');
+INSERT INTO `resource` VALUES ('511', '6', 'data/tenant/upload/49/3fff485427bdbe11ceffaeb68fa057a4.jpg', '1495592806');
+INSERT INTO `resource` VALUES ('512', '6', 'data/tenant/upload/77/4652de322062534c86d3bf5609b43fa6.jpg', '1495592824');
+INSERT INTO `resource` VALUES ('513', '6', 'data/tenant/upload/92/dba83dc139c3c46c2a5481822841b589.jpg', '1495592828');
+INSERT INTO `resource` VALUES ('514', '3', 'data/tenant/image/ecabcfa0b5922756325fbac2c581316e.jpg', '1495593217');
+INSERT INTO `resource` VALUES ('515', '3', 'data/tenant/image/3b928b8d348175aac7631df7c3fa1b1b.jpg', '1495593223');
+INSERT INTO `resource` VALUES ('516', '6', 'data/tenant/upload/11/840ef777ff7430c1d12ecd1c2779392a.jpg', '1495592930');
+INSERT INTO `resource` VALUES ('517', '6', 'data/tenant/upload/72/83651cb5da887cdb841edf77808a7a3b.jpg', '1495592933');
+INSERT INTO `resource` VALUES ('518', '3', 'data/tenant/image/8614413969e0c72da9a9a48ce79a9b8a.png', '1495595187');
+INSERT INTO `resource` VALUES ('519', '2', 'data/tenant/upload/70/c955da816366837f4166a3e26567354f.jpg', '1495595145');
+INSERT INTO `resource` VALUES ('520', '2', 'data/tenant/upload/18/df6687315bd2851687fb7a8018271863.jpg', '1495595148');
+INSERT INTO `resource` VALUES ('521', '1', 'data/tenant/upload/74/ed1d35c22a619416d563f262f8a3fbeb.jpg', '1495596199');
+INSERT INTO `resource` VALUES ('522', '1', 'data/tenant/upload/95/3bb5efaa26cc640918d551c18136f821.jpg', '1495596200');
+INSERT INTO `resource` VALUES ('523', '1', 'data/tenant/upload/87/02f48eb5b9056eb89ff8376a95afd1e7.jpg', '1495596202');
+INSERT INTO `resource` VALUES ('524', '1', 'data/tenant/upload/42/9d774306a726faa709783564022ea030.jpg', '1495596211');
+INSERT INTO `resource` VALUES ('525', '1', 'data/tenant/upload/96/5e4eca70c5c607abc478276a3ba10660.jpg', '1495596219');
+INSERT INTO `resource` VALUES ('526', '6', 'data/tenant/upload/99/dd5bb19e68b57686ff831c946ed0e7a7.jpg', '1495596233');
+INSERT INTO `resource` VALUES ('527', '3', 'data/tenant/image/fe1e0274c7d59ddf3bdf5bc0004945ef.jpg', '1495596764');
+INSERT INTO `resource` VALUES ('528', '3', 'data/tenant/image/760e24c17848ace2f8223d6462b6faec.jpg', '1495596771');
+INSERT INTO `resource` VALUES ('529', '3', 'data/tenant/image/519a3d052afee2261a5884ef19cacfb8.jpg', '1495596815');
+INSERT INTO `resource` VALUES ('530', '1', 'data/tenant/upload/42/cc2abb1fe424028146ddb359ab99f838.jpg', '1495596862');
+INSERT INTO `resource` VALUES ('531', '1', 'data/tenant/upload/23/1d11b9d1715acd141bd4012d823071fa.jpg', '1495596864');
+INSERT INTO `resource` VALUES ('532', '1', 'data/tenant/upload/94/64bc0453543b11b52e6a1c12de81d4bc.jpg', '1495596866');
+INSERT INTO `resource` VALUES ('533', '3', 'data/tenant/image/fc5647a0b31c3895a92bd995f34e8685.jpg', '1495596868');
+INSERT INTO `resource` VALUES ('534', '1', 'data/tenant/upload/84/13b0426f8214e86db93741a3258f5d55.jpg', '1495596888');
+INSERT INTO `resource` VALUES ('535', '1', 'data/tenant/upload/68/b9c6e0597f45f87bbf124920e3f7376b.jpg', '1495596890');
+INSERT INTO `resource` VALUES ('536', '1', 'data/tenant/upload/93/1d4fbc4287e3e77089fbc2a5ed8af25c.png', '1495596900');
+INSERT INTO `resource` VALUES ('537', '6', 'data/tenant/upload/36/18e32f24d7393c97ff2ec2bcde56ba24.jpg', '1495596939');
+INSERT INTO `resource` VALUES ('538', '3', 'data/tenant/image/6e8ac2c92d757c8ff0d6220fd10fc0ea.jpg', '1495596974');
+INSERT INTO `resource` VALUES ('539', '6', 'data/tenant/upload/88/1e48755779bc98e3885937fdb0b45366.jpg', '1495597002');
+INSERT INTO `resource` VALUES ('540', '6', 'data/tenant/upload/73/0506cf675d99305c1fe76372aa991b33.jpg', '1495597004');
+INSERT INTO `resource` VALUES ('541', '6', 'data/tenant/upload/28/98817a18c433c687d2e3270228e4a2b1.jpg', '1495597006');
+INSERT INTO `resource` VALUES ('542', '3', 'data/tenant/image/044a737719385b2ca737ecd2f8aa95c5.jpg', '1495597015');
+INSERT INTO `resource` VALUES ('543', '3', 'data/tenant/image/af028ecf1be7b986e1e849350a708109.jpg', '1495597017');
+INSERT INTO `resource` VALUES ('544', '3', 'data/tenant/image/9dc3de69355bba90edb38755c0a453c0.jpg', '1495597019');
+INSERT INTO `resource` VALUES ('545', '3', 'data/tenant/image/2e3b52d8003733ff5032fcc8b2317a70.jpg', '1495597021');
+INSERT INTO `resource` VALUES ('546', '3', 'data/tenant/image/469a178842c91cd3100af44bd844d24c.jpg', '1495597023');
+INSERT INTO `resource` VALUES ('547', '6', 'data/tenant/upload/51/37ccf63eb117c8d7eb2d90a4da49fe00.jpg', '1495597051');
+INSERT INTO `resource` VALUES ('548', '6', 'data/tenant/upload/14/e10e70f873ff3f4b1fe5f3e140f132c2.jpg', '1495597053');
+INSERT INTO `resource` VALUES ('549', '6', 'data/tenant/upload/36/658e166c29ccc0da43599feec8049f1d.jpg', '1495597055');
+INSERT INTO `resource` VALUES ('550', '3', 'data/tenant/image/9016efb6c1e41f4d659226f171424a52.jpg', '1495597089');
+INSERT INTO `resource` VALUES ('551', '3', 'data/tenant/image/aad12d0e888bd9ef3f327dac26376742.jpg', '1495597091');
+INSERT INTO `resource` VALUES ('552', '3', 'data/tenant/image/0ff5eb7a61cd3216f6ba58eca948aff1.jpg', '1495597094');
+INSERT INTO `resource` VALUES ('553', '3', 'data/tenant/image/0a138ed080adf8ae7708561168886568.jpg', '1495597138');
+INSERT INTO `resource` VALUES ('554', '3', 'data/tenant/image/4bbe4d2c5a39aef9936384e6212525ff.jpg', '1495597140');
+INSERT INTO `resource` VALUES ('555', '3', 'data/tenant/image/f7788e4bac12d6fb793ae6e84a8f5cab.jpg', '1495597166');
+INSERT INTO `resource` VALUES ('556', '3', 'data/tenant/image/f61158c3ce6b3304ff55fef9f98f8359.jpg', '1495597168');
+INSERT INTO `resource` VALUES ('557', '3', 'data/tenant/image/abecf3953fde14693a1b06bf234b3094.jpg', '1495597170');
+INSERT INTO `resource` VALUES ('558', '3', 'data/tenant/image/9d23f2e979e9418d51d6b04e79755d09.jpg', '1495597174');
+INSERT INTO `resource` VALUES ('559', '3', 'data/tenant/image/02b60aad9c9c6691387dd4c14bec82c8.jpg', '1495597176');
+INSERT INTO `resource` VALUES ('560', '3', 'data/tenant/image/cf2c59d0e91cdbd5e03fe8d800b89df0.jpg', '1495597473');
+INSERT INTO `resource` VALUES ('561', '3', 'data/tenant/image/54f200410decd080ebdbad30b41f59ea.jpg', '1495597522');
+INSERT INTO `resource` VALUES ('562', '3', 'data/tenant/image/94068d74e1eadaae0fa2c796abc9ef8a.jpg', '1495597524');
+INSERT INTO `resource` VALUES ('563', '3', 'data/tenant/image/cd3d1a404b68a3626827a7de8cb858b7.jpg', '1495597525');
+INSERT INTO `resource` VALUES ('564', '3', 'data/tenant/image/27bb2c6a26757e12b69d52ec606be46d.jpg', '1495597966');
+INSERT INTO `resource` VALUES ('565', '3', 'data/tenant/image/699891d4482cf9303b3973bb5b41bdc0.jpg', '1495606590');
+INSERT INTO `resource` VALUES ('566', '3', 'data/tenant/image/d0c4a9a2051e45f3203b09db39786714.jpg', '1495606636');
+INSERT INTO `resource` VALUES ('567', '3', 'data/tenant/image/38100bdabd91623ae1665c0a797e1113.jpg', '1495606638');
+INSERT INTO `resource` VALUES ('568', '3', 'data/tenant/image/6958cc8571fe86b3e935bb16033f35f1.jpg', '1495606647');
+INSERT INTO `resource` VALUES ('569', '3', 'data/tenant/image/3a63ab7e1328c449da7e5dff0def16d5.jpg', '1495606654');
+INSERT INTO `resource` VALUES ('570', '3', 'data/tenant/image/29c3aebf112c3bc90f4d4216afdfa507.jpg', '1495606766');
+INSERT INTO `resource` VALUES ('571', '3', 'data/tenant/image/1481d1d2a41ec0d8a9e7551cd376c968.jpg', '1495606768');
+INSERT INTO `resource` VALUES ('572', '3', 'data/tenant/image/1f161f719d3961e61fc3cf6c7ac2198c.jpg', '1495606770');
+INSERT INTO `resource` VALUES ('573', '3', 'data/tenant/image/ed7fc48a17e12ff1d53bcd6eccf76293.jpg', '1495606777');
+INSERT INTO `resource` VALUES ('574', '3', 'data/tenant/image/685015d8d8f70ffbeff760784de21d4e.jpg', '1495606780');
+INSERT INTO `resource` VALUES ('575', '3', 'data/tenant/image/241994775b9af60a1e8c4155650af181.jpg', '1495606795');
+INSERT INTO `resource` VALUES ('576', '3', 'data/tenant/image/095a7374a6b32bca260e6340dc0dab7b.jpg', '1495606886');
+INSERT INTO `resource` VALUES ('577', '3', 'data/tenant/image/56c378e9539315f8241f0ba4b8c88016.jpg', '1495606888');
+INSERT INTO `resource` VALUES ('578', '3', 'data/tenant/image/664dc42a60a3b007557c4ef11c76bcf9.jpg', '1495607922');
+INSERT INTO `resource` VALUES ('579', '6', 'data/tenant/upload/99/61fa61d01912a4cc3bb16e9ae5957519.jpg', '1495608623');
+INSERT INTO `resource` VALUES ('580', '3', 'data/tenant/image/8e4ce107bcf52a11e855946f2e6dee89.jpg', '1495608841');
+INSERT INTO `resource` VALUES ('581', '1', 'data/tenant/upload/42/00977f1beff18a7c5d452a16543838e8.jpg', '1495609285');
+INSERT INTO `resource` VALUES ('582', '1', 'data/tenant/upload/95/34a57d268a83eaa64559d6a94d44c7ce.jpg', '1495609288');
+INSERT INTO `resource` VALUES ('583', '1', 'data/tenant/upload/99/ba007550ca44b93927e08fc8b5991360.jpg', '1495609312');
+INSERT INTO `resource` VALUES ('584', '1', 'data/tenant/upload/88/cd5d6baa6cee2ece3a3fd1e61e28e870.jpg', '1495609315');
+INSERT INTO `resource` VALUES ('585', '1', 'data/tenant/upload/87/5d6ec2582e52ed30e4df322c249c9009.jpg', '1495609335');
+INSERT INTO `resource` VALUES ('586', '3', 'data/tenant/image/e5783e8aeadd403a8c4e50f98c508372.jpg', '1495608960');
+INSERT INTO `resource` VALUES ('587', '6', 'data/tenant/upload/93/6cd6eaa54fc0d7b4d761a247d4ef686f.jpg', '1495609365');
+INSERT INTO `resource` VALUES ('588', '6', 'data/tenant/upload/54/4a91ac980aec6c5195ceef3233649954.jpg', '1495609367');
+INSERT INTO `resource` VALUES ('589', '2', 'data/tenant/upload/89/fd4f55d7f744a018a436a4435d943194.jpg', '1495610097');
+INSERT INTO `resource` VALUES ('590', '2', 'data/tenant/upload/31/38235de28cb1f68408dd67bf5cf17c32.jpg', '1495611029');
+INSERT INTO `resource` VALUES ('591', '3', 'data/tenant/image/18442d2edc3e26470d215be929857bd7.jpg', '1495701158');
+INSERT INTO `resource` VALUES ('592', '3', 'data/tenant/image/e5f560473e6b58d60fdb62f6e9a4b63d.jpg', '1495701163');
+INSERT INTO `resource` VALUES ('593', '3', 'data/tenant/image/687300a107c980fc5ddd6c7ec6dd404d.jpg', '1495701790');
+INSERT INTO `resource` VALUES ('594', '3', 'data/tenant/image/5ec0e3f268bf1d38e14ae4a16cc9cce9.jpg', '1495701894');
+INSERT INTO `resource` VALUES ('595', '3', 'data/tenant/image/35ab00554076d7db759daafa152c5bfb.jpg', '1495701918');
+INSERT INTO `resource` VALUES ('596', '3', 'data/tenant/image/32aff7cfd76808ba5d3feef11c9a9ddb.jpg', '1495701922');
+INSERT INTO `resource` VALUES ('597', '3', 'data/tenant/image/db5642289f6fc4c3e3e0c87aeaa6a97c.jpg', '1495702225');
+INSERT INTO `resource` VALUES ('598', '3', 'data/tenant/image/43aea8440f4865e2af4b2b21e447ed37.jpg', '1495702233');
+INSERT INTO `resource` VALUES ('599', '3', 'data/tenant/image/079aa8fe5abff853c27011de154fa157.jpg', '1495702262');
+INSERT INTO `resource` VALUES ('600', '3', 'data/tenant/image/ba09d4b441d9acae35b0094068bce3e7.jpg', '1495702286');
+INSERT INTO `resource` VALUES ('601', '3', 'data/tenant/image/acd06c27e2f96518795aa08cbe81addd.jpg', '1495702288');
+INSERT INTO `resource` VALUES ('602', '3', 'data/tenant/image/abeab6d018afb4375c81a8779768af4e.jpg', '1495702290');
+INSERT INTO `resource` VALUES ('603', '3', 'data/tenant/image/4959c755fd1d3b69f310463687fb905e.jpg', '1495702291');
+INSERT INTO `resource` VALUES ('604', '1', 'data/tenant/upload/56/84b091e3f4a1dfaa8d2f39724c2806c4.png', '1495702812');
+INSERT INTO `resource` VALUES ('605', '1', 'data/tenant/upload/57/0d040fb49aa6c91a40f310f70616282e.png', '1495702814');
+INSERT INTO `resource` VALUES ('606', '1', 'data/tenant/upload/62/67529f05f6cf1cbb348cd4590b8ccc28.png', '1495702816');
+INSERT INTO `resource` VALUES ('607', '1', 'data/tenant/upload/72/ca731a52541a42a4a4ea559bf358f67c.png', '1495702826');
+INSERT INTO `resource` VALUES ('608', '1', 'data/tenant/upload/53/c9881344ecbb93aa9a02140985cc4a87.png', '1495702828');
+INSERT INTO `resource` VALUES ('609', '1', 'data/tenant/upload/74/2f6eb973b57967b65f49f767b6d809eb.png', '1495702863');
+INSERT INTO `resource` VALUES ('610', '6', 'data/tenant/upload/61/13d5681b7fe19517abeea2f4435f8842.png', '1495702908');
+INSERT INTO `resource` VALUES ('611', '1', 'data/tenant/upload/22/d2aa84c7fea4c4a3501bd259d1b5f8c1.jpg', '1495703235');
+INSERT INTO `resource` VALUES ('612', '1', 'data/tenant/upload/34/9f8c99ccaab82af1a7af37fe9a75d427.jpg', '1495703243');
+INSERT INTO `resource` VALUES ('613', '1', 'data/tenant/upload/52/2ac8d35d185de7508d25a06d700394fc.jpg', '1495703253');
+INSERT INTO `resource` VALUES ('614', '1', 'data/tenant/upload/19/de3a5253871be5d31cf2f7b116a56a52.jpg', '1495703256');
+INSERT INTO `resource` VALUES ('615', '1', 'data/tenant/upload/45/c107573d7ce5a23fc7400fe49236acfd.png', '1495703315');
+INSERT INTO `resource` VALUES ('616', '1', 'data/tenant/upload/20/e423458a8d23c199f9708f6d2fe29b31.jpg', '1495703335');
+INSERT INTO `resource` VALUES ('617', '1', 'data/tenant/upload/46/d1cb007c9687105fbf5ecf4d4eecec5a.png', '1495703615');
+INSERT INTO `resource` VALUES ('618', '1', 'data/tenant/upload/15/9353bb7ff313ddc53bac71d4d3aaad87.png', '1495703625');
+INSERT INTO `resource` VALUES ('619', '1', 'data/tenant/upload/39/c03a43a6103b6518c9a8c9533129ed87.jpg', '1495703630');
+INSERT INTO `resource` VALUES ('620', '1', 'data/tenant/upload/39/54b6c8267a64bf91cc90dcbb1b70c50d.png', '1495703649');
+INSERT INTO `resource` VALUES ('621', '1', 'data/tenant/upload/22/2301734a43388e65252d54e88626f240.jpg', '1495703652');
+INSERT INTO `resource` VALUES ('622', '1', 'data/tenant/upload/18/85a42d6319324dbae37e24f0f383a3fc.png', '1495704731');
+INSERT INTO `resource` VALUES ('623', '1', 'data/tenant/upload/78/93a2e6c202367832e86fd8caa28f2fda.png', '1495704738');
+INSERT INTO `resource` VALUES ('624', '1', 'data/tenant/upload/96/c82856750b6670b92f42c7e96bd815b9.png', '1495704911');
+INSERT INTO `resource` VALUES ('625', '1', 'data/tenant/upload/26/126d2cdb49adacf94e310ef098b65a20.jpg', '1495704915');
+INSERT INTO `resource` VALUES ('626', '1', 'data/tenant/upload/42/eb70766dbfdf6a4d186352c57317b4f2.png', '1495704917');
+INSERT INTO `resource` VALUES ('627', '1', 'data/tenant/upload/70/936646235e55cc0a974d4ef49013e30b.png', '1495704931');
+INSERT INTO `resource` VALUES ('628', '6', 'data/tenant/upload/94/7b1993a6cc2ada3a794ae5c35efad81e.png', '1495705238');
+INSERT INTO `resource` VALUES ('629', '6', 'data/tenant/upload/32/3f0bd43bf15f5c8ba986b139cca6fae7.png', '1495705253');
+INSERT INTO `resource` VALUES ('630', '6', 'data/tenant/upload/34/415bb0f5c21d26c545f792bcf3f64a93.png', '1495705329');
+INSERT INTO `resource` VALUES ('631', '6', 'data/tenant/upload/59/ec7ba7b44921226449468802ca883c91.jpg', '1495705332');
+INSERT INTO `resource` VALUES ('632', '3', 'data/tenant/image/83f441f0bdab9957181ae7842e6ac592.jpg', '1495705754');
+INSERT INTO `resource` VALUES ('633', '3', 'data/tenant/image/ac2f2562b4170a5f141f5321fc5730be.jpg', '1495705774');
+INSERT INTO `resource` VALUES ('634', '3', 'data/tenant/image/071cf82e97ca539cadef3f8d909d6f3a.jpg', '1495705786');
+INSERT INTO `resource` VALUES ('635', '3', 'data/tenant/image/9053f66fbade0376d56417970d58bef3.jpg', '1495705856');
+INSERT INTO `resource` VALUES ('636', '3', 'data/tenant/image/70c62bba3f99368246ee732713e06344.jpg', '1495705892');
+INSERT INTO `resource` VALUES ('637', '3', 'data/tenant/image/0b24e2f25da503f8f41b006e968c3eda.jpg', '1495705931');
+INSERT INTO `resource` VALUES ('638', '3', 'data/tenant/image/8b9c0b66fd1ff052fc79154d99c960fd.jpg', '1495705948');
+INSERT INTO `resource` VALUES ('639', '3', 'data/tenant/image/01b2e746bb3ce2ec81dbaf0d8e7ad516.jpg', '1495705963');
+INSERT INTO `resource` VALUES ('640', '3', 'data/tenant/image/1ec23aca3df323cdbcd3e6243c8ed3f0.png', '1495705970');
+INSERT INTO `resource` VALUES ('641', '3', 'data/tenant/image/9fa34429cd91710d747149be764a06b5.png', '1495705978');
+INSERT INTO `resource` VALUES ('642', '3', 'data/tenant/image/0aab5231c6a79437287f13606dc9c306.jpg', '1495705988');
+INSERT INTO `resource` VALUES ('643', '3', 'data/tenant/image/6cbbc569deabbe96689450f494f0753b.jpg', '1495705995');
+INSERT INTO `resource` VALUES ('644', '3', 'data/tenant/image/784117fd70a5a287b27d1d711ac73d96.jpg', '1495706006');
+INSERT INTO `resource` VALUES ('645', '6', 'data/tenant/upload/65/f359b1f805009544b506f6cb1cd2c056.png', '1495706063');
+INSERT INTO `resource` VALUES ('646', '3', 'data/tenant/image/cc4a378ddedca015907af838cc5b410b.png', '1495706163');
+INSERT INTO `resource` VALUES ('647', '3', 'data/tenant/image/faf562255636e60bf6308f82d185de57.png', '1495706176');
+INSERT INTO `resource` VALUES ('648', '3', 'data/tenant/image/5418b51972ab12aaf00962abbb4a37f9.png', '1495706179');
+INSERT INTO `resource` VALUES ('649', '1', 'data/tenant/upload/98/a65c475a67244b0e583333518a335811.png', '1495706156');
+INSERT INTO `resource` VALUES ('650', '1', 'data/tenant/upload/22/d659c52526cf3cdd865bb8f16a8932e0.png', '1495706166');
+INSERT INTO `resource` VALUES ('651', '1', 'data/tenant/upload/43/8394cb855e6d061d15270a8d62dcdd0d.jpg', '1495706187');
+INSERT INTO `resource` VALUES ('652', '1', 'data/tenant/upload/79/375ce36ee7beb6621ad0176a1116cfcd.png', '1495706190');
+INSERT INTO `resource` VALUES ('653', '3', 'data/tenant/image/86b8ea42c65c171788e2b9d226dad55d.png', '1495706280');
+INSERT INTO `resource` VALUES ('654', '1', 'data/tenant/upload/44/045ff2033d263475977c845682b8caac.jpg', '1495706685');
+INSERT INTO `resource` VALUES ('655', '1', 'data/tenant/upload/94/a0d9651ffa302915226291e02a3fb92c.jpg', '1495706688');
+INSERT INTO `resource` VALUES ('656', '1', 'data/tenant/upload/44/033194b88de1d1d6168eeeb3ec92d95b.jpg', '1495706691');
+INSERT INTO `resource` VALUES ('657', '1', 'data/tenant/upload/86/e509ee06318694730ab3b7f6fb378379.jpg', '1495706703');
+INSERT INTO `resource` VALUES ('658', '1', 'data/tenant/upload/64/20e940af54cf666f42b3597c4c589f8f.jpg', '1495706729');
+INSERT INTO `resource` VALUES ('659', '6', 'data/tenant/upload/80/ec2bb80f2dddefe0237502a1736e84d5.jpg', '1495706736');
+INSERT INTO `resource` VALUES ('660', '1', 'data/tenant/upload/90/1f1558baa96f2c055946a12f60477444.png', '1495706312');
+INSERT INTO `resource` VALUES ('661', '1', 'data/tenant/upload/48/8f8a59ee62005639e209de5f5a3f59f9.png', '1495706315');
+INSERT INTO `resource` VALUES ('662', '1', 'data/tenant/upload/48/73a4557b42001f5e2c58b001ec736fad.png', '1495706324');
+INSERT INTO `resource` VALUES ('663', '1', 'data/tenant/upload/43/fa52e61b2cee0d77b46c5ed7df83ddf4.jpg', '1495706327');
+INSERT INTO `resource` VALUES ('664', '2', 'data/tenant/upload/42/625e6f57b18bbcc8136b1e1cd2a48f59.png', '1495706348');
+INSERT INTO `resource` VALUES ('665', '3', 'data/tenant/image/6a9b80191ca350bf65abdbceea1b67b7.png', '1495706522');
+INSERT INTO `resource` VALUES ('666', '3', 'data/tenant/image/26d110480b648bb407ae8bcaee983a59.png', '1495706529');
+INSERT INTO `resource` VALUES ('667', '3', 'data/tenant/image/05d45868558801fc1fb699b229ea415a.png', '1495706531');
+INSERT INTO `resource` VALUES ('668', '6', 'data/tenant/upload/81/e6e53bf446fb7049f60273e12015efa5.png', '1495706543');
+INSERT INTO `resource` VALUES ('669', '6', 'data/tenant/upload/36/5759ab3e9371273dfd64729b67bbda7c.png', '1495706545');
+INSERT INTO `resource` VALUES ('670', '6', 'data/tenant/upload/49/6db1e770dce4247aa639cb655a654709.png', '1495706568');
+INSERT INTO `resource` VALUES ('671', '6', 'data/tenant/upload/81/c7368bc29acc4cd2309937693660ef73.png', '1495706705');
+INSERT INTO `resource` VALUES ('672', '6', 'data/tenant/upload/30/29c47634847cb73906cdb74d4489de11.png', '1495706780');
+INSERT INTO `resource` VALUES ('673', '6', 'data/tenant/upload/39/1aeb92cb97ba134d75d156650bd565f7.png', '1495706905');
+INSERT INTO `resource` VALUES ('674', '6', 'data/tenant/upload/50/4197f2b4f25904dabe0645aac4ae48df.png', '1495707055');
+INSERT INTO `resource` VALUES ('675', '6', 'data/tenant/upload/20/0324b28647d98aaa89f1951ef40a5beb.png', '1495707166');
+INSERT INTO `resource` VALUES ('676', '6', 'data/tenant/upload/88/57609c24371c75ab0e7184d0717b0937.png', '1495707249');
+INSERT INTO `resource` VALUES ('677', '6', 'data/tenant/upload/93/c04226040ec7e6212e66c045ba996ec7.png', '1495707301');
+INSERT INTO `resource` VALUES ('678', '6', 'data/tenant/upload/64/5a6ce05f1eb1c56d0ab40167d9963091.png', '1495707308');
+INSERT INTO `resource` VALUES ('679', '6', 'data/tenant/upload/49/ac0c6d99d4c655282de3c288bed6ff8d.png', '1495707321');
+INSERT INTO `resource` VALUES ('680', '6', 'data/tenant/upload/16/2cf4c1ebd01ef3953e813f1c18a2d31a.png', '1495707324');
+INSERT INTO `resource` VALUES ('681', '6', 'data/tenant/upload/75/0c3507a7e0b8d7a820a27fc015a9090b.png', '1495707332');
+INSERT INTO `resource` VALUES ('682', '6', 'data/tenant/upload/75/a26460b82e06a2442a1fa7965ed2f582.png', '1495762672');
+INSERT INTO `resource` VALUES ('683', '6', 'data/tenant/upload/25/4e0f13d49b8781037a3fb5ffe18d223f.png', '1495762692');
+INSERT INTO `resource` VALUES ('684', '6', 'data/tenant/upload/37/f5ed1584f406887f42188c74b98108ba.png', '1495762695');
+INSERT INTO `resource` VALUES ('685', '6', 'data/tenant/upload/87/a307d2fee090b48ee587e869e3aec1d2.png', '1495762974');
+INSERT INTO `resource` VALUES ('686', '3', 'data/tenant/image/5fe3594941113435e9e069c352e7ade0.png', '1495763084');
+INSERT INTO `resource` VALUES ('687', '3', 'data/tenant/image/fa4d23edd044b9a328623015e29d9c2f.png', '1495763086');
+INSERT INTO `resource` VALUES ('688', '1', 'data/tenant/upload/52/5f63f7a0f19147508bb16fa31e2da57f.png', '1495763300');
+INSERT INTO `resource` VALUES ('689', '1', 'data/tenant/upload/99/0f4b9025639ce41597e6e1c6d7fc8dc3.png', '1495763307');
+INSERT INTO `resource` VALUES ('690', '1', 'data/tenant/upload/45/c2b17b212cb7e6b0df1bef3833b9f955.png', '1495763360');
+INSERT INTO `resource` VALUES ('691', '6', 'data/tenant/upload/85/47210439ff25c5fdefa494c9b76c7fac.png', '1495764034');
+INSERT INTO `resource` VALUES ('692', '1', 'data/tenant/upload/60/c78cd6b3d00f652c4e86c11c13cfb2f4.png', '1495764019');
+INSERT INTO `resource` VALUES ('693', '6', 'data/tenant/upload/22/30439e466846997e4c849417deace409.png', '1495764343');
+INSERT INTO `resource` VALUES ('694', '6', 'data/tenant/upload/85/f6e5969cab8cb4541a91be9e9060e263.png', '1495764417');
+INSERT INTO `resource` VALUES ('695', '6', 'data/tenant/upload/34/7a37db768ef8d51b744643e29878bd3e.png', '1495764468');
+INSERT INTO `resource` VALUES ('696', '6', 'data/tenant/upload/16/b61bba406d1f898e72b775ba6c7f956a.jpg', '1495764476');
+INSERT INTO `resource` VALUES ('697', '6', 'data/tenant/upload/11/1c0aaf21f08c644fe927e0fdfe6da44d.png', '1495764486');
+INSERT INTO `resource` VALUES ('698', '6', 'data/tenant/upload/36/f6dc26d0f4beee31f09305d2f5b5e3c9.png', '1495764643');
+INSERT INTO `resource` VALUES ('699', '6', 'data/tenant/upload/37/a69ccf3038a0e8527432fc1de6d0a785.png', '1495764647');
+INSERT INTO `resource` VALUES ('700', '6', 'data/tenant/upload/93/42735068c4e6c916ced5fb9748be23e3.png', '1495764773');
+INSERT INTO `resource` VALUES ('701', '6', 'data/tenant/upload/51/60eef7240987968e26576bba9750f674.png', '1495764785');
+INSERT INTO `resource` VALUES ('702', '6', 'data/tenant/upload/52/3c2b6fe235b414d7094060150e27e6e4.png', '1495764794');
+INSERT INTO `resource` VALUES ('703', '6', 'data/tenant/upload/80/6bb5d15b1d6f262ee9fcf065b089c133.png', '1495765016');
+INSERT INTO `resource` VALUES ('704', '1', 'data/tenant/upload/51/f86abf748871f6adc84c2900c007ef84.png', '1495765147');
+INSERT INTO `resource` VALUES ('705', '1', 'data/tenant/upload/71/5646772ac60c0bae3445ed42b3b88372.png', '1495765162');
+INSERT INTO `resource` VALUES ('706', '1', 'data/tenant/upload/22/0f591c85d4ced70ed8436e584b5937a7.jpg', '1495765164');
+INSERT INTO `resource` VALUES ('707', '1', 'data/tenant/upload/35/7392ea04487af75899dab1b7f54dbc75.png', '1495765231');
+INSERT INTO `resource` VALUES ('708', '1', 'data/tenant/upload/44/252af547801516e64d9b4ab9f3fc1ac2.png', '1495765243');
+INSERT INTO `resource` VALUES ('709', '1', 'data/tenant/upload/22/96e2eb319046c0fd3719e9690158ac49.png', '1495765251');
+INSERT INTO `resource` VALUES ('710', '1', 'data/tenant/upload/79/646bc6547f7938c092477a3b39182796.jpg', '1495765258');
+INSERT INTO `resource` VALUES ('711', '1', 'data/tenant/upload/71/0fa5a676b2ae34c2714fb70b3877a7a4.png', '1495765260');
+INSERT INTO `resource` VALUES ('712', '1', 'data/tenant/upload/11/ccf4ef2bcd90478ad54fc1bad27d512c.png', '1495765266');
+INSERT INTO `resource` VALUES ('713', '1', 'data/tenant/upload/11/6afff7738950a3777532579eb379bac0.png', '1495765274');
+INSERT INTO `resource` VALUES ('714', '3', 'data/tenant/image/66b81022ad995e769f72e02220e92857.png', '1495765655');
+INSERT INTO `resource` VALUES ('715', '3', 'data/tenant/image/5128c298db8a1c5e57525f000c40c202.png', '1495765659');
+INSERT INTO `resource` VALUES ('716', '1', 'data/tenant/upload/38/8e24f60b5b1371310032d58bf905825d.png', '1495765609');
+INSERT INTO `resource` VALUES ('717', '3', 'data/tenant/image/6b845045e3d93c21a229c495d695d187.png', '1495765776');
+INSERT INTO `resource` VALUES ('718', '2', 'data/tenant/upload/48/7654b764939e2f42167dc6cc7b99fb9c.png', '1495766105');
+INSERT INTO `resource` VALUES ('719', '2', 'data/tenant/upload/78/dc843efb3655e657752a7033d64d7efe.png', '1495766124');
+INSERT INTO `resource` VALUES ('720', '3', 'data/tenant/image/c8c9d4734c5280a1ec1af3c6d14113c3.png', '1495766466');
+INSERT INTO `resource` VALUES ('721', '3', 'data/tenant/image/81a50cbb4cb3a336e885bee63b3a5d55.png', '1495766469');
+INSERT INTO `resource` VALUES ('722', '2', 'data/tenant/upload/55/44293300f2f427810912be900622d783.png', '1495766669');
+INSERT INTO `resource` VALUES ('723', '2', 'data/tenant/upload/11/415db53c45e541b3cf609c3f6762065a.jpg', '1495766682');
+INSERT INTO `resource` VALUES ('724', '3', 'data/tenant/image/8d89efecc9b572446da0425e37efff30.png', '1495766759');
+INSERT INTO `resource` VALUES ('725', '2', 'data/tenant/upload/48/5db715959ec39435341d67be165102c6.png', '1495766687');
+INSERT INTO `resource` VALUES ('726', '3', 'data/tenant/image/fb11078f6fbc02db8fe144a51c3707f5.png', '1495766761');
+INSERT INTO `resource` VALUES ('727', '3', 'data/tenant/image/f30733c487b1ef6b9632a4676f311473.jpg', '1495766763');
+INSERT INTO `resource` VALUES ('728', '2', 'data/tenant/upload/57/d58453feb837dacae11955bfdc32737e.png', '1495767082');
+INSERT INTO `resource` VALUES ('729', '2', 'data/tenant/upload/87/f0461bb5267278f5fc2dc007699f2ef8.jpg', '1495767089');
+INSERT INTO `resource` VALUES ('730', '1', 'data/tenant/upload/99/fcc7b4c903ba11aef74ab47b69c656b1.png', '1495767103');
+INSERT INTO `resource` VALUES ('731', '1', 'data/tenant/upload/25/e2aa7ffd97400974c4806d9a042624da.png', '1495767105');
+INSERT INTO `resource` VALUES ('732', '1', 'data/tenant/upload/11/1265c103798ae272e6ad8df6d1a71138.jpg', '1495767110');
+INSERT INTO `resource` VALUES ('733', '1', 'data/tenant/upload/32/3cdbd03491120f5b3c00a87c87ada5de.png', '1495767119');
+INSERT INTO `resource` VALUES ('734', '1', 'data/tenant/upload/12/61cee98b3161de52f97155b66b3de28b.jpg', '1495767125');
+INSERT INTO `resource` VALUES ('735', '1', 'data/tenant/upload/23/3df64ee4d362e5c9ccde9f18da755cba.png', '1495767130');
+INSERT INTO `resource` VALUES ('736', '1', 'data/tenant/upload/57/f4bf7a6a4d3dbbc9275f9658eb2b4d91.png', '1495767145');
+INSERT INTO `resource` VALUES ('737', '6', 'data/tenant/upload/43/3de71725040d7eca21f3ae1565c398ee.png', '1495767156');
+INSERT INTO `resource` VALUES ('738', '6', 'data/tenant/upload/53/ec4d1759a1a86460ec81449971777a06.jpg', '1495768211');
+INSERT INTO `resource` VALUES ('739', '6', 'data/tenant/upload/74/7a75aedd139f22c2778534bbb55c09a2.jpg', '1495768243');
+INSERT INTO `resource` VALUES ('740', '6', 'data/tenant/upload/17/f400033c7cca4fc75a42b8850f5cb26d.jpg', '1495768269');
+INSERT INTO `resource` VALUES ('741', '6', 'data/tenant/upload/24/41bc28bef36db67f04b02e266ebf0c44.png', '1495768305');
+INSERT INTO `resource` VALUES ('742', '6', 'data/tenant/upload/58/a994339be40fed49661fa0b4d6ac946e.png', '1495768307');
+INSERT INTO `resource` VALUES ('743', '6', 'data/tenant/upload/21/65b650d22f783d7326ff62ad16aac827.png', '1495768316');
+INSERT INTO `resource` VALUES ('744', '6', 'data/tenant/upload/98/0c61e6f81cd79384ba6ed69440cb6f50.jpg', '1495768336');
+INSERT INTO `resource` VALUES ('745', '6', 'data/tenant/upload/43/95bcb8c9cc1fb72869ff2c72af0c1f24.jpg', '1495768375');
+INSERT INTO `resource` VALUES ('746', '6', 'data/tenant/upload/13/5850d401978f7388ff30edac6434a4b7.jpg', '1495768387');
+INSERT INTO `resource` VALUES ('747', '6', 'data/tenant/upload/67/ea05791de1c793bd0297dde94a936fb0.png', '1495768918');
+INSERT INTO `resource` VALUES ('748', '6', 'data/tenant/upload/46/5654ef1e9d605399567b76395e21e495.png', '1495768996');
+INSERT INTO `resource` VALUES ('749', '3', 'data/tenant/image/7de65453ca85378bc665f96563e8b5f7.png', '1495769017');
+INSERT INTO `resource` VALUES ('750', '6', 'data/tenant/upload/73/0c8a03288afdbd703b4052ab766f2bd6.jpg', '1495770058');
+INSERT INTO `resource` VALUES ('751', '3', 'data/tenant/image/bd86825004a645553708d4c49aafdf31.jpg', '1495770077');
+INSERT INTO `resource` VALUES ('752', '6', 'data/tenant/upload/67/3d2c5261a65c5459f6b9985e74c2d523.jpg', '1495770091');
+INSERT INTO `resource` VALUES ('753', '4', 'data/api/upload/3e4684189fc10a22612967d7e5283dc2.jpg', '1495790761');
+INSERT INTO `resource` VALUES ('754', '4', 'data/api/upload/8534ebbb8f53b878af8e1afb63f77e08.jpg', '1495790828');
+INSERT INTO `resource` VALUES ('755', '4', 'data/api/upload/16da711d2eb711f8e6d46108496ed9cd.jpg', '1495790845');
+INSERT INTO `resource` VALUES ('756', '4', 'data/api/upload/6df1fc6572d9ef9cdc9f1e77254b9b81.jpg', '1495791284');
+INSERT INTO `resource` VALUES ('757', '4', 'data/api/upload/9985ffaa1172afafdd447d660218e27b.jpg', '1495791313');
+INSERT INTO `resource` VALUES ('758', '4', 'data/api/upload/4ed087bf3b31496b52e5596888992477.jpg', '1495791330');
+INSERT INTO `resource` VALUES ('759', '4', 'data/api/upload/248ce129be0e6e3c0e163e0702b5b593.jpg', '1495791383');
+INSERT INTO `resource` VALUES ('760', '4', 'data/api/upload/5fde4bbaf58b8626b65c2ce806cd0b2d.jpg', '1495791417');
+INSERT INTO `resource` VALUES ('761', '4', 'data/api/upload/f37c1197175342b7efa7749fa9527b08.jpg', '1495791537');
+INSERT INTO `resource` VALUES ('762', '4', 'data/api/upload/f004d996c6a0738d25717f9ad24a726f.jpg', '1495791780');
+INSERT INTO `resource` VALUES ('763', '4', 'data/api/upload/3e487849154a835c62a8ec45f3f3261f.jpg', '1495791782');
+INSERT INTO `resource` VALUES ('764', '4', 'data/api/upload/96c264859cbdd6fe81241aa41edc49b7.jpg', '1495791815');
+INSERT INTO `resource` VALUES ('765', '4', 'data/api/upload/26717dedfb7bd91c0796ba2bb4ec2710.jpg', '1495791817');
+INSERT INTO `resource` VALUES ('766', '4', 'data/api/upload/848fdd6d7bb0bde3926e6b4f37e8101f.jpg', '1495792008');
+INSERT INTO `resource` VALUES ('767', '4', 'data/api/upload/647157354d97a3c11dbc9f3a605a95aa.jpg', '1495792010');
+INSERT INTO `resource` VALUES ('768', '4', 'data/api/upload/c2da642f673b013afc4455f3622b7757.jpg', '1495792046');
+INSERT INTO `resource` VALUES ('769', '4', 'data/api/upload/9345b0d5bf1715561e2f3ba5e0e69107.jpg', '1495792048');
+INSERT INTO `resource` VALUES ('770', '4', 'data/api/upload/42dcca183d9440cd4dd8b6c092c69e85.jpg', '1495792084');
+INSERT INTO `resource` VALUES ('771', '4', 'data/api/upload/f238b39af3c6f57d9a08545ae86579c0.jpg', '1495792086');
+INSERT INTO `resource` VALUES ('772', '6', 'data/tenant/upload/83/33b1e0c6a88fa81a508fc6c07611e913.', '1495868722');
+INSERT INTO `resource` VALUES ('773', '6', 'data/tenant/upload/50/79a26990719f1f1916fe2b6fe6c7247f.jpg', '1495868945');
+INSERT INTO `resource` VALUES ('774', '6', 'data/tenant/upload/66/989fa9d778a147aeee05fb40ea3769ff.jpg', '1495869118');
+INSERT INTO `resource` VALUES ('775', '1', 'data/tenant/upload/81/bde33fd92bc0e191a69b9a8c4dfef380.jpg', '1496199526');
+INSERT INTO `resource` VALUES ('776', '1', 'data/tenant/upload/33/e494905498277b11b7926d6dd5e0339b.jpg', '1496199532');
+INSERT INTO `resource` VALUES ('777', '1', 'data/tenant/upload/71/9e20106f225b3b061fdc2afa0df80d1b.png', '1496199533');
+INSERT INTO `resource` VALUES ('778', '1', 'data/tenant/upload/51/45fa6cdeacd7dcbe13e899cb2591bc31.png', '1496199557');
+INSERT INTO `resource` VALUES ('779', '1', 'data/tenant/upload/77/d1ae155b19899c6b9b486ef562579b30.png', '1496199570');
+INSERT INTO `resource` VALUES ('780', '6', 'data/tenant/upload/68/553d0985f62c8f3ddf33a5d4df48c3c0.png', '1496199603');
+INSERT INTO `resource` VALUES ('781', '1', 'data/tenant/upload/27/5f1675b30af9c6857254218afb2228e2.png', '1496200901');
+INSERT INTO `resource` VALUES ('782', '1', 'data/tenant/upload/28/e39b564a8c12ba14eb68caecdbe42a8d.jpg', '1496200910');
+INSERT INTO `resource` VALUES ('783', '1', 'data/tenant/upload/51/d7bda14bfe4aefa49b9d23eecac9eedd.png', '1496200913');
+INSERT INTO `resource` VALUES ('784', '1', 'data/tenant/upload/53/661d1b862b69397b582e54e2f62e127e.png', '1496200915');
+INSERT INTO `resource` VALUES ('785', '4', 'data/api/upload/f982d1f92b5eb03190fa8dbb8b11a082.jpg', '1496286210');
+INSERT INTO `resource` VALUES ('786', '4', 'data/api/upload/fa2644b5b76145ef61b0a5ba317b928c.jpg', '1496286227');
+INSERT INTO `resource` VALUES ('787', '4', 'data/api/upload/b8a446d81db4a9c9e9c86a33be90c83d.jpg', '1496287930');
+INSERT INTO `resource` VALUES ('788', '4', 'data/api/upload/d16f04b17fe79f140301e4b7c6d53be8.jpg', '1496288040');
+INSERT INTO `resource` VALUES ('789', '4', 'data/api/upload/1bca35301435dcc611002f8379cebb2a.jpg', '1496288550');
+INSERT INTO `resource` VALUES ('790', '2', 'data/api/upload/c4ca4238a0b923820dcc509a6f75849b.jpg', '1496395738');
+INSERT INTO `resource` VALUES ('791', '2', 'data/api/upload/c4ca4238a0b923820dcc509a6f75849b.jpg', '1496631275');
+INSERT INTO `resource` VALUES ('792', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1496631446');
+INSERT INTO `resource` VALUES ('793', '4', 'data/api/upload/7978cadbb2231e3c3a3da23568d93874.jpg', '1496642108');
+INSERT INTO `resource` VALUES ('794', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1496642365');
+INSERT INTO `resource` VALUES ('795', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1496642796');
+INSERT INTO `resource` VALUES ('796', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1496642891');
+INSERT INTO `resource` VALUES ('797', '4', 'data/api/upload/139ac60eb112928fccf8cafe3a5b1acc.jpg', '1496648755');
+INSERT INTO `resource` VALUES ('798', '2', 'data/api/upload/a87ff679a2f3e71d9181a67b7542122c.jpg', '1496739932');
+INSERT INTO `resource` VALUES ('799', '3', 'data/tenant/image/dec84bd6ab3606ea918fdce6a578c198.jpg', '1496806402');
+INSERT INTO `resource` VALUES ('800', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1496910622');
+INSERT INTO `resource` VALUES ('801', '1', 'data/tenant/upload/20/3f1ce88257b5c0d4ed86acbe15130072.png', '1496989298');
+INSERT INTO `resource` VALUES ('802', '1', 'data/tenant/upload/82/a563d70c6c1b42a2c6f432f1e54d3985.jpg', '1496989303');
+INSERT INTO `resource` VALUES ('803', '1', 'data/tenant/upload/46/8ff4e16f4aa32e369cd1d2ac8848444a.png', '1496989312');
+INSERT INTO `resource` VALUES ('804', '1', 'data/tenant/upload/81/bb63bd779034780f92fa43dca81564b0.jpg', '1496989316');
+INSERT INTO `resource` VALUES ('805', '1', 'data/tenant/upload/61/b235ae2c0b59d031584c38ef973b1e69.png', '1496989320');
+INSERT INTO `resource` VALUES ('806', '1', 'data/tenant/upload/19/4c23e0da6fc84962201a5d01acd5932a.png', '1496989408');
+INSERT INTO `resource` VALUES ('807', '6', 'data/tenant/upload/16/c65a724d7eafff68c38a511c11b4e4e2.jpg', '1496989465');
+INSERT INTO `resource` VALUES ('808', '3', 'data/tenant/image/1bd3005f1072f02f1c36322ef1fb8fcb.jpg', '1496989843');
+INSERT INTO `resource` VALUES ('809', '3', 'data/tenant/image/105d781c2bef144f51e7c1fc4bf00e99.png', '1496989846');
+INSERT INTO `resource` VALUES ('810', '6', 'data/tenant/upload/70/0a609548e0df534e186bc126754f66df.jpg', '1497247624');
+INSERT INTO `resource` VALUES ('811', '6', 'data/tenant/upload/58/ab6048a7499a23d2038917b40f6c80dd.jpg', '1497247679');
+INSERT INTO `resource` VALUES ('812', '6', 'data/tenant/upload/66/a30863743de458b280e231d087d4338a.jpg', '1497247749');
+INSERT INTO `resource` VALUES ('813', '3', 'data/tenant/image/6df61332751f7586f2cc16843847fc3d.png', '1497320119');
+INSERT INTO `resource` VALUES ('814', '3', 'data/tenant/image/948f22134d5bd2dbade8bfee15112dc9.jpg', '1497320313');
+INSERT INTO `resource` VALUES ('815', '3', 'data/tenant/image/34760d006de24f6b8d4f47c37bc546ec.jpg', '1497322021');
+INSERT INTO `resource` VALUES ('816', '3', 'data/tenant/image/016ee2635816e00155d345afe4ae02c6.jpg', '1497322139');
+INSERT INTO `resource` VALUES ('817', '3', 'data/tenant/image/e01db49695162db2565244a8c4cbb521.jpg', '1497322253');
+INSERT INTO `resource` VALUES ('818', '2', 'data/tenant/upload/56/ebff9ac6fba045f51472da3e255f4ad6.jpg', '1497322495');
+INSERT INTO `resource` VALUES ('819', '3', 'data/tenant/image/d35111f633d5ad010fd93f59668b7b71.jpg', '1497322881');
+INSERT INTO `resource` VALUES ('820', '3', 'data/tenant/image/d0baa9b900ae575776d734f035ad652b.jpg', '1497322959');
+INSERT INTO `resource` VALUES ('821', '3', 'data/tenant/image/1b83788f01784597907bea70e29bdaf0.jpg', '1497337425');
+INSERT INTO `resource` VALUES ('822', '2', 'data/tenant/upload/70/b6076c3530b14d8420a82e98a3e47287.jpg', '1497409148');
+INSERT INTO `resource` VALUES ('823', '2', 'data/tenant/upload/94/fc46f8ac927b47d85e5199e650c23a64.jpg', '1497410546');
+INSERT INTO `resource` VALUES ('824', '2', 'data/tenant/upload/56/2275b8692e24d6c936fa89bf0ce66ab1.png', '1497410567');
+INSERT INTO `resource` VALUES ('825', '3', 'data/tenant/image/ad08833c192f439a78c551eeaf70f3ee.png', '1497426291');
+INSERT INTO `resource` VALUES ('826', '3', 'data/tenant/image/f90c308c1234ee0a08fa46010acfe0f6.png', '1497427074');
+INSERT INTO `resource` VALUES ('827', '3', 'data/tenant/image/0dd725dad5f330d37a37269a329bf76a.png', '1497427205');
+INSERT INTO `resource` VALUES ('828', '3', 'data/tenant/image/0580d1e789460bfb6ee6b7b1f55a5676.png', '1497427218');
+INSERT INTO `resource` VALUES ('829', '3', 'data/tenant/image/6cff51ea8deec9c76dada66014ac9824.png', '1497427271');
+INSERT INTO `resource` VALUES ('830', '3', 'data/tenant/image/f856c80fe6df31a4d05c71b4286049ad.png', '1497427404');
+INSERT INTO `resource` VALUES ('831', '3', 'data/tenant/image/753dc57a0452551d4afe7f1e2ccadf78.png', '1497427398');
+INSERT INTO `resource` VALUES ('832', '3', 'data/tenant/image/f523b0616b1d13f9a1e7dc9206d532cb.png', '1497427536');
+INSERT INTO `resource` VALUES ('833', '3', 'data/tenant/image/6da329db7227841149090c4715fd8506.png', '1497427622');
+INSERT INTO `resource` VALUES ('834', '3', 'data/tenant/image/868efa43f536450ab11ae07147814621.png', '1497427624');
+INSERT INTO `resource` VALUES ('835', '3', 'data/tenant/image/8cc79c2c64f7751ccc06a5c95bae9c83.png', '1497427630');
+INSERT INTO `resource` VALUES ('836', '3', 'data/tenant/image/9d05c8dbe3b01c763a585630db10bd16.png', '1497427632');
+INSERT INTO `resource` VALUES ('837', '3', 'data/tenant/image/de7cfe49ded5a919c880363c382621dc.png', '1497427638');
+INSERT INTO `resource` VALUES ('838', '3', 'data/tenant/image/52b94cb02e436a181b7c635e09678d93.png', '1497428178');
+INSERT INTO `resource` VALUES ('839', '3', 'data/tenant/image/c4b329343b568c4c3d27d46c1f487d34.png', '1497428233');
+INSERT INTO `resource` VALUES ('840', '3', 'data/tenant/image/d9fc9d426bf3175c4cdcbdfd76db604d.png', '1497428467');
+INSERT INTO `resource` VALUES ('841', '3', 'data/tenant/image/75286dc380b008e471590aa5f46c1c18.jpg', '1497428472');
+INSERT INTO `resource` VALUES ('842', '3', 'data/tenant/image/8d144a59a33ae86ebdcce3fc4dacbe73.jpg', '1497428932');
+INSERT INTO `resource` VALUES ('843', '3', 'data/tenant/image/75fd9b466c617921b0fd9c8f7e1dc4b4.png', '1497431314');
+INSERT INTO `resource` VALUES ('844', '3', 'data/tenant/image/9459ac79d4cd074bc47580f50fc17825.png', '1497432110');
+INSERT INTO `resource` VALUES ('845', '3', 'data/tenant/image/72ac00eaabe81bf3cafc46d99d3ca545.png', '1497432117');
+INSERT INTO `resource` VALUES ('846', '3', 'data/tenant/image/821f3461c11ca7ab55222d3926299c2b.jpg', '1497432120');
+INSERT INTO `resource` VALUES ('847', '1', 'data/tenant/upload/29/f0e4fb097cdb53849deb8c2dd6a09351.jpg', '1497857262');
+INSERT INTO `resource` VALUES ('848', '1', 'data/tenant/upload/61/610e0d1bb7d6decbf5265518a1d74458.jpg', '1497857266');
+INSERT INTO `resource` VALUES ('849', '1', 'data/tenant/upload/20/df71ed990887c6311cc0c46fc29af093.jpg', '1497857269');
+INSERT INTO `resource` VALUES ('850', '1', 'data/tenant/upload/23/f433b1b6b58a5b57a2637e2f1cfcd2af.jpg', '1497857276');
+INSERT INTO `resource` VALUES ('851', '6', 'data/tenant/upload/49/a1559548b0bb59cba10d55d1b22625e1.jpg', '1497857403');
+INSERT INTO `resource` VALUES ('852', '6', 'data/tenant/upload/19/680984c42f33a4f6d140149d062bef8d.jpg', '1497858734');
+INSERT INTO `resource` VALUES ('853', '6', 'data/tenant/upload/79/5c857112b1ae39d130c55992a27d922e.jpg', '1497860174');
+INSERT INTO `resource` VALUES ('854', '1', 'data/tenant/upload/87/ecf4d228f5d3a8bddcccea95009ec4aa.jpg', '1498032929');
+INSERT INTO `resource` VALUES ('855', '1', 'data/tenant/upload/84/783ad4cd8b726f99570506556963a0e9.jpg', '1498032931');
+INSERT INTO `resource` VALUES ('856', '1', 'data/tenant/upload/54/acd1d52eb544d2f268333b1408999bf6.jpg', '1498032933');
+INSERT INTO `resource` VALUES ('857', '1', 'data/tenant/upload/22/dbc4f108dbfb2c960db1996a5ce0c61a.jpg', '1498032940');
+INSERT INTO `resource` VALUES ('858', '1', 'data/tenant/upload/79/b58fe96b9190ec346b1ccb775dee0e0b.jpg', '1498032947');
+INSERT INTO `resource` VALUES ('859', '6', 'data/tenant/upload/27/67706799d98dd49cddc1008dd0d04ba3.jpg', '1498032969');
+INSERT INTO `resource` VALUES ('860', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498466283');
+INSERT INTO `resource` VALUES ('861', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498466745');
+INSERT INTO `resource` VALUES ('862', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498466761');
+INSERT INTO `resource` VALUES ('863', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498467565');
+INSERT INTO `resource` VALUES ('864', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498467587');
+INSERT INTO `resource` VALUES ('865', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498467643');
+INSERT INTO `resource` VALUES ('866', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498469219');
+INSERT INTO `resource` VALUES ('867', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498470889');
+INSERT INTO `resource` VALUES ('868', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498471086');
+INSERT INTO `resource` VALUES ('869', '1', 'data/tenant/upload/86/b795be31235d3aeb5ee718d2d0b5a407.jpg', '1498617568');
+INSERT INTO `resource` VALUES ('870', '1', 'data/tenant/upload/24/025531bd0eeaf59d497f282a6a3d5313.png', '1498620861');
+INSERT INTO `resource` VALUES ('871', '1', 'data/tenant/upload/90/238e0062820499c43afb4bafb0d5e462.png', '1498620939');
+INSERT INTO `resource` VALUES ('872', '1', 'data/tenant/upload/48/307ffa80f9ce842fcd080f04de0b979f.png', '1498621081');
+INSERT INTO `resource` VALUES ('873', '1', 'data/tenant/upload/25/9fa63be461e741dab03424e5056ec9fe.png', '1498621086');
+INSERT INTO `resource` VALUES ('874', '1', 'data/tenant/upload/61/d38dd5913b8ad66769f614278be3a032.png', '1498621725');
+INSERT INTO `resource` VALUES ('875', '1', 'data/tenant/upload/20/2f89ad9b6ba92eece20df02b2ac05d45.png', '1498621737');
+INSERT INTO `resource` VALUES ('876', '1', 'data/tenant/upload/57/0f74d3f3a4a64d4e5e9e7a668c59aa19.png', '1498621774');
+INSERT INTO `resource` VALUES ('877', '1', 'data/tenant/upload/58/554f50677e7b7a25d1df9eea7bb58625.jpg', '1498621784');
+INSERT INTO `resource` VALUES ('878', '1', 'data/tenant/upload/68/468df167bf276d7062553171cc117169.jpg', '1498621789');
+INSERT INTO `resource` VALUES ('879', '1', 'data/tenant/upload/22/c9ee9081b2ecb521211fe14498cfe79a.jpg', '1498621799');
+INSERT INTO `resource` VALUES ('880', '1', 'data/tenant/upload/35/b6d27770ebe95f4657c1a6ffba28647c.png', '1498621843');
+INSERT INTO `resource` VALUES ('881', '1', 'data/tenant/upload/97/f82f5a69ec4ba894caaff09a7d787985.png', '1498621848');
+INSERT INTO `resource` VALUES ('882', '1', 'data/tenant/upload/33/e1bbdffd7059c008a4d25c5379a633d6.png', '1498621903');
+INSERT INTO `resource` VALUES ('883', '6', 'data/tenant/upload/13/bf4880b654aa262211d86ce2cd88d5b2.jpg', '1498888904');
+INSERT INTO `resource` VALUES ('884', '6', 'data/tenant/upload/56/c1f32671580699774ff1ab5111f94bd4.jpg', '1498889085');
+INSERT INTO `resource` VALUES ('885', '6', 'data/tenant/upload/19/a7d7230047b394c1581ec7b7b8dec5f5.jpg', '1498889189');
+INSERT INTO `resource` VALUES ('886', '6', 'data/tenant/upload/91/3dd793eaf52c68393c3de0096e16bda0.jpg', '1498889271');
+INSERT INTO `resource` VALUES ('887', '3', 'data/tenant/image/316eae6a7b4d5ec0408be0ec2e6c2084.png', '1498631738');
+INSERT INTO `resource` VALUES ('888', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498631771');
+INSERT INTO `resource` VALUES ('889', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498631806');
+INSERT INTO `resource` VALUES ('890', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498631843');
+INSERT INTO `resource` VALUES ('891', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498631894');
+INSERT INTO `resource` VALUES ('892', '2', 'data/api/upload/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', '1498631959');
+INSERT INTO `resource` VALUES ('893', '6', 'data/tenant/upload/49/f9a8b5e5ffd70c9a9f3c17fe649d034b.jpg', '1498632734');
+INSERT INTO `resource` VALUES ('894', '6', 'data/tenant/upload/47/2de299f4bf8eba0ad1b57e9745f4d557.jpg', '1498632823');
+INSERT INTO `resource` VALUES ('895', '6', 'data/tenant/upload/62/5ec4946ba57fb456ba985c22301d9514.jpg', '1498632872');
+INSERT INTO `resource` VALUES ('896', '6', 'data/tenant/upload/78/4b87bfb52b775141fc980c38c8c4f5f2.jpg', '1498633040');
+INSERT INTO `resource` VALUES ('897', '6', 'data/tenant/upload/55/40580c309dde6e52eb3e29735829f779.jpg', '1498633309');
+INSERT INTO `resource` VALUES ('898', '6', 'data/tenant/upload/35/07a12ac89b56d0b6b033a32023360788.jpg', '1498633548');
+INSERT INTO `resource` VALUES ('899', '6', 'data/tenant/upload/55/b7a81f8314912d3ae0494a8cb5e11e46.jpg', '1498633651');
+INSERT INTO `resource` VALUES ('900', '1', 'data/tenant/upload/56/c0c0959bca6f93c5a0d1d751e7e2d7f6.png', '1498633778');
+INSERT INTO `resource` VALUES ('901', '1', 'data/tenant/upload/16/9c0c126eddc866f64621875868def1ed.png', '1498633845');
+INSERT INTO `resource` VALUES ('902', '6', 'data/tenant/upload/59/416415b628207b0efb5599dd0cab15e9.png', '1498634400');
+INSERT INTO `resource` VALUES ('903', '3', 'data/tenant/image/a09fd958fac7ca760e2afa32f501bb80.jpg', '1498808187');
+INSERT INTO `resource` VALUES ('904', '1', 'data/tenant/upload/79/e882ab563d4a8d566f776df4b4013454.png', '1499150308');
+INSERT INTO `resource` VALUES ('905', '1', 'data/tenant/upload/83/c9a6e20beb2b70c778c65d53f9e603e7.png', '1499150310');
+INSERT INTO `resource` VALUES ('906', '1', 'data/tenant/upload/34/64b5b0fc991281a49fc6991a5532686c.png', '1499150312');
+INSERT INTO `resource` VALUES ('907', '1', 'data/tenant/upload/76/846079ff108f75abd2b1889a5db3aa22.jpg', '1499150316');
+INSERT INTO `resource` VALUES ('908', '1', 'data/tenant/upload/72/fe4e3814942f97be66fa17c4d6a1beb4.jpg', '1499160015');
+INSERT INTO `resource` VALUES ('909', '6', 'data/tenant/upload/64/f7a88bc1c46f9cddbab0959210fddfda.jpg', '1499160035');
+INSERT INTO `resource` VALUES ('910', '6', 'data/tenant/upload/32/8b9821f2010223be66b56cc586e42727.jpg', '1499160038');
+INSERT INTO `resource` VALUES ('911', '3', 'data/tenant/image/5b083a003eb3127c20f7e305bdf7a0ad.jpg', '1499332961');
+INSERT INTO `resource` VALUES ('912', '3', 'data/tenant/image/eac66946a8ecee0264ea7812fc2248bd.jpg', '1499333020');
+INSERT INTO `resource` VALUES ('913', '3', 'data/tenant/image/d301f4aaf94ae252d3186b55d8b4e91e.jpg', '1499333022');
+INSERT INTO `resource` VALUES ('914', '3', 'data/tenant/image/08f4a3c1ad684486cc7e0221a833eb74.jpg', '1499333025');
+INSERT INTO `resource` VALUES ('915', '3', 'data/tenant/image/4eacf8a659443d3bd6a8c765151d740d.jpg', '1499333074');
+INSERT INTO `resource` VALUES ('916', '3', 'data/tenant/image/1a56c1f6b80c88ccaef16f302625c1eb.jpg', '1499333077');
+INSERT INTO `resource` VALUES ('917', '3', 'data/tenant/image/9611f7fc5a5b9d45ac8c4bcfe4b42f26.jpg', '1499333177');
+INSERT INTO `resource` VALUES ('918', '3', 'data/tenant/image/fc882cf2e60597bc04dfe8c05afeabe1.jpg', '1499333179');
+INSERT INTO `resource` VALUES ('919', '3', 'data/tenant/image/692ef052b4284f2771b54ce46ab004c0.jpg', '1499333329');
+INSERT INTO `resource` VALUES ('920', '3', 'data/tenant/image/6c87b31287162bffb499fdb2aef21fd4.jpg', '1499333331');
+INSERT INTO `resource` VALUES ('921', '3', 'data/tenant/image/765197683dbcfaa47caf978b27867d99.jpg', '1499333342');
+INSERT INTO `resource` VALUES ('922', '3', 'data/tenant/image/ff04e9363f372b7b47e320a948de8c05.jpg', '1499333631');
+INSERT INTO `resource` VALUES ('923', '3', 'data/tenant/image/94ddd5fb9dcc3e6ed5a80dd46e18c62c.jpg', '1499333681');
+INSERT INTO `resource` VALUES ('924', '3', 'data/tenant/image/b434d684f9c993e5b4724c6f09601128.jpg', '1499333712');
+INSERT INTO `resource` VALUES ('925', '1', 'data/tenant/upload/87/34fbdd19b0d3545c0db714c4f4b9b2ef.jpg', '1499395781');
+INSERT INTO `resource` VALUES ('926', '1', 'data/tenant/upload/26/09f0cff832cc204bbba02acc5a439448.jpg', '1499395783');
+INSERT INTO `resource` VALUES ('927', '1', 'data/tenant/upload/24/5d093a1455c7706b61048053b2d22e0f.jpg', '1499395785');
+INSERT INTO `resource` VALUES ('928', '1', 'data/tenant/upload/83/9e89eaae83f46ecb3df9f85fe4536951.jpg', '1499395805');
+INSERT INTO `resource` VALUES ('929', '1', 'data/tenant/upload/61/8a17a9b7dd01189a7b45774f1f14b04e.jpg', '1499395807');
+INSERT INTO `resource` VALUES ('930', '1', 'data/tenant/upload/28/f4925aa474291f4d7d1962c38ff1c114.jpg', '1499395819');
+INSERT INTO `resource` VALUES ('931', '6', 'data/tenant/upload/24/6819006ab9517ee722c6a6888db01f99.jpg', '1499395907');
+INSERT INTO `resource` VALUES ('932', '6', 'data/tenant/upload/48/ef6ae6bfc897eda520fc8a76cefdcae6.jpg', '1499408044');
+INSERT INTO `resource` VALUES ('933', '6', 'data/tenant/upload/76/c4103c2651c2c461d228be120d1672c1.', '1499409316');
+INSERT INTO `resource` VALUES ('934', '6', 'data/tenant/upload/87/e403cf6bec91ac1bdab78434dfaa0879.', '1499410316');
+INSERT INTO `resource` VALUES ('935', '2', 'data/tenant/upload/14/2cc5cef5bc47b8be40b4c0f26a1a8c4d.png', '1499410831');
+INSERT INTO `resource` VALUES ('936', '2', 'data/tenant/upload/88/08b6c1814ee1dba73506c9a49e1bcf68.png', '1499411066');
+INSERT INTO `resource` VALUES ('937', '6', 'data/tenant/upload/76/993442336d4341375d4b755352150264.', '1499411110');
+INSERT INTO `resource` VALUES ('938', '2', 'data/tenant/upload/30/530edeea3e16edb32e0a0425370fce1e.png', '1499411472');
+INSERT INTO `resource` VALUES ('939', '6', 'data/tenant/upload/69/a2a7f6b84c0662baf31049094900aaf8.', '1499412008');
+INSERT INTO `resource` VALUES ('940', '6', 'data/tenant/upload/58/94095232a87fc46caa7ab891b4491bbf.', '1499412043');
+INSERT INTO `resource` VALUES ('941', '6', 'data/tenant/upload/71/f605c3cefd9a144c12d1bf0410fb61f0.', '1499412139');
+INSERT INTO `resource` VALUES ('942', '6', 'data/tenant/upload/23/aa6c493abf8ae1aab664385ac68bc757.', '1499412684');
+INSERT INTO `resource` VALUES ('943', '6', 'data/tenant/upload/25/8efeca3c87f72a5fa39730d651257664.jpeg', '1499412719');
+INSERT INTO `resource` VALUES ('944', '6', 'data/tenant/upload/44/4d93d4ada5d78273e4ef07f65700dadb.png', '1499412722');
+INSERT INTO `resource` VALUES ('945', '6', 'data/tenant/upload/58/b2e745b0a8031afb23b1471665d994a7.png', '1499412759');
+INSERT INTO `resource` VALUES ('946', '6', 'data/tenant/upload/32/430f13bdfa7bf6d786ffb6962d2075c1.png', '1499413106');
+INSERT INTO `resource` VALUES ('947', '6', 'data/tenant/upload/87/795f570366ecf30c191bc757b033a27b.png', '1499413121');
+INSERT INTO `resource` VALUES ('948', '6', 'data/tenant/upload/57/62eb1dc72bf282d8a0d2df6947b8ef15.png', '1499413148');
+INSERT INTO `resource` VALUES ('949', '6', 'data/tenant/upload/49/56172007f462edeeb4e6bb1539477a6a.gif', '1499413396');
+INSERT INTO `resource` VALUES ('950', '6', 'data/tenant/upload/36/90c2993aa5e42588507862c3d942db23.png', '1499413912');
+INSERT INTO `resource` VALUES ('951', '6', 'data/tenant/upload/24/4d4346acf4abf6d93d2e1c5094164a08.jpg', '1499414229');
+INSERT INTO `resource` VALUES ('952', '6', 'data/tenant/upload/43/74ffca75a2d31394e37a28611c0056f2.jpeg', '1499414255');
+INSERT INTO `resource` VALUES ('953', '6', 'data/tenant/upload/87/c25c43fd44e124d9cc6989e319c0e2e5.png', '1499415098');
+INSERT INTO `resource` VALUES ('954', '6', 'data/tenant/upload/79/020d09d7aecdcaadda491d1df656314f.png', '1499415239');
+INSERT INTO `resource` VALUES ('955', '6', 'data/tenant/upload/70/53ace1b47a85966ef844f73923ff943f.png', '1499415353');
+INSERT INTO `resource` VALUES ('956', '6', 'data/tenant/upload/84/b3d6372d6e97c741a4172071da522550.png', '1499415384');
+INSERT INTO `resource` VALUES ('957', '6', 'data/tenant/upload/35/4f19f239153a5c28d7b7ff44f71ccdc4.png', '1499415428');
+INSERT INTO `resource` VALUES ('958', '6', 'data/tenant/upload/25/1a10eb8859c3a15d238d9325a5efc621.png', '1499415488');
+INSERT INTO `resource` VALUES ('959', '6', 'data/tenant/upload/85/82f880303a9ceeb134803e9e63898073.png', '1499417149');
+INSERT INTO `resource` VALUES ('960', '6', 'data/tenant/upload/44/92c8568b0dcbc941e2d2b31acb1a5fd9.png', '1499418104');
+INSERT INTO `resource` VALUES ('961', '6', 'data/tenant/upload/43/37fcbdbabf1d2e5b21d64e63464033d6.jpeg', '1499418110');
+INSERT INTO `resource` VALUES ('962', '6', 'data/tenant/upload/93/d20ebca792bd48e45907531fe9651dc4.jpeg', '1499418113');
+INSERT INTO `resource` VALUES ('963', '6', 'data/tenant/upload/40/288ea38d72639dcda25e288571614a40.jpeg', '1499419110');
+INSERT INTO `resource` VALUES ('964', '6', 'data/tenant/upload/19/73078018d77be9629c4dfbddf230084f.jpeg', '1499419121');
+INSERT INTO `resource` VALUES ('965', '2', 'data/tenant/upload/73/9bafae9be32d4d496cf75bd97082cfa4.jpeg', '1499421604');
+INSERT INTO `resource` VALUES ('966', '3', 'data/tenant/image/f7fb83e46f5e118612be5991ab70c397.jpeg', '1499651155');
+INSERT INTO `resource` VALUES ('967', '1', 'data/tenant/upload/50/f146f85160b587d12498927f7ee42cb3.jpeg', '1499669740');
+INSERT INTO `resource` VALUES ('968', '1', 'data/tenant/upload/61/4cfe45b61e1ae4751e0d492caecfe39d.jpeg', '1499669777');
+INSERT INTO `resource` VALUES ('969', '6', 'data/tenant/upload/91/5adf91bb390e4f8f0dcc94e49b198376.jpeg', '1499669793');
+INSERT INTO `resource` VALUES ('970', '1', 'data/tenant/upload/23/c1d8def4eab25a86ae3e33d97560467a.jpeg', '1499669857');
+INSERT INTO `resource` VALUES ('971', '6', 'data/tenant/upload/62/f8ee5531f8913d383dbb09d24ca20135.jpeg', '1499669906');
+INSERT INTO `resource` VALUES ('972', '6', 'data/tenant/upload/11/ce6ef146343be6a937dfe14eb80c4995.jpeg', '1499669935');
+INSERT INTO `resource` VALUES ('973', '6', 'data/tenant/upload/43/9eb8cb2b353016212c564077155ac714.jpeg', '1499669950');
+INSERT INTO `resource` VALUES ('974', '6', 'data/tenant/upload/90/d2ed7b6fdd6727d41fbc4ef73907b545.jpeg', '1499670038');
+INSERT INTO `resource` VALUES ('975', '6', 'data/tenant/upload/11/6382a0d0fd95969b484f9db223c1a319.jpeg', '1499670102');
+INSERT INTO `resource` VALUES ('976', '6', 'data/tenant/upload/79/fac62e0c3f3f240e4d98cb35dab4d452.jpeg', '1499670104');
+INSERT INTO `resource` VALUES ('977', '6', 'data/tenant/upload/40/8474fce4711b8ce4c58e5af120bb16d0.jpeg', '1499670107');
+INSERT INTO `resource` VALUES ('978', '1', 'data/tenant/upload/74/2cc6d8e5c020f63d8ef60109ec88248e.jpeg', '1499670130');
+INSERT INTO `resource` VALUES ('979', '1', 'data/tenant/upload/74/7ce4d698b939c4ef388953ab97f1eb70.jpeg', '1499670140');
+INSERT INTO `resource` VALUES ('980', '1', 'data/tenant/upload/89/e3fd51ed3dad1d9efc7aaa151989e727.jpeg', '1499670836');
+INSERT INTO `resource` VALUES ('981', '1', 'data/tenant/upload/45/33a7def117747a50f981e05d71c26530.png', '1499670837');
+INSERT INTO `resource` VALUES ('982', '1', 'data/tenant/upload/51/3ce880c8389f711bf107b2d52c057f57.png', '1499670844');
+INSERT INTO `resource` VALUES ('983', '1', 'data/tenant/upload/73/87d3de97c9533399b881348289a1b8cf.jpeg', '1499670846');
+INSERT INTO `resource` VALUES ('984', '1', 'data/tenant/upload/34/3f70ab9a614b810bd204d6f0ed1d5d0e.jpeg', '1499670889');
+INSERT INTO `resource` VALUES ('985', '1', 'data/tenant/upload/70/59f9b0c12005b9b325537f899d53ddd3.jpeg', '1499670944');
+INSERT INTO `resource` VALUES ('986', '1', 'data/tenant/upload/64/c7eff963cb999b5adb03e2bd0cb6d250.jpeg', '1499670953');
+INSERT INTO `resource` VALUES ('987', '1', 'data/tenant/upload/54/db83aa8cf589aceebbc11ae19f4a848a.jpeg', '1499670968');
+INSERT INTO `resource` VALUES ('988', '6', 'data/tenant/upload/96/fa53e1c7f170c0b4b945ddee27dd8022.jpeg', '1499671010');
+INSERT INTO `resource` VALUES ('989', '1', 'data/tenant/upload/45/ea9d2ea9e727fa7d6a14aece4a554408.png', '1499671239');
+INSERT INTO `resource` VALUES ('990', '1', 'data/tenant/upload/43/7e7596cbd5ba811392cf9111f812490e.jpeg', '1499671252');
+INSERT INTO `resource` VALUES ('991', '1', 'data/tenant/upload/81/b496c43da8d3b77b3a18d8a0ce8b335c.png', '1499671524');
+INSERT INTO `resource` VALUES ('992', '2', 'data/tenant/upload/83/44961e4bc07091a6b060d29da6368441.jpeg', '1499671601');
+INSERT INTO `resource` VALUES ('993', '2', 'data/tenant/upload/64/31867a21474e81631bd55b2fe794eeab.jpeg', '1499671866');
+INSERT INTO `resource` VALUES ('994', '3', 'data/tenant/image/45e7de815169281e6fc77ae54377d80e.jpeg', '1499672022');
+INSERT INTO `resource` VALUES ('995', '3', 'data/tenant/image/293dfdb0828de3c51f4a837d45c9ea60.jpeg', '1499672088');
+INSERT INTO `resource` VALUES ('996', '6', 'data/tenant/upload/27/8235d3eb7a6f5e460d8031218c88294d.png', '1499677105');
+INSERT INTO `resource` VALUES ('997', '2', 'data/tenant/upload/95/c3a20ad2833e17ec1585501ad9313a10.png', '1499677290');
+INSERT INTO `resource` VALUES ('998', '1', 'data/tenant/upload/23/dbdf24336136ee30873aa8fe5c3c196e.jpeg', '1499677424');
+INSERT INTO `resource` VALUES ('999', '1', 'data/tenant/upload/10/c6da688c763369a400c88491b9996cd2.jpeg', '1499755949');
+INSERT INTO `resource` VALUES ('1000', '1', 'data/tenant/upload/17/ad4df5dcb7c7fa644c7d0498adb151e3.jpeg', '1499755953');
+INSERT INTO `resource` VALUES ('1001', '1', 'data/tenant/upload/36/d6b512a89ae882e0b3a27478eefe7e1c.jpeg', '1499755955');
+INSERT INTO `resource` VALUES ('1002', '1', 'data/tenant/upload/61/f587873ec671be93917486d5e1af9def.jpeg', '1499755981');
+INSERT INTO `resource` VALUES ('1003', '1', 'data/tenant/upload/11/00b0cf266e96df31fa07d938d44f002e.jpeg', '1499755984');
+INSERT INTO `resource` VALUES ('1004', '1', 'data/tenant/upload/50/898164f025175d5612431b5a730eab77.jpeg', '1499756000');
+INSERT INTO `resource` VALUES ('1005', '6', 'data/tenant/upload/98/0a7c08e2ebf609bd7df9dcca1b820ea9.jpeg', '1499756085');
+INSERT INTO `resource` VALUES ('1006', '1', 'data/tenant/upload/12/ed616766409d42aa03105ee372496f25.jpeg', '1499847343');
+INSERT INTO `resource` VALUES ('1007', '1', 'data/tenant/upload/81/2c69eb27b50fbf728adfb4eaf3966e94.jpeg', '1499849889');
+INSERT INTO `resource` VALUES ('1008', '3', 'data/tenant/image/5cf026a9cbe6b291d3ce3fb33fc3fcc2.jpeg', '1499910551');
+INSERT INTO `resource` VALUES ('1009', '1', 'data/tenant/upload/38/2f1405e8921e192620332fbf737eb706.jpeg', '1502333689');
+INSERT INTO `resource` VALUES ('1010', '1', 'data/tenant/upload/28/db124e22a959100056592db4b29f1cbe.jpeg', '1502333691');
+INSERT INTO `resource` VALUES ('1011', '1', 'data/tenant/upload/72/5210eb5874ce70a0ff8faf94a34ee59d.jpeg', '1502333693');
+INSERT INTO `resource` VALUES ('1012', '1', 'data/tenant/upload/25/a9050bf7cfa438818db3e2edbe197aa8.jpeg', '1502333721');
+INSERT INTO `resource` VALUES ('1013', '1', 'data/tenant/upload/75/f06c891a7a655f1b1ecdbd71e98ebd68.jpeg', '1502333723');
+INSERT INTO `resource` VALUES ('1014', '1', 'data/tenant/upload/36/c9cc39d18b987f9eb573851d8ddad181.jpeg', '1502333740');
+INSERT INTO `resource` VALUES ('1015', '6', 'data/tenant/upload/39/b33fcf529d4624b49158c51dae57bd4b.jpeg', '1502333785');
+INSERT INTO `resource` VALUES ('1016', '1', 'data/tenant/upload/87/34559d33d376496c8eb8494cffabbe72.png', '1502335515');
+INSERT INTO `resource` VALUES ('1017', '1', 'data/tenant/upload/40/e84553030ac7eb2beb67e78ed489a336.png', '1502335516');
+INSERT INTO `resource` VALUES ('1018', '1', 'data/tenant/upload/53/eeec533e1fa6002ed0996a2a9783b100.png', '1502335518');
+INSERT INTO `resource` VALUES ('1019', '1', 'data/tenant/upload/99/bbe14e34a86bca3e175a2edcb00aa14e.png', '1502335529');
+INSERT INTO `resource` VALUES ('1020', '1', 'data/tenant/upload/74/4e5f63174fd21e3740fdb259ae5cc2ca.png', '1502335531');
+INSERT INTO `resource` VALUES ('1021', '6', 'data/tenant/upload/70/7c1aa10315616804f82ea279960d5733.png', '1502335572');
+INSERT INTO `resource` VALUES ('1022', '3', 'data/tenant/image/fece2110f29d7b07be9a2ef83907dbd2.jpeg', '1502767564');
+INSERT INTO `resource` VALUES ('1023', '3', 'data/tenant/image/a5fb47048e5f5bee6a2d0cdc4e6cbaa5.jpeg', '1502767566');
+INSERT INTO `resource` VALUES ('1024', '3', 'data/tenant/image/7815b9e5ac5494d9740bbb59a292e1ee.jpeg', '1502768555');
+INSERT INTO `resource` VALUES ('1025', '3', 'data/tenant/image/839bb5a0de3f5410ad960a883bc1d7e3.jpeg', '1502768847');
+INSERT INTO `resource` VALUES ('1026', '3', 'data/tenant/image/37ec023d366cd0aa44054fef284ea521.jpeg', '1502768853');
+INSERT INTO `resource` VALUES ('1027', '3', 'data/tenant/image/e180f30c00cafe85723127076660b758.jpeg', '1502768858');
+INSERT INTO `resource` VALUES ('1028', '3', 'data/tenant/image/afbe42e4b1d3faa5f37fe01c1e7be05e.jpeg', '1502768867');
+INSERT INTO `resource` VALUES ('1029', '3', 'data/tenant/image/d1861f01a78dc69f99a8d51b64d5ee16.jpeg', '1502768937');
+INSERT INTO `resource` VALUES ('1030', '3', 'data/tenant/image/d4eb38989ffe5ece393aa2edcd92c28a.jpeg', '1502768940');
+INSERT INTO `resource` VALUES ('1031', '3', 'data/tenant/image/6342f59852986233736d4c1805c8ccbe.jpeg', '1502769738');
+INSERT INTO `resource` VALUES ('1032', '3', 'data/tenant/image/c2a52ecf219652c8da2da08657375dab.jpeg', '1502778391');
+INSERT INTO `resource` VALUES ('1033', '6', 'data/tenant/upload/41/1dfbb252c504c9a44980875228504558.jpeg', '1502778495');
+INSERT INTO `resource` VALUES ('1034', '6', 'data/tenant/upload/32/3187a60ac17bb82c409a271223becca0.png', '1502778571');
+INSERT INTO `resource` VALUES ('1035', '6', 'data/tenant/upload/90/78b747f49821c2af4f876278ab7691ad.png', '1502779003');
+INSERT INTO `resource` VALUES ('1036', '6', 'data/tenant/upload/13/f534535fdaae9797cbfc1f42e789facd.png', '1502779116');
+INSERT INTO `resource` VALUES ('1037', '6', 'data/tenant/upload/43/ca3c21e51411eda7875653fa23c46259.png', '1502779196');
+INSERT INTO `resource` VALUES ('1038', '6', 'data/tenant/upload/74/3e0a5c1e4c16c78ec695165db48239fa.png', '1502779213');
+INSERT INTO `resource` VALUES ('1039', '6', 'data/tenant/upload/58/87f61062c1fc9350a4f7d554ac902fd6.png', '1502779275');
+INSERT INTO `resource` VALUES ('1040', '6', 'data/tenant/upload/45/ad9122e532d8229772ee83cbf45a6b01.png', '1502779295');
+INSERT INTO `resource` VALUES ('1041', '6', 'data/tenant/upload/69/585e7d35a2d4371a3fefa06faf45bbd6.png', '1502779458');
+INSERT INTO `resource` VALUES ('1042', '6', 'data/tenant/upload/67/ef853e5ec5c4c824e942acd21a7936ee.png', '1502779474');
+INSERT INTO `resource` VALUES ('1043', '6', 'data/tenant/upload/68/daeb624c67d70c4b730dd7d04c6898e4.png', '1502779497');
+INSERT INTO `resource` VALUES ('1044', '6', 'data/tenant/upload/52/8055a228af25d8c2a6d759c03bfa4565.png', '1502779502');
+INSERT INTO `resource` VALUES ('1045', '6', 'data/tenant/upload/45/31eb70d3e2830e9d2a7dfac81927cd68.png', '1502779545');
+INSERT INTO `resource` VALUES ('1046', '6', 'data/tenant/upload/42/3e445ad2fcc86034fd6e537db8c7c97a.png', '1502779607');
+INSERT INTO `resource` VALUES ('1047', '6', 'data/tenant/upload/60/5f70b54f90629e941e0160db29fd82ed.png', '1502779751');
+INSERT INTO `resource` VALUES ('1048', '6', 'data/tenant/upload/95/a415ff9b5c08aa32e8e158312e8a1f3c.png', '1502779783');
+INSERT INTO `resource` VALUES ('1049', '6', 'data/tenant/upload/13/2471981bcaef24b0b8753046073ea7d6.jpeg', '1502779788');
+INSERT INTO `resource` VALUES ('1050', '6', 'data/tenant/upload/41/45dbec15e0e3446a12e82443fe34110b.png', '1502779809');
+INSERT INTO `resource` VALUES ('1051', '6', 'data/tenant/upload/75/569be77b0a810576172659abeccc7bd4.png', '1502779842');
+INSERT INTO `resource` VALUES ('1052', '6', 'data/tenant/upload/49/14158746e8987021401ffa9b5bf7a957.png', '1502779895');
+INSERT INTO `resource` VALUES ('1053', '6', 'data/tenant/upload/80/ef4d3aef0e0ea5bed234ad6c91facfdd.png', '1502779899');
+INSERT INTO `resource` VALUES ('1054', '6', 'data/tenant/upload/38/d9c5c319cd06f30e98bfe3d66d3ff10a.png', '1502779909');
+INSERT INTO `resource` VALUES ('1055', '3', 'data/tenant/image/4774eb46f7b2a677cc957af90b20c83e.png', '1502779926');
+INSERT INTO `resource` VALUES ('1056', '3', 'data/tenant/image/f6920a603fcd1424eea93ae581e73908.png', '1502779928');
+INSERT INTO `resource` VALUES ('1057', '3', 'data/tenant/image/944c6abea89f465f81a14419d04d1264.png', '1502779931');
+INSERT INTO `resource` VALUES ('1058', '3', 'data/tenant/image/9018d26790759ae34a79f9c96836559d.png', '1502779983');
+INSERT INTO `resource` VALUES ('1059', '3', 'data/tenant/image/af0a2a043c4d85ea226557f54a86b131.png', '1502779990');
+INSERT INTO `resource` VALUES ('1060', '3', 'data/tenant/image/9edfcfe9f25c78230fbdb482d3055a2f.png', '1502780000');
+INSERT INTO `resource` VALUES ('1061', '3', 'data/tenant/image/dd2ac207dd0d68511d21d19d796cecda.png', '1502780054');
+INSERT INTO `resource` VALUES ('1062', '3', 'data/tenant/image/4a12d4ec1a583bfe61009830003b98e6.png', '1502780056');
+INSERT INTO `resource` VALUES ('1063', '3', 'data/tenant/image/fb9f23028fe9596d74314a8797ab2bde.png', '1502780109');
+INSERT INTO `resource` VALUES ('1064', '6', 'data/tenant/upload/57/e2dbe82e4d1d6cf192bc409cca7c6331.jpeg', '1502781032');
+INSERT INTO `resource` VALUES ('1065', '3', 'data/tenant/image/0131fdcb93cfe6ebf96a96f0a4d53e87.jpeg', '1502781047');
+
+-- ----------------------------
+-- Table structure for `teacher`
+-- ----------------------------
+DROP TABLE IF EXISTS `teacher`;
+CREATE TABLE `teacher` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `profile` int(11) NOT NULL COMMENT '头像',
+  `name` varchar(10) NOT NULL COMMENT '姓名',
+  `duty` varchar(10) NOT NULL COMMENT '职务',
+  `seniority` tinyint(2) NOT NULL COMMENT '教龄',
+  `description` varchar(200) NOT NULL COMMENT '简介',
+  `order` int(11) NOT NULL COMMENT '排序',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of teacher
+-- ----------------------------
+INSERT INTO `teacher` VALUES ('1', '1', '334', '123123', '12', '12', '123', '6', '1495020688');
+INSERT INTO `teacher` VALUES ('2', '1', '337', '1212', '123123', '127', '1231241123123123', '1', '1495020981');
+INSERT INTO `teacher` VALUES ('12', '12', '453', '刘试试', '语文', '2', '打打', '1', '1495421059');
+INSERT INTO `teacher` VALUES ('6', '1', '411', 'tiantian', 'admin', '16', 'adsasdf', '3', '1495177140');
+INSERT INTO `teacher` VALUES ('11', '15', '1', '李国1', '数学教师1', '2', '数学教师数学教师1', '2', '123423');
+INSERT INTO `teacher` VALUES ('10', '15', '1', '李国', '数学教师', '2', '数学教师数学教师', '1', '123423');
+INSERT INTO `teacher` VALUES ('13', '12', '454', '柳岩', '数学', '5', '帝国', '5', '1495421150');
+INSERT INTO `teacher` VALUES ('14', '12', '456', '昆凌', '英语', '3', '得到大幅改观', '2', '1495421188');
+INSERT INTO `teacher` VALUES ('15', '12', '458', '苍老师', '日语', '10', '敬爱的老师', '4', '1495438286');
+INSERT INTO `teacher` VALUES ('16', '12', '459', '波多老师', '日语', '7', '波多老师波多老师', '3', '1495438945');
+INSERT INTO `teacher` VALUES ('17', '22', '818', '李老师', '数学老师', '1', '可爱的老师点点滴滴', '1', '1497322514');
+INSERT INTO `teacher` VALUES ('18', '16', '441', 'ddd', 'ddd', '12', '123123123', '0', '1495184279');
+INSERT INTO `teacher` VALUES ('19', '16', '442', '123123', '444', '23', '123123', '1', '1495184652');
+INSERT INTO `teacher` VALUES ('20', '16', '449', '123', '421', '12', '123123123', '2', '1495197780');
+INSERT INTO `teacher` VALUES ('21', '16', '441', 'ddd', 'ddd', '12', '123123123', '0', '1495184279');
+INSERT INTO `teacher` VALUES ('22', '16', '442', '123123', '444', '23', '123123', '1', '1495184652');
+INSERT INTO `teacher` VALUES ('23', '16', '449', '123', '421', '12', '123123123', '2', '1495197780');
+INSERT INTO `teacher` VALUES ('24', '34', '992', '李老师', '校长', '123', '校长', '1', '1499671633');
+INSERT INTO `teacher` VALUES ('25', '32', '993', '李老师', '老是', '100', '介绍~~~', '1', '1499671889');
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `openid` varchar(50) NOT NULL COMMENT '微信openid',
+  `profile` int(11) NOT NULL COMMENT '头像',
+  `mobile` varchar(11) NOT NULL COMMENT '绑定手机',
+  `name` varchar(10) NOT NULL COMMENT '姓名',
+  `accumulate_points` int(11) NOT NULL COMMENT '用户积分',
+  `last_city_id` int(11) NOT NULL COMMENT '最后定位的城市',
+  `last_lng` decimal(10,6) NOT NULL COMMENT '最后定位的经度',
+  `last_lat` decimal(10,6) NOT NULL COMMENT '最后定位的纬度',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', '', '791', '18620772020', 'jay', '271940', '1', '113.264435', '23.129163', '1494295067');
+INSERT INTO `user` VALUES ('2', '', '0', '18620772029', '李亚林', '0', '0', '0.000000', '0.000000', '1494904233');
+INSERT INTO `user` VALUES ('3', 'o88sa0fzQ6btODVee1lMVoCrlTv4', '892', '13642658465', '邓鸿健', '537626697', '1', '113.264435', '23.129163', '1495594788');
+INSERT INTO `user` VALUES ('4', 'o88sa0VHHzBeHUxwlMmMM15j8YTg', '798', '13246813739', '弥生·斌', '15802', '1', '113.266531', '23.132191', '1496390699');
+
+-- ----------------------------
+-- Table structure for `user_accumulate_point_get_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_accumulate_point_get_record`;
+CREATE TABLE `user_accumulate_point_get_record` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `type` tinyint(3) NOT NULL COMMENT '获取类型',
+  `amount` int(11) NOT NULL COMMENT '数量',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_accumulate_point_get_record
+-- ----------------------------
+INSERT INTO `user_accumulate_point_get_record` VALUES ('1', '1', '1', '2', '343242');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('2', '3', '12', '60000', '1495677664');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('3', '3', '8', '500', '1495682820');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('4', '3', '6', '1000', '1496648721');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('5', '4', '2', '5000', '1496739966');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('6', '4', '8', '500', '1496739968');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('7', '4', '7', '500', '1496739983');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('8', '4', '4', '5000', '1496740028');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('9', '4', '3', '5000', '1496740264');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('10', '3', '5', '1000', '1499159386');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('11', '3', '4', '5000', '1499159387');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('12', '3', '3', '5000', '1499159387');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('13', '3', '2', '5000', '1499159388');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('14', '3', '1', '500', '1499323015');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('15', '1', '1', '500', '1499668077');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('16', '1', '1', '500', '1499668220');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('17', '1', '1', '500', '1499668387');
+INSERT INTO `user_accumulate_point_get_record` VALUES ('18', '1', '1', '500', '1499668416');
+
+-- ----------------------------
+-- Table structure for `user_accumulate_point_use_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_accumulate_point_use_record`;
+CREATE TABLE `user_accumulate_point_use_record` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `user_id` int(11) NOT NULL COMMENT '用户id',
+  `type` tinyint(3) NOT NULL COMMENT '使用类型',
+  `amount` int(11) NOT NULL COMMENT '数量',
+  `data_id` int(11) NOT NULL COMMENT '如果是订单，对应订单id',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_accumulate_point_use_record
+-- ----------------------------
+INSERT INTO `user_accumulate_point_use_record` VALUES ('1', '1', '1', '3', '0', '23');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('2', '1', '1', '0', '1110', '1496653237');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('3', '1', '1', '49', '1111', '1496653319');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('4', '4', '1', '98', '1113', '1496740019');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('5', '4', '1', '100', '1116', '1496740252');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('6', '1', '1', '49', '1117', '1496815565');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('7', '1', '1', '49', '1118', '1496815634');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('8', '1', '1', '49', '1119', '1496815723');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('9', '3', '1', '222', '1120', '1496818925');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('10', '3', '1', '222', '1122', '1496819349');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('11', '3', '1', '444', '1124', '1496819650');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('12', '3', '1', '444', '1125', '1496819650');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('13', '3', '1', '666', '1126', '1496821278');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('14', '1', '1', '6636', '1130', '1496904440');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('15', '1', '1', '6636', '1131', '1496904488');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('16', '3', '1', '100', '1132', '1496994839');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('17', '3', '1', '200', '1133', '1496994926');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('18', '3', '1', '300', '1134', '1496994976');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('19', '3', '1', '400', '1135', '1496994981');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('20', '3', '1', '2220', '1136', '1497252575');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('21', '3', '1', '1110', '1137', '1497253097');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('22', '3', '1', '999', '1138', '1497338131');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('23', '1', '1', '0', '1140', '1497338656');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('24', '3', '1', '10000', '1141', '1497404097');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('25', '3', '1', '10000', '1143', '1497404328');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('26', '3', '1', '10000', '1144', '1497404522');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('27', '3', '1', '3373', '1145', '1497404784');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('28', '3', '1', '3373', '1146', '1497404834');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('29', '3', '1', '3373', '1147', '1497404860');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('30', '3', '1', '100', '1148', '1497404948');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('31', '3', '1', '300', '1149', '1497406168');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('32', '3', '1', '100', '1150', '1497406375');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('33', '3', '1', '2873', '1151', '1497406399');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('34', '3', '1', '1', '1152', '1497406517');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('35', '3', '1', '2872', '1153', '1497406538');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('36', '3', '1', '2744', '1154', '1497406552');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('37', '1', '1', '6635', '1155', '1499054112');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('38', '1', '1', '111100', '1156', '1499054227');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('39', '1', '1', '111100', '1157', '1499068466');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('40', '1', '1', '111100', '1158', '1499068489');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('41', '1', '1', '600', '1159', '1499068615');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('42', '3', '1', '100', '1161', '1499157853');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('43', '3', '1', '100', '1162', '1499159399');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('44', '1', '1', '198', '1163', '1499653475');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('45', '1', '1', '198', '1164', '1499653690');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('46', '1', '1', '198', '1165', '1499653744');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('47', '1', '1', '198', '1166', '1499658317');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('48', '3', '1', '10000', '1168', '1499847289');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('49', '3', '1', '5000000', '1169', '1499847495');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('50', '3', '1', '50000000', '1170', '1499847509');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('51', '1', '1', '3', '1171', '1501123144');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('52', '3', '1', '22500', '1172', '1501555086');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('53', '3', '1', '22500', '1173', '1501555394');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('54', '3', '1', '22500', '1174', '1501556162');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('55', '3', '1', '22500', '1176', '1501557919');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('56', '3', '1', '21500', '1177', '1501567985');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('57', '3', '1', '21500', '1178', '1501569308');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('58', '3', '1', '10300', '1179', '1501569661');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('59', '3', '1', '30000', '1180', '1501569695');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('60', '3', '1', '1', '1181', '1501836103');
+INSERT INTO `user_accumulate_point_use_record` VALUES ('61', '3', '1', '2', '1182', '1501837424');
+
+-- ----------------------------
+-- Table structure for `user_action`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_action`;
+CREATE TABLE `user_action` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，用户id',
+  `note` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_action
+-- ----------------------------
+INSERT INTO `user_action` VALUES ('3', '{\"last_notice_read_time\":1496994996}');
+INSERT INTO `user_action` VALUES ('4', '{\"last_notice_read_time\":1496395272}');
+INSERT INTO `user_action` VALUES ('1', '[]');
+
+-- ----------------------------
+-- Table structure for `user_collect`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_collect`;
+CREATE TABLE `user_collect` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `user_id` int(11) NOT NULL COMMENT '收藏用户id',
+  `type` tinyint(1) NOT NULL COMMENT '1：店铺，2：商品',
+  `data_id` int(11) NOT NULL COMMENT '数据id',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_collect
+-- ----------------------------
+INSERT INTO `user_collect` VALUES ('1', '1', '1', '1', '2323');
+INSERT INTO `user_collect` VALUES ('2', '1', '2', '1', '333');
+INSERT INTO `user_collect` VALUES ('10', '3', '2', '1', '1495863986');
+INSERT INTO `user_collect` VALUES ('11', '4', '1', '1', '1496739961');
+INSERT INTO `user_collect` VALUES ('12', '4', '2', '8', '1496739977');
+INSERT INTO `user_collect` VALUES ('17', '3', '2', '3', '1498470889');
+INSERT INTO `user_collect` VALUES ('20', '3', '2', '4', '1498631960');
+
+-- ----------------------------
+-- Table structure for `user_notice`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_notice`;
+CREATE TABLE `user_notice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `user_id` int(11) NOT NULL COMMENT '用户id ',
+  `title` varchar(20) NOT NULL COMMENT '标题',
+  `content` varchar(100) NOT NULL COMMENT '内容',
+  `is_read` tinyint(1) NOT NULL COMMENT '是否已读',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_notice
+-- ----------------------------
+INSERT INTO `user_notice` VALUES ('1', '1', 'ff', 'ffffff', '1', '1495505172');
+INSERT INTO `user_notice` VALUES ('2', '1', '标题', '消息内容', '1', '1495505172');
+INSERT INTO `user_notice` VALUES ('3', '1', '标题', '你已成功购买 xxxx （商品名称）\n数量：x\n有效期至：201x-x-xx\n激活码：xxxxxxx\n请在有效期内持激活码至线下商家激活商品', '1', '1495505172');
+INSERT INTO `user_notice` VALUES ('4', '1', '买单成功', '买单商户：测试商<br>买单金额：¥ 49<br>实际支付：¥ 0', '0', '1496815723');
+INSERT INTO `user_notice` VALUES ('5', '2', '退款成功', '你的商品 你这样不太好 已退款 23333 元.', '0', '1496818160');
+INSERT INTO `user_notice` VALUES ('6', '2', '退款成功', '你的商品 你这样不太好 已退款 23333 元.', '0', '1496818192');
+INSERT INTO `user_notice` VALUES ('7', '3', '退款成功', '你的商品 商品1 已退款 500 元.', '0', '1496818199');
+INSERT INTO `user_notice` VALUES ('8', '2', '退款成功', '你的商品 你这样不太好 已退款 100 元.', '0', '1496818539');
+INSERT INTO `user_notice` VALUES ('9', '3', '商品券购买成功', '你已成功购买 测试商品名称 （商品名称）<br>数量：1<br>有效期至： 2017-06-30<br>激活码：f4tx1120<br>请在有效期内持激活码至线下商家激活商品', '0', '1496818925');
+INSERT INTO `user_notice` VALUES ('10', '3', '退款成功', '你的商品 商品1 已退款 033 元', '0', '1496818977');
+INSERT INTO `user_notice` VALUES ('11', '3', '商品券购买成功', '你已成功购买 测试商品名称 （商品名称）<br>数量：1<br>有效期至： 2017-06-30<br>激活码：CWb51122<br>请在有效期内持激活码至线下商家激活商品', '0', '1496819349');
+INSERT INTO `user_notice` VALUES ('12', '3', '商品券购买成功', '你已成功购买 测试商品名称 （商品名称）<br>数量：2<br>有效期至： 2017-06-30<br>激活码：mkWa1124<br>请在有效期内持激活码至线下商家激活商品', '0', '1496819650');
+INSERT INTO `user_notice` VALUES ('13', '3', '商品券购买成功', '你已成功购买 测试商品名称 （商品名称）<br>数量：2<br>有效期至： 2017-06-30<br>激活码：dKnD1125<br>请在有效期内持激活码至线下商家激活商品', '0', '1496819650');
+INSERT INTO `user_notice` VALUES ('14', '2', '退款成功', '你的商品 你这样不太好 已退款 233 元', '0', '1496820312');
+INSERT INTO `user_notice` VALUES ('15', '3', '商品券购买成功', '你已成功购买 测试商品名称 （商品名称）<br>数量：3<br>有效期至： 2017-06-30<br>激活码：ml8Y1126<br>请在有效期内持激活码至线下商家激活商品', '0', '1496821278');
+INSERT INTO `user_notice` VALUES ('16', '1', '退款请求已提交', '你的商品 你这样不太好 退款请求已提交，7个工作日内将完成退款', '0', '1496915204');
+INSERT INTO `user_notice` VALUES ('17', '3', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 1<br>实际支付：¥ 0', '0', '1496994839');
+INSERT INTO `user_notice` VALUES ('18', '3', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 2<br>实际支付：¥ 0', '0', '1496994926');
+INSERT INTO `user_notice` VALUES ('19', '3', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 3<br>实际支付：¥ 0', '0', '1496994976');
+INSERT INTO `user_notice` VALUES ('20', '3', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 4<br>实际支付：¥ 0', '0', '1496994981');
+INSERT INTO `user_notice` VALUES ('21', '3', '商品券购买成功', '你已成功购买 测试商品名称 <br>数量：10<br>有效期至： 2017-08-20<br>商品码：zewf2i<br>请在有效期内持激活码至线下商家激活商品', '0', '1497252575');
+INSERT INTO `user_notice` VALUES ('22', '3', '商品激活成功', '你的商品 测试商品名称 已激活', '0', '1497252605');
+INSERT INTO `user_notice` VALUES ('23', '3', '商品券购买成功', '你已成功购买 测试商品名称 <br>数量：5<br>有效期至： 2017-08-20<br>商品码：zfuruq<br>请在有效期内持激活码至线下商家激活商品', '0', '1497253097');
+INSERT INTO `user_notice` VALUES ('24', '3', '商品激活成功', '你的商品 测试商品名称 已激活', '0', '1497253178');
+INSERT INTO `user_notice` VALUES ('25', '3', '买单成功', '买单商户：小黄车<br>买单金额：¥ 9.99<br>实际支付：¥ 0', '0', '1497338131');
+INSERT INTO `user_notice` VALUES ('26', '1', '买单成功', '买单商户：测试商<br>买单金额：¥ 0.01<br>实际支付：¥ 0', '0', '1497338656');
+INSERT INTO `user_notice` VALUES ('27', '3', '服务激活成功', '你的服务 测试商品名称 已激活', '0', '1497338992');
+INSERT INTO `user_notice` VALUES ('28', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：100<br>有效期至： 2017-06-14<br>服务码：zjxyk4<br>请在有效期内持激活码至线下商家激活服务', '0', '1497404097');
+INSERT INTO `user_notice` VALUES ('29', '3', '服务激活成功', '你的服务 测试服务007 已激活', '0', '1497404112');
+INSERT INTO `user_notice` VALUES ('30', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：100<br>有效期至： 2017-06-14<br>服务码：zm7sgz<br>请在有效期内持激活码至线下商家激活服务', '0', '1497404328');
+INSERT INTO `user_notice` VALUES ('31', '3', '服务激活成功', '你的服务 测试服务007 已激活', '0', '1497404388');
+INSERT INTO `user_notice` VALUES ('32', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：100<br>有效期至： 2017-06-14<br>服务码：zn9h72<br>请在有效期内持激活码至线下商家激活服务', '0', '1497404522');
+INSERT INTO `user_notice` VALUES ('33', '3', '服务激活成功', '你的服务 测试服务007 已激活', '0', '1497404537');
+INSERT INTO `user_notice` VALUES ('34', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：1<br>有效期至： 2017-06-14<br>服务码：zs1imw<br>请在有效期内持激活码至线下商家激活服务', '0', '1497404948');
+INSERT INTO `user_notice` VALUES ('35', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：3<br>有效期至： 2017-06-14<br>服务码：ztpswa<br>请在有效期内持激活码至线下商家激活服务', '0', '1497406168');
+INSERT INTO `user_notice` VALUES ('36', '3', '服务激活成功', '你的服务 测试服务007 已激活', '0', '1497406194');
+INSERT INTO `user_notice` VALUES ('37', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：1<br>有效期至： 2017-06-14<br>服务码：zu04f5<br>请在有效期内持激活码至线下商家激活服务', '0', '1497406375');
+INSERT INTO `user_notice` VALUES ('38', '3', '买单成功', '买单商户：测试商<br>买单金额：¥ 0.01<br>实际支付：¥ 0', '0', '1497406517');
+INSERT INTO `user_notice` VALUES ('39', '3', '买单成功', '买单商户：测试商<br>买单金额：¥ 27.44<br>实际支付：¥ 0', '0', '1497406552');
+INSERT INTO `user_notice` VALUES ('40', '1', '服务券购买成功', '你已成功购买 尼玛比 <br>数量：1<br>有效期至： 2017-11-30<br>服务码：100jux4<br>请在有效期内持激活码至线下商家激活服务', '0', '1499054227');
+INSERT INTO `user_notice` VALUES ('41', '1', '服务券购买成功', '你已成功购买 尼玛比 <br>数量：1<br>有效期至： 2017-11-30<br>服务码：101udgy<br>请在有效期内持激活码至线下商家激活服务', '0', '1499068466');
+INSERT INTO `user_notice` VALUES ('42', '1', '服务券购买成功', '你已成功购买 尼玛比 <br>数量：1<br>有效期至： 2017-11-30<br>服务码：102wv72<br>请在有效期内持激活码至线下商家激活服务', '0', '1499068489');
+INSERT INTO `user_notice` VALUES ('43', '1', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 6<br>实际支付：¥ 0', '0', '1499068615');
+INSERT INTO `user_notice` VALUES ('44', '3', '服务券购买成功', '你已成功购买 测试服务007 <br>数量：1<br>有效期至： 2017-12-21<br>服务码：105tkzf<br>请在有效期内持激活码至线下商家激活服务', '0', '1499157853');
+INSERT INTO `user_notice` VALUES ('45', '3', '服务激活成功', '你的服务 测试服务007 已激活', '0', '1499159357');
+INSERT INTO `user_notice` VALUES ('46', '3', '服务券购买成功', '你已成功购买 高级服务 <br>数量：1<br>有效期至： 2017-11-30<br>服务码：106c6b2<br>请在有效期内持激活码至线下商家激活服务', '0', '1499159399');
+INSERT INTO `user_notice` VALUES ('47', '3', '服务激活成功', '你的服务 高级服务 已激活', '0', '1499159423');
+INSERT INTO `user_notice` VALUES ('48', '3', '积分获取成功', '获得500积分成功！每次订单评价（不包括追评）都可获得500积分，可在下次下单时抵扣相应金额', '0', '1499323015');
+INSERT INTO `user_notice` VALUES ('49', '3', '退款成功', '你的服务 商品1 已退款1元.', '0', '1499653300');
+INSERT INTO `user_notice` VALUES ('50', '1', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 1.98<br>实际支付：¥ 0', '0', '1499653475');
+INSERT INTO `user_notice` VALUES ('51', '1', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 1.98<br>实际支付：¥ 0', '0', '1499658317');
+INSERT INTO `user_notice` VALUES ('52', '1', '积分获取成功', '获得500积分成功！每次订单评价（不包括追评）都可获得500积分，可在下次下单时抵扣相应金额', '0', '1499668077');
+INSERT INTO `user_notice` VALUES ('53', '1', '积分获取成功', '获得500积分成功！每次订单评价（不包括追评）都可获得500积分，可在下次下单时抵扣相应金额', '0', '1499668220');
+INSERT INTO `user_notice` VALUES ('54', '1', '积分获取成功', '获得500积分成功！每次订单评价（不包括追评）都可获得500积分，可在下次下单时抵扣相应金额', '0', '1499668387');
+INSERT INTO `user_notice` VALUES ('55', '1', '积分获取成功', '获得500积分成功！每次订单评价（不包括追评）都可获得500积分，可在下次下单时抵扣相应金额', '0', '1499668416');
+INSERT INTO `user_notice` VALUES ('56', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 100<br>实际支付：¥ 0', '0', '1499847289');
+INSERT INTO `user_notice` VALUES ('57', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 50000<br>实际支付：¥ 0', '0', '1499847495');
+INSERT INTO `user_notice` VALUES ('58', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 500000<br>实际支付：¥ 0', '0', '1499847509');
+INSERT INTO `user_notice` VALUES ('59', '1', '买单成功', '买单商户：咸鱼饭<br>买单金额：¥ 0.03<br>实际支付：¥ 0', '0', '1501123144');
+INSERT INTO `user_notice` VALUES ('60', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 225<br>实际支付：¥ 0', '0', '1501555086');
+INSERT INTO `user_notice` VALUES ('61', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 225<br>实际支付：¥ 0', '0', '1501555394');
+INSERT INTO `user_notice` VALUES ('62', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 225<br>实际支付：¥ 0', '0', '1501556162');
+INSERT INTO `user_notice` VALUES ('63', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 225<br>实际支付：¥ 0', '0', '1501557919');
+INSERT INTO `user_notice` VALUES ('64', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 215<br>实际支付：¥ 0', '0', '1501567985');
+INSERT INTO `user_notice` VALUES ('65', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 215<br>实际支付：¥ 0', '0', '1501569308');
+INSERT INTO `user_notice` VALUES ('66', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 103<br>实际支付：¥ 0', '0', '1501569661');
+INSERT INTO `user_notice` VALUES ('67', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 300<br>实际支付：¥ 0', '0', '1501569695');
+INSERT INTO `user_notice` VALUES ('68', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 0.01<br>实际支付：¥ 0', '0', '1501836103');
+INSERT INTO `user_notice` VALUES ('69', '3', '买单成功', '买单商户：王五的商品<br>买单金额：¥ 0.02<br>实际支付：¥ 0', '0', '1501837424');
+INSERT INTO `user_notice` VALUES ('70', '3', '退款成功', '你的买单已退款0元.', '0', '1502097952');
+INSERT INTO `user_notice` VALUES ('71', '3', '退款成功', '你的买单已退款0元.', '0', '1502098368');
+INSERT INTO `user_notice` VALUES ('72', '3', '退款成功', '你的买单已退款0元.', '0', '1502098825');
+
+-- ----------------------------
+-- Table structure for `user_task`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_task`;
+CREATE TABLE `user_task` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，用户id',
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user_task
+-- ----------------------------
+INSERT INTO `user_task` VALUES ('3', '{\"2\":{\"task_id\":2,\"name\":\"\\u65b0\\u624b\\u673a\\u7528\\u6237\\u6ce8\\u518c\\u6216\\u7ed1\\u5b9a\",\"accumulate_point\":5000,\"status\":2},\"3\":{\"task_id\":3,\"name\":\"\\u9996\\u6b21\\u4e0b\\u5355\",\"accumulate_point\":5000,\"status\":2},\"4\":{\"task_id\":4,\"name\":\"\\u9996\\u6b21\\u4e70\\u5355\",\"accumulate_point\":5000,\"status\":2},\"5\":{\"task_id\":5,\"name\":\"\\u9996\\u6b21\\u8bc4\\u4ef7\",\"accumulate_point\":1000,\"status\":2},\"6\":{\"task_id\":6,\"name\":\"\\u9996\\u6b21\\u8ffd\\u8bc4\",\"accumulate_point\":1000,\"status\":2},\"7\":{\"task_id\":7,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u54c1\",\"accumulate_point\":500,\"status\":1},\"8\":{\"task_id\":8,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u5e97\",\"accumulate_point\":500,\"status\":2},\"9\":{\"task_id\":9,\"name\":\"\\u7d2f\\u8ba1\\u8fdb\\u884c10\\u6b21\\u521d\\u8bc4\",\"accumulate_point\":2000,\"first_comment_count\":\"7\",\"status\":0},\"10\":{\"task_id\":10,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed85000\\u5143\",\"accumulate_point\":10000,\"pay_money\":115,\"status\":0},\"11\":{\"task_id\":11,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed810000\\u5143\",\"accumulate_point\":25000,\"pay_money\":115,\"status\":0},\"12\":{\"task_id\":12,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed820000\\u5143\",\"accumulate_point\":60000,\"pay_money\":115,\"status\":2}}');
+INSERT INTO `user_task` VALUES ('4', '{\"2\":{\"task_id\":2,\"name\":\"\\u65b0\\u624b\\u673a\\u7528\\u6237\\u6ce8\\u518c\\u6216\\u7ed1\\u5b9a\",\"accumulate_point\":5000,\"status\":2},\"3\":{\"task_id\":3,\"name\":\"\\u9996\\u6b21\\u4e0b\\u5355\",\"accumulate_point\":5000,\"status\":2},\"4\":{\"task_id\":4,\"name\":\"\\u9996\\u6b21\\u4e70\\u5355\",\"accumulate_point\":5000,\"status\":2},\"5\":{\"task_id\":5,\"name\":\"\\u9996\\u6b21\\u8bc4\\u4ef7\",\"accumulate_point\":1000,\"status\":0},\"6\":{\"task_id\":6,\"name\":\"\\u9996\\u6b21\\u8ffd\\u8bc4\",\"accumulate_point\":1000,\"status\":0},\"7\":{\"task_id\":7,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u54c1\",\"accumulate_point\":500,\"status\":2},\"8\":{\"task_id\":8,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u5e97\",\"accumulate_point\":500,\"status\":2},\"9\":{\"task_id\":9,\"name\":\"\\u7d2f\\u8ba1\\u8fdb\\u884c10\\u6b21\\u521d\\u8bc4\",\"accumulate_point\":2000,\"first_comment_count\":0,\"status\":0},\"10\":{\"task_id\":10,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed85000\\u5143\",\"accumulate_point\":10000,\"pay_money\":0,\"status\":0},\"11\":{\"task_id\":11,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed810000\\u5143\",\"accumulate_point\":25000,\"pay_money\":0,\"status\":0},\"12\":{\"task_id\":12,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed820000\\u5143\",\"accumulate_point\":60000,\"pay_money\":0,\"status\":0}}');
+INSERT INTO `user_task` VALUES ('1', '{\"2\":{\"task_id\":2,\"name\":\"\\u65b0\\u624b\\u673a\\u7528\\u6237\\u6ce8\\u518c\\u6216\\u7ed1\\u5b9a\",\"accumulate_point\":5000,\"status\":0},\"3\":{\"task_id\":3,\"name\":\"\\u9996\\u6b21\\u4e0b\\u5355\",\"accumulate_point\":5000,\"status\":0},\"4\":{\"task_id\":4,\"name\":\"\\u9996\\u6b21\\u4e70\\u5355\",\"accumulate_point\":5000,\"status\":1},\"5\":{\"task_id\":5,\"name\":\"\\u9996\\u6b21\\u8bc4\\u4ef7\",\"accumulate_point\":1000,\"status\":1},\"6\":{\"task_id\":6,\"name\":\"\\u9996\\u6b21\\u8ffd\\u8bc4\",\"accumulate_point\":1000,\"status\":0},\"7\":{\"task_id\":7,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u54c1\",\"accumulate_point\":500,\"status\":0},\"8\":{\"task_id\":8,\"name\":\"\\u9996\\u6b21\\u6536\\u85cf\\u5546\\u5e97\",\"accumulate_point\":500,\"status\":0},\"9\":{\"task_id\":9,\"name\":\"\\u7d2f\\u8ba1\\u8fdb\\u884c10\\u6b21\\u521d\\u8bc4\",\"accumulate_point\":2000,\"first_comment_count\":1,\"status\":0},\"10\":{\"task_id\":10,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed85000\\u5143\",\"accumulate_point\":10000,\"pay_money\":1960,\"status\":0},\"11\":{\"task_id\":11,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed810000\\u5143\",\"accumulate_point\":25000,\"pay_money\":0,\"status\":0},\"12\":{\"task_id\":12,\"name\":\"\\u7d2f\\u8ba1\\u5b9e\\u9645\\u652f\\u4ed820000\\u5143\",\"accumulate_point\":60000,\"pay_money\":0,\"status\":0}}');
+INSERT INTO `user_task` VALUES ('2', '{\"2\":{\"task_id\":2,\"status\":0},\"3\":{\"task_id\":3,\"status\":0},\"4\":{\"task_id\":4,\"status\":0},\"5\":{\"task_id\":5,\"status\":0},\"6\":{\"task_id\":6,\"status\":0},\"7\":{\"task_id\":7,\"status\":0},\"8\":{\"task_id\":8,\"status\":0},\"9\":{\"task_id\":9,\"first_comment_count\":0,\"status\":0},\"10\":{\"task_id\":10,\"pay_money\":0,\"status\":0},\"11\":{\"task_id\":11,\"pay_money\":0,\"status\":0},\"12\":{\"task_id\":12,\"pay_money\":0,\"status\":0}}');
+
+-- ----------------------------
+-- Table structure for `withcash_approve_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `withcash_approve_record`;
+CREATE TABLE `withcash_approve_record` (
+  `id` int(11) NOT NULL COMMENT '主键(withdraw_cash_record的id)',
+  `status` tinyint(1) NOT NULL COMMENT '状态, 1,等待审核 2审核通过 3 审核不过 4,批准通过，5批准不通过,6已完成',
+  `bank_transaction` varchar(30) NOT NULL COMMENT '银行流水',
+  `note` text NOT NULL COMMENT 'json [    ‘reson’ => 原因,    ‘remark’ => 备注,    ‘prepare’ => [         manager_id => 准备人id         time  => 时间 ], ‘approve’ => [         manager_id => 审核人id         time  => 时间 ], ‘approval=> [         manager_id => 批准人id         time  => 时间 ],  ‘cashier’ ',
+  `last_operation_time` int(11) NOT NULL COMMENT '最后操作时间',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of withcash_approve_record
+-- ----------------------------
+INSERT INTO `withcash_approve_record` VALUES ('2', '1', '', '{\"reson\":\"111111 \\u3010\\u7533\\u8bf7\\u63d0\\u73b0\\u91d1\\u989d\\u4e3a: \\uffe50.01\\u5143\\u3011\",\"remark\":\"22222222 \\u3010\\u7533\\u8bf7\\u63d0\\u73b0\\u91d1\\u989d\\u4e3a: \\uffe50.01\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1502263998}}', '1502263998', '1502179450');
+INSERT INTO `withcash_approve_record` VALUES ('16', '6', 'SBSBSBSBSBS001', '{\"reson\":\"\\u4eba\\u5bb6\\u5bb3\\u7f9e~~ \\u3010\\u7533\\u8bf7\\u63d0\\u73b0\\u91d1\\u989d\\u4e3a: \\uffe51\\u5143\\u3011\",\"remark\":\"\\u4eba\\u5bb6\\u5bb3\\u7f9e~~\\u4eba\\u5bb6\\u5bb3\\u7f9e~~ \\u3010\\u7533\\u8bf7\\u63d0\\u73b0\\u91d1\\u989d\\u4e3a: \\uffe51\\u5143\\u3011\",\"prepare\":{\"manager_id\":\"1\",\"time\":1502179859},\"approve\":{\"manager_id\":\"1\",\"time\":1502179968},\"approval\":{\"manager_id\":\"1\",\"time\":1502179977},\"cashier\":{\"manager_id\":\"1\",\"time\":1502180141}}', '1502180141', '1502179859');
+
+-- ----------------------------
+-- Table structure for `withdraw_cash_record`
+-- ----------------------------
+DROP TABLE IF EXISTS `withdraw_cash_record`;
+CREATE TABLE `withdraw_cash_record` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(id)，自增',
+  `tenant_id` int(11) NOT NULL COMMENT '商户id',
+  `amount` int(11) NOT NULL COMMENT '提现金额',
+  `balance` int(11) NOT NULL COMMENT '余额',
+  `is_finish` tinyint(1) NOT NULL COMMENT '是否完成',
+  `finish_time` int(11) NOT NULL COMMENT '完成时间',
+  `create_time` int(11) NOT NULL COMMENT '时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of withdraw_cash_record
+-- ----------------------------
+INSERT INTO `withdraw_cash_record` VALUES ('1', '1', '500', '1', '1', '1501035953', '1494486875');
+INSERT INTO `withdraw_cash_record` VALUES ('2', '1', '1', '1', '0', '0', '1494487094');
+INSERT INTO `withdraw_cash_record` VALUES ('3', '1', '99', '549400', '0', '0', '1495005561');
+INSERT INTO `withdraw_cash_record` VALUES ('4', '12', '5000', '45000', '0', '0', '1495181967');
+INSERT INTO `withdraw_cash_record` VALUES ('5', '1', '1111', '648289', '0', '0', '1495183557');
+INSERT INTO `withdraw_cash_record` VALUES ('6', '1', '1111', '647178', '0', '0', '1495183616');
+INSERT INTO `withdraw_cash_record` VALUES ('7', '1', '10000', '637178', '0', '0', '1495184393');
+INSERT INTO `withdraw_cash_record` VALUES ('8', '1', '12350', '624828', '0', '0', '1495184798');
+INSERT INTO `withdraw_cash_record` VALUES ('9', '10', '1', '29996', '0', '0', '1497404587');
+INSERT INTO `withdraw_cash_record` VALUES ('10', '10', '29999', '0', '0', '0', '1497404659');
+INSERT INTO `withdraw_cash_record` VALUES ('11', '22', '1000', '0', '0', '0', '1498705748');
+INSERT INTO `withdraw_cash_record` VALUES ('12', '10', '100', '200', '0', '0', '1498707491');
+INSERT INTO `withdraw_cash_record` VALUES ('13', '13', '100', '1500', '0', '0', '1499150174');
+INSERT INTO `withdraw_cash_record` VALUES ('14', '10', '100', '300', '0', '0', '1499220850');
+INSERT INTO `withdraw_cash_record` VALUES ('15', '34', '10000', '55000000', '0', '0', '1499847544');
+INSERT INTO `withdraw_cash_record` VALUES ('16', '13', '100', '1796', '1', '1502180141', '1499847797');
+INSERT INTO `withdraw_cash_record` VALUES ('17', '13', '100', '1696', '1', '1499916598', '1499847838');

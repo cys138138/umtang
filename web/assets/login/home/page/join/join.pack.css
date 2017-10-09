@@ -1,0 +1,42 @@
+.umt-join-page {
+  padding-bottom: 200px;
+}
+.umt-join-page .list {
+  width: 80%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.umt-join-page .job-detail {
+  margin-bottom: 25px;
+}
+.umt-join-page .job-detail .title {
+  font-size: 2.5rem;
+  padding: 25px 0;
+}
+.umt-join-page .job-detail .title-s {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.umt-join-page .job-detail .content {
+  color: #808080;
+  font-size: 1.5rem;
+}
+.umt-join-page .job-detail .msg {
+  line-height: 2;
+}
+.umt-join-page .job-detail .job-info {
+  margin: 15px 0;
+}
+.umt-join-page .job-detail .job-info > span {
+  display: inline-block;
+  width: 33%;
+}
+.umt-join-page .job-detail + .job-detail {
+  border-top: 1px solid #808080;
+}
+.umt-join-page .title-s {
+  font-size: 20px;
+  margin-top: 100px;
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+.wrapUBox{-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;text-align:center; line-height:40px; font-size:12px; z-index:99; padding:15px; height:50px; cursor:pointer; /*FF IE7*/ top:50%;/*FF IE7*/ margin-top:-25px!important;/*FF IE7 该值为本身高的一半*/ position:fixed!important;/*FF IE7*/ position:absolute;/*IE6*/ _top:expression(eval(document.compatMode && document.compatMode == 'CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight - this.offsetHeight) / 2 : document.body.scrollTop + (document.body.clientHeight - this.clientHeight) / 2); overflow:hidden; z-index:100001;}
+.uBoxshadow div{background-image:url("ubox.png"); overflow:hidden;}
+.uBoxshadow {box-shadow:0px 0px 15px #666; border-radius:4px;}
+
+.wrapUBoxLeft{float:left; width:55px; height:50px; background-position:left top; background-repeat:no-repeat;}
+.uBoxErrorIcon{background-position:left top;}
+.uBoxNoticeIcon{background-position:-90px top;}
+.uBoxSuccessIcon{background-position:-180px top;}
+
+.wrapUBoxMiddle{float:left; height:50px; background-repeat:repeat-x; font-size:14px; font-weight:bold; color:#fff; line-height:47px;}
+.uBoxErrorMessage{background-position:left -60px;}
+.uBoxNoticeMessage{background-position:left -120px;}
+.uBoxSuccessMessage{background-position:left -180px;}
+
+.wrapUBoxRightSpace{float:left;width:22px;height:50px;background-repeat:no-repeat;}
+.uBoxErrorRightSpace{background-position:-60px 0;}
+.uBoxNoticeRightSpace{background-position:-150px 0;}
+.uBoxSuccessRightSpace{background-position:-240px 0;}
+
+/*提示框alert*/
+.uBoxAlert{width:100%; height:100%; position:absolute; left:0; top:0; background-color:transparent; z-index:99998;}
+.uBoxAlertContent{position:absolute;width: 100%;text-align: center;bottom: 100px;}
+.uBoxAlertContent .uBoxAlertshadow{box-shadow:0px 0px 15px #666; border-radius:4px; text-align: left; display:inline-block; background: black;padding: 10px 25px;}
+.uBoxAlertContent .status{vertical-align: middle; font-size: 2rem; font-weight: 900;line-height: 2rem;padding: 1px 7px; border: 2px solid white; border-radius: 50%; display:inline-block; color: white;}
+.uBoxAlertContent .uBoxAlertMsg{word-wrap:break-word;vertical-align: middle; display: inline-block; color: white;}
+
+/* 确认框-赵欢磊：20130819 */
+.uBoxMask{width:100%; height:100%; position:absolute; left:0; top:0; background-color:#000; opacity:.3; filter:alpha(opacity:30); z-index:99998;}
+.uBoxWrapConfirm{width:450px; min-height:100px; _height:100px; position:fixed; border:1px solid #999; z-index:999999; border-radius:3px;}
+*html .uBoxWrapConfirm {position:absolute;top:expression(offsetParent.scrollTop);}
+.uBoxWrapConfirm .uBoxTitle{height:36px; position:relative; line-height:36px; padding:0 15px; font-size:14px; font-weight:bold; background-color:#eaeaea; color:#333; border-bottom:1px solid #ccc; border-radius:3px 3px 0 0;}
+.uBoxWrapConfirm .uBoxClose{width:18px; height:18px; position:absolute; top:9px; right:10px; background:url(closed.png) no-repeat; cursor:pointer;}
+.uBoxWrapConfirm .uBoxClose:hover{background-position:right bottom;}
+.uBoxWrapConfirm .wrapTip{background-color:#fff; padding:30px 30px 40px 60px;}
+.uBoxWrapConfirm .wrapTip .confirmIcon{float:left; width:32px; height:32px; margin-left:-32px; display:inline; background-image:url(confirm_icon.png);}
+.uBoxWrapConfirm .tip{padding:8px 0 0 15px; color:#333; font-size:14px;}
+.uBoxWrapConfirm .wrapControl{padding:5px 15px; border-top:1px solid #ccc; background-color:#eaeaea; text-align:right; border-radius:0 0 3px 3px;}
+.uBoxWrapConfirm .wrapControl{padding-top:5px;}
+.uBoxWrapConfirm .wrapControl button{display:inline-block; height:22px; line-height:22px; min-width:22px; border:1px solid #999; border-radius:3px; padding:0 12px; color:#000; background-color:#f3f3f3; background:linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%); margin-left:10px; font-size:12px; cursor:pointer;}
+
